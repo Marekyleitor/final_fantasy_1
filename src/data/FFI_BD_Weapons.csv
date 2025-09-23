@@ -1,0 +1,68 @@
+New Name;Old Name;Price;Atk;Acc;Crit;Equipped by;Buy;Find;Win;Special;Type;Strong vs;Element;Cast;Inflicts;Stats;Special Effect Before Attack;Special Effect After Attack
+Staff;Wooden staff;5;6;0;3;Fi,Kn,Ni,RM,RW,BB,Ma,WM,WW,BM,BW;Cornelia;several;-;False;staff;-;-;-;-;-;-;-
+Power staff;Power staff;24690;12;0;28;Fi,Kn,Ni,RM,RW,BB,Ma,WM,WW,BM,BW;-;Western Keep;-;False;staff;-;-;-;-;-;-;-
+Rapier;Rapier;10;9;5;4;Fi,Kn,Th,Ni,RM,RW;Cornelia;-;-;False;sword;-;-;-;-;-;-;-
+Scimitar;Scimtar;200;10;10;8;Fi,Kn,Th,Ni,RM,RW;Pravoka;-;-;False;sword;-;-;-;-;-;-;-
+Battle axe;Hand axe;550;16;5;7;Fi,Kn,Ni;Pravoka;-;-;False;axe;-;-;-;-;-;-;-
+Mythril sword;Silver sword;4000;23;15;17;Fi,Kn,Ni,RM,RW;Elfheim, Crescent Lake;-;-;False;sword;-;-;-;-;-;-;-
+Broad sword;Short sword;550;15;10;6;Fi,Kn,Ni,RM,RW;Pravoka;Marsh Cave;-;False;sword;-;-;-;-;-;-;-
+Falchion;Falchon;450;15;10;15;Fi,Kn,Th,Ni,RM,RW;Melmond;Western Keep;-;False;sword;-;-;-;-;-;-;-
+Sabre/Saber (sword);Sabre;450;13;5;12;Fi,Kn,Th,Ni,RM,RW;Elfheim,Melmond;Cornelia Castle;-;False;sword;-;-;-;-;-;-;-
+Rune blade;Rune sword;5000;18;15;27;Fi,Kn,Th,Ni,RM,RW;-;Chaos Temple;-;False;sword;mages;-;-;-;-;-;-
+Werebane;Were sword;6000;18;15;26;Fi,Kn,Ni,RM,RW;-;Chaos Temple;-;False;sword;werefiends;-;-;-;-;-;-
+Wyrmkiller;Dragon sword;8000;19;15;22;Fi,Kn,Th,Ni,RM,RW;-;Mt. Duergar;-;False;sword;dragons;-;-;-;-;-;-
+Long sword;Long sword;1500;20;10;13;Fi,Kn,Ni,RM,RW;Melmond;-;-;False;sword;-;-;-;-;-;-;-
+Coral sword;Coral sword;8000;19;15;25;Fi,Kn,Th,Ni,RM,RW;-;Terra Cave;-;False;sword;sea enemies;-;-;-;-;-;-
+Great axe;Great axe;2000;22;5;14;Fi,Kn,Ni;-;Titan's Cave;-;False;axe;-;-;-;-;-;-;-
+Mythril axe;Silver axe;4500;25;10;19;Fi,Kn,Ni;Crescent Lake;Mt. Gulg;-;False;axe;-;-;-;-;-;-;-
+Great sword;Giant sword;8000;21;20;23;Fi,Kn,Ni,RM,RW;-;Mt. Gulg;-;False;sword;giants;-;-;-;-;-;-
+Ice brand;Ice sword;15000;29;25;21;Fi,Kn,Ni,RM,RW;-;Mt. Gulg,Trials Citadel;-;False;sword;-;ice;-;-;-;-;-
+Flame sword;Flame sword;10000;26;20;20;Fi,Kn,Ni,RM,RW;-;Ice Cavern;-;False;sword;-;fire;-;-;-;-;-
+Light axe;Light axe;10000;28;15;29;Fi,Kn,Ni;-;Sunken Shrine;-;False;axe;-;-;Diara;-;-;-;-
+Defender;Defense;50000;30;35;32;Kn,Ni,RW;-;Waterfall Cave;-;False;sword;-;-;Blink;-;-;-;-
+Sun blade;Sun sword;20000;32;30;24;Fi,Kn,Ni,RM,RW;-;Mirage Tower;-;False;sword;-;holy;-;-;-;-;-
+Vorpal sword;Vorpal;30000;24;25;34;Kn,Ni,RW;-;Mirage Tower;-;False;sword;-;-;-;-;-;-;-
+Venom blade;Bane sword;60000;22;30;37;Kn,Ni,RW;-;Flying Fortress;-;False;sword;-;-;Bane;-;-;-;-
+Sasuke's Blade;Katana;60000;33;35;38;Ni;-;Flying Fortress,Chaos Temple;-;False;sword;-;-;-;-;-;-;-
+Excalibur;Xcalber;60000;45;35;39;Kn;-;Mt. Duergar;-;False;sword;-;ALL;-;-;-;-;-
+Masamune;Masmune;60000;56;50;40;All classes;-;Chaos Temple;-;False;sword;-;-;-;-;-;-;-
+Nunchaku;Wooden nunchuck;10;12;0;1;Ni,BB,Ma;Cornelia;-;-;False;nunchaku;-;-;-;-;-;-;-
+Crosier;Iron staff;200;14;0;11;Fi,Kn,Ni,BB,Ma;Elfheim,Melmond;Cornelia Castle;-;False;nunchaku;-;-;-;-;-;-;-
+Iron nunchaku;Iron nunchuck;200;16;0;9;Ni,BB,Ma;Elfheim;-;-;False;nunchaku;-;-;-;-;-;-;-
+Knife;Small knife;5;5;10;2;Fi,Kn,Th,Ni,RM,RW,BM,BW;Cornelia;-;-;False;knife;-;-;-;-;-;-;-
+Dagger;Large knife;175;7;10;10;Fi,Kn,Th,Ni,RM,RW,BM,BW;Elfheim;Marsh Cave;-;False;knife;-;-;-;-;-;-;-
+Mythril knife;Silver dagger;800;10;15;16;Fi,Kn,Th,Ni,RM,RW,BM,BW;Crescent Lake;Marsh Cave,Mt. Duergar;-;False;knife;-;-;-;-;-;-;-
+Cat claws;CatClaw;65000;22;35;35;Kn,Ni,RW,BW;Gaia;-;-;False;knife;-;-;-;-;-;-;-
+Mage staff;Mage staff;30000;12;10;31;Ni,BM,BW;-;Sunken Shrine;-;False;knife;-;-;Fira;-;-;-;-
+Wizard staff;Wizard staff;50000;15;15;33;BW;-;Waterfall Cave;-;False;knife;-;-;Confuse;-;-;-;-
+Hammer;Iron hammer;10;9;0;5;Fi,Kn,Ni,WM,WW;Cornelia,Pravoka;-;-;False;hammer;-;-;-;-;-;-;-
+Mythril hammer;Silver hammer;2500;12;5;18;Fi,Kn,Ni,WM,WW;Crescent Lake;Elfheim;-;False;hammer;-;-;-;-;-;-;-
+Healing staff;Heal staff;25000;9;0;30;Ni,WM,WW;-;Trials Citadel;-;False;staff;-;-;Heal;-;-;-;-
+Thor's hammer;Thor hammer;40000;18;15;36;Kn,Ni,WW;-;Mirage Tower;-;False;hammer;-;-;Thundara;-;-;-;-
+Kotetsu katana;-;?;22;20;21;Fi,Kn,Th,Ni,RM,RW;-;-;Cerberus;True;sword;-;-;-;-;-;-;-
+Braveheart;-;?;30;52;28;Fi,Kn,Ni;-;-;Barbariccia,Yamatano Orochi;True;sword;-;-;-;Confuse;-;-;-
+Kikuichimonji;-;?;35;25;30;Fi,Kn,Th,Ni,RM,RW;-;-;Rubicante;True;sword;-;-;-;-;{STR:5};-;-
+Deathbringer;-;?;33;20;29;RW;-;Lifespring Grotto;Black Knight;True;sword;-;-;Death;-;{STR:5, STA:5, AGL:5, INT:5};-;-
+Murasame;-;?;50;10;50;Ni;-;-;Omega Weapon;True;sword;-;-;Protect;-;{STR:5};-;-
+Ragnarok;-;?;55;40;39;Kn;-;-;Shinryu;True;sword;-;-;Flare;-;{STR:7, STA:7, AGL:3, EVA:30, INT:7};-;-
+Viking axe;-;?;25;10;16;Fi,Kn,Ni;-;Whisperwind Cove;-;True;axe;-;-;-;-;{EVA:-10};-;-
+Asura;-;?;25;25;25;Fi,Kn,Th,Ni,RM,RW;-;-;Pharaoh;True;sword;-;-;-;-;-;-;-
+Duel rapier;-;?;27;30;26;Fi,Kn,Th,Ni,RM,RW;-;Whisperwind Cove;-;True;sword;-;-;-;-;{EVA:80};-;-
+Enhancer;-;?;28;25;18;Fi,Kn,Ni,RM,RW;-;Whisperwind Cove;-;True;sword;-;-;-;-;{INT:7};-;-
+Ogrekiller axe;-;?;30;0;20;Fi,Kn,Ni;-;Whisperwind Cove;-;True;axe;giants;-;-;-;-;-;-
+Dark claymore;-;?;40;5;30;Fi,Kn;-;Whisperwind Cove;-;True;sword;-;-;-;-;-;-;-
+Rune axe;-;?;40;20;0;Fi,Kn,Ni;-;-;Prototype;True;axe;-;-;Curaga;-;{INT:3};25MP: critical hit;-
+Gigant axe;-;?;42;0;26;Fi,Kn,Ni;-;Whisperwind Cove;-;True;axe;-;-;-;-;{STR:4, INT:-4};-;-
+Lightbringer;-;?;48;40;37;RW;-;-;Death Gaze;True;sword;-;holy;-;-;{STR:7, STA:7, AGL:7, EVA:50, INT:7};-;-
+Ultima weapon;-;?;HP/10;HP/10;50;Kn,Ni,RW,Ma,WW,BW;-;Whisperwind Cove;-;True;sword;-;-;-;-;-;-;-
+Sage's Staff;-;?;20;10;15;RM,RW,WM,WW,BM,BW;-;-;Squidraken;True;staff;-;-;Life;-;{INT:15};-;-
+Rune staff;-;?;25;25;20;WW;-;-;Orthros;True;staff;-;-;Healara;-;{INT:10};-;-
+Judgment staff;-;?;25;25;20;BW;-;-;Atomos;True;knife;-;-;Flare;-;-;-;-
+Orichalcum;-;?;28;35;31;Fi,Kn,Th,Ni,RM,RW,BW;-;Lifespring Grotto;-;True;knife;-;-;-;-;-;-;Drains HP from enemy
+Mage masher dagger;-;?;20;30;25;Fi,Kn,Th,Ni,RM,RW,BM,BW;-;Whisperwind Cove;-;True;knife;-;-;Silence;-;{INT:5};-;-
+Gladius;-;?;23;30;26;Fi,Kn,Th,Ni,RM,RW,BM,BW;-;Whisperwind Cove;-;True;knife;-;-;-;-;{EVA:10};-;-
+Assassin dagger;-;?;30;40;35;Fi,Kn,Th,Ni,RM,RW,BW;-;Whisperwind Cove;-;True;knife;-;-;Kill;-;{AGL:3, EVA:10, INT:2};-;-
+War Hammer;-;38000;30;0;15;Kn,Ni,WW;Whisperwind Cove;Hellfire Chasm;Sekhret;False;hammer;-;-;-;-;-;-;-
+Lust Dagger;-;?;50;70;20;Ni,BW;-;-;Chronodia (Lich);True;knife;-;-;-;-;{AGL:20, EVA:20};-;-
+Barbarian's Sword;-;?;125;20;?;Kn,Ni,RM,RW;-;-;Chronodia (Four Fiends and Chaos with many weapons);True;sword;-;-;-;-;{STR:18, STA:13};-;-
+Golden Staff;-;?;30;30;?;WW;-;-;Chronodia (Marilith);True;staff;-;-;-;-;{INT:20};-;-
