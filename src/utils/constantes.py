@@ -67,6 +67,97 @@ def cargar_armas():
     return armas
 
 
+def cargar_estadisticas_enemigos():
+    # Obtener la ruta absoluta del archivo
+    ruta_archivo = os.path.join(os.path.dirname(__file__),
+                                '../data/Enemy_stats_01.csv')
+
+    enemigos = {}
+    with open(ruta_archivo, 'r', newline='', encoding='utf-8') as archivo:
+        lector = csv.DictReader(archivo, delimiter=';')
+        for fila in lector:
+            nombre = fila['Name']
+            enemigos[nombre] = {
+                'background': fila['Background'],
+                'HP': int(fila['HP']),
+                'ATK': int(fila['ATK']),
+                'DEF': int(fila['DEF']),
+                'MD': int(fila['MD']),
+                'WEAK': [x.strip() for x in fila['WEAK'].split(',') if x.strip()],
+                'RESI': [x.strip() for x in fila['RESI'].split(',') if x.strip()],
+                'gil': int(fila['Gil']),
+                'XP': int(fila['EXP']),
+                'Hits': int(fila['Hits']),
+                'ACC': int(fila['ACC']),
+                # 'acc_2': int(fila['ACC_2']) if fila['ACC_2'] != '-' else None,
+                'status': fila['Status'],
+                'CRIT': int(fila['CRIT']),
+                'EVA': int(fila['EVA']),
+                # 'eva_2': int(fila['Eva_2']) if fila['Eva_2'] != '-' else None,
+                'run_level': fila['Run Lev.'],
+                'magic': fila['Magic'],
+                'sp_atk': fila['Sp. Att'],
+                'family': fila['Family'],
+                'AGL': int(fila['AGL'])
+                # 'Real_AGL': int(fila['Real_AGL'])
+            }
+    return enemigos
+
+# def cargar_estadisticas_enemigos():
+#     # Obtener la ruta absoluta del archivo
+#     ruta_archivo = os.path.join(os.path.dirname(__file__),
+#                                 '../data/Enemy_stats_01.csv')
+#
+#     try:
+#         # Detectar la codificación
+#         encoding = detectar_codificacion(ruta_archivo)
+#         print(f"Codificación detectada: {encoding}")
+#
+#         with open(ruta_archivo, 'r', newline='', encoding='utf-8') as archivo:
+#             # Verificar que el archivo tiene contenido
+#             contenido = archivo.read()
+#             if not contenido.strip():
+#                 print(f"Error: El archivo {ruta_archivo} está vacío")
+#                 return {}
+#
+#             # Volver al inicio del archivo
+#             archivo.seek(0)
+#
+#             lector = csv.DictReader(archivo, delimiter=';')
+#             enemigos = {}
+#             for fila in lector:
+#                 nombre = fila['Name']
+#                 enemigos[nombre] = {
+#                     'background': fila['Background'],
+#                     'HP': int(fila['HP']),
+#                     'ATK': int(fila['ATK']),
+#                     'DEF': int(fila['DEF']),
+#                     'MD': int(fila['MD']),
+#                     'WEAK': [x.strip() for x in fila['WEAK'].split(',') if x.strip()],
+#                     'RESI': [x.strip() for x in fila['RESI'].split(',') if x.strip()],
+#                     'gil': int(fila['Gil']),
+#                     'XP': int(fila['EXP']),
+#                     'Hits': int(fila['Hits']),
+#                     'ACC': int(fila['ACC']),
+#                     # 'acc_2': int(fila['ACC_2']) if fila['ACC_2'] != '-' else None,
+#                     'status': fila['Status'],
+#                     'CRIT': int(fila['CRIT']),
+#                     'EVA': int(fila['EVA']),
+#                     # 'eva_2': int(fila['Eva_2']) if fila['Eva_2'] != '-' else None,
+#                     'run_level': fila['Run Lev.'],
+#                     'magic': fila['Magic'],
+#                     'sp_atk': fila['Sp. Att'],
+#                     'family': fila['Family'],
+#                     'AGL': int(fila['AGL'])
+#                     # 'Real_AGL': int(fila['Real_AGL'])
+#                 }
+#             return enemigos
+#
+#
+#     except Exception as e:
+#         print(f"Error: {e}")
+#         return {}
+
 
 # Definimos un diccionario con todas las estadísticas por clase
 ESTADISTICAS_BASE = {
@@ -92,6 +183,14 @@ CRECIMIENTO_GARANTIZADO = cargar_estadisticas_crecimiento()
 
 # Carga la info de todas las armas
 ARMAS = cargar_armas()
+# print(ARMAS["Sasuke's Blade"])
+# print(ARMAS["Masamune"])
 
-print(ARMAS["Sasuke's Blade"])
-print(ARMAS["Masamune"])
+# Ejemplo de uso:
+ENEMIGOS = cargar_estadisticas_enemigos()
+# Acceder a los datos:
+# chaos_dict = ENEMIGOS['Chaos']
+# print(f"HP de Chaos: {chaos_dict['HP']}")
+# print(f"Debilidades de Chaos: {', '.join(chaos_dict['WEAK'])}")
+# print(f"Familia de Chaos: {chaos_dict['family']}")
+
