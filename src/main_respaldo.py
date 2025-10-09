@@ -1,7 +1,6 @@
 from src.clases.personaje import *
 from src.clases.pj import PJ
 from src.clases.enemy import Enemy
-from src.clases.arrCharacter import ArrCharacter
 
 max_wait = 400
 
@@ -22,16 +21,12 @@ pj_2 = PJ('Warrior')
 pj_3 = PJ('Thief')
 pj_4 = PJ('Monk')
 
-ene_1 = Enemy('Crazy Horse')
-ene_2 = Enemy('Black Widow')
+
+
 
 print(f"Enemies has appeared")
 opc = -1
-char_lst = [pj_1,pj_2,pj_3,pj_4,ene_1,ene_2]
-arrChar = ArrCharacter()
-arrChar.addArrChar(char_lst)
-party = arrChar.arrPer()
-enemies = arrChar.arrEne()
+# pers = [per1, per2, ene1, ene2]
 
 def siguientes_x_turnos(arr_char, n):
     turnos = []
@@ -90,8 +85,7 @@ pasa_turno = True
 
 while(True):
     if pasa_turno:
-        # personaje_en_turno = proseguir_al_siguiente_turno(pers)
-        personaje_en_turno = proseguir_al_siguiente_turno(arrChar)
+        personaje_en_turno = proseguir_al_siguiente_turno(pers)
         if "COM" in personaje_en_turno.con:
             # Ataque aleatorio de un enemigo a un jugador
             # print(f"Enemigo {personaje_en_turno.con} ha atacado.")

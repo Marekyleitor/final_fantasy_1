@@ -2,35 +2,35 @@ from src.utils.constantes import ARMAS
 
 class Arma:
     def __init__(self, name):
-        self.nombre = name
+        self.name = name
         if name != 'Hands':
-            self.price = ARMAS[self.nombre]['Price']
+            self.price = ARMAS[name]['Price']
             self.value = 0
             if isinstance(self.price, int):
                 self.value = self.price // 2
-            self.atk = ARMAS[self.nombre]['atk']
-            self.acc = ARMAS[self.nombre]['acc']
-            self.crit = ARMAS[self.nombre]['crit']
-            self.equip_by = self.equiped_by_exact_class(ARMAS[self.nombre]['equip_by']) # List
-            self.buy = ARMAS[self.nombre]['buy']
-            self.find = ARMAS[self.nombre]['find']
-            self.win = ARMAS[self.nombre]['win']
-            self.special = ARMAS[self.nombre]['special']
-            self.tipo = ARMAS[self.nombre]['tipo']
-            self.str_vs = ARMAS[self.nombre]['str_vs']
-            self.elemental = ARMAS[self.nombre]['elemental']
-            self.cast = ARMAS[self.nombre]['cast']
-            self.inflicts = ARMAS['inflicts'][self.nombre]
-            self.stats = self.str_to_dict(ARMAS[self.nombre]['stats'])
+            self.atk = ARMAS[name]['atk']
+            self.acc = ARMAS[name]['acc']
+            self.crit = ARMAS[name]['crit']
+            self.equip_by = self.equiped_by_exact_class(ARMAS[name]['equip_by']) # List
+            self.buy = ARMAS[name]['buy']
+            self.find = ARMAS[name]['find']
+            self.win = ARMAS[name]['win']
+            self.special = ARMAS[name]['special']
+            self.tipo = ARMAS[name]['tipo']
+            self.str_vs = ARMAS[name]['str_vs']
+            self.elemental = ARMAS[name]['elemental']
+            self.cast = ARMAS[name]['cast']
+            self.inflicts = ARMAS['inflicts'][name]
+            self.stats = self.str_to_dict(ARMAS[name]['stats'])
             self.allStats = self.getAllStats(self.stats)
-            self.seba = ARMAS[self.nombre]['seba']
-            self.seaa = ARMAS[self.nombre]['seaa']
+            self.seba = ARMAS[name]['seba']
+            self.seaa = ARMAS[name]['seaa']
         else:
             self.price,self.value,self.atk,self.acc,self.crit,self.equip_by = 0,0,0,0,0,'All clases'
             self.buy,self.find,self.win,self.special,self.tipo,self.str_vs = '-','-','-',False,'-','-'
             self.elemento,self.cast,self.inflige,self.stats,self.seba,self.seaa = '-','-','-','-','-','-'
 
-    def mostrar_Info(self):
+    def motrar_datos(self):
         print("Precio:", self.price, '\t', type(self.price))
         print("Atk:", self.atk, '\t', type(self.atk))
         print("Acc:", self.acc, '\t', type(self.acc))

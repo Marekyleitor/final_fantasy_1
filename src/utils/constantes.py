@@ -99,7 +99,6 @@ def cargar_estadisticas_enemigos():
                 'sp_atk': fila['Sp. Att'],
                 'family': fila['Family'],
                 'AGL': int(fila['AGL'])
-                # 'Real_AGL': int(fila['Real_AGL'])
             }
     return enemigos
 

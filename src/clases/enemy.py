@@ -21,8 +21,11 @@ class Enemy:
         self.sp_atk = ENEMIGOS[name]['sp_atk']
         self.family = ENEMIGOS[name]['family']
         self.AGL = ENEMIGOS[name]['AGL']
+        self.espera = 0
+        self.alive = True
+        self.char_type = "enemy"
 
-    def mostrar_Info(self):
+    def motrar_datos(self):
         print("HP:", self.HP, '\t', type(self.HP))
         print("ATK:", self.ATK, '\t', type(self.ATK))
         print("DEF:", self.DEF, '\t', type(self.DEF))
@@ -39,10 +42,13 @@ class Enemy:
         print("Run_level:", self.run_level, '\t', type(self.run_level))
         print("Magic:", self.magic, '\t', type(self.magic))
         print("Sp_atk:", self.sp_atk, '\t', type(self.sp_atk))
-        print("Fmily:", self.family, '\t', type(self.family))
+        print("Family:", self.family, '\t', type(self.family))
         print("AGL:", self.AGL, '\t', type(self.AGL))
 
     def remove_None(self, lst):
         for text in lst:
-            if text is "None":
+            if text is None:
                 return "-"
+
+# chaos = Enemy("Chaos")
+# chaos.motrar_datos()

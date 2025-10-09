@@ -5,7 +5,7 @@ from src.utils.constantes import ESTADISTICAS_BASE, XP_TABLE, CRECIMIENTO_GARANT
 
 
 class PJ:
-    def __init__(self, clase:str="Warrior", LV:int=1):
+    def __init__(self, clase:str="Warrior", name:str="no_name", LV:int=1):
         """
                 Inicializa el personaje jugable con su nombre y clase.
 
@@ -13,6 +13,7 @@ class PJ:
                     nombre (str): Nombre del personaje
                     clase (str): Clase del personaje ('Warrior', 'Thief', etc.)
                 """
+        self.name = name
         self.clase = clase
         self.LV = 1
         self.XP = 0
@@ -27,6 +28,7 @@ class PJ:
         # self.weapon = arma_inicial(self.clase)
         self.espera = 0
         self.alive = True
+        self.char_type = "pj"
         # self.actualizar_HP_MAX()
 
     def xp_Lv(self, Nxt_Lv, max_Lv):
@@ -54,7 +56,7 @@ class PJ:
         self.INT = self.INT_base
         self.STA = self.STA_base
         self.LCK = self.LCK_base
-        print(f"self.HP: {self.HP}")
+        # print(f"self.HP: {self.HP}")
 
     def asignar_estadisticas_secundarias(self):
         self.asignar_ATK()
@@ -220,9 +222,9 @@ class PJ:
         print(f"espera: {self.espera}")
         print(f"alive: {self.alive}")
 
-guerrero = PJ("Warrior")
-print(f"\nEstadísticas del guerrero nivel {guerrero.LV}:")
-guerrero.motrar_datos()
+# guerrero = PJ("Warrior")
+# print(f"\nEstadísticas del guerrero nivel {guerrero.LV}:")
+# guerrero.motrar_datos()
 # print(f"guerrero.HP: {guerrero.HP}")
 # print(f"guerrero.HP_MAX: {guerrero.HP_MAX}")
 # print(XP_TABLE[35])
