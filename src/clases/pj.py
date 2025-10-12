@@ -1,6 +1,7 @@
 import random
 import math
 
+from src.clases.arma import Arma
 from src.utils.constantes import ESTADISTICAS_BASE, XP_TABLE, CRECIMIENTO_GARANTIZADO
 
 
@@ -20,12 +21,13 @@ class PJ:
         self.MAX_LV = len(XP_TABLE)  # 99
         self.XP_limit0 = self.xp_Lv(self.LV, self.MAX_LV)
         self.XP_limit1 = self.xp_Lv(self.LV + 1, self.MAX_LV)
+        self.arma = self.arma_inicial(self.clase)
         self.asignar_estadisticas_base() # Variables: STR_base,AGL_base,INT_base,STA_base,LCK_base
         self.asignar_estadisticas() # Variables: HP,MP,STR,AGL,INT,STA,LCK
         self.asignar_estadisticas_secundarias() # Variables: ATK,ACC,DEF,EVA,CRIT,MD
         self.asignar_HP_MAX_MP_MAX_y_sus_bases() # HP_MAX_base,MP_MAX_base,HP_MAX,MP_MAX
         self.levelear_si_es_necesario(LV)
-        # self.weapon = arma_inicial(self.clase)
+
         self.espera = 0
         self.alive = True
         self.char_type = "pj"
@@ -66,6 +68,21 @@ class PJ:
         self.asignar_CRIT()
         self.MD = self.obtener_estadistica('Ini_MD') + self.LV *self.obtener_estadistica('Mul_MD')
 
+    def actualizar_stats_secundarias_despues_de_leveleo(self):
+        self.asignar_estadisticas_secundarias()
+
+    def actualizar_stats_por_arma_y_secundarias_despues_de_leveleo(self):
+        arma_stats = self.arma.getAllStats()
+        self.STR += arma_stats['STR']
+        self.AGL += arma_stats['AGL']
+        self.INT += arma_stats['INT']
+        self.STA += arma_stats['STA']
+        self.LCK += arma_stats['LCK']
+        # Actualizar el resto de stats (secundarias)
+        self.actualizar_stats_secundarias_despues_de_leveleo()
+        self.EVA += arma_stats['EVA']
+        pass
+
     def asignar_ATK(self):
         if self.clase in ['Monk', 'Master'] and not self.armado():
             if self.clase == 'Monk':
@@ -74,8 +91,9 @@ class PJ:
                 self.ATK = self.STR // 2 + self.STA
         else:
             ### Standard ###
-            # self.ATK = Weapon Attack + self.STR//2
-            self.ATK = self.STR // 2
+            # Esto debería ser una función, para validar cuando no sea número (único caso 'HP/10')
+            self.ATK = int(self.arma.atk) + self.STR//2
+            # self.ATK = self.STR // 2
 
     def asignar_DEF(self):
         if self.clase in ['Monk', 'Master']:
@@ -106,31 +124,31 @@ class PJ:
             for i in range(iter):
                 self.Lv1UP()
 
-
     def Lv1UP(self, show_title = False):
         self.actualizar_LV_y_XP()
-        self.actualizar_stats(show_title)
-        self.asignar_estadisticas_secundarias()
+        self.actualizar_stats_principales_despues_de_leveleo(show_title)
+        self.actualizar_stats_por_arma_y_secundarias_despues_de_leveleo() # incluyen stats principales que no son base
+        # self.actualizar_stats_secundarias_despues_de_leveleo()
 
     def actualizar_LV_y_XP(self):
         self.LV += 1
         self.XP_limit0 = self.xp_Lv(self.LV, self.MAX_LV)
         self.XP_limit1 = self.xp_Lv(self.LV + 1, self.MAX_LV)
 
-    def actualizar_stats(self, show_title):
+    def actualizar_stats_principales_despues_de_leveleo(self, show_title):
         # self.HP_MAX = self.HP_MAX + (self.STA // 4) + 1 + self.prob_aum(0.5) * random.randint(20, 25)
         self.aumentar_HP_MAX()
         self.aumentar_MP_MAX()
-        # self.STR = self.STR + self.prob_aum(0.75)
-        # self.AGL = self.AGL + self.prob_aum(0.625)
-        # self.INT = self.INT + self.prob_aum(0.32)
-        # self.STA = self.STA + self.prob_aum(0.5)
-        # self.LCK = self.LCK + self.prob_aum(0.5)
-        self.STR = self.STR + self.aumentar_stat("S")
-        self.AGL = self.AGL + self.aumentar_stat("A")
-        self.INT = self.INT + self.aumentar_stat("I")
-        self.STA = self.STA + self.aumentar_stat("V")
-        self.LCK = self.LCK + self.aumentar_stat("L")
+        self.STR_base = self.STR_base + self.aumentar_stat("S")
+        self.AGL_base = self.AGL_base + self.aumentar_stat("A")
+        self.INT_base = self.INT_base + self.aumentar_stat("I")
+        self.STA_base = self.STA_base + self.aumentar_stat("V")
+        self.LCK_base = self.LCK_base + self.aumentar_stat("L")
+        self.STR = self.STR_base
+        self.AGL = self.AGL_base
+        self.INT = self.INT_base
+        self.STA = self.STA_base
+        self.LCK = self.LCK_base
         # self.mostrar(show_title)  #
 
     # def prob_aum(self, prob):
@@ -207,13 +225,17 @@ class PJ:
         if self.HP == 0:
             self.alive = False
 
-    # def arma_inicial(tipo):
-    #     if tipo == 'Fi' or tipo == 'Th' or tipo == 'BM' or tipo == 'RM':
-    #         return Arma('Knife')
-    #     elif tipo == 'WM' or tipo == 'BB':
-    #         return Arma('Staff')
+    def arma_inicial(self, tipo):
+        if tipo == 'Warrior' or tipo == 'Thief' or tipo == 'B. Mage' or tipo == 'R. Mage'\
+                or tipo == 'Fi' or tipo == 'Th' or tipo == 'BM' or tipo == 'RM'\
+                or tipo == 'Knight' or tipo == 'Ninja' or tipo == 'B. Wizard' or tipo == 'R. Wizard'\
+                or tipo == 'Kn' or tipo == 'Ni' or tipo == 'BW' or tipo == 'RW':
+            return Arma('Knife')
+        elif tipo == 'W. Mage' or tipo == 'Monk' or tipo == 'W. Wizard' or tipo == 'Master'\
+                or tipo == 'WM' or tipo == 'BB' or tipo == 'WW' or tipo == 'Ma':
+            return Arma('Staff')
 
-    def motrar_datos(self):
+    def mostrar_datos(self):
         print(f"-" * 10, f"{self.name}", f"-" * 10)
         print(f"{self.clase} - LV. {self.LV}")
         print(f"HP: {self.HP} / {self.HP_MAX}")
@@ -229,7 +251,7 @@ class PJ:
         print(f"espera: {self.espera}")
         print(f"alive: {self.alive}")
 
-    def motrar_datos_2(self):
+    def mostrar_datos_2(self):
         print(f"-" * 10, f"{self.name}", f"-" * 10)
         print(f"{self.clase} - LV. {self.LV}")
         print(f"HP: {self.HP} / {self.HP_MAX}")
@@ -241,9 +263,21 @@ class PJ:
         print(f"espera: {self.espera}")
         print(f"alive: {self.alive}")
 
-    def motrar_datos_3(self):
+    def mostrar_datos_3(self):
         print(f"-" * 10, f"{self.name}", f"-" * 10)
         print(f"{self.clase} - LV. {self.LV}")
         print(f"HP: {self.HP} / {self.HP_MAX}")
         print(f"MP: {self.MP} / {self.MP_MAX}")
         print(f"alive: {self.alive}")
+
+    def mostrar_datos_4(self):
+        print(f"-" * 10, f"{self.name}", f"-" * 10)
+        print(f"-" * 8, f"{self.clase} - {self.LV}", f"-" * 8)
+        print(f"STR_b\tAGL_b\tINT_b\tSTA_b\tLCK_b")
+        print(f"{self.STR_base}\t\t{self.AGL_base}\t\t{self.INT_base}\t\t{self.STA_base}\t\t{self.LCK_base}")
+        print(f"STR\t\tAGL\t\tINT\t\tSTA\t\tLCK")
+        print(f"{self.STR}\t\t{self.AGL}\t\t{self.INT}\t\t{self.STA}\t\t{self.LCK}")
+        print(f"ATK: {self.ATK}\tATK_weapon ({self.arma.name}): {self.arma.atk}")
+        # print(f"XP: {self.XP}")
+        # print(f"XP_limit0: {self.XP_limit0}")
+        # print(f"XP_limit1: {self.XP_limit1}")

@@ -3,6 +3,7 @@ from src.utils.constantes import ENEMIGOS
 class Enemy:
     def __init__(self, name):
         self.name = name
+        self.background = ENEMIGOS[name]['background']
         self.HP = ENEMIGOS[name]['HP']
         self.ATK = ENEMIGOS[name]['ATK']
         self.DEF = ENEMIGOS[name]['DEF']
@@ -30,7 +31,7 @@ class Enemy:
         if self.HP == 0:
             self.alive = False
 
-    def motrar_datos(self):
+    def mostrar_datos(self):
         print(f"-" * 10, f"Enemy: {self.name}", f"-" * 10)
         print("HP:", self.HP, '\t', type(self.HP))
         print("ATK:", self.ATK, '\t', type(self.ATK))
@@ -51,7 +52,7 @@ class Enemy:
         print("Family:", self.family, '\t', type(self.family))
         print("AGL:", self.AGL, '\t', type(self.AGL))
 
-    def motrar_datos_2(self):
+    def mostrar_datos_2(self):
         print(f"-" * 10, f"Enemy: {self.name}", f"-" * 10)
         print(f"HP: {self.HP} / {ENEMIGOS[self.name]['HP']}")
         print(f"ATK\tACC\tDEF\tEVA\tCRI\tMD")
@@ -59,7 +60,7 @@ class Enemy:
         print(f"AGL: {self.AGL}")
         print(f"alive: {self.alive}")
 
-    def motrar_datos_3(self):
+    def mostrar_datos_3(self):
         print(f"-" * 10, f"Enemy: {self.name}", f"-" * 10)
         print(f"HP: {self.HP} / {ENEMIGOS[self.name]['HP']}")
         print(f"alive: {self.alive}")
@@ -70,4 +71,4 @@ class Enemy:
                 return "-"
 
 # chaos = Enemy("Chaos")
-# chaos.motrar_datos()
+# chaos.mostrar_datos()

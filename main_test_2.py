@@ -101,7 +101,7 @@ while(True):
         pasa_turno = False
         print(f"*" * 10)
         for p in pers:
-            p.motrar_datos()
+            p.mostrar_datos()
         print(f"*" * 10)
     elif opc == "5":
         pasa_turno = False

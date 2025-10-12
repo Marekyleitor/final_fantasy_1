@@ -14,7 +14,7 @@ class ArrCharacter:
 
     def mostrar_datos_todo(self):
         for char in self.arr:
-            char.motrar_datos()
+            char.mostrar_datos()
 
     # def mostrarTodo2(self):
     #     for char in self.arr:

@@ -54,6 +54,6 @@ class Personaje:
             self.ajustar_vida()
             print(f"Daño de ataque físico recibido: {ataque}.")
 
-    def motrar_datos(self):
+    def mostrar_datos(self):
         print(f"{self.con} - LV. {self.LV}")
         print(f"HP: {self.HP} / {self.HP_MAX}")

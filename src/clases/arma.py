@@ -4,7 +4,7 @@ class Arma:
     def __init__(self, name):
         self.name = name
         if name != 'Hands':
-            self.price = ARMAS[name]['Price']
+            self.price = ARMAS[name]['price']
             self.value = 0
             if isinstance(self.price, int):
                 self.value = self.price // 2
@@ -20,9 +20,9 @@ class Arma:
             self.str_vs = ARMAS[name]['str_vs']
             self.elemental = ARMAS[name]['elemental']
             self.cast = ARMAS[name]['cast']
-            self.inflicts = ARMAS['inflicts'][name]
+            self.inflicts = ARMAS[name]['inflicts']
             self.stats = self.str_to_dict(ARMAS[name]['stats'])
-            self.allStats = self.getAllStats(self.stats)
+            self.allStats = self.getAllStats()
             self.seba = ARMAS[name]['seba']
             self.seaa = ARMAS[name]['seaa']
         else:
@@ -30,7 +30,7 @@ class Arma:
             self.buy,self.find,self.win,self.special,self.tipo,self.str_vs = '-','-','-',False,'-','-'
             self.elemento,self.cast,self.inflige,self.stats,self.seba,self.seaa = '-','-','-','-','-','-'
 
-    def motrar_datos(self):
+    def mostrar_datos(self):
         print("Precio:", self.price, '\t', type(self.price))
         print("Atk:", self.atk, '\t', type(self.atk))
         print("Acc:", self.acc, '\t', type(self.acc))
@@ -54,6 +54,8 @@ class Arma:
             Traduce una lista de strings usando un diccionario de traducciones.
             Modifica la lista original.
             """
+        if lst[0] == 'All classes':
+            return ['Warrior','Knight','Thief','Ninja','W. Mage','W. Wizard','B. Mage','B. Wizard','Monk','Master','R. Mage','R. Wizard']
         # Diccionario de clase exacta del PJ (ejemplo)
         traducciones = {
             'Fi': 'Warrior',
@@ -87,22 +89,22 @@ class Arma:
                 # print(type(miDic[val[0]]))
             return miDic
 
-    def getAllStats(self, dic) -> dict:  # dic es dict, excepto si es '-'
+    def getAllStats(self) -> dict:  # self.stats es dict, excepto si es '-'
         aux = {'STR': 0, 'AGL': 0, 'INT': 0, 'STA': 0, 'LCK': 0, 'EVA': 0}
-        if dic == '-':
+        if self.stats == '-':
             return aux
         else:
-            if 'STR' in dic:
-                aux['STR'] = dic['STR']
-            if 'AGL' in dic:
-                aux['AGL'] = dic['AGL']
-            if 'INT' in dic:
-                aux['INT'] = dic['INT']
-            if 'STA' in dic:
-                aux['STA'] = dic['STA']
-            if 'LCK' in dic:
-                aux['LCK'] = dic['LCK']
-            if 'EVA' in dic:
-                aux['EVA'] = dic['EVA']
+            if 'STR' in self.stats:
+                aux['STR'] = self.stats['STR']
+            if 'AGL' in self.stats:
+                aux['AGL'] = self.stats['AGL']
+            if 'INT' in self.stats:
+                aux['INT'] = self.stats['INT']
+            if 'STA' in self.stats:
+                aux['STA'] = self.stats['STA']
+            if 'LCK' in self.stats:
+                aux['LCK'] = self.stats['LCK']
+            if 'EVA' in self.stats:
+                aux['EVA'] = self.stats['EVA']
             # print('getAllStats: aux:', aux)
             return aux

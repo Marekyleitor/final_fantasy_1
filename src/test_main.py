@@ -130,5 +130,7 @@ def ataque_att_tar(attacker, target):
 # print(f"n_acie: {n_acie}/{n} => {n_acie/n*100}%")
 # print(f"n_crit: {n_crit}/{n} => {n_crit/n*100}%")
 
-pj_1.Lv1UP()
-pj_1.motrar_datos()
+pj_1.mostrar_datos_4()
+for i in range(10):
+    pj_1.Lv1UP()
+pj_1.mostrar_datos_4()

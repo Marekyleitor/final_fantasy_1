@@ -190,7 +190,7 @@ while(True):
 
         # print(f"*" * 10)
         # for p in arrChar.arr:
-        #     p.motrar_datos()
+        #     p.mostrar_datos()
         # print(f"*" * 10)
 
         while (True):
@@ -200,13 +200,13 @@ while(True):
                     print(f"*" * 10)
                     if num == 1:
                         for p in arrChar.arr:
-                            p.motrar_datos()
+                            p.mostrar_datos()
                     elif num == 2:
                         for p in arrChar.arr:
-                            p.motrar_datos_2()
+                            p.mostrar_datos_2()
                     elif num == 3:
                         for p in arrChar.arr:
-                            p.motrar_datos_3()
+                            p.mostrar_datos_3()
                     print(f"*" * 10)
                     break
                 else:
