@@ -25,7 +25,13 @@ class Enemy:
         self.alive = True
         self.char_type = "enemy"
 
+    def up_or_down_HP(self, quant):
+        self.HP = max(0, min(self.HP+quant, ENEMIGOS[self.name]['HP']))
+        if self.HP == 0:
+            self.alive = False
+
     def motrar_datos(self):
+        print(f"-" * 10, f"Enemy: {self.name}", f"-" * 10)
         print("HP:", self.HP, '\t', type(self.HP))
         print("ATK:", self.ATK, '\t', type(self.ATK))
         print("DEF:", self.DEF, '\t', type(self.DEF))
@@ -44,6 +50,19 @@ class Enemy:
         print("Sp_atk:", self.sp_atk, '\t', type(self.sp_atk))
         print("Family:", self.family, '\t', type(self.family))
         print("AGL:", self.AGL, '\t', type(self.AGL))
+
+    def motrar_datos_2(self):
+        print(f"-" * 10, f"Enemy: {self.name}", f"-" * 10)
+        print(f"HP: {self.HP} / {ENEMIGOS[self.name]['HP']}")
+        print(f"ATK\tACC\tDEF\tEVA\tCRI\tMD")
+        print(f"{self.ATK}\t{self.ACC}\t{self.DEF}\t{self.EVA}\t{self.CRIT}\t{self.MD}")
+        print(f"AGL: {self.AGL}")
+        print(f"alive: {self.alive}")
+
+    def motrar_datos_3(self):
+        print(f"-" * 10, f"Enemy: {self.name}", f"-" * 10)
+        print(f"HP: {self.HP} / {ENEMIGOS[self.name]['HP']}")
+        print(f"alive: {self.alive}")
 
     def remove_None(self, lst):
         for text in lst:

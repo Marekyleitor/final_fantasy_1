@@ -78,14 +78,14 @@ class PJ:
             self.ATK = self.STR // 2
 
     def asignar_DEF(self):
-        if self.clase not in ['Monk', 'Master']:
+        if self.clase in ['Monk', 'Master']:
             self.DEF = self.STA // 2
         else:
             ### Sum of the character's equipment's DEF
             self.DEF = 0
 
     def asignar_CRIT(self):
-        if self.clase not in ['Monk', 'Master']:
+        if self.clase in ['Monk', 'Master']:
             ### Unarmed Monk or Master ###
             self.CRIT = self.LV * 2
         else:
@@ -110,6 +110,7 @@ class PJ:
     def Lv1UP(self, show_title = False):
         self.actualizar_LV_y_XP()
         self.actualizar_stats(show_title)
+        self.asignar_estadisticas_secundarias()
 
     def actualizar_LV_y_XP(self):
         self.LV += 1
@@ -201,6 +202,11 @@ class PJ:
         # else:
         # return True
 
+    def up_or_down_HP(self, quant):
+        self.HP = max(0, min(self.HP+quant, self.HP_MAX))
+        if self.HP == 0:
+            self.alive = False
+
     # def arma_inicial(tipo):
     #     if tipo == 'Fi' or tipo == 'Th' or tipo == 'BM' or tipo == 'RM':
     #         return Arma('Knife')
@@ -208,6 +214,7 @@ class PJ:
     #         return Arma('Staff')
 
     def motrar_datos(self):
+        print(f"-" * 10, f"{self.name}", f"-" * 10)
         print(f"{self.clase} - LV. {self.LV}")
         print(f"HP: {self.HP} / {self.HP_MAX}")
         print(f"MP: {self.MP} / {self.MP_MAX}")
@@ -222,17 +229,21 @@ class PJ:
         print(f"espera: {self.espera}")
         print(f"alive: {self.alive}")
 
-# guerrero = PJ("Warrior")
-# print(f"\nEstadísticas del guerrero nivel {guerrero.LV}:")
-# guerrero.motrar_datos()
-# print(f"guerrero.HP: {guerrero.HP}")
-# print(f"guerrero.HP_MAX: {guerrero.HP_MAX}")
-# print(XP_TABLE[35])
-# print(XP_TABLE.get(35))
-# print(len(XP_TABLE))
-# print(guerrero.XP_limit0)
-# print(guerrero.XP_limit1)
-# # print(CRECIMIENTO_GARANTIZADO)
-# print(CRECIMIENTO_GARANTIZADO[9])
-# print(CRECIMIENTO_GARANTIZADO[9]["Thief"])
+    def motrar_datos_2(self):
+        print(f"-" * 10, f"{self.name}", f"-" * 10)
+        print(f"{self.clase} - LV. {self.LV}")
+        print(f"HP: {self.HP} / {self.HP_MAX}")
+        print(f"MP: {self.MP} / {self.MP_MAX}")
+        print(f"STR\tAGL\tINT\tSTA\tLCK")
+        print(f"{self.STR}\t{self.AGL}\t{self.INT}\t{self.STA}\t{self.LCK}")
+        print(f"ATK\tACC\tDEF\tEVA\tCRI\tMD")
+        print(f"{self.ATK}\t{self.ACC}\t{self.DEF}\t{self.EVA}\t{self.CRIT}\t{self.MD}")
+        print(f"espera: {self.espera}")
+        print(f"alive: {self.alive}")
 
+    def motrar_datos_3(self):
+        print(f"-" * 10, f"{self.name}", f"-" * 10)
+        print(f"{self.clase} - LV. {self.LV}")
+        print(f"HP: {self.HP} / {self.HP_MAX}")
+        print(f"MP: {self.MP} / {self.MP_MAX}")
+        print(f"alive: {self.alive}")

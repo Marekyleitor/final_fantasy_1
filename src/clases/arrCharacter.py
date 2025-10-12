@@ -25,7 +25,9 @@ class ArrCharacter:
         for per in self.arr:
             if per.alive:
                 aux.append(per)
-        return aux
+        arr_char = ArrCharacter()
+        arr_char.addArrChar(aux)
+        return arr_char
 
     def subirXP_gru(self, cant):
         auxArrAlive = self.arrAlive()
@@ -38,14 +40,18 @@ class ArrCharacter:
         for char in self.arr:
             if char.char_type == "pj":
                 aux.append(char)
-        return aux
+        arr_char = ArrCharacter()
+        arr_char.addArrChar(aux)
+        return arr_char
 
     def arrEne(self):
         aux = []
         for char in self.arr:
             if char.char_type == "enemy":
                 aux.append(char)
-        return aux
+        arr_char = ArrCharacter()
+        arr_char.addArrChar(aux)
+        return arr_char
 
     def get_n(self):
         return self.n
