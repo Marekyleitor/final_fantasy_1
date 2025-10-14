@@ -10,7 +10,7 @@ max_wait = 400
 pj_1 = PJ('Warrior', 'Escanor')
 pj_2 = PJ('Warrior', 'Arturo')
 pj_3 = PJ('Thief', 'Robin Hood')
-pj_4 = PJ('Monk', 'Monje')
+pj_4 = PJ('Monk', 'Eremita')
 
 ene_1 = Enemy('Crazy Horse')
 ene_2 = Enemy('Black Widow')
@@ -130,7 +130,15 @@ def ataque_att_tar(attacker, target):
 # print(f"n_acie: {n_acie}/{n} => {n_acie/n*100}%")
 # print(f"n_crit: {n_crit}/{n} => {n_crit/n*100}%")
 
+pj_1.cambiar_arma("Ultima weapon")
+
 pj_1.mostrar_datos_4()
-for i in range(10):
+for i in range(98):
     pj_1.Lv1UP()
+    pj_1.HP = pj_1.HP_MAX
 pj_1.mostrar_datos_4()
+
+# pj_4.mostrar_datos_4()
+# for i in range(98):
+#     pj_4.Lv1UP()
+# pj_4.mostrar_datos_4()

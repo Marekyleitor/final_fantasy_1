@@ -62,7 +62,7 @@ class PJ:
 
     def asignar_estadisticas_secundarias(self):
         self.asignar_ATK()
-        self.ACC = self.obtener_estadistica('Ini_ACC') + self.AGL + self.LV*self.obtener_estadistica('Mul_ACC')
+        self.ACC = self.obtener_estadistica('Ini_ACC') + self.AGL + self.LV*self.obtener_estadistica('Mul_ACC')# + self.arma.acc
         self.asignar_DEF()
         self.EVA = self.obtener_estadistica('Ini_EVA') + 2 * self.AGL
         self.asignar_CRIT()
@@ -71,7 +71,7 @@ class PJ:
     def actualizar_stats_secundarias_despues_de_leveleo(self):
         self.asignar_estadisticas_secundarias()
 
-    def actualizar_stats_por_arma_y_secundarias_despues_de_leveleo(self):
+    def actualizar_stats_por_arma_y_secundarias(self):
         arma_stats = self.arma.getAllStats()
         self.STR += arma_stats['STR']
         self.AGL += arma_stats['AGL']
@@ -83,6 +83,25 @@ class PJ:
         self.EVA += arma_stats['EVA']
         pass
 
+    def get_atk_del_arma(self):
+        if isinstance(self.arma.atk, str):
+            if self.arma.atk == 'HP/10':
+                return self.HP // 10
+            elif self.arma.atk.isdigit():
+                return int(self.arma.atk)
+        return 0
+
+    def get_arma_acc(self):
+        if isinstance(self.arma.acc, str):
+            if self.arma.acc == 'HP/10':
+                return self.HP // 10
+            elif self.arma.acc.isdigit():
+                return int(self.arma.acc)
+        return 0
+
+    def get_arma_crit(self):
+        return int(self.arma.crit)
+
     def asignar_ATK(self):
         if self.clase in ['Monk', 'Master'] and not self.armado():
             if self.clase == 'Monk':
@@ -91,9 +110,8 @@ class PJ:
                 self.ATK = self.STR // 2 + self.STA
         else:
             ### Standard ###
-            # Esto debería ser una función, para validar cuando no sea número (único caso 'HP/10')
-            self.ATK = int(self.arma.atk) + self.STR//2
-            # self.ATK = self.STR // 2
+            self.ATK = self.get_atk_del_arma() + self.STR//2
+            # print(f"LV: {self.LV}\tHP: {self.HP}\tarma_atk: {self.get_atk_del_arma()}\tself.STR//2: {self.STR//2}")
 
     def asignar_DEF(self):
         if self.clase in ['Monk', 'Master']:
@@ -109,7 +127,7 @@ class PJ:
         else:
             ### Weapon CRIT ###
             # self.CRIT = self.weapon.CRIT
-            self.CRIT = 0
+            self.CRIT = 0 # + self.arma.acc
 
     def obtener_estadistica(self, stat):
         """Calcula el valor final de una estadística basada en el nivel."""
@@ -127,7 +145,8 @@ class PJ:
     def Lv1UP(self, show_title = False):
         self.actualizar_LV_y_XP()
         self.actualizar_stats_principales_despues_de_leveleo(show_title)
-        self.actualizar_stats_por_arma_y_secundarias_despues_de_leveleo() # incluyen stats principales que no son base
+        # self.actualizar_stats_por_arma_y_secundarias_despues_de_leveleo() # incluyen stats principales que no son base
+        self.actualizar_stats_por_arma_y_secundarias() # incluyen stats principales que no son base
         # self.actualizar_stats_secundarias_despues_de_leveleo()
 
     def actualizar_LV_y_XP(self):
@@ -215,10 +234,10 @@ class PJ:
             self.HP = self.HP_MAX
 
     def armado(self):
-        # if self.weapon.nombre == 'Hands'
-        return False
-        # else:
-        # return True
+        if self.arma.name == 'Hands':
+            return False
+        else:
+            return True
 
     def up_or_down_HP(self, quant):
         self.HP = max(0, min(self.HP+quant, self.HP_MAX))
@@ -231,9 +250,24 @@ class PJ:
                 or tipo == 'Knight' or tipo == 'Ninja' or tipo == 'B. Wizard' or tipo == 'R. Wizard'\
                 or tipo == 'Kn' or tipo == 'Ni' or tipo == 'BW' or tipo == 'RW':
             return Arma('Knife')
-        elif tipo == 'W. Mage' or tipo == 'Monk' or tipo == 'W. Wizard' or tipo == 'Master'\
-                or tipo == 'WM' or tipo == 'BB' or tipo == 'WW' or tipo == 'Ma':
+        # elif tipo == 'W. Mage' or tipo == 'Monk' or tipo == 'W. Wizard' or tipo == 'Master'\
+        #         or tipo == 'WM' or tipo == 'BB' or tipo == 'WW' or tipo == 'Ma':
+        #     return Arma('Staff')
+        elif tipo == 'W. Mage' or tipo == 'W. Wizard' or tipo == 'WM' or tipo == 'WW':
             return Arma('Staff')
+        else: # 'Monk', 'Master', 'BB' y 'Ma'
+            return Arma('Hands')
+
+    def cambiar_arma(self, nueva_arma_name):
+        self.arma = Arma(nueva_arma_name)
+        self.actualizar_stats_por_arma_y_secundarias()
+
+
+
+
+
+
+
 
     def mostrar_datos(self):
         print(f"-" * 10, f"{self.name}", f"-" * 10)
@@ -271,13 +305,17 @@ class PJ:
         print(f"alive: {self.alive}")
 
     def mostrar_datos_4(self):
+        print(f"\t\t===== mostrar_datos_4 =====")
         print(f"-" * 10, f"{self.name}", f"-" * 10)
         print(f"-" * 8, f"{self.clase} - {self.LV}", f"-" * 8)
+        print(f"HP: {self.HP} / {self.HP_MAX}")
         print(f"STR_b\tAGL_b\tINT_b\tSTA_b\tLCK_b")
         print(f"{self.STR_base}\t\t{self.AGL_base}\t\t{self.INT_base}\t\t{self.STA_base}\t\t{self.LCK_base}")
         print(f"STR\t\tAGL\t\tINT\t\tSTA\t\tLCK")
         print(f"{self.STR}\t\t{self.AGL}\t\t{self.INT}\t\t{self.STA}\t\t{self.LCK}")
-        print(f"ATK: {self.ATK}\tATK_weapon ({self.arma.name}): {self.arma.atk}")
+        self.asignar_ATK()
+        print(f"ATK: {self.ATK}\t\tATK_weapon ({self.arma.name}): {self.get_atk_del_arma()}")
         # print(f"XP: {self.XP}")
         # print(f"XP_limit0: {self.XP_limit0}")
         # print(f"XP_limit1: {self.XP_limit1}")
+        print(f"\t\t===========================")

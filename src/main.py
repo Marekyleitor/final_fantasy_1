@@ -119,15 +119,20 @@ def one_hit_att_tar(attacker, target):
     # y aumenta en otros 40 si el defensor es débil al ataque
     acierta = my_rnd_0_200 <= min(acc_att+prob_impact, 255) - eva_tar
     critico = my_rnd_0_200 <= crit_att
+
+    n_tabs = ""
+    if attacker.char_type == "enemy":
+        n_tabs = "\t" * 16
+
     if acierta:
         if critico:
-            print(f"Crit Damage: 2 * {daño_att} - {defensa_tar} = {2 * daño_att - defensa_tar}")
+            print(n_tabs, f"Crit Damage: 2 * {daño_att} - {defensa_tar} = {2 * daño_att - defensa_tar}")
             return max(2 * daño_att - defensa_tar, 0)
         else:
-            print(f"Norm Damage: {daño_att} - {defensa_tar} = {daño_att - defensa_tar}")
+            print(n_tabs, f"Norm Damage: {daño_att} - {defensa_tar} = {daño_att - defensa_tar}")
             return max(daño_att - defensa_tar, 0)
     else:
-        print("Miss Hit")
+        print(n_tabs, "Miss Hit")
         return 0
 
 def ataque_att_tar(attacker, target):
@@ -140,7 +145,12 @@ def ataque_att_tar(attacker, target):
     for i in range(n_golpes):
         daño_total += one_hit_att_tar(attacker, target)
     target.up_or_down_HP(-daño_total)
-    print(f"El HP de {target.name} ha sido afectado en {-daño_total}. Ahora es {target.HP}")
+
+    n_tabs = ""
+    if attacker.char_type == "enemy":
+        n_tabs = "\t" * 16
+
+    print(n_tabs, f"El HP de {target.name} ha sido afectado en {-daño_total}. Ahora es {target.HP}")
     if not target.alive:
         print(f" "*50, f"{target.name} HA MUERTO.")
 
@@ -162,7 +172,12 @@ while(True):
     if pasa_turno:
         char_en_turno = proseguir_al_siguiente_turno(arrChar)
         print(f"")
-        print(f"*" * 10, f"Turno de {char_en_turno.name}", f"*" * 10)
+
+        n_tabs = ""
+        if char_en_turno.char_type == "enemy":
+            n_tabs = "\t" * 16
+
+        print(n_tabs, f"*" * 10, f"Turno de {char_en_turno.name}", f"*" * 10)
         if "enemy" == char_en_turno.char_type:
             # Ataque aleatorio de un enemigo a un jugador
             # print(f"Enemigo {char_en_turno.char_type} ha atacado.")
@@ -175,7 +190,7 @@ while(True):
         while(True):
             try:
                 index = int(input(f"Ingresa un enemigo entre 1 y {enemies_alive.get_n()}: "))
-                if 0 <= index-1 <= enemies_alive.get_n():
+                if 0 <= index-1 < enemies_alive.get_n():
                     ataque_att_tar(char_en_turno, enemies_alive.get_char(index-1))
                     pasa_turno = True
                     break
@@ -219,4 +234,4 @@ while(True):
         siguientes_x_turnos(arrChar, 8)
     else:
         pasa_turno = False
-        print("Opcion invalida")
+        print("Opcion inválida")

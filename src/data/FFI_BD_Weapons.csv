@@ -64,5 +64,5 @@ Gladius;-;?;23;30;26;Fi,Kn,Th,Ni,RM,RW,BM,BW;-;Whisperwind Cove;-;True;knife;-;-
 Assassin dagger;-;?;30;40;35;Fi,Kn,Th,Ni,RM,RW,BW;-;Whisperwind Cove;-;True;knife;-;-;Kill;-;{AGL:3, EVA:10, INT:2};-;-
 War Hammer;-;38000;30;0;15;Kn,Ni,WW;Whisperwind Cove;Hellfire Chasm;Sekhret;False;hammer;-;-;-;-;-;-;-
 Lust Dagger;-;?;50;70;20;Ni,BW;-;-;Chronodia (Lich);True;knife;-;-;-;-;{AGL:20, EVA:20};-;-
-Barbarian's Sword;-;?;125;20;?;Kn,Ni,RM,RW;-;-;Chronodia (Four Fiends and Chaos with many weapons);True;sword;-;-;-;-;{STR:18, STA:13};-;-
-Golden Staff;-;?;30;30;?;WW;-;-;Chronodia (Marilith);True;staff;-;-;-;-;{INT:20};-;-
+Barbarian's Sword;-;?;125;20;30;Kn,Ni,RM,RW;-;-;Chronodia (Four Fiends and Chaos with many weapons);True;sword;-;-;-;-;{STR:18, STA:13};-;-
+Golden Staff;-;?;30;30;30;WW;-;-;Chronodia (Marilith);True;staff;-;-;-;-;{INT:20};-;-
