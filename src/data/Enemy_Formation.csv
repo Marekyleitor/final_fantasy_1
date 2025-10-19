@@ -1,0 +1,370 @@
+Number;Enemies;Maximum;Can flee?;Ambush%;Musical theme;Location
+0;Goblin x3-5;9 small;True;4;Battle;Chaos Shrine region, Southern Cornelia region, Cornelia-Cornelia Bridge-Earthgift Shrine region
+1;Skeleton x2-4;9 small;True;4;Battle;Chaos Shrine, Chaos Shrine region
+2;Goblin Guard x1-3, Wolf x0-2, Warg Wolf x0-2, Goblin x0-2;9 small;True;4;Battle;Chaos Shrine, Pravoka region
+3;Wolf x1-2;9 small;True;4;Battle;Cornelia-Cornelia Bridge-Earthgift Shrine region
+4;Zombie x2-4;9 small;True;4;Battle;Chaos Shrine
+5;Black Widow x1-2;9 small;True;55;Battle;Chaos Shrine, Chaos Shrine region
+6;Crazy Horse x1;4 large;True;4;Battle;Chaos Shrine region, Cornelia-Cornelia Bridge-Earthgift Shrine region
+7;Gigas Worm x1-2;9 small;True;4;Battle;Chaos Shrine, Chaos Shrine region, Pravoka region
+8;Ghoul x1;9 small;True;4;Battle;Chaos Shrine
+9;Lizard x1;4 large;True;4;Battle;Pravoka region
+10;Shadow x2-4;9 small;True;90;Battle;Marsh Cave B1
+11;Warg Wolf x2-5, Wolf x0-3;9 small;True;4;Battle;Western Cavern of Ice region, Cavern of Ice-Marsh Cave-Mount Gulg-Whisperwind Cove region, Elfheim-Lifespring Grotto-Melmond-Mount Duergar-Western Keep region, Matoya's Cave region
+12;Ogre x1-2;4 large;True;4;Battle;Western Cavern of Ice region, Cavern of Ice-Marsh Cave-Mount Gulg-Whisperwind Cove region, Elfheim-Lifespring Grotto-Melmond-Mount Duergar-Western Keep region, Matoya's Cave region, Pravoka region
+13;Cobra x1-2;9 small;True;4;Battle;Western Cavern of Ice region, Elfheim-Lifespring Grotto-Melmond-Mount Duergar-Western Keep region, Matoya's Cave region
+14;Goblin Guard x0-5, Werewolf x1-3, Hill Gigas x0-2, Lizard x0-2;2 large 6 small;True;33;Battle;Cavern of Earth B4
+15;Ghast x1-4;9 small;True;4;Battle;Cavern of Ice-Marsh Cave-Mount Gulg-Whisperwind Cove region
+16;Gargoyle x2-3;9 small;True;4;Battle;Chaos Shrine, Marsh Cave B2, Marsh Cave B3
+17;Werewolf x3-6;9 small;True;33;Battle;Western Cavern of Ice region, Marsh Cave B1, Marsh Cave B3
+18;Tarantula x1-4;9 small;True;55;Battle;Cavern of Ice-Marsh Cave-Mount Gulg-Whisperwind Cove region, Elfheim-Lifespring Grotto-Melmond-Mount Duergar-Western Keep region
+19;Ogre Chief x1, Ogre x1-2;4 large;True;4;Battle;Cavern of Earth-Giant's Cave-Melmond-Sage's Cave region, Cavern of Ice-Marsh Cave-Mount Gulg-Whisperwind Cove region, Elfheim-Lifespring Grotto-Melmond-Mount Duergar-Western Keep region, Giant's Cave, Matoya's Cave region
+20;Tarantula x1-2;9 small;True;4;Battle;Western Cavern of Ice region
+21;Anaconda x2-6;9 small;True;4;Battle;Cavern of Earth B1, Marsh Cave B3
+22;Cockatrice x2-6;9 small;True;4;Battle;Cavern of Earth B3, Cavern of Earth B4
+23;Ankheg x1-4;4 large;True;4;Battle;Crescent Lake-Ryukahn Desert region
+24;Wraith x2-6;9 small;True;4;Battle;Cavern of Earth B3, Cavern of Earth B4, Cavern of Earth B5, Western Keep
+25;Lesser Tiger x1-3;4 large;True;27;Battle;Cavern of Earth-Giant's Cave-Melmond-Sage's Cave region, Giant's Cave
+26;Scorpion x2-4;9 small;True;27;Battle;Cavern of Ice-Marsh Cave-Mount Gulg-Whisperwind Cove region, Marsh Cave B2, Marsh Cave B3
+27;Troll x1-2, Minotaur x0-1;4 large;True;27;Battle;Cavern of Earth B2, Cavern of Earth B5
+28;Piscodemon x2-4;9 small;False;33;Battle;Cavern of Earth B3, Cavern of Earth B4, Marsh Cave B3
+29;Mummy x2-5;9 small;True;4;Battle;Cavern of Earth B1, Cavern of Earth B3, Cavern of Earth B5, Western Keep
+30;Hill Gigas x1-2;4 large;True;4;Battle;Cavern of Earth B2, Cavern of Earth B5, Crescent Lake-Ryukahn Desert region
+31;Hill Gigas x1-2, Lizard;4 large;True;4;Battle;Cavern of Earth B1, Mount Gulg B2, Mount Gulg B3
+32;Hydra x1-2;4 large;True;27;Battle;Pre-WSC southern rivers
+33;Earth Elemental x1;4 large;False;4;Battle;Cavern of Earth B1, Cavern of Earth B2, Cavern of Earth B3, Cavern of Earth B5
+34;Hellhound x0-1, Ogre Mage x1-2;4 large;False;55;Battle;Mount Gulg B3, Mount Gulg B5
+35;Pyrolisk x2-5;9 small;True;4;Battle;Mount Gulg B2, Mount Gulg B3
+36;Fire Hydra x1;4 large;True;4;Battle;Mount Gulg B2, Mount Gulg B3, Mount Gulg B4
+37;Ochu x1-3;4 large;True;33;Battle;Southwestern Cardian Islands region
+38;Fire Gigas x1-2;4 large;True;4;Battle;Mount Gulg B4, Mount Gulg B5
+39;Fire Elemental x1-2;4 large;False;4;Battle;Mount Gulg B2, Mount Gulg B3, Mount Gulg B5
+40;Lava Worm x1;4 large;True;4;Battle;Mount Gulg B4, Mount Gulg B5
+41;Fire Lizard x1;4 large;True;4;Battle;Mount Gulg B4, Mount Gulg B5
+42;Red Dragon x1;4 large;True;4;Battle;Mount Gulg B4, Mount Gulg B5
+43;Bloodbones x1, Skeleton x2-4, Crawler x1;9 small;True;4;Battle;Marsh Cave B2, Marsh Cave B3
+44;Specter x1-5, Wraith x0-3, Wight x0-3, Ghast x0-3;9 small;True;4;Battle;Cavern of Ice B1, Cavern of Ice B2, Cavern of Ice B3
+45;Winter Wolf x3-7;9 small;True;4;Battle;Cavern of Ice B3
+46;Ice Gigas x1, Winter Wolf x0-2;2 large 6 small;False;4;Battle;Cavern of Ice B2, Cavern of Ice B3, Gaia-Onrac-Waterfall Cavern region
+47;Dark Wizard x1-4;9 small;True;75;Battle;Cavern of Ice B2, Cavern of Ice B3
+48;White Dragon x1-2;4 large;True;4;Battle;Cavern of Ice B1, Cavern of Ice B2, Cavern of Ice B3
+49;Remorazz x1;4 large;True;4;Battle;Cavern of Ice B3, Gaia-Onrac-Waterfall Cavern region
+50;Minotaur Zombie x1-3;4 large;False;4;Battle;Citadel of Trials 2F
+51;Rakshasa x3-5;9 small;True;4;Battle;Citadel of Trials 2F, Citadel of Trials 3F
+52;Medusa x2-5;9 small;True;27;Battle;Citadel of Trials 2F, Citadel of Trials 3F
+53;Mindflayer x2-5;9 small;True;4;Battle;Citadel of Trials 2F, Citadel of Trials 3F
+54;Manticore x1-3;4 large;True;4;Battle;Gaia-Onrac-Waterfall Cavern region, Southwestern Cardian Islands region
+55;Wyrm x1-3;4 large;True;4;Battle;Southwestern Cardian Islands region
+56;Baretta x1-3;4 large;True;4;Battle;Southwestern Cardian Islands region
+57;Weretiger x2-4;9 small;True;27;Battle;Cardian Islands-Citadel of Trials region, Northern Citadel of Trials region
+58;Basilisk x1-2;4 large;True;27;Battle;Cardian Islands-Citadel of Trials region, Northern Citadel of Trials region
+59;Chimera x1-3;4 large;True;4;Battle;Mirage Tower 1F, Mirage Tower 2F
+60;Sand Worm x1;4 large;True;4;Battle;Northern Citadel of Trials region
+61;Allosaurus x1;4 large;True;4;Battle;Lufenia region
+62;Tyrannosaur x1;4 large;True;4;Battle;Yahnikurm Desert region
+63;Clay Golem x1-3;4 large;True;4;Battle;Citadel of Trials 2F, Waterfall Cavern
+64;Earth Medusa x1-4;9 small;True;4;Battle;Flying Fortress 1F, Flying Fortress 2F
+65;Neochu x1;4 large;True;33;Battle;All / pre-WSC northern rivers
+66;Sea Troll x1-2, Sea Scorpion x1-3;2 large, 6 small;True;4;Battle;Sunken Shrine 3F, Sunken Shrine 5F (dummied)
+67;Sea Scorpion x2-6;9 small;True;4;Battle;Sunken Shrine 5F (dummied)
+68;Sea Scorpion x1-6, Sea Snake x2-5, Sea Troll x2;2 large 6 small;True;4;Battle;Chaos Shrine B3, Sunken Shrine 2F
+69;Sahagin Prince x0-1, White Shark x1-2;2 large 6 small;True;4;Battle;Sunken Shrine 2F, Sunken Shrine 3F, Sunken Shrine 5F (dummied)
+70;Death Eye x1;2 large 6 small;False;4;Battle;Chaos Shrine 3F, Chaos Shrine B5
+71;Water Naga x1, Water Elemental x0-1;2 large 6 small;True;4;Battle;Sunken Shrine 3F, Sunken Shrine 5F (dummied)
+72;White Shark x1, Deepeyes x0-1;4 large;True;4;Battle;Sunken Shrine 1F, Sunken Shrine 2F, Sunken Shrine 4F
+73;Water Elemental x1-3;9 small;False;4;Battle;Sunken Shrine 1F, Sunken Shrine 2F, Sunken Shrine 4F
+74;Cockatrice x0-8, Pyrolisk x0-8, King Mummy x1-5, Mummy x0-8;9 small;True;4;Battle;Mirage Tower 2F, Mirage Tower 3F, Sunken Shrine 2F, Waterfall Cavern
+75;Dragon Zombie x1-2;4 large;False;4;Battle;Citadel of Trials 2F, Citadel of Trials 3F
+76;Guardian x2-5;9 small;True;4;Battle;Mirage Tower 1F, Mirage Tower 2F
+77;Black Knight x2-5;9 small;True;4;Battle;Flying Fortress 1F
+78;Blue Dragon x1;4 large;False;4;Battle;Mirage Tower 2F, Mirage Tower 3F
+79;Nightmare x1-2;2 large 6 small;True;4;Battle;Citadel of Trials 3F, Waterfall Cavern
+80;Black Flan x3-6;9 small;True;4;Battle;Flying Fortress 1F, Flying Fortress 2F, Flying Fortress 5F
+81;Air Elemental x2-4;9 small;True;4;Battle;Flying Fortress 4F, Flying Fortress 5F
+82;Spirit Naga x1, Air Elemental x0-1;2 large 6 small;True;4;Battle;Flying Fortress 1F, Flying Fortress 2F
+83;Vampire Lord x1-3;9 small;True;4;Battle;Flying Fortress 3F, Flying Fortress 4F
+84;Death Knight x1, Nightmare x1-2;2 large 6 small;True;4;Battle;Flying Fortress 1F, Flying Fortress 2F
+85;Chimera x1-2, Rhyos x1-2;4 large;True;4;Battle;Chaos Shrine 2F
+86;Warmech x1;4 large;True;75;Battle;Flying Fortress 5F
+87;Purple Worm x1-2;4 large;False;4;Battle;Chaos Shrine 1F
+88;Stone Golem x1-2;4 large;True;4;Battle;Sunken Shrine 5F (dummied)
+89;Green Dragon x1;4 large;False;4;Battle;Chaos Shrine B5, Waterfall Cavern
+90;White Shark x1-2, Shark x0-1;4 large;True;4;Battle;Sunken Shrine 3F, Sunken Shrine 4F
+91;Sahagin x0-6, Bigeyes x1-2;2 large 6 small;True;4;Battle;Sea
+92;Buccaneer x1-5;9 small;True;4;Battle;Sea
+93;Shark x1-2, Sahagin x0-2, Bigeyes x0-2;2 large 4 small;True;4;Battle;Sea
+94;Shark x1, Sahagin Chief x0-1;2 large 4 small;True;4;Battle;Sea
+95;Piranha x2-6;9 small;True;4;Battle;Pre-WSC southern rivers
+96;Hydra x1-2, Ochu x0-2;4 large;True;33;Battle;Cardian Islands-Citadel of Trials region, Northern Citadel of Trials region, Gaia-Onrac-Waterfall Cavern region
+97;Sea Troll x1-2, Sea Snake x0-2, Sea Scorpion x0-2;2 large 6 small;True;4;Battle;Sunken Shrine 3F, Sunken Shrine 4F
+98;White Croc x1-2, Red Piranha x0-3;9 small;True;4;Battle;All / pre-WSC northern rivers
+99;Troll x1-2;4 large;True;4;Battle;Cavern of Earth B4, Cavern of Earth B5, Crescent Lake-Ryukahn Desert region
+100;Minotaur x1-2;4 large;True;27;Battle;Cavern of Earth B1, Cavern of Earth B2
+101;Piranha x0-2, Crocodile x0-2, Ochu x1, Hydra x0-1;2 large 6 small;True;30;Battle;All / pre-WSC northern rivers
+102;Tarantula x1-2, Black Widow x0-2, Green Slime x0-2, Gray Ooze x0-2;9 small;True;55;Battle;Marsh Cave B1, Marsh Cave B2, Marsh Cave B3
+103;Weretiger x1-2, Sabertooth x0-2, Lesser Tiger x0-2;2 large 6 small;True;27;Battle;Cardian Islands-Citadel of Trials region
+104;Vampire x2-5;9 small;True;4;Battle;Mirage Tower 1F, Mirage Tower 2F, Mirage Tower 3F
+105;Evil Eye x1;4 large;False;4;Battle;Cavern of Ice B2, Flying Fortress 1F, Flying Fortress 2F
+106;Horned Devil x2-5;9 small;True;4;Battle;Mount Gulg B1, Mount Gulg B2
+107;Gray Ooze x1-3;9 small;True;4;Battle;Marsh Cave B1, Marsh Cave B3
+108;Mindflayer x1-3;9 small;True;4;Battle;Cavern of Ice B2, Cavern of Ice B3
+109;Hellhound x1-2;4 large;True;55;Battle;Mount Gulg B3, Mount Gulg B4
+110;Ogre Mage x1, Ogre Chief x1, Hyenadon x0-2;4 large;True;4;Battle;Cavern of Earth B4, Mount Gulg B1, Mount Gulg B2, Mount Gulg B3
+111;Sphinx x1-2;4 large;True;4;Battle;Cavern of Earth B4, Mount Gulg B1
+112;Wyvern x x1-3;4 large;True;4;Battle;Northern Citadel of Trials region, Gaia-Onrac-Waterfall Cavern region
+113;Desert Baretta x1;4 large;True;4;Battle;Caravan region
+114;Sea Snake x2-4;9 small;True;4;Battle;Sunken Shrine 3F, Sunken Shrine 4F, Sunken Shrine 5F (dummied)
+115;Lich x1;1 boss;False;4;Boss Battle A;Chaos Shrine B1
+116;Marilith x1;1 boss;False;4;Boss Battle B;Chaos Shrine B2
+117;Kraken x1;1 boss;False;4;Boss Battle A;Chaos Shrine B3
+118;Tiamat x1;1 boss;False;4;Boss Battle B;Chaos Shrine B4
+119;Tiamatx1;1 boss;False;4;Boss Battle B;Flying Fortress 5F
+120;Kraken x1;1 boss;False;4;Boss Battle A;Sunken Shrine F1
+121;Marilith x1;1 boss;False;4;Boss Battle B;Mount Gulg B5
+122;Lich x1;1 boss;False;4;Boss Battle A;Cavern of Earth B5
+123;Chaos x1;1 boss;False;4;Final Battle;Chaos Shrine B5
+124;Vampire x1;2 large 6 small;False;4;Miniboss Battle;Cavern of Earth B3, Whisperwind Cove - Swamp
+125;Astos x1;1 boss;False;4;Miniboss Battle;Western Keep, Whisperwind Cove - Swamp
+126;Pirate x9;9 small;False;4;Battle;Pravoka
+127;Garland x1;1 boss;False;4;Miniboss Battle;Chaos Shrine
+128;Goblin x3-6, Goblin Guard x0-4;9 small;True;4;Battle;Chaos Shrine region, Cornelia-Cornelia Bridge-Earthgift Shrine region
+129;Skeleton x3-5, Crawler x0-2;9 small;True;4;Battle;Marsh Cave B1, Marsh Cave B2
+130;Goblin x1-3;9 small;True;4;Battle;Chaos Shrine region, Cornelia-Cornelia Bridge-Earthgift Shrine region
+131;Wolf x4-6, Warg Wolf x0-1;9 small;True;4;Battle;Western Cavern of Ice region, Chaos Shrine, Elfheim-Lifespring Grotto-Melmond-Mount Duergar-Western Keep region, Matoya's Cave region, Pravoka region
+132;Zombie x2-3, Ghoul x2-4;9 small;True;4;Battle;Marsh Cave B1, Marsh Cave B2
+133;Green Slime x2-4;9 small;True;55;Battle;Marsh Cave B1, Marsh Cave B2, Marsh Cave B3
+134;Crazy Horse x2-4;4 large;True;4;Battle;Chaos Shrine region, Pravoka region
+135;Gigas Worm x1-3, Ogre x1;2 large 6 small;True;4;Battle;Elfheim-Lifespring Grotto-Melmond-Mount Duergar-Western Keep region, Matoya's Cave region, Pravoka region
+136;Ghoul x2-5, Ghast x0-4;9 small;True;4;Battle;Cavern of Earth-Giant's Cave-Melmond-Sage's Cave region
+137;Hill Gigas x1-3, Lizard x0-2;4 large;True;4;Battle;Northern Citadel of Trials region
+138;Shadow x3-7;9 small;True;90;Battle;Cavern of Earth-Giant's Cave-Melmond-Sage's Cave region
+139;Warg Wolf x4-8;9 small;True;4;Battle;Cavern of Earth-Giant's Cave-Melmond-Sage's Cave region, Giant's Cave
+140;Ogre x1-3, Hyenadon x0-2;4 large;True;4;Battle;Cavern of Earth-Giant's Cave-Melmond-Sage's Cave region
+141;Cobra x3-7;9 small;True;4;Battle;Cavern of Earth B1, Cavern of Earth B2
+142;Goblin Guard x2-5, Werewolf x0-2;9 small;True;33;Battle;Western Cavern of Ice region, Cavern of Ice-Marsh Cave-Mount Gulg-Whisperwind Cove region, Chaos Shrine
+143;Wight x2-5, Ghast x2-5;9 small;True;4;Battle;Cavern of Earth B3, Cavern of Earth B4
+144;Gargoyle x3-8;9 small;True;4;Battle;Cavern of Earth B1, Cavern of Earth B2
+145;Werewolf x2-5, Warg Wolf x0-5;9 small;True;33;Battle;Cavern of Earth B2, Cavern of Earth B3, Marsh Cave B2, Marsh Cave B3
+146;Ochre Jelly x2-5, Tarantula x0-5;9 small;True;55;Battle;Cavern of Earth B3, Cavern of Earth B4, Cavern of Earth B5
+147;Ogre Chief x1-4, Ogre x0-2;4 large;True;4;Battle;Cavern of Earth B1, Cavern of Earth B2, Cavern of Earth B3
+148;Tarantula x4-8;9 small;True;4;Battle;Cavern of Earth B2, Cavern of Earth B5, Giant's Cave
+149;Anaconda x2-6, Scorpion x0-4;9 small;True;4;Battle;Crescent Lake-Ryukahn Desert region
+150;Cockatrice x2-6, Mummy x1-5;9 small;True;4;Battle;Cavern of Ice B1
+151;Ankheg x1-4;4 large;True;4;Battle;Mount Gulg B1, Mount Gulg B2
+152;Wraith x2-6, Specter x0-4;9 small;True;4;Battle;Cavern of Ice B2
+153;Sabertooth x1-3, Lesser Tiger x0-2;4 large;True;27;Battle;Caravan region
+154;Scorpion x2-6, Minotaur x1-2;2 large 6 small;True;27;Battle;Crescent Lake-Ryukahn Desert region, Mount Gulg B1
+155;Troll x1-2, Minotaur x0-2;4 large;True;27;Battle;Crescent Lake-Ryukahn Desert region
+156;Piscodemon x3-7;9 small;False;33;Battle;Cavern of Ice B1
+157;Mummy x3-7, King Mummy x1;9 small;True;4;Battle;Citadel of Trials 2F, Citadel of Trials 3F
+158;Hill Gigas x2-4;4 large;True;4;Battle;Lufenia region
+159;Hill Gigas x1-4, Lizard x1;4 large;True;4;Battle;Gaia-Onrac-Waterfall Cavern region
+160;Hydra x1-2, Crocodile x0-3;2 large 6 small;True;27;Battle;All / pre-WSC northern rivers
+161;Earth Elemental x2-4;4 large;False;4;Battle;Chaos Shrine B1
+162;Hellhound x1-3, Ogre Mage x0-2;4 large;False;55;Battle;Caravan region
+163;Pyrolisk x4-8;9 small;True;4;Battle;Waterfall Cavern
+164;Fire Hydra x4;4 large;True;4;Battle;Flying Fortress 3F, Flying Fortress 5F
+165;Ochu x1, Piranha x0-2;2 large 6 small;True;33;Battle;Pre-WSC southern rivers
+166;Fire Gigas x1, Fire Lizard x0-3;4 large;True;4;Battle;Chaos Shrine B2
+167;Fire Elemental x3-4;4 large;False;4;Battle;Chaos Shrine B2
+168;Lava Worm x2-4;4 large;True;4;Battle;Chaos Shrine B2
+169;Fire Lizard x2-4;4 large;True;4;Battle;Chaos Shrine B2
+170;Red Dragon x2-4;4 large;True;4;Battle;Chaos Shrine B2
+171;Bloodbones x3-6;9 small;True;4;Battle;Cavern of Ice B1, Cavern of Ice B3
+172;Specter x2-6;9 small;True;4;Battle;Cavern of Ice B1, Cavern of Ice B2, Cavern of Ice B3
+173;Winter Wolf x4-7;9 small;True;4;Battle;Lufenia region
+174;Ice Gigas x2, Winter Wolf x2-6;2 large 6 small;False;4;Battle;Chaos Shrine 2F
+175;Dark Wizard x2-3, Dark Fighter x1;9 small;True;75;Battle;Chaos Shrine 3F, Chaos Shrine B5
+176;White Dragon x3-4;4 large;True;4;Battle;Chaos Shrine 1F
+177;Remorazz x1-2;4 large;True;4;Battle;Caravan region, Cardian Islands-Citadel of Trials region
+178;Minotaur Zombie x1-4, Troll x0-2;4 large;False;4;Battle;Lufenia region
+179;Rakshasa x3-7, Medusa x0-5;9 small;True;4;Battle;Flying Fortress 3F, Flying Fortress 4F
+180;Medusa x3-6, Sabertooth x1-2;2 large 6 small;True;27;Battle;Mirage Tower 1F, Mirage Tower 3F
+181;Mindflayer x1-6, Clay Golem x1-2;2 large 6 small;True;4;Battle;Flying Fortress 4F, Flying Fortress 5F
+182;Manticore x3-4;4 large;True;4;Battle;Flying Fortress 1F, Flying Fortress 2F, Flying Fortress 3F
+183;Wyrm x1-3;4 large;True;4;Battle;Caravan region, Southwestern Cardian Islands region, Cardian Islands-Citadel of Trials region
+184;Baretta x1-4;4 large;True;4;Battle;Yahnikurm Desert region
+185;Weretiger x3-6, Sabertooth x1-2;2 large 6 small;True;27;Battle;Mirage Tower 1F, Mirage Tower 2F
+186;Basilisk x2-4;4 large;True;27;Battle;Chaos Shrine B1
+187;Chimera x3-4;4 large;True;4;Battle;Chaos Shrine 1F
+188;Sand Worm x1-2;4 large;True;4;Battle;Yahnikurm Desert region
+189;Allosaurus x1, Wyvern x0-1;4 large;True;4;Battle;Yahnikurm Desert region
+190;Wyvern x1-3, Wyrm x0-3;4 large;True;4;Battle;Mirage Tower 3F
+191;Clay Golem x1-4, Stone Golem x1-3;4 large;True;4;Battle;Chaos Shrine B1
+192;Earth Medusa x4-7;9 small;True;4;Battle;Chaos Shrine B1
+193;Neochu x1-2;4 large;True;33;Battle;Flying Fortress 4F, Flying Fortress 5F
+194;Sea Troll x1-2, Sea Scorpion x1-4;2 large 6 small;True;4;Battle;Sunken Shrine 1F, Sunken Shrine 2F
+195;Sea Scorpion x3-7;9 small;True;4;Battle;Sunken Shrine 1F, Sunken Shrine 2F
+196;Sea Scorpion x1-5, Sea Snake x0-3;9 small;True;4;Battle;Sunken Shrine 1F, Sunken Shrine 2F
+197;Sahagin Prince x3-6, White Shark x2;2 large 6 small;True;4;Battle;Chaos Shrine B3
+198;Ghost x2-5;2 large 6 small;False;4;Battle;Sunken Shrine 2F, Sunken Shrine 4F
+199;Water Naga x1-2, Water Elemental x3-6;2 large 6 small;True;4;Battle;Chaos Shrine B3
+200;White Shark x1-2, Deepeyes x1-2;4 large;True;4;Battle;Chaos Shrine B3
+201;Water Elemental x3-6;9 small;False;4;Battle;Chaos Shrine B3
+202;King Mummy x1-2, Mummy x1-6;9 small;True;4;Battle;Waterfall Cavern
+203;Dragon Zombie x2-4;4 large;False;4;Battle;Chaos Shrine 2F
+204;Guardian x0-1, Soldier x1;9 small;True;4;Battle;Flying Fortress 3F, Flying Fortress 4F
+205;Black Knight x5-9;9 small;True;4;Battle;Chaos Shrine 3F
+206;Blue Dragon x2-3;4 large;False;4;Battle;Dummied
+207;Nightmare x1-2, Black Knight x1-2;2 large 6 small;True;4;Battle;Mirage Tower 1F
+208;Black Flan x4-8;9 small;True;4;Battle;Chaos Shrine 1F, Chaos Shrine 2F
+209;Air Elemental x3-6;9 small;True;4;Battle;Chaos Shrine B4
+210;Spirit Naga x0-1, Air Elemental x1-3;2 large 6 small;True;4;Battle;Flying Fortress 4F, Flying Fortress 5F
+211;Vampire Lord x1-3, Dragon Zombie x1-2;2 large 6 small;True;4;Battle;Chaos Shrine 2F, Chaos Shrine 3F, Chaos Shrine B4, Chaos Shrine B5
+212;Death Knight x1-2, Nightmare x1-2;2 large 6 small;True;4;Battle;Chaos Shrine B4, Chaos Shrine B5
+213;Chimera x1;4 large;True;4;Battle;Flying Fortress 2F, Flying Fortress 3F
+214;Dark Fighter x1-2;2 large 6 small;True;75;Battle;Flying Fortress 3F, Flying Fortress 4F, Flying Fortress 5F
+215;Purple Worm x3-4;4 large;False;4;Battle;Chaos Shrine B4, Chaos Shrine B5
+216;Stone Golem x2-4;4 large;True;4;Battle;Chaos Shrine B4, Chaos Shrine B5, Flying Fortress 2F, Flying Fortress 3F
+217;Green Dragon x2-4;4 large;False;4;Battle;Chaos Shrine 3F
+218;White Shark x1-2, Shark x0-1;4 large;True;4;Battle;Sunken Shrine 3F, Sunken Shrine 4F
+219;Sahagin x3-7, Sahagin Chief x0-2;9 small;True;4;Battle;Sea
+220;Shark x1;4 large;True;4;Battle;Sea
+221;Sahagin x4-6;2 large 6 small;True;4;Battle;Sea
+222;Shark x1-2, Sahagin Chief x0-3;2 large 6 small;True;4;Battle;Sea
+223;Piranha x3-8;9 small;True;4;Battle;Pre-WSC southern rivers
+224;Hydra x1, Ochu x0-1;4 large;True;33;Battle;Pre-WSC southern rivers
+225;Sea Troll x1, Sea Snake x0-3;2 large, 6 small;True;4;Battle;Sunken Shrine 1F, Sunken Shrine 2F
+226;White Croc x1, Red Piranha x1-4;9 small;True;4;Battle;All / pre-WSC northern rivers
+227;Troll x2-4;4 large;True;4;Battle;Gaia-Onrac-Waterfall Cavern region
+228;Minotaur x2-4;4 large;True;27;Battle;Mount Gulg B4, Mount Gulg B5
+229;Piranha x2-4, Crocodile x0-2;9 small;True;30;Battle;Pre-WSC southern rivers
+230;Tarantula x3-6, Black Widow x0-2;9 small;True;55;Battle;Cavern of Earth B1, Cavern of Earth-Giant's Cave-Melmond-Sage's Cave region
+231;Weretiger x4-7;9 small;True;27;Battle;Mirage Tower 1F, Mirage Tower 2F, Mirage Tower 3F
+232;Vampire Lord x1, Vampire x3-6;9 small;True;4;Battle;Chaos Shrine B4
+233;Evil Eye x2-3;4 large;False;4;Battle;Dummied
+234;Horned Devil x3-7;9 small;True;4;Battle;Citadel of Trials 2F, Citadel of Trials 3F
+235;Gray Ooze x4-7;9 small;True;4;Battle;Mount Gulg B1, Mount Gulg B2
+236;Mindflayer x3-7;9 small;True;4;Battle;Chaos Shrine B4, Chaos Shrine B5
+237;Hellhound x3-4;4 large;True;55;Battle;Mirage Tower 2F, Mirage Tower 3F
+238;Ogre Mage x1-3, Ogre Chief x0-2;4 large;True;4;Battle;Mount Gulg B3, Mount Gulg B4, Mount Gulg B5
+239;Sphinx x1-4;4 large;True;4;Battle;Cardian Islands-Citadel of Trials region
+240;Wyvern x1-4;4 large;True;4;Battle;Lufenia region
+241;Desert Baretta x1-2;4 large;True;4;Battle;Yahnikurm Desert region
+242;Sea Snake x3-6;9 small;True;4;Battle;Sunken Shrine 1F, Sunken Shrine 2F
+243;Goblin x9;9 small;True;4;Battle;Dummied
+244;Goblin x9;9 small;True;4;Battle;Dummied
+245;Goblin x9;9 small;True;4;Battle;Dummied
+246;Goblin x9;9 small;True;4;Battle;Dummied
+247;Goblin x9;9 small;True;4;Battle;Dummied
+248;Goblin x9;9 small;True;4;Battle;Dummied
+249;Goblin x9;9 small;True;4;Battle;Dummied
+250;Goblin x9;9 small;True;4;Battle;Dummied
+251;Goblin x9;9 small;True;4;Battle;Dummied
+252;Goblin x9;9 small;True;4;Battle;Dummied
+253;Goblin x9;9 small;True;4;Battle;Dummied
+254;Sahagin Prince x1-2, Sahagin Chief x8;9 small;False;4;Battle;Sunken Shrine 2F, Sunken Shrine 3F, Sunken Shrine 4F
+255;Iron Golem x1-2;4 large;False;4;Battle;Chaos Shrine B4
+256;Echidna x1;1 boss;False;4;Boss Battle A (Dawn of Souls);Earthgift Shrine B5
+257;Cerberus x1;1 boss;False;4;Boss Battle A (Dawn of Souls);Earthgift Shrine B5
+258;Ahriman x1;1 boss;False;4;Boss Battle A (Dawn of Souls);Earthgift Shrine B5
+259;Two-Headed Dragon;1 boss;False;4;Boss Battle A (Dawn of Souls);Earthgift Shrine B5
+260;Scarmiglione x1;1 boss;False;4;Boss Battle B (Dawn of Souls);Hellfire Chasm B5
+261;Scarmiglione x1;1 boss;False;4;Boss Battle B (Dawn of Souls);Hellfire Chasm B5
+262;Cagnazzo x1;1 boss;False;4;Boss Battle B (Dawn of Souls);Hellfire Chasm B5
+263;Barbariccia x1;1 boss;False;4;Boss Battle B (Dawn of Souls);Hellfire Chasm B10
+264;Rubicante x1;1 boss;False;4;Boss Battle B (Dawn of Souls);Hellfire Chasm B10
+265;Gilgamesh x1;1 boss;False;4;Boss Battle A (Dawn of Souls);Lifespring Grotto B5
+266;Omega x1;1 boss;False;4;Boss Battle A (Dawn of Souls);Lifespring Grotto B20
+267;Shinryu x1;1 boss;False;4;Boss Battle A (Dawn of Souls);Lifespring Grotto B20
+268;Atomos x1;1 boss;False;4;Boss Battle A (Dawn of Souls);Lifespring Grotto B10
+269;Typhon x1;1 boss;False;4;Boss Battle B (Dawn of Souls);Whisperwind Cove B10
+270;Orthros x1;1 boss;False;4;Boss Battle B (Dawn of Souls);Whisperwind Cove B20
+271;Phantom Train x1;1 boss;False;4;Boss Battle B (Dawn of Souls);Whisperwind Cove B30
+272;Death Gaze x1;1 boss;False;4;Boss Battle B (Dawn of Souls);Whisperwind Cove B40
+273;Earth Troll x1-2;4 large;True;4;Battle;Whisperwind Cove - Cavern of Earth B31-39, Whisperwind Cove - Floating Continent B31-39
+274;Earth Troll x1-2, Sekhret x0-1;4 large;True;27;Battle;Whisperwind Cove - Cavern of Earth B31-39, Whisperwind Cove - Floating Continent B31-39
+275;Earth Plant x1-2;4 large;True;33;Battle;Whisperwind Cove - Flying Fortress B31-39
+276;Abyss Worm x1-2;4 large;False;4;Battle;Earthgift Shrine - Desert
+277;Undergrounder x1;4 large;True;4;Battle;Whisperwind Cove - Cavern of Ice B31-39
+278;Yellow Ogre x1-2;4 large;True;4;Battle;Lifespring Grotto - Marsh Cave B11-19, Whisperwind Cove - Feyhome B11-19, Whisperwind Cove - Feyhome B21-29, Whisperwind Cove - Marsh Cave B11-19, Whisperwind Cove - Marsh Cave B21-29, Whisperwind Cove - Western Keep B11-19, Whisperwind Cove - Western Keep B21-29
+279;Yellow Ogre x1-4;4 large;True;4;Battle;Whisperwind Cove - Cavern of Earth B11-19, Whisperwind Cove - Cavern of Earth B21-29, Whisperwind Cove - Floating Continent B11-19, Whisperwind Cove - Floating Continent B21-29
+280;Yellow Dragon;4 large;True;4;Battle;Whisperwind Cove - Giant's Cave B11-19, Whisperwind Cove - Giant's Cave B21-29, Whisperwind Cove - Waterfall Cavern B11-19, Whisperwind Cove - Waterfall Cavern B21-29
+281;Elm Gigas x1, Dark Wolf x0-2;2 large 6 small;False;4;Battle;Whisperwind Cove - Cavern of Ice B21-29
+282;Elm Gigas x1-2;4 large;True;4;Battle;Hellfire Chasm - Overworld, Whisperwind Cove - Cavern of Earth B11-19, Whisperwind Cove - Cavern of Earth B21-29, Whisperwind Cove - Floating Continent B11-19, Whisperwind Cove - Floating Continent B21-29
+283;Elm Gigas x1-3;4 large;True;4;Battle;Lifespring Grotto - Cavern of Ice B11-19, Whisperwind Cove - Cavern of Ice B11-19, Whisperwind Cove - Cavern of Ice B21-29
+284;Catoblepas x1-2;4 large;True;27;Battle;Hellfire Chasm - Overworld, Whisperwind Cove - Cavern of Earth B1-9, Whisperwind Cove - Cavern of Earth B11-19, Whisperwind Cove - Floating Continent B1-9, Whisperwind Cove - Floating Continent B11-19
+285;Catoblepas x1-3;4 large;True;27;Battle;Earthgift Shrine - Desert, Hellfire Chasm - Fire Shrine, Hellfire Chasm - Mount Gulg, Whisperwind Cove - Mount Gulg B1-9, Whisperwind Cove - Mount Gulg B11-19
+286;Killer Shark x1, Dark Eye x0-1;4 large;True;4;Battle;Lifespring Grotto - Sunken Shrine B11-19
+287;Killer Shark x1-2;4 large;True;4;Battle;Lifespring Grotto - Sunken Shrine B11-19
+288;Gloom Widow x1-2;9 small;True;4;Battle;Lifespring Grotto - Chaos Shrine B1-9, Lifespring Grotto - Chaos Shrine B11-19
+289;Gloom Widow x1-3;9 small;True;4;Battle;Earthgift Shrine - Altar Cave, Earthgift Shrine - Desert, Earthgift Shrine - Forest, Hellfire Chasm - Waterfall Cavern, Lifespring Grotto - Cavern of Ice B1-9, Lifespring Grotto - Cavern of Ice B11-19, Whisperwind Cove - Cavern of Ice B1-9, Whisperwind Cove - Cavern of Ice B11-19, Whisperwind Cove - Feyhome B1-9, Whisperwind Cove - Feyhome B11-19, Whisperwind Cove - Giant's Cave B1-9, Whisperwind Cove - Giant's Cave B11-19, Whisperwind Cove - Waterfall Cavern B1-9, Whisperwind Cove - Waterfall Cavern B11-19
+290;Gloom Widow x2-4;9 small;True;4;Battle;Lifespring Grotto - Cavern of Ice B1-9, Lifespring Grotto - Cavern of Ice B11-19, Whisperwind Cove - Cavern of Ice B1-9, Whisperwind Cove - Cavern of Ice B11-19
+291;Gloom Widow x4-8;9 small;True;4;Battle;Hellfire Chasm - Overworld, Whisperwind Cove - Cavern of Earth B1-9, Whisperwind Cove - Cavern of Earth B11-19, Whisperwind Cove - Floating Continent B1-9, Whisperwind Cove - Floating Continent B11-19
+292;Sahagin Queen x0-1, Killer Shark x1-2;2 large 6 small;True;4;Battle;Lifespring Grotto - Sunken Shrine B11-19
+293;Sahagin Queen x5-8;9 small;False;4;Battle;Hellfire Chasm - Sea, Lifespring Grotto - Sunken Shrine B1-9
+294;Reaper x1-5, Revenant x0-3;9 small;True;4;Battle;Whisperwind Cove - Cavern of Ice B21-29
+295;Reaper x2-4;9 small;True;4;Battle;Whisperwind Cove - Feyhome B31-39, Whisperwind Cove - Marsh Cave B31-39, Whisperwind Cove - Swamp B31-39, Whisperwind Cove - Western Keep B31-39
+296;Reaper x2-6;9 small;True;4;Battle;Whisperwind Cove - Cavern of Ice B31-39
+297;Silver Dragon x1;4 large;True;4;Battle;Hellfire Chasm - Fire Shrine, Whisperwind Cove - Mount Gulg B11-19, Whisperwind Cove - Mount Gulg B21-29
+298;Silver Dragon x1-2;4 large;True;4;Battle;Lifespring Grotto - Chaos Shrine B11-19
+299;Skuldier x2-4;9 small;True;4;Battle;Earthgift Shrine - Forest, Lifespring Grotto - Marsh Cave B1-9, Lifespring Grotto - Marsh Cave B11-19, Whisperwind Cove - Feyhome B1-9, Whisperwind Cove - Feyhome B11-19, Whisperwind Cove - Marsh Cave B1-9, Whisperwind Cove - Marsh Cave B11-19, Whisperwind Cove - Western Keep B1-9, Whisperwind Cove - Western Keep B11-19
+300;Skuldier x3-5, Flood Gigas x0-2;9 small;True;4;Battle;Whisperwind Cove - Feyhome B21-29, Whisperwind Cove - Marsh Cave B21-29, Whisperwind Cove - Western Keep B21-29
+301;Squidraken x1-3;9 small;False;33;Battle;Whisperwind Cove - Cavern of Ice B31-39
+302;Squidraken x2-4;9 small;False;33;Battle;Whisperwind Cove - Cavern of Earth B31-39, Whisperwind Cove - Floating Continent B31-39
+303;Squidraken x3-7;9 small;False;33;Battle;Whisperwind Cove - Cavern of Ice B31-39
+304;Sekhret x1-2;4 large;True;27;Battle;Whisperwind Cove - Cavern of Earth B31-39, Whisperwind Cove - Floating Continent B31-39, Whisperwind Cove - Mount Gulg B31-39
+305;Dark Eye x1;4 large;False;4;Battle;Lifespring Grotto - Sunken Shrine B11-19
+306;Dark Elemental x1;4 large;True;27;Battle;Hellfire Chasm - Overworld, Whisperwind Cove - Cavern of Earth B11-19, Whisperwind Cove - Cavern of Earth B21-29, Whisperwind Cove - Floating Continent B11-19, Whisperwind Cove - Floating Continent B21-29, Whisperwind Cove - Swamp B11-19
+307;Dark Elemental x1-2;4 large;True;27;Battle;Hellfire Chasm - Fire Shrine, Whisperwind Cove - Mount Gulg B11-19, Whisperwind Cove - Mount Gulg B21-39, Whisperwind Cove - Swamp B11-19
+308;Desertpede x2-4;9 small;True;27;Battle;Earthgift Shrine - Desert, Earthgift Shrine - Forest, Lifespring Grotto - Marsh Cave B1-9, Lifespring Grotto - Marsh Cave B1-19, Whisperwind Cove - Feyhome B1-9, Whisperwind Cove - Feyhome B11-19, Whisperwind Cove - Marsh Cave B1-9, Whisperwind Cove - Marsh Cave B11-19, Whisperwind Cove - Western Keep B1-9, Whisperwind Cove - Western Keep B11-19
+309;Death Elemental x1-3;9 small;False;4;Battle;Hellfire Chasm - Sea, Lifespring Grotto - Sunken Shrine B1-9, Lifespring Grotto - Sunken Shrine B11-19
+310;Death Elemental x2-4;9 small;False;4;Battle;Lifespring Grotto - Flying Fortress B1-9, Lifespring Grotto - Flying Fortress B11-19, Whisperwind Cove - Flying Fortress B1-9, Whisperwind Cove - Flying Fortress B11-19
+311;Death Manticore x3-4;4 large;True;4;Battle;Lifespring Grotto - Flying Fortress B11-19, Whisperwind Cove - Flying Fortress B11-19, Whisperwind Cove - Flying Fortress B21-29
+312;Devil Wizard x1;9 small;True;75;Battle;Whisperwind Cove - Feyhome B31-39, Whisperwind Cove - Western Keep
+313;Devil Wizard x1-2;9 small;True;75;Battle;Whisperwind Cove - Flying Fortress B21-29, Whisperwind Cove - Flying Fortress B31-39
+314;Devil Hound x1;4 large;True;55;Battle;Hellfire Chasm - Fire Shrine, Whisperwind Cove - Mount Gulg B11-19, Whisperwind Cove - Mount Gulg B21-29
+315;Devil Hound x1-2;4 large;True;55;Battle;Hellfire Chasm - Fire Shrine, Whisperwind Cove - Mount Gulg B11-19, Whisperwind Cove - Mount Gulg B21-29
+316;Duel Knight x1, Unicorn x1-2;2 large 6 small;True;4;Battle;Whisperwind Cove - Flying Fortress B21-29
+317;Duel Knight x1-2;9 small;True;4;Battle;Whisperwind Cove - Western Keep B31-39
+318;Duel Knight x2-5;9 small;True;4;Battle;Whisperwind Cove - Flying Fortress B21-29, Whisperwind Cove - Flying Fortress B31-39
+319;Knocker x1-5;9 small;True;4;Battle;Whisperwind Cove - Cavern of Earth B31-39, Whisperwind Cove - Cavern of Ice B31-39, Whisperwind Cove - Feyhome B31-39, Whisperwind Cove - Floating Continent B31-39, Whisperwind Cove - Flying Fortress B21-29, Whisperwind Cove - Giant's Cave B21-29, Whisperwind Cove - Giant's Cave B31-39, Whisperwind Cove - Marsh Cave B31-39, Whisperwind Cove - Waterfall Cavern B21-29, Whisperwind Cove - Waterfall Cavern B31-39, Whisperwind Cove - Western Keep B31-39
+320;Mad Ogre x1;4 large;True;4;Battle;Whisperwind Cove - Feyhome B31-39, Whisperwind Cove - Giant's Cave B31-39, Whisperwind Cove - Marsh Cave B31-39, Whisperwind Cove - Waterfall Cavern B31-39, Whisperwind Cove - Western Keep B31-39
+321;Python x2-4;9 small;True;4;Battle;Lifespring Grotto - Sunken Shrine B1-9
+322;Python x2-6;9 small;True;4;Battle;Hellfire Chasm - Overworld, Whisperwind Cove - Cavern of Earth B1-9, Whisperwind Cove - Cavern of Earth B11-19, Whisperwind Cove - Floating Continent B1-9, Whisperwind Cove - Floating Continent B11-19
+323;Python x3-7;9 small;True;4;Battle;Whisperwind Cove - Cavern of Earth B1-9, Whisperwind Cove - Cavern of Earth B11-19, Whisperwind Cove - Floating Continent B1-9
+324;Hundlegs;4 large;True;4;Battle;Hellfire Chasm - Fire Shrine, Whisperwind Cove - Mount Gulg B11-19, Whisperwind Cove - Mount Gulg B21-29
+325;Poison Eagle x4-8;9 small;True;4;Battle;Whisperwind Cove - Cavern of Ice B31-39, Whisperwind Cove - Giant's Cave B21-29, Whisperwind Cove - Giant's Cave B31-39, Whisperwind Cove - Waterfall Cavern B21-29, Whisperwind Cove - Waterfall Cavern B31-39
+326;Pharaoh x1-2;9 small;True;4;Battle;Whisperwind Cove - Giant's Cave B21-29, Whisperwind Cove - Giant's Cave B31-39, Whisperwind Cove - Waterfall Cavern B21-29, Whisperwind Cove - Waterfall Cavern B31-39
+327;Dark Wolf x2-5;9 small;True;4;Battle;Whisperwind Cove - Cavern of Earth B31-39, Whisperwind Cove - Floating Continent B31-39
+328;Dark Wolf x3-7;9 small;True;4;Battle;Whisperwind Cove - Cavern of Ice B31-39
+329;Black Goblin x0-5, Dark Wolf x1-3, Elm Gigas x0-2, Catoblepas x0-2;2 large 6 small;True;33;Battle;Whisperwind Cove - Cavern of Earth B21-29, Whisperwind Cove - Floating Continent B21-29
+330;Black Goblin x1-4, Knocker x0-2;9 small;True;4;Battle;Whisperwind Cove - Cavern of Earth B21-29, Whisperwind Cove - Feyhome B21-29, Whisperwind Cove - Floating Continent B21-29, Whisperwind Cove - Marsh Cave B21-29, Whisperwind Cove - Western Keep B21-29
+331;Black Goblin x1-5;9 small;True;4;Battle;Earthgift Shrine - Altar Cave, Earthgift Shrine - Desert, Earthgift Shrine - Forest, Hellfire Chasm - Fire Shrine, Hellfire Chasm - Mount Gulg, Hellfire Chasm - Overworld, Hellfire Chasm - Waterfall Cavern, Lifespring Grotto - Cavern of Ice B1-9, Lifespring Grotto - Cavern of Ice B11-19, Lifespring Grotto - Chaos Shrine B1-9, Lifespring Grotto - Chaos Shrine B11-19, Lifespring Grotto - Flying Fortress B1-9, Lifespring Grotto - Flying Fortress B11-19, Lifespring Grotto - Marsh Cave B1-9, Lifespring Grotto - Marsh Cave B11-19, Lifespring Grotto - Sunken Shrine B1-9, Lifespring Grotto - Sunken Shrine B11-19, Whisperwind Cover - Cavern of Earth B1-9, Whisperwind Cover - Cavern of Earth B11-19, Whisperwind Cover - Cavern of Ice B1-9, Whisperwind Cover - Cavern of Ice B11-19, Whisperwind Cover - Feyhome B1-9, Whisperwind Cover - Feyhome B11-19, Whisperwind Cover - Floating Continent B1-9, Whisperwind Cover - Floating Continent B11-19, Whisperwind Cover - Flying Fortress B1-9, Whisperwind Cover - Flying Fortress B11-19, Whisperwind Cover - Giant's Cave B1-9, Whisperwind Cover - Giant's Cave B11-19, Whisperwind Cover - Marsh Cave B1-9, Whisperwind Cover - Marsh Cave B11-19, Whisperwind Cover - Mount Gulg B1-9, Whisperwind Cover - Mount Gulg B11-19, Whisperwind Cover - Waterfall Cavern B1-9, Whisperwind Cover - Waterfall Cavern B11-19, Whisperwind Cover - Western Keep B1-9, Whisperwind Cover - Western Keep B11-19
+332;Black Goblin x2-5, Wild Nakk x0-2;9 small;True;33;Battle;Lifespring Grotto - Chaos Shrine B1-9, Lifespring Grotto - Chaos Shrine B11-19
+333;Black Dragon x1-2;4 large;False;4;Battle;Whisperwind Cover - Cavern of Ice B31-39
+334;Bloody Eye x1;4 large;False;4;Battle;Whisperwind Cover - Flying Fortress B31-39
+335;Blood Tiger x1-3;4 large;True;27;Battle;Whisperwind Cover - Giant's Cave B11-19, Whisperwind Cover - Giant's Cave B21-29, Whisperwind Cover - Waterfall Cavern B11-19, Whisperwind Cover - Waterfall Cavern B21-29
+336;Blue Troll x1-2;4 large;True;4;Battle;Hellfire Chasm - Sea, Lifespring Grotto - Sunken Shrine B11-19
+337;Blue Troll x1-2, Python x0-2;2 large 6 small;True;4;Battle;Hellfire Chasm - Sea
+338;Flare Gigas x1-2;4 large;True;4;Battle;Whisperwind Cove - Mount Gulg B31-39
+339;Prototype x1;9 small;True;4;Battle;Whisperwind Cove - Flying Fortress B21-29, Whisperwind Cove - Flying Fortress B31-39
+340;Poison Naga x1, Death Elemental x0-1;2 large 6 small;True;4;Battle;Hellfire Chasm - Sea
+341;Holy Dragon x1;4 large;True;4;Battle;Whisperwind Cove - Western Keep B31-39
+342;Bonesnatch x1, Skuldier x2-4, Flood Gigas x1;9 small;True;4;Battle;Whisperwind Cove - Feyhome B21-29, Whisperwind Cove - Marsh Cave B21-29, Whisperwind Cove - Swamp B21-29, Whisperwind Cove - Western Keep B21-29
+343;Bonesnatch x1-2, Skuldier x2-4;9 small;True;4;Battle;Whisperwind Cove - Feyhome B21-29, Whisperwind Cove - Marsh Cave B21-29, Whisperwind Cove - Swamp B21-29, Whisperwind Cove - Western Keep B21-29
+344;Bonesnatch x1-3;9 small;True;4;Battle;Whisperwind Cove - Feyhome B31-39, Whisperwind Cove - Marsh Cave B31-39, Whisperwind Cove - Swamp B21-29, Whisperwind Cove - Western Keep B31-39
+345;Bonesnatch x2-4;9 small;True;4;Battle;Whisperwind Cove - Swamp B21-29
+346;Mythril Golem x1;4 large;True;4;Battle;Whisperwind Cove - Flying Fortress B31-39
+347;Mage Chimera x1;4 large;True;4;Battle;Whisperwind Cove - Flying Fortress B31-39
+348;Yamatano Orochi x1;4 large;True;4;Battle;Whisperwind Cove - Mount Gulg B31-39
+349;Yamatano Orochi x1-2;4 large;True;4;Battle;Whisperwind Cove - Flying Fortress B31-39
+350;Red Flan x2-5, Gloom Widow x0-5;9 small;True;55;Battle;Whisperwind Cove - Cavern of Earth B21-29, Whisperwind Cove - Floating Continent B21-29
+351;Red Flan x3-6;9 small;True;4;Battle;Whisperwind Cove - Mount Gulg B21-29, Whisperwind Cove - Mount Gulg B31-39
+352;Revenant x1-5;9 small;True;4;Battle;Lifespring Grotto - Cavern of Ice B1-9, Lifespring Grotto - Cavern of Ice B11-19, Whisperwind Cove - Cavern of Ice B1-9, Whisperwind Cove - Cavern of Ice B11-19, Whisperwind Cove - Swamp B1-9, Whisperwind Cove - Western Keep
+353;Revenant x2-3;9 small;True;4;Battle;Lifespring Grotto - Marsh Cave B1-9, Lifespring Grotto - Marsh Cave B11-19, Whisperwind Cove - Marsh Cave B1-9, Whisperwind Cove - Marsh Cave B11-19, Whisperwind Cove - Swamp B1-9, Whisperwind Cove - Western Keep B1-9, Whisperwind Cove - Western Keep B11-19
+354;Rock Gargoyle x2-3;9 small;True;4;Battle;Whisperwind Cove - Feyhome B31-39, Whisperwind Cove - Marsh Cave B31-39, Whisperwind Cove - Western Keep B31-39
+355;Rock Gargoyle x2-5;9 small;True;4;Battle;Whisperwind Cove - Mount Gulg B21-29, Whisperwind Cove - Mount Gulg B31-39
+356;Rock Gargoyle x3-8;9 small;True;4;Battle;Whisperwind Cove - Cavern of Earth B31-39, Whisperwind Cove - Floating Continent B31-39
+357;Wild Nakk x2-6;9 small;True;33;Battle;Lifespring Grotto - Chaos Shrine B1-9, Lifespring Grotto - Chaos Shrine B11-19
+358;Wild Nakk x4-8;9 small;True;33;Battle;Earthgift Shrine - Altar Cave, Hellfire Chasm - Waterfall Cavern, Whisperwind Cove - Giant's Cave B1-9, Whisperwind Cove - Giant's Cave B11-19, Whisperwind Cove - Waterfall Cavern B1-9, Whisperwind Cove - Waterfall Cavern B11-19
+359;Red Dragon x1;4 large;False;4;Battle;Lifespring Grotto - Dragon Caves
+360;White Dragon x1;4 large;False;4;Battle;Lifespring Grotto - Dragon Caves
+361;Green Dragon x1;4 large;False;4;Battle;Lifespring Grotto - Dragon Caves
+362;Blue Dragon x1;4 large;False;4;Battle;Lifespring Grotto - Dragon Caves
+363;Dragon Zombie x1;4 large;False;4;Battle;Lifespring Grotto - Dragon Caves
+364;Yellow Dragon x1;4 large;False;4;Battle;Lifespring Grotto - Dragon Caves
+365;Holy Dragon x1;4 large;False;4;Battle;Lifespring Grotto - Dragon Caves
+366;Black Dragon x1;4 large;False;4;Battle;Lifespring Grotto - Dragon Caves
+367;Silver Dragon x1;4 large;False;4;Battle;Lifespring Grotto - Dragon Caves
+368;Pharaoh x1;9 small;True;4;Battle;Whisperwind Cove - Western Keep
