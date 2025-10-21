@@ -4,43 +4,76 @@ from src.clases.personaje import *
 from src.clases.pj import PJ
 from src.clases.enemy import Enemy
 from src.clases.arrCharacter import ArrCharacter
+from src.utils.formation_utils import *
 
 max_wait = 400
 
+# pj_1 = PJ('Warrior', 'Escanor')
+# pj_2 = PJ('Warrior', 'Arturo')
+# pj_3 = PJ('Thief', 'Robin Hood')
+# # pj_1 = PJ('Monk', 'Tenzin')
+# # pj_2 = PJ('Monk', 'Gyatso')
+# # pj_3 = PJ('Monk', 'Asceta')
+# pj_4 = PJ('Monk', 'Eremita')
+#
+# # # Levelear a los personajes
+# # party_arr = [pj_1,pj_2,pj_3,pj_4]
+# # for i in range(10):
+# #     for p in party_arr:
+# #         p.Lv1UP()
+# # # HP y MP al máx
+# # for p in party_arr:
+# #
+# #     p.MP = p.MP_MAX
+#
+# # Para party de Nivel 1
+# ene_1 = Enemy('Crazy Horse')
+# ene_2 = Enemy('Black Widow')
+#
+# ## Para party de Nivel 5
+# # ene_1 = Enemy('Werewolf')
+# # ene_2 = Enemy('Gigas Worm')
+# # # ene_3 = Enemy('Warg Wolf')
+#
+# print(f"Enemies has appeared")
+# opc = -1
+# char_lst = [pj_1,pj_2,pj_3,pj_4,ene_1,ene_2]
+# arrChar = ArrCharacter()
+# arrChar.addArrChar(char_lst)
+# # party = arrChar.arrPer()
+# # enemies = arrChar.arrEne()
+
+#############################
+# 1. Iniciar Nueva Partida (Crear Party)
 pj_1 = PJ('Warrior', 'Escanor')
 pj_2 = PJ('Warrior', 'Arturo')
 pj_3 = PJ('Thief', 'Robin Hood')
-# pj_1 = PJ('Monk', 'Tenzin')
-# pj_2 = PJ('Monk', 'Gyatso')
-# pj_3 = PJ('Monk', 'Asceta')
 pj_4 = PJ('Monk', 'Eremita')
-
-# # Levelear a los personajes
-# party_arr = [pj_1,pj_2,pj_3,pj_4]
-# for i in range(10):
-#     for p in party_arr:
-#         p.Lv1UP()
-# # HP y MP al máx
-# for p in party_arr:
-#     p.HP = p.HP_MAX
-#     p.MP = p.MP_MAX
-
-# Para party de Nivel 1
-ene_1 = Enemy('Crazy Horse')
-ene_2 = Enemy('Black Widow')
-
-## Para party de Nivel 5
-# ene_1 = Enemy('Werewolf')
-# ene_2 = Enemy('Gigas Worm')
-# # ene_3 = Enemy('Warg Wolf')
-
-print(f"Enemies has appeared")
-opc = -1
-char_lst = [pj_1,pj_2,pj_3,pj_4,ene_1,ene_2]
 arrChar = ArrCharacter()
-arrChar.addArrChar(char_lst)
-# party = arrChar.arrPer()
-# enemies = arrChar.arrEne()
+arrChar.addArrChar([pj_1,pj_2,pj_3,pj_4])
+# 2. Seleccionar Location Inicial ("Cornelia-Cornelia Bridge-Earthgift Shrine region")
+location = "Cornelia-Cornelia Bridge-Earthgift Shrine region"
+# 3. Encuentro con enemigos
+## 3.1. Crear arreglo de enemigos
+form_ids = get_formation("Cornelia-Cornelia Bridge-Earthgift Shrine region")
+print(f"form_ids: {form_ids}")
+random_choice = random.choice(form_ids)
+print(f"random_choice: {random_choice}")
+enemies_by_formation = get_enemies_from_formation(random_choice)
+print(f"enemies_by_formation: {enemies_by_formation}")
+enemies_array_str = get_enemies_how_many_and_which(enemies_by_formation)
+print(f"enemies_array_str: {enemies_array_str}")
+enemies_array = []
+for enemy in enemies_array_str:
+    enemies_array.append(Enemy(enemy))
+## 3.2. Y pasárselo a arrChar
+arrChar.addArrChar(enemies_array)
+arrChar.update_enemy_names()
+print(f"Characters in arrChar.n: {arrChar.n}")
+# Mostrar tipo de enemigo y su nombre (ej.: "Goblin 2") de todos los enemigos en arrChar
+for enemy in arrChar.arrEne().arr:
+    enemy.mostrar_datos_4()
+#############################
 
 def siguientes_x_turnos(arr_char, n):
     turnos = []

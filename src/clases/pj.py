@@ -113,6 +113,10 @@ class PJ:
             self.ATK = self.get_atk_del_arma() + self.STR//2
             # print(f"LV: {self.LV}\tHP: {self.HP}\tarma_atk: {self.get_atk_del_arma()}\tself.STR//2: {self.STR//2}")
 
+    def get_ATK_act(self):
+        self.asignar_ATK()
+        return self.ATK
+
     def asignar_DEF(self):
         if self.clase in ['Monk', 'Master']:
             self.DEF = self.STA // 2
@@ -313,8 +317,7 @@ class PJ:
         print(f"{self.STR_base}\t\t{self.AGL_base}\t\t{self.INT_base}\t\t{self.STA_base}\t\t{self.LCK_base}")
         print(f"STR\t\tAGL\t\tINT\t\tSTA\t\tLCK")
         print(f"{self.STR}\t\t{self.AGL}\t\t{self.INT}\t\t{self.STA}\t\t{self.LCK}")
-        self.asignar_ATK()
-        print(f"ATK: {self.ATK}\t\tATK_weapon ({self.arma.name}): {self.get_atk_del_arma()}")
+        print(f"ATK: {self.get_ATK_act()}\t\tATK_weapon ({self.arma.name}): {self.get_atk_del_arma()}")
         # print(f"XP: {self.XP}")
         # print(f"XP_limit0: {self.XP_limit0}")
         # print(f"XP_limit1: {self.XP_limit1}")

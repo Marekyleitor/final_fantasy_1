@@ -4,8 +4,7 @@ import os
 
 def cargar_xp_tabla():
     # Obtener la ruta absoluta del archivo
-    ruta_archivo = os.path.join(os.path.dirname(__file__),
-                                '../data/XP_Solo_Table.csv')
+    ruta_archivo = os.path.join(os.path.dirname(__file__), '../data/XP_Solo_Table.csv')
 
     xp_tabla = {}
     with open(ruta_archivo, 'r', newline='') as archivo:
@@ -15,11 +14,9 @@ def cargar_xp_tabla():
             xp_tabla[int(nivel)] = int(xp)
     return xp_tabla
 
-
 def cargar_estadisticas_crecimiento():
     # Obtener la ruta absoluta del archivo
-    ruta_archivo = os.path.join(os.path.dirname(__file__),
-                                '../data/Guaranteed_stat_growth.csv')
+    ruta_archivo = os.path.join(os.path.dirname(__file__), '../data/Guaranteed_stat_growth.csv')
 
     estadisticas = {}
     with open(ruta_archivo, 'r', newline='', encoding='utf-8') as archivo:
@@ -33,11 +30,9 @@ def cargar_estadisticas_crecimiento():
             }
     return estadisticas
 
-
 def cargar_armas():
     # Obtener la ruta absoluta del archivo
-    ruta_archivo = os.path.join(os.path.dirname(__file__),
-                                '../data/FFI_BD_Weapons.csv')
+    ruta_archivo = os.path.join(os.path.dirname(__file__), '../data/FFI_BD_Weapons.csv')
 
     armas = {}
     with open(ruta_archivo, 'r', newline='', encoding='utf-8') as archivo:
@@ -66,11 +61,9 @@ def cargar_armas():
             }
     return armas
 
-
 def cargar_estadisticas_enemigos():
     # Obtener la ruta absoluta del archivo
-    ruta_archivo = os.path.join(os.path.dirname(__file__),
-                                '../data/Enemy_stats_01.csv')
+    ruta_archivo = os.path.join(os.path.dirname(__file__), '../data/Enemy_stats_01.csv')
 
     enemigos = {}
     with open(ruta_archivo, 'r', newline='', encoding='utf-8') as archivo:
@@ -102,7 +95,24 @@ def cargar_estadisticas_enemigos():
             }
     return enemigos
 
+def cargar_formacion_enemigos():
+    # Obtener la ruta absoluta del archivo
+    ruta_archivo = os.path.join(os.path.dirname(__file__), '../data/Enemy_Formation.csv')
 
+    formacion = {}
+    with open(ruta_archivo, 'r', newline='', encoding='utf-8') as archivo:
+        lector = csv.DictReader(archivo, delimiter=';')
+        for fila in lector:
+            numero = fila['Number']
+            formacion[numero] = {
+                'Enemies': [x.strip() for x in fila['Enemies'].split(', ') if x.strip()],
+                'Maximum': str(fila['Maximum']),
+                'Can flee?': bool(fila['Can flee?']),
+                'Ambush%': int(fila['Ambush%']),
+                'Musical theme': str(fila['Musical theme']),
+                'Location': [x.strip() for x in fila['Location'].split(', ') if x.strip()]
+            }
+    return formacion
 
 
 # Definimos un diccionario con todas las estadísticas por clase
@@ -140,3 +150,5 @@ ENEMIGOS = cargar_estadisticas_enemigos()
 # print(f"Debilidades de Chaos: {', '.join(chaos_dict['WEAK'])}")
 # print(f"Familia de Chaos: {chaos_dict['family']}")
 
+# Carga la info de todas las Formaciones Enemigas
+FORMACION = cargar_formacion_enemigos()
