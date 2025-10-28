@@ -1,0 +1,76 @@
+Name;Equipped by;Price;Value;Defense;Evasion;Weight;Buy;Find;Drop;Type;Stats;Resistance;Description;Used as item;End of turn
+Leather Shield (Wooden);Wa, Kn, Ni;15;7;2;0;0;Pravoka;Cavern of Earth;Pirate;shield;-;-;A shield made of hardened leather.;-;-
+Buckler;Wa, Kn, Th, Ni, RM, RW;2500;1250;2;0;0;Crescent Lake;-;-;shield;-;-;A small shield.;-;-
+Iron Shield;Wa, Kn, Ni;100;50;4;0;0;Elfheim;Castle Cornelia;-;shield;-;-;A shield wrought from iron.;-;-
+Mythril Shield (Silver);Wa, Kn, Ni;2500;1250;8;0;0;Crescent Lake;Cavern of Earth, Mount Gulg;-;shield;-;-;A shield crafted from mythril.;-;-
+Flame Shield;Wa, Kn, Ni;10000;5000;12;0;0;-;Mount Gulg;-;shield;-;Ice;A shield imbued with the power of fire that guards against ice.;-;-
+Ice Shield;Wa, Kn, Ni;10000;5000;12;0;0;-;Cavern of Ice;Winter Wolf;shield;-;Fire;A shield imbued with the power of ice that guards against fire.;-;-
+Diamond Shield (Opal);Kn;15000;7500;16;0;0;-;Sunken Shrine, Flying Fortress;-;shield;-;Lightning;A shield made of diamond that guards against lightning.;-;-
+Aegis Shield;Kn;40000;20000;16;0;0;-;Mirage Tower;-;shield;-;Poison, Stone;A shield that guards against stone and poison.;-;-
+Protect Cloak;Wa, Kn, Th, Ni, RM, RW, WM, WW, BM, BW;20000;10000;8;0;2;Whisperwind Cove (Mage Town);Flying Fortress, Chaos Shrine (Past);-;shield;-;-;A large cloak worn over armor.;-;-
+Genji Shield;Wa, Kn, Ni;?;100;14;50;8;-;Lifespring Grotto;-;shield;-;Poison, Stone;Heavy shield crafted in a distant land.;-;-
+Crystal Shield;Kn, Ni;?;100;15;45;0;-;Lifespring Grotto, Whisperwind Cove;-;shield;-;Stone;A shield of crystal, crafted long ago.;-;-
+Hero's Shield;Kn, Ni;?;100;16;40;0;-;Lifespring Grotto;-;shield;-;All elements & statuses;Shield that wards off status ailments.;-;-
+Zephyr Cape;Wa, Kn, Th, Ni, RM, RW, WM, WW, BM, BW;51000;25500;4;10;1;Whisperwind Cove (B21-B29 Town);Whisperwind Cove;Death Elemental;shield;-;-;A cape alive with the spirit of wind.;-;-
+Elven Cloak;Wa, Kn, Th, Ni, RM, RW, WM, WW, BM, BW;55800;27900;9;0;1;Whisperwind Cove (B31-B39 Town);Earthgift Shrine, Whisperwind Cove;-;shield;{AGL:1, INT:1};-;A cloak enchanted with elven magic.;-;-
+Master Shield;Wa, Kn, RM, RW;?;100;19;30;0;-;Labyrinth of Time;Chronodia (Kraken);shield;{AGL:1, INT:1};All elements & statuses;A shield once held by a great hero.;-;-
+Leather Cap;Wa, Kn, Th, Ni, Mo, Ma, RM, RW, WM, WW, BM, BW;80;40;1;0;1;Elfheim;Chaos Shrine;-;helmet;-;-;A cap made of leather.;-;-
+Ribbon;Wa, Kn, Th, Ni, Mo, Ma, RM, RW, WM, WW, BM, BW;?;1;1;0;1;-;Sunken Shrine, Waterfall Cavern, Flying Fortress, Hellfire Chasm (Last Floor);-;helmet;-;All elements & statuses;A ribbon that guards against elemental attacks and status effects.;-;-
+Helm (Wooden);Wa, Kn, Ni;100;50;3;0;3;Elfheim;-;-;helmet;-;-;A small helm.;-;-
+Great Helm (Iron);Wa, Kn, Ni;450;225;5;0;5;Melmond;Mount Duergar;-;helmet;-;-;A helm that covers the entire head.;-;-
+Mythril Helm (Silver);Wa, Kn, Ni;2500;1250;6;0;3;Crescent Lake;Titan's Cave, Mount Gulg, Flying Fortress;-;helmet;-;-;A helm wrought from mythril.;-;-
+Healing Helm;Kn, Ni;20000;10000;6;0;3;-;Mirage Tower, Flying Fortress;-;helmet;-;-;A helm that casts Heal when used.;Heal;-
+Diamond Helm (Opal);Kn;10000;5000;8;0;3;-;Sunken Shrine;-;helmet;-;-;A helm made of diamond.;-;-
+Twist Headband;Th, Ni, Mo, Ma;?;100;3;0;1;-;Hellfire Chasm;-;helmet;{STR:10, AGL:1, STA:2};-;A headband favored by martial artists.;-;-
+Feathered Cap;Wa, Kn, Th, Ni, RM, RW;?;100;4;10;1;-;Lifespring Grotto;-;helmet;-;-;A light cap woven of silk.;-;-
+Wizard's Hat;RM, RW, WM, WW, BM, BW;46600;23300;4;0;1;Whisperwind Cove (B21-B29 Town);Whisperwind Cove;-;helmet;{INT:5};-;A traditional hat brimming with magic.;-;-
+Sage's Mitre;WM, WW, BM, BW;45200;22600;5;0;1;Whisperwind Cove (B31-B39 Town);Hellfire Chasm, Lifespring Grotto, Whisperwind Cove;-;helmet;{INT:5, MP_MAX:10%};-;A hat made of enchanted cloth.;-;-
+Black Cowl;Th, Ni;?;100;8;10;1;-;Earthgift Shrine, Whisperwind Cove;-;helmet;{STR:3, AGL:1, STA:1};Sleep;Black hood brought from a distant land.;-;-
+Tiger Mask;Kn, Ni, Ma;?;100;8;0;2;-;Lifespring Grotto, Whisperwind Cove;-;helmet;{STR:3, AGL:2, STA:1};-;A light mask made in a tiger's likeness.;-;-
+Red Cap;RM, RW;?;100;8;0;1;-;Whisperwind Cove;-;helmet;{STR:4, AGL:3, STA:2, , HP_MAX:25%};-;A cap that awakens latent abilities.;-;-
+Genji Helm;Wa, Kn, Th, Ni;?;100;9;15;3;-;Whisperwind Cove;Typhon;helmet;{INT:3};Poison, Stone;A heavy helm crafted in a distant land.;-;-
+Crystal Helm;Kn, Ni;?;100;10;15;3;-;Whisperwind Cove;-;helmet;{INT:3};Stone;A helm of crystal, crafted long ago.;-;-
+Shadow Mask;Th, Ni;?;100;3;6;2;-;-;Chronodia (Tiamat);helmet;{AGL:30};-;Mask that is a testament to darkness.;-;-
+Clothes;Wa, Kn, Th, Ni, Mo, Ma, RM, RW, WM, WW, BM, BW;10;5;1;0;2;Cornelia;Cavern of Ice, Flying Fortress;-;body armor;-;-;Ordinary clothing.;-;-
+White Robe;WW;25000;12500;24;0;2;Whisperwind Cove (Mage Town);Flying Fortress;-;body armor;-;Fire, Instant Death;"A robe that guards against fire and instant death; casts Invisira when used.";Invisira;-
+Black Robe;BW;25000;12500;24;0;2;Whisperwind Cove (Mage Town);Flying Fortress;-;body armor;-;Ice, Time;"A robe that guards against ice and time irregularities; casts Blizzara when used.";Blizzara;-
+Leather Armor;Mo, Ma, RM, RW;50;25;4;0;8;Cornelia, Pravoka;-;-;body armor;-;-;Armor made of hardened leather.;-;-
+Chain Mail;Wa, Kn, Ni, RM, RW;80;40;15;0;15;Cornelia, Pravoka;-;-;body armor;-;-;Mail of interwoven chain links.;-;-
+Mythril Mail (Silver);Wa, Kn, Ni, RM, RW;7500;3750;18;0;8;Crescent Lake;Mount Duergar;-;body armor;-;-;Mail crafted from mythril.;-;-
+Iron Armor;Wa, Kn, Ni;800;400;24;0;23;Pravoka, Elfheim;Castle Cornelia, Marsh Cave;-;body armor;-;-;Armor made of thinly hammered iron.;-;-
+Knight's Armor (Steel);Wa, Kn;45000;22500;34;0;33;Melmond;-;-;body armor;-;-;Armor crafted from steel plate.;-;-
+Flame Mail;Wa, Kn, Ni;?;15000;34;0;10;-;Mount Gulg;-;body armor;-;Ice;Mail infused with the power of fire that guards against ice.;-;-
+Ice Armor;Wa, Kn, Ni;?;15000;34;0;10;-;Cavern of Ice;-;body armor;-;Fire;Armor infused with the power of ice that guards against fire.;-;-
+Diamond Armor (Opal);Kn;?;30000;42;0;10;-;Sunken Shrine;-;body armor;-;Lightning;Armor crafted from diamond that guards against lightning.;-;-
+Dragon Mail;Kn;?;30000;42;0;10;-;Mirage Tower;-;body armor;-;Fire, Ice, Lightning;Mail fashioned from dragon scales that guards against fire and ice.;-;-
+Copper Armlet;Wa, Kn, Th, Ni, Mo, Ma, RM, RW, WM, WW, BM, BW;1000;500;4;0;1;Elfheim;Marsh Cave;-;body armor;-;-;An armlet crafted from copper.;-;-
+Silver Armlet;Wa, Kn, Th, Ni, Mo, Ma, RM, RW, WM, WW, BM, BW;5000;2500;15;0;1;Melmond;Marsh Cave;-;body armor;-;-;An armlet of worked silver.;-;-
+Ruby Armlet (Gold);Wa, Kn, Th, Ni, Mo, Ma, RM, RW, WM, WW, BM, BW;50000;25000;24;0;1;Gaia;Citadel of Trials;-;body armor;-;-;An armlet ornamented with rubies.;-;-
+Diamond Armlet (Opal);Wa, Kn, Th, Ni, Mo, Ma, RM, RW, WM, WW, BM, BW;?;32500;34;0;1;-;Sunken Shrine;-;body armor;-;-;An armlet adorned with diamonds.;-;-
+Bard's Tunic;Wa, Kn, Th, Ni, Mo, Ma, RM, RW, WM, WW, BM, BW;67300;33650;20;0;3;Whisperwind Cove (B1-B9 Town);Hellfire Chasm, Whisperwind Cove;2-Headed Dragon;body armor;-;Silence;A light, loose-fitting tunic.;-;-
+Red Jacket;Th, Ni, RM, RW;?;100;24;0;2;-;Whisperwind Cove;-;body armor;{STR: 5, AGL: 2, INT: 1, STA: 4};Fire;A jacket that protects against flame.;-;-
+Sage's Surplice;RM, RW, WM, WW, BM, BW;70000;35000;25;0;2;Whisperwind Cove (B11-B19 Town);Lifespring Grotto, Hellfire Chasm;-;body armor;{INT: 5};-;A robe that enhances intelligence.;-;-
+Kenpogi;Mo, Ma;?;100;28;0;1;-;Earthgift Shrine, Lifespring Grotto, Whisperwind Cove;-;body armor;{STR: 3};-;An outfit favored by martial artists.;-;-
+Gaia Gear;BM, BW;?;100;35;0;2;-;Lifespring Grotto;Undergrounder;body armor;-;Quake, Stone;A robe instilled with the earth's grace.;-;-
+Light Robe;WM, WW;?;100;35;0;2;-;Whisperwind Cove;-;body armor;{INT: 5};-;A robe imbued with the spirit of light.;-;-
+Power Vest;Mo, Ma;?;100;38;0;1;-;Lifespring Grotto;-;body armor;{STR: 15, AGL: 1, STA: 1};-;A vest woven with a unique thread.;-;-
+Black Garb;Th, Ni;?;100;40;0;2;-;Whisperwind Cove (x2);-;body armor;{STR: 1, AGL: 10};-;Light, durable suit from a distant land.;-;-
+Genji Armor;Wa, Kn, Ni;?;100;35;0;10;-;Whisperwind Cove;Warmech;body armor;{STR: 5, AGL: 3, INT: 3, STA: 2};Poison, Stone, Death;Heavy armor crafted in a distant land.;-;-
+Crystal Mail;Kn, Ni;?;100;44;0;10;-;Whisperwind Cove;-;body armor;{INT: 3};Blind, Silence, Stone;Mail of crystal, crafted long ago.;-;-
+Thief's Armlet;Th, Ni;?;100;30;0;1;-;Whisperwind Cove;-;body armor;{AGL: 5};-;An armlet that enhances agility.;-;-
+Lordly Robes;WM, WW;?;100;37;5;1;-;-;Chronodia (Lich & Marilith);body armor;{INT: 20};Stone, Death;A robe immersed in holy power.;-;10% HP Regen
+Survival Vest;Th, Ni, Mo, Ma;?;100;45;0;1;-;-;Chronodia (Kraken & Tiamat);body armor;{AGL: 15, STA: 15};Sleep, Poison;A vest that musters strength.;-;-
+Maximillian;Wa, Kn, RM, RW;?;100;55;0;10;-;-;Chronodia;body armor;{STR: 5, STA: 10};-;Suit of armor made of pure steel.;-;-
+Leather Gloves;Wa, Kn, Th, Ni, Mo, Ma, RM, RW, WM, WW, BM, BW;60;30;1;0;1;Pravoka;-;-;gloves;-;-;Gloves made of leather.;-;-
+Bronze Gloves (Copper);Wa, Kn, Ni;200;100;2;0;3;Melmond;Elven Castle (Mystic Key);-;gloves;-;-;Gloves made of bronze.;-;-
+Steel Gloves (Iron);Wa, Kn, Ni;750;375;4;0;5;Melmond;Western Keep (Mystic Key), Citadel of Trials;-;gloves;-;-;Gloves made of steel.;-;-
+Mythril Gloves (Silver);Wa, Kn, Ni, RW;2500;1250;6;0;3;Crescent Lake;Mount Gulg, Cavern of Ice;-;gloves;-;-;Gloves made of mythril.;-;-
+Gauntlets (Zeus);Kn, Ni, RW;15000;7500;6;0;3;Whisperwind Cove (Mage Town);Citadel of Trials;-;gloves;-;-;Gloves that cast Thundara when used.;Thundara;-
+Giant's Gloves (Power);Kn, Ni, RW;?;5000;6;0;3;-;Sunken Shrine;-;gloves;-;-;Gloves that cast Saber when used.;Saber;-
+Diamond Gloves (Opal);Kn;?;10000;8;0;3;-;Sunken Shrine, Flying Fortress;-;gloves;-;-;Gloves made of diamond.;-;-
+Protect Ring;Wa, Kn, Th, Ni, Mo, Ma, RM, RW, WM, WW, BM, BW;20000;10000;8;0;1;Gaia;Flying Fortress (x2), Chaos Shrine (Past);-;gloves;-;Instant Death;A ring that guards against instant death.;-;-
+Thief's Gloves;Th, Ni;?;100;6;10;1;-;Hellfire Chasm;-;gloves;{AGL: 5};-;Gloves that enhance agility.;-;-
+Crystal Ring;Kn, Ni, Ma, RW;?;100;9;0;1;-;Lifespring Grotto (x2);-;gloves;{AGL: 5};Sleep, Paralysis;A ring of crystal, crafted long ago.;-;-
+Genji Gloves;Wa, Kn, Ni;?;100;9;15;2;-;-;Gilgamesh;gloves;-;Poison, Stone;Heavy gloves crafted in a distant land.;-;-
+Crystal Gloves;Kn, Ni;?;100;10;15;3;-;Whisperwind Cove;-;gloves;{INT: 3};Stone;Gloves of crystal, crafted long ago.;-;-
+Angel's Ring;RM, RW, WM, WW, BM, BW;?;100;8;0;1;-;-;-;gloves;-;-;Ring fashioned after an angel's feather.;-;-

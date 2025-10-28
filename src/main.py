@@ -49,13 +49,22 @@ pj_1 = PJ('Warrior', 'Escanor')
 pj_2 = PJ('Warrior', 'Arturo')
 pj_3 = PJ('Thief', 'Robin Hood')
 pj_4 = PJ('Monk', 'Eremita')
+pj_4.reemplazar_armadura('body_armor', '')
 arrChar = ArrCharacter()
 arrChar.addArrChar([pj_1,pj_2,pj_3,pj_4])
-# 2. Seleccionar Location Inicial ("Cornelia-Cornelia Bridge-Earthgift Shrine region")
-location = "Cornelia-Cornelia Bridge-Earthgift Shrine region"
+# 1.5. Leveleo y descansados
+nivel_objetivo = 1
+for i in range(nivel_objetivo-1):
+    for pj in [pj_1,pj_2,pj_3,pj_4]:
+        pj.Lv1UP()
+        pj.HP = pj.HP_MAX
+# 2. Seleccionar Location Inicial ("Cornelia")
+            # Cornelia-Cornelia Bridge-Earthgift Shrine region      # All / pre-WSC northern rivers
+            # Earthgift Shrine region
+location = "Marsh Cave B1"
 # 3. Encuentro con enemigos
 ## 3.1. Crear arreglo de enemigos
-form_ids = get_formation("Cornelia-Cornelia Bridge-Earthgift Shrine region")
+form_ids = get_formation(location)
 print(f"form_ids: {form_ids}")
 random_choice = random.choice(form_ids)
 print(f"random_choice: {random_choice}")
@@ -202,6 +211,29 @@ agregar_espera_aleatoria(arrChar)
 pasa_turno = True
 
 while(True):
+    if arrChar.arrPer().arrAlive().arr == []:
+        print(f"""⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⡀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⠀⠀⠀⢀⣴⣿⡶⠀⣾⣿⣿⡿⠟⠛⠁
+⠀⠀⠀⠀⠀⠀⣀⣀⣄⣀⠀⠀⠀⠀⣶⣶⣦⠀⠀⠀⠀⣼⣿⣿⡇⠀⣠⣿⣿⣿⠇⣸⣿⣿⣧⣤⠀⠀⠀
+⠀⠀⢀⣴⣾⣿⡿⠿⠿⠿⠇⠀⠀⣸⣿⣿⣿⡆⠀⠀⢰⣿⣿⣿⣷⣼⣿⣿⣿⡿⢀⣿⣿⡿⠟⠛⠁⠀⠀
+⠀⣴⣿⡿⠋⠁⠀⠀⠀⠀⠀⠀⢠⣿⣿⣹⣿⣿⣿⣿⣿⣿⡏⢻⣿⣿⢿⣿⣿⠃⣼⣿⣯⣤⣴⣶⣿⡤⠀
+⣼⣿⠏⠀⣀⣠⣤⣶⣾⣷⠄⣰⣿⣿⡿⠿⠻⣿⣯⣸⣿⡿⠀⠀⠀⠁⣾⣿⡏⢠⣿⣿⠿⠛⠋⠉⠀⠀⠀
+⣿⣿⠲⢿⣿⣿⣿⣿⡿⠋⢰⣿⣿⠋⠀⠀⠀⢻⣿⣿⣿⠇⠀⠀⠀⠀⠙⠛⠀⠀⠉⠁⠀⠀⠀⠀⠀⠀⠀
+⠹⢿⣷⣶⣿⣿⠿⠋⠀⠀⠈⠙⠃⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⣴⣶⣦⣤⡀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⣠⡇⢰⣶⣶⣾⡿⠷⣿⣿⣿⡟⠛⣉⣿⣿⣿⠆
+⠀⠀⠀⠀⠀⠀⢀⣤⣶⣿⣿⡎⣿⣿⣦⠀⠀⠀⢀⣤⣾⠟⢀⣿⣿⡟⣁⠀⠀⣸⣿⣿⣤⣾⣿⡿⠛⠁⠀
+⠀⠀⠀⠀⣠⣾⣿⡿⠛⠉⢿⣦⠘⣿⣿⡆⠀⢠⣾⣿⠋⠀⣼⣿⣿⣿⠿⠷⢠⣿⣿⣿⠿⢻⣿⣧⠀⠀⠀
+⠀⠀⠀⣴⣿⣿⠋⠀⠀⠀⢸⣿⣇⢹⣿⣷⣰⣿⣿⠃⠀⢠⣿⣿⢃⣀⣤⣤⣾⣿⡟⠀⠀⠀⢻⣿⣆⠀⠀
+⠀⠀⠀⣿⣿⡇⠀⠀⢀⣴⣿⣿⡟⠀⣿⣿⣿⣿⠃⠀⠀⣾⣿⣿⡿⠿⠛⢛⣿⡟⠀⠀⠀⠀⠀⠻⠿⠀⠀
+⠀⠀⠀⠹⣿⣿⣶⣾⣿⣿⣿⠟⠁⠀⠸⢿⣿⠇⠀⠀⠀⠛⠛⠁⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⠙⠛⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""")
+#         print(f"""  ____    _    __  __ _____    _____     _______ ____
+#  / ___|  / \  |  \/  | ____|  / _ \ \   / / ____|  _ \
+# | |  _  / _ \ | |\/| |  _|   | | | \ \ / /|  _| | |_) |
+# | |_| |/ ___ \| |  | | |___  | |_| |\ V / | |___|  _ <
+#  \____/_/   \_\_|  |_|_____|  \___/  \_/  |_____|_| \_\ """)
+        break
     if pasa_turno:
         char_en_turno = proseguir_al_siguiente_turno(arrChar)
         print(f"")

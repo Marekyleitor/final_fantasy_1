@@ -1,0 +1,129 @@
+Name;Background;HP;ATK;DEF;MD;WEAK;RESI;Gil;EXP;Hits;ACC;ACC_2;Status;CRIT;Crit_2;EVA;Eva_2;Run Lev.;Magic;Sp. Att;Family;AGL
+Goblin;Grass;8;4;4;16;None;None;6;6;1;2;85;-;1;1%;6;3;13;-;-;Giant;3
+Goblin Guard;Grass;16;8;6;23;None;None;18;18;1;4;86;-;1;1%;10;5;20;-;-;Giant;5
+Wolf;Grass;20;8;0;28;None;None;6;24;1;4;86;-;1;1%;36;18;13;-;-;-;18
+Crazy Horse;Grass;64;10;2;40;None;None;15;63;2;16;92;-;1;1%;22;11;13;-;-;-;11
+Skeleton;Temple of Chaos 1;10;10;0;17;Fire, Dia;Ice, Death, Confusion, Paralysis;3;9;1;2;85;-;1;1%;12;6;22;-;-;Undead;6
+Black Widow;Temple of Chaos 1;28;10;0;28;None;None;8;30;1;6;87;-;1;1%;30;15;15;-;-;-;15
+Gigas Worm;Temple of Chaos 1;56;17;8;40;Fire;None;15;63;1;14;91;-;1;1%;24;12;12;-;-;-;12
+Warg Wolf;Temple of Chaos 1;72;14;0;46;None;None;22;93;1;18;93;-;1;1%;54;27;14;-;-;-;27
+Werewolf;Temple of Chaos 1;68;14;6;45;None;None;67;135;1;16;92;Poison;1;1%;42;21;20;-;-;Magic Beast,Regenerating,Werebeast;21
+Zombie;Temple of Chaos 1;20;10;0;25;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;12;24;1;4;86;-;1;1%;6;3;20;-;-;Undead;3
+Ghoul;Temple of Chaos 1;48;8;6;36;Fire, Dia;Ice, Death, Confusion, Paralysis;50;93;3;12;90;Paralysis;1;1%;12;6;22;-;-;Undead;6
+Garland;Temple of Chaos 1;106;15;10;64;None;None;250;130;1;26;97;-;1;1%;12;6;-;-;-;-;6
+Cobra;Forest 1;56;6;6;46;None;None;50;123;1;14;91;Poison;1;1%;30;15;14;-;-;Dragon;15
+Ogre;Forest 1;100;18;10;65;None;None;195;195;1;24;96;-;1;1%;18;9;18;-;-;Giant;9
+Ogre Chieftain;Forest 1;132;23;14;71;None;None;300;282;1;32;100;-;1;1%;30;15;23;-;-;Giant;15
+Lizard;Forest 2;92;18;12;55;None;None;50;153;1;22;95;-;10;5%;24;12;27;-;-;Dragon;12
+Pirate;Pravoka;6;8;0;15;None;None;40;40;1;2;85;-;1;1%;12;6;-;-;-;-;6
+Sahagin;Boat;28;10;4;28;Bolt;Quake, Fire;30;30;1;6;87;-;1;1%;72;36;15;-;-;Aquatic;36
+Sahagin Chief;Boat;64;15;8;46;Bolt;Quake, Fire;105;105;1;16;92;-;1;1%;78;39;31;-;-;Aquatic;39
+Privateer;Boat;50;14;6;37;None;Quake;120;60;1;12;90;-;1;1%;24;12;13;-;-;-;12
+Shark;Boat;120;22;0;70;Bolt;Quake, Fire;66;267;1;30;99;-;1;1%;72;36;21;-;-;Aquatic;36
+Goggler;Boat;10;4;0;14;Bolt;Quake, Fire;10;42;1;2;85;-;1;1%;84;42;15;-;100%;-;42
+Tarantula;Forest 2;64;5;12;46;None;None;50;141;1;16;92;Poison;1;1%;24;12;16;-;-;-;12
+Ghast;Forest 2;56;8;10;40;Fire, Dia;Ice, Death, Confusion, Paralysis;117;117;3;14;91;Paralysis;1;1%;46;23;40;-;-;Undead;23
+Scorpion;Marsh Cave;84;22;10;55;None;None;70;225;2;20;94;Poison;1;1%;54;27;16;-;-;-;27
+Shadow;Marsh Cave;50;10;0;37;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;45;90;1;12;90;Darkness;1;1%;36;18;22;-;-;Magic Beast,Undead;18
+Green Slime;Marsh Cave;24;1;255;36;Ice, Fire;Quake, Bolt, Death, Confusion, Paralysis;20;84;1;0;84;Poison;1;1%;0;0;22;-;-;-;0
+Crawler;Marsh Cave;84;1;8;51;None;None;200;186;8;20;94;Paralysis;1;1%;42;21;13;-;-;-;21
+Gray Ooze;Marsh Cave;76;30;7;55;Bolt;Quake, Ice, Fire, Death, Confusion, Paralysis;70;255;1;18;93;-;1;1%;4;2;36;-;-;-;2
+Gargoyle;Marsh Cave;80;12;8;53;None;Quake;80;132;4;20;94;-;1;1%;46;23;26;-;-;Magic Beast;23
+Bloodbones;Marsh Cave;144;26;12;76;Fire, Dia;Ice, Death, Confusion, Paralysis;378;378;1;34;101;-;1;1%;42;21;38;-;-;Undead;21
+Piscodemon;Marsh Cave;84;30;16;98;None;Ice, Fire, Confusion, Paralysis;300;276;2;20;94;-;1;1%;66;33;23;-;-;Aquatic,Magic Beast;33
+Astos;Western Keep;420;26;40;170;None;None;2000;2250;1;40;104;-;1;1%;78;39;-;75%;-;-;39
+Mummy;Terra Cavern 1;80;30;20;60;Fire, Dia;Ice, Death, Confusion, Paralysis;300;300;1;20;94;Sleep;1;1%;24;12;46;-;-;Undead;12
+Wraith;Western Keep;86;22;4;52;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;231;231;1;22;95;Paralysis;1;1%;90;45;40;-;-;Magic Beast,Undead;45
+Anaconda;Marsh Cave;80;22;10;56;None;None;50;165;1;20;94;-;31;16%;36;18;15;-;-;Dragon;18
+Hyenadon;Forest 1;120;22;4;76;None;None;72;288;1;30;99;-;1;1%;48;24;21;-;-;-;24
+Lesser Tiger;Titan's Cave;132;22;8;85;None;None;108;438;2;32;100;-;25;13%;48;24;18;-;-;-;24
+Minotaur;Terra Cavern 1;164;22;4;95;None;None;489;489;2;40;104;-;1;1%;48;24;22;-;-;-;24
+Hill Gigas;Terra Cavern 1;240;38;12;120;None;None;879;879;1;58;113;-;1;1%;48;24;28;-;-;Giant;24
+Gnoma;Terra Cavern 1;288;66;20;130;Fire;Quake, Bolt, Ice, Death, Confusion, Paralysis;768;1536;1;70;119;-;1;1%;18;9;-;-;-;Magic Beast;9
+Troll;Terra Cavern 1;184;24;12;100;Fire;None;621;621;3;44;106;-;1;1%;48;24;28;-;-;Regenerating;24
+Wight;Terra Cavern 1;52;20;12;45;Fire, Dia;Ice, Death, Confusion, Paralysis;150;150;1;12;90;Paralysis;1;1%;42;21;40;-;-;Undead;21
+Ochre Jelly;Terra Cavern 1;76;32;6;55;Ice, Fire;Quake, Bolt, Death, Confusion, Paralysis;70;252;1;18;93;-;1;1%;6;3;32;-;-;-;3
+Cockatrice;Terra Cavern 1;50;1;4;47;None;Quake;200;186;1;10;89;Stone;1;1%;72;36;22;-;-;-;36
+Vampire;Terra Cavern 1;156;76;24;75;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;2000;1200;1;38;103;Paralysis;1;1%;72;36;-;-;25%;Magic Beast,Regenerating,Undead;36
+Ogre Mage;Terra Cavern 1;144;23;10;80;None;Quake;723;723;1;34;101;-;1;1%;54;27;27;50%;-;Giant,Regenerating,Spellcaster;27
+Sphinx;Terra Cavern 1;228;23;12;115;None;Quake;1160;1160;3;56;112;-;1;1%;120;60;26;-;-;-;60
+Lich;Terra Cavern 2;1200;40;40;120;Fire, Dia;Ice, Death, Confusion, Paralysis;3000;2200;1;48;108;Paralysis;1;1%;24;12;-;75%;-;Magic Beast,Spellcaster,Undead;12
+Centipede;Mt. Gulg 1;222;39;20;116;None;None;300;1194;1;54;111;Poison;1;1%;48;24;16;-;-;-;24
+Piranha;River 1;92;22;0;68;Bolt;Quake, Fire;20;240;1;22;95;-;1;1%;72;36;29;-;-;-;36
+Red Piranha;River 2;172;37;20;83;None;None;46;546;1;42;105;-;1;1%;72;36;31;-;-;-;36
+Crocodile;River 1;184;42;16;103;Bolt;Quake, Fire;900;816;2;44;106;-;1;1%;48;24;29;-;-;-;24
+White Croc;River 2;288;56;20;143;Bolt;Quake, Fire;2000;1890;2;70;119;-;1;1%;48;24;31;-;-;Dragon;24
+Ochu;River 1;208;20;24;116;Bolt;Quake, Fire;102;1224;3;50;109;Poison;1;1%;24;12;48;-;-;-;12
+Neochu;River 2;344;35;32;170;None;None;500;3189;3;84;126;Poison;1;1%;24;12;-;-;-;-;12
+Hydra;River 1;212;30;14;116;None;None;150;915;3;52;110;-;1;1%;36;18;29;-;-;Dragon;18
+Horned Devil;Mt. Gulg 1;94;10;32;127;None;Quake, Ice, Fire;387;387;4;24;96;-;1;1%;72;36;27;50%;-;Magic Beast;36
+Pyrolisk;Mt. Gulg 1;44;20;4;45;Ice;Quake, Fire;500;423;1;10;89;-;1;1%;72;36;22;-;25%;-;36
+Pyros;Mt. Gulg 1;276;50;20;130;Ice;Quake, fire, Death, Confusion, Paralysis;800;1620;1;68;118;-;1;1%;42;21;-;-;-;Magic Beast;21
+Fire Hydra;Mt. Gulg 1;182;20;14;103;Ice;Fire;400;1215;3;44;106;-;1;1%;36;18;36;-;50%;Dragon;18
+Lava Worm;Mt. Gulg 1;280;50;31;143;Ice;Quake, Fire;400;1671;1;68;118;-;1;1%;4;2;-;-;-;-;2
+Hellhound;Mt. Gulg 1;192;30;8;103;Ice;None;600;1182;1;46;107;-;1;1%;48;24;33;-;50%;-;24
+Fire Lizard;Mt. Gulg 1;296;31;18;143;Ice;Fire;1200;2472;2;72;120;-;1;1%;36;18;-;-;25%;Dragon;18
+Fire Gigas;Mt. Gulg 1;300;73;20;135;Ice;Fire;1506;1506;1;82;125;-;1;1%;48;24;-;-;-;Giant;24
+Red Dragon;Mt. Gulg 1;248;75;30;200;None;Quake, Fire;4000;2904;1;60;114;-;1;1%;96;48;-;-;50%;Dragon;48
+Marilith;Mt. Gulg 2;1440;40;50;183;Paralysis;Bolt, Ice, Fire;3000;2475;6;62;115;-;1;1%;48;24;-;38%;-;Magic Beast,Spellcaster;24
+White Dragon;Ice Cavern;200;53;8;196;Bolt, Fire;Quake, Ice;2000;1701;1;48;108;-;1;1%;120;60;-;-;50%;Dragon;60
+Winter Wolf;Ice Cavern;92;25;0;55;Fire;Ice;200;402;1;22;95;-;1;1%;54;27;-;-;25%;-;27
+Mindflayer;Ice Cavern;112;1;12;187;None;None;999;822;3;28;98;KO;1;1%;48;24;25;-;50%;-;24
+Ice Gigas;Ice Cavern;336;60;16;150;Fire;Ice;1752;1752;1;76;122;-;1;1%;48;24;-;-;-;Giant;24
+Specter;Ice Cavern;114;40;12;67;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;432;432;1;28;98;Paralysis;1;1%;108;54;40;-;-;Magic Beast,Undead;54
+Remora;Ice Cavern;320;73;24;185;None;Ice, Fire;1000;2244;1;78;123;-;1;1%;48;24;48;-;-;-;24
+Dark Wizard;Ice Cavern;105;26;40;170;None;None;1095;1095;1;26;97;-;1;1%;78;39;-;50%;-;Spellcaster;39
+Evil Eye;Ice Cavern;162;30;30;92;None;Quake;3225;3225;1;40;104;-;1;1%;12;6;-;63%;23%;Spellcaster;6
+Desert Baretta;Desert;352;98;48;156;None;None;1;2610;1;86;127;-;1;1%;48;24;32;-;-;-;24
+Sabretooth;Grass;200;24;8;106;None;None;500;843;2;48;108;-;0;35%;42;21;50;-;-;-;21
+Wyvern;Forest 1;212;30;12;115;None;Quake;50;1173;1;52;110;Poison;1;1%;96;48;35;-;-;Dragon;48
+Wyrm;Forest 1;260;40;22;131;None;Quake;502;1218;1;64;116;-;1;1%;60;30;35;-;-;Dragon;30
+Manticore;Forest 1;164;22;8;95;None;Quake;650;1317;2;40;104;-;1;1%;72;36;35;-;50%;-;36
+Baretta;Forest 1;256;60;38;130;None;None;300;1428;3;62;115;-;1;1%;56;28;33;-;-;-;28
+Basilisk;Marsh;196;30;20;91;None;None;658;1977;1;52;110;-;1;1%;24;12;-;-;50%;Dragon;12
+Allosaurus;Forest 1;480;65;10;200;None;None;502;3387;1;132;150;-;1;1%;60;30;32;-;-;Dragon;30
+Weretiger;Marsh;160;30;16;93;None;None;780;780;2;38;103;Poison;1;1%;48;24;34;-;-;Magic Beast,Regenerating,Werebeast;24
+Sand Worm;Desert;200;46;14;103;None;Quake;900;2683;1;48;108;-;1;1%;62;31;22;-;50%;-;31
+Necrotaur;Citadel of Trials;224;40;14;116;Fire, Dia;Ice, Death, Confusion, Paralysis;1050;1050;1;54;111;-;1;1%;36;18;28;-;-;Undead;18
+King Mummy;Citadel of Trials;188;43;24;95;Fire, Dia;Ice, Death, Confusion, Paralysis;1000;984;1;46;107;Sleep;1;1%;24;12;34;-;-;Undead;12
+Medusa;Citadel of Trials;68;20;10;55;None;None;699;699;1;16;92;Poison;1;1%;36;18;35;-;50%;-;18
+Rakshasa;Citadel of Trials;110;20;30;62;None;Quake, Bolt, Ice, Fire, Death, Confusion, Paralysis;800;603;3;28;98;-;1;1%;60;30;35;75%;-;Spellcaster;30
+Clay Golem;Citadel of Trials;176;64;7;94;None;Quake, Ice, Fire, Death, Confusion, Paralysis;800;1257;1;42;105;Poison;1;1%;28;14;-;25%;-;Magic Beast,Spellcaster;14
+Nightmare;Citadel of Trials;200;30;24;100;Ice;Quake, fire, Death, Confusion, Paralysis;700;1272;3;48;108;-;1;1%;132;66;-;-;25%;Magic Beast;66
+Dragon Zombie;Citadel of Trials;268;56;30;135;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;999;2331;1;66;117;Paralysis;1;1%;24;12;-;-;-;Dragon,Undead;12
+Sahagin Prince;Sunken Shrine 1;204;47;20;101;Bolt;Quake, Fire;882;882;1;50;109;-;1;1%;96;48;-;-;-;Aquatic;48
+White Shark;Sunken Shrine 1;344;50;8;170;Bolt;Quake, Fire;600;2361;1;84;126;-;1;1%;72;36;-;-;-;Aquatic;36
+Deepeyes;Sunken Shrine 1;304;30;16;156;Bolt;Quake, Fire;3591;3591;2;74;121;-;1;1%;24;12;-;-;50%;Aquatic;12
+Sea Snake;Sunken Shrine 1;224;35;12;116;Bolt;Quake, Fire;600;957;1;54;111;-;0;0%;48;24;-;-;-;Aquatic,Dragon;24
+Sea Scorpion;Sunken Shrine 1;148;35;18;85;Bolt;Quake, Fire;300;639;3;36;102;Poison;1;1%;60;30;-;-;-;Aquatic;30
+Sea Troll;Sunken Shrine 1;216;40;20;110;Bolt;Quake;852;852;1;52;110;-;1;1%;48;24;-;-;-;Aquatic,Regenerating;24
+Ghost;Sunken Shrine 1;180;93;30;85;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;990;990;1;44;106;Paralysis;1;1%;36;18;-;-;-;Magic Beast,Undead;18
+Aquos;Sunken Shrine 1;300;69;20;130;Ice;Quake, fire, Death, Confusion, Paralysis;800;1962;1;66;117;-;1;1%;72;36;-;-;-;Magic Beast;36
+Water Naga;Sunken Shrine 1;356;9;8;116;Bolt;Quake, Fire;2355;2355;1;70;119;Poison;1;1%;72;36;-;75%;-;Aquatic,Spellcaster;36
+Kraken;Sunken Shrine 2;1800;50;60;160;Bolt;Quake, Fire;5000;4245;8;88;128;-;1;1%;84;42;-;-;25%;Aquatic;42
+Tyrannosaur;Forest 2;600;115;10;200;None;None;600;7200;1;142;155;-;0;15%;60;30;35;-;-;Dragon;30
+Black Knight;Tower of Mirage;260;44;38;135;None;None;1800;1263;2;64;116;-;1;1%;36;18;-;-;-;-;18
+Chimera;Tower of Mirage;300;30;20;130;Ice;Quake, Fire;2500;2064;4;58;113;-;1;1%;72;36;-;-;50%;Dragon;36
+Guardian;Tower of Mirage;200;25;40;110;Bolt;Death, Confusion, Paralysis;400;1224;2;48;108;Paralysis;1;1%;72;36;-;-;-;-;36
+Blue Dragon;Tower of Mirage;454;92;20;200;None;Quake, Bolt;2000;3274;1;84;126;-;1;1%;96;48;-;-;50%;Dragon;48
+Green Dragon;Waterfall Cavern;352;72;16;200;Ice;Quake;5000;4068;1;66;117;-;1;1%;96;48;-;-;50%;Dragon;48
+Stone Golem;Flying Fortress 1;200;70;16;110;None;Quake, Bolt, Ice, Fire, Death, Confusion, Paralysis;1000;2385;1;48;108;-;1;1%;24;12;-;38%;-;Magic Beast,Spellcaster;12
+Aeros;Flying Fortress 1;358;53;4;130;None;Quake, Death, Confusion, Paralysis;807;1614;1;60;114;-;1;1%;144;72;-;-;-;Magic Beast;72
+Spirit Naga;Flying Fortress 1;420;7;16;143;None;None;4000;3489;1;86;127;Poison;1;1%;48;24;37;75%;-;Spellcaster;24
+Doom Knight;Flying Fortress 1;190;55;32;173;None;Death, Confusion, Paralysis;3000;2700;1;46;107;-;1;1%;42;21;-;25%;-;Magic Beast,Spellcaster;21
+Earth Medusa;Flying Fortress 1;96;11;12;70;Fire;Quake, Ice;1218;1218;10;24;96;Paralysis;1;1%;72;36;-;-;50%;Magic Beast;36
+Dark Flan;Flying Fortress 1;156;49;255;85;Fire;Quake, Bolt, Ice, Death, Confusion, Paralysis;900;1101;1;38;103;Poison;1;1%;24;12;-;-;-;-;12
+Soldier;Flying Fortress 1;400;102;48;160;Bolt;Quake, Ice, Fire, Death, Confusion, Paralysis;2000;4000;1;88;128;-;1;1%;96;48;35;-;-;-;48
+Vampire Lord;Flying Fortress 1;300;90;28;84;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;3000;2385;1;40;104;Paralysis;1;1%;72;36;-;25%;19%;Magic Beast,Regenerating,Spellcaster,Undead;36
+Dark Warrior;Flying Fortress 1;200;40;38;186;None;None;3420;3420;1;44;106;-;1;1%;90;45;39;38%;-;Spellcaster;45
+Warmech;Flying Fortress 1;2000;128;80;200;None;Quake, Bolt, Ice, Fire, Death, Confusion, Paralysis;32000;32000;2;198;183;-;1;1%;96;48;-;-;25%;Regenerating;48
+Tiamat;Flying Fortress 2;2400;49;80;200;Stone;Quake, Bolt, Ice, Fire;6000;5496;4;78;123;-;1;1%;72;36;-;-;50%;Dragon;36
+Rhyos;Temple of Chaos Past 1;350;40;18;143;Ice;Quake, Fire;5000;4584;4;68;118;-;1;1%;60;30;-;-;50%;Dragon;30
+Death Eye;Temple of Chaos Past 1;360;120;60;160;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;1;1;1;148;158;Paralysis;40;20%;24;12;-;50%;25%;Magic Beast,Regenerating,Undead;12
+Purple Worm;Temple of Chaos Past 1;448;65;10;200;None;Quake;1000;4344;1;110;139;-;0;5%;36;18;-;-;-;-;18
+Iron Golem;Temple of Chaos Past 1;304;93;100;143;None;Quake, Ice, Fire, Death, Confusion, Paralysis;3000;6717;1;74;121;-;1;1%;24;12;-;-;13%;Magic Beast;12
+Lich 2;Temple of Chaos Past 1;2800;50;80;140;Dia;Ice, Death, Confusion, Paralysis;1;2000;1;62;115;Paralysis;1;1%;48;24;-;0.75;-;Magic Beast,Spellcaster,Undead;24
+Marilith 2;Temple of Chaos Past 1;3200;60;80;183;None;Bolt, Ice, Fire;1;2000;6;62;115;-;1;1%;60;30;-;0.38;-;Magic Beast,Spellcaster;30
+Kraken 2;Temple of Chaos Past 1;3600;60;80;200;None;Quake, Fire;1;2000;8;112;140;-;1;1%;98;49;-;0.38;16%;Aquatic;49
+Tiamat 2;Temple of Chaos Past 1;5500;75;90;200;None;Quake, Bolt, Ice, Fire;1;2000;4;84;126;-;1;1%;90;45;-;0.5;25%;Dragon,Spellcaster;45
+Chaos;Temple of Chaos Past 2;20000;170;100;200;None;Resistant to all attributes;0;0;2;198;183;Paralysis;1;1%;100;50;-;0.5;25%;-;50

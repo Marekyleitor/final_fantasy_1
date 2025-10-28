@@ -5,7 +5,7 @@ class Arma:
         self.name = name
         if name != 'Hands':
             self.price = ARMAS[name]['price']
-            self.value = 0
+            self.value = 100
             if isinstance(self.price, int):
                 self.value = self.price // 2
             self.atk = ARMAS[name]['atk']
@@ -16,7 +16,7 @@ class Arma:
             self.find = ARMAS[name]['find']
             self.win = ARMAS[name]['win']
             self.special = ARMAS[name]['special']
-            self.tipo = ARMAS[name]['tipo']
+            self.type = ARMAS[name]['type']
             self.str_vs = ARMAS[name]['str_vs']
             self.elemental = ARMAS[name]['elemental']
             self.cast = ARMAS[name]['cast']
@@ -27,8 +27,9 @@ class Arma:
             self.seaa = ARMAS[name]['seaa']
         else:
             self.price,self.value,self.atk,self.acc,self.crit,self.equip_by = 0,0,0,0,0,'All clases'
-            self.buy,self.find,self.win,self.special,self.tipo,self.str_vs = '-','-','-',False,'-','-'
-            self.elemento,self.cast,self.inflige,self.stats,self.seba,self.seaa = '-','-','-','-','-','-'
+            self.buy,self.find,self.win,self.special,self.type,self.str_vs = '-','-','-',False,'-','-'
+            self.elemental,self.cast,self.inflicts,self.stats = '-','-','-','-'
+            self.allStats,self.seba,self.seaa = self.getAllStats(),'-','-'
 
     def mostrar_datos(self):
         print("Precio:", self.price, '\t', type(self.price))
@@ -40,11 +41,11 @@ class Arma:
         print("Find:", self.find, '\t', type(self.find))
         print("Win:", self.win, '\t', type(self.win))
         print("Special:", self.special, '\t', type(self.special))
-        print("Type:", self.tipo, '\t', type(self.tipo))
+        print("Type:", self.type, '\t', type(self.type))
         print("Strong vs:", self.str_vs, '\t', type(self.str_vs))
-        print("Element:", self.elemento, '\t', type(self.elemento))
+        print("Element:", self.elemental, '\t', type(self.elemental))
         print("Cast:", self.cast, '\t', type(self.cast))
-        print("Inflicts:", self.inflige, '\t', type(self.inflige))
+        print("Inflicts:", self.inflicts, '\t', type(self.inflicts))
         print("Stats:", self.stats, '\t', type(self.stats))
         print("Special Effect Before Attack:", self.seba, type(self.seba))
         print("Special Effect After Attack:", self.seaa, type(self.seaa))
@@ -108,3 +109,6 @@ class Arma:
                 aux['EVA'] = self.stats['EVA']
             # print('getAllStats: aux:', aux)
             return aux
+
+    def validar_nombre_arma(self, nombre:str) -> bool:
+        return nombre == 'Hands' or nombre in ARMAS.keys()

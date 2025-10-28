@@ -2,6 +2,9 @@
 
 from typing import List, Dict, Optional
 import random
+
+from pip._internal import locations
+
 # import sys
 # import os
 # sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -54,6 +57,23 @@ def get_enemies_how_many_and_which(enemies: List[str]) -> List[str]:
         else:
             result.append(name)
     return result
+
+def get_total_locations():
+    # total_locations = []
+    # print(f"{FORMACION['Location']}")
+    # for loc_lst_arr in FORMACION['Location']:
+    #     for ind_loc in loc_lst_arr:
+    #         if ind_loc not in total_locations:
+    #             total_locations.append(ind_loc)
+    # return total_locations
+    total_locations = []
+    for numero, datos in FORMACION.items():
+        loc_lst_arr = datos['Location']
+        for ind_loc in loc_lst_arr:
+            if ind_loc not in total_locations:
+                total_locations.append(ind_loc)
+    return total_locations
+
 
 ## Southern Cornelia region -> [0]
 ## Cornelia-Cornelia Bridge-Earthgift Shrine region -> [0, 3, 6, 128, 130]

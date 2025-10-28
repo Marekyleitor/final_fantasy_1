@@ -1,0 +1,87 @@
+def main():
+    # Inicialización del juego
+    pj = PJ()  # Crear personaje inicial
+    cargar_partida()  # Cargar partida guardada si existe
+
+    while True:
+        # Escena de título
+        if not pj.nombre or pj.nivel == 0:
+            # Mostrar logo de Square
+            mostrar_logo()
+            # Opción de nueva partida
+            if input("Nueva Partida? (S/N): ").upper() == 'S':
+                crear_personaje()
+            # Opción de cargar partida
+            elif input("Cargar Partida? (S/N): ").upper() == 'S':
+                cargar_partida()
+            # Opción de configuración
+            elif input("Configuración? (S/N): ").upper() == 'S':
+                menu_configuracion()
+
+        # Creación de personaje
+        if pj.nivel == 0:
+            # Selección de nombre
+            pj.nombre = input("Ingrese nombre del personaje: ")
+            # Elección de clase
+            pj.clase = seleccionar_clase()
+            # Distribución inicial de estadísticas
+            distribuir_estadisticas_iniciales()
+
+        # Bucle principal del juego
+        while True:
+            # Menú principal
+            opcion = menu_principal()
+            if opcion == '1':  # Continuar
+                if pj.ubicacion == 'mundo':
+                    explorar_mundo()
+                elif pj.ubicacion == 'pueblo':
+                    interactuar_pueblo()
+                elif pj.ubicacion == 'mazmorra':
+                    explorar_mazmorra()
+            elif opcion == '2':  # Guardar
+                guardar_partida()
+            elif opcion == '3':  # Configuración
+                menu_configuracion()
+            elif opcion == '4':  # Salir
+                if input("¿Seguro que desea salir? (S/N): ").upper() == 'S':
+                    break
+
+            # Navegación por el mundo
+            if pj.ubicacion == 'mundo':
+                if pj.posicion in posiciones_mazmorras:
+                    if input("¿Entrar a la mazmorra? (S/N): ").upper() == 'S':
+                        pj.ubicacion = 'mazmorra'
+                        pj.posicion_mazmorra = pj.posicion
+                elif pj.posicion in posiciones_pueblos:
+                    if input("¿Entrar al pueblo? (S/N): ").upper() == 'S':
+                        pj.ubicacion = 'pueblo'
+                        pj.posicion_pueblo = pj.posicion
+
+            # Sistema de combate
+            if random.random() < probabilidad_combate:
+                iniciar_combate()
+                if pj.HP <= 0:
+                    break
+
+            # Progresión de la historia
+            if cristal_actual < 4 and pj.posicion == ubicaciones_cristales[cristal_actual]:
+                evento_historia()
+                cristal_actual += 1
+
+            # Condiciones de victoria/derrota
+            if pj.HP <= 0:
+                mostrar_game_over()
+                if input("¿Continuar? (S/N): ").upper() == 'S':
+                    restaurar_punto_control()
+                else:
+                    break
+            elif cristal_actual >= 4:
+                mostrar_escena_final()
+                mostrar_creditos()
+                break
+
+        # Opción de nueva partida
+        if input("¿Nueva Partida? (S/N): ").upper() == 'S':
+            pj = PJ()  # Crear nuevo personaje
+        else:
+            break

@@ -16,11 +16,13 @@ pj_3 = PJ('Thief', 'Robin Hood')
 pj_4 = PJ('Monk', 'Eremita')
 arrChar = ArrCharacter()
 arrChar.addArrChar([pj_1,pj_2,pj_3,pj_4])
-# 2. Seleccionar Location Inicial ("Cornelia-Cornelia Bridge-Earthgift Shrine region")
-location = "Cornelia-Cornelia Bridge-Earthgift Shrine region"
+# 2. Seleccionar Location Inicial ("Cornelia")
+            # Cornelia-Cornelia Bridge-Earthgift Shrine region
+            # Earthgift Shrine region
+location = "All / pre-WSC northern rivers"
 # 3. Encuentro con enemigos
 ## 3.1. Crear arreglo de enemigos
-form_ids = get_formation("Cornelia-Cornelia Bridge-Earthgift Shrine region")
+form_ids = get_formation(location)
 print(f"form_ids: {form_ids}")
 random_choice = random.choice(form_ids)
 print(f"random_choice: {random_choice}")
@@ -160,3 +162,23 @@ def ataque_att_tar(attacker, target):
 #     pj_4.Lv1UP()
 # pj_4.mostrar_datos_4()
 
+## Mostrar Locations que tengas un '-' en el nombre
+# arr = get_total_locations()
+# print(len(arr))
+# # print(arr)
+# for i, txt in enumerate(arr):
+#     if ("-") in txt:
+#         print(f"i: {i}, txt: {txt}")
+
+## Mostrar stats del Monje
+pj_4.mostrar_datos_4()
+print(f"\tArma: {pj_4.arma.name}")
+print(f"\tbody_armor: {pj_4.body_armor.name}")
+pj_4.reemplazar_armadura('body_armor', '')
+pj_4.mostrar_datos_4()
+print(f"\tArma: {pj_4.arma.name}")
+print(f"\tbody_armor: {pj_4.body_armor.name}")
+pj_4.reemplazar_arma('Hands')
+pj_4.mostrar_datos_4()
+print(f"\tArma: {pj_4.arma.name}")
+print(f"\tbody_armor: {pj_4.body_armor.name}")

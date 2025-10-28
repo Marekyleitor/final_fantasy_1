@@ -50,7 +50,7 @@ def cargar_armas():
                 'find': fila['Find'],# == 'True',
                 'win': fila['Win'],# == 'True',
                 'special': fila['Special'],# == 'True',
-                'tipo': fila['Type'],
+                'type': fila['Type'],
                 'str_vs': fila['Strong vs'],
                 'elemental': fila['Element'],
                 'cast': fila['Cast'],
@@ -63,7 +63,7 @@ def cargar_armas():
 
 def cargar_estadisticas_enemigos():
     # Obtener la ruta absoluta del archivo
-    ruta_archivo = os.path.join(os.path.dirname(__file__), '../data/Enemy_stats_01.csv')
+    ruta_archivo = os.path.join(os.path.dirname(__file__), '../data/Enemy_stats.csv')
 
     enemigos = {}
     with open(ruta_archivo, 'r', newline='', encoding='utf-8') as archivo:
@@ -114,6 +114,34 @@ def cargar_formacion_enemigos():
             }
     return formacion
 
+def cargar_armaduras():
+    # Obtener la ruta absoluta del archivo
+    ruta_archivo = os.path.join(os.path.dirname(__file__), '../data/FFI_BD_Armors.csv')
+
+    armaduras = {}
+    with open(ruta_archivo, 'r', newline='', encoding='utf-8') as archivo:
+        lector = csv.DictReader(archivo, delimiter=';')
+        for fila in lector:
+            nombre = fila['Name']
+            armaduras[nombre] = {
+                'equip_by': [x.strip() for x in fila['Equipped by'].split(',') if x.strip()],
+                'price': fila['Price'], # int y '?'
+                'value': int(fila['Value']),
+                'DEF': int(fila['Defense']),
+                'EVA': int(fila['Evasion']),
+                'WEI': int(fila['Weight']),
+                'buy': str(fila['Buy']),
+                'find': str(fila['Find']),
+                'drop': str(fila['Drop']),
+                'type': str(fila['Type']),
+                'stats': str(fila['Stats']),
+                'resistance': str(fila['Resistance']),
+                'description': str(fila['Description']),
+                'used_as_item': str(fila['Used as item']),
+                'end_of_turn': str(fila['End of turn'])
+            }
+    return armaduras
+
 
 # Definimos un diccionario con todas las estadísticas por clase
 ESTADISTICAS_BASE = {
@@ -152,3 +180,10 @@ ENEMIGOS = cargar_estadisticas_enemigos()
 
 # Carga la info de todas las Formaciones Enemigas
 FORMACION = cargar_formacion_enemigos()
+
+# Carga la info de las armaduras
+ARMADURAS = cargar_armaduras()
+
+# print(f"ARMADURAS.keys(): {ARMADURAS.keys()}")
+# print(f"ARMADURAS['Genji Helm']: {ARMADURAS['Genji Helm']}")
+# print(f"ARMADURAS['Genji Helm']['type']: {ARMADURAS['Genji Helm']['type']}")
