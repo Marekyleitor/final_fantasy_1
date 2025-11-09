@@ -32,7 +32,7 @@ class PJ:
         self.asignar_estadisticas_secundarias() # Variables: ATK,ACC,DEF,EVA,CRIT,MD
         self.asignar_HP_MAX_MP_MAX_y_sus_bases() # HP_MAX_base,MP_MAX_base,HP_MAX,MP_MAX
         self.levelear_si_es_necesario(LV)
-        #self.actualizar_stats_por_arma_armadura_y_secundarias()
+        self.actualizar_stats_por_arma_armadura_y_secundarias()
 
         self.espera = 0
         self.alive = True
@@ -128,7 +128,7 @@ class PJ:
     def actualizar_ATK(self):
         self.ATK = self.get_ATK_base() + self.get_arma_atk() # las armaduras no modifican el ATK directamente, el STR ya se calculó antes de este paso
 
-    def get_ACC_actualizado(self):
+    def get_ATK_actualizado(self):
         self.actualizar_ATK()
         return self.ATK
 
@@ -137,7 +137,7 @@ class PJ:
         return int(self.obtener_estadistica('Ini_ACC') + self.AGL + self.LV * self.obtener_estadistica('Mul_ACC'))
 
     def actualizar_ACC(self):
-        self.ACC = self.get_ACC_base() + self.get_arma_acc() # No hay ACC por parte de las armaduras
+        self.ACC = min(self.get_ACC_base() + self.get_arma_acc(), 255) # No hay ACC por parte de las armaduras
 
     def get_ACC_actualizado(self):
         self.actualizar_ACC()
@@ -254,7 +254,7 @@ class PJ:
             self.ATK = self.get_arma_atk() + self.STR//2
             # print(f"LV: {self.LV}\tHP: {self.HP}\tarma_atk: {self.get_arma_atk()}\tself.STR//2: {self.STR//2}")
 
-    def get_ATK_actualizado(self):
+    def get_ATK_actualizado_old(self):
         self.actualizar_ATK_old()
         return self.ATK
 
@@ -286,6 +286,7 @@ class PJ:
             iter = self.LV - 1
             for i in range(iter):
                 self.Lv1UP()
+                self.actualizar_stats_por_arma_armadura_y_secundarias()
 
     def Lv1UP(self, show_title = False):
         self.actualizar_LV_y_XP()
@@ -324,8 +325,22 @@ class PJ:
     def aumentar_HP_MAX(self):
         self.HP_MAX = self.HP_MAX + self.STA // 4 + 1 + self.consulta_gran_MP() # self.prob_aum(0.5) * random.randint(20, 25)
 
+    def get_guaranteed_growth(self, LV, clase):
+        traducciones = {
+            'Knight': 'Warrior',
+            'Ninja': 'Thief',
+            'W. Wizard': 'W. Mage',
+            'B. Wizard': 'B. Mage',
+            'Master': 'Monk',
+            'R. Wizard': 'R. Mage',
+        }
+        if clase in traducciones:
+            clase = traducciones[clase]
+        return CRECIMIENTO_GARANTIZADO[LV][clase]
+
     def consulta_gran_HP(self) -> int:
-        growth_text = CRECIMIENTO_GARANTIZADO[self.LV][self.clase]
+        # growth_text = CRECIMIENTO_GARANTIZADO[self.LV][self.clase]
+        growth_text = self.get_guaranteed_growth(self.LV, self.clase)
         if "H" in growth_text:
             return self.obtener_gran_aumento_de_HP()
         elif random.randint(1, 8) == 1:
@@ -341,7 +356,8 @@ class PJ:
             self.MP_MAX = self.MP_MAX + self.INT // 4 + 1 + self.consulta_gran_MP()
 
     def consulta_gran_MP(self) -> int:
-        growth_text = CRECIMIENTO_GARANTIZADO[self.LV][self.clase]
+        # growth_text = CRECIMIENTO_GARANTIZADO[self.LV][self.clase]
+        growth_text = self.get_guaranteed_growth(self.LV, self.clase)
         if "M" in growth_text:
             return self.obtener_gran_aumento_de_MP()
         elif random.randint(1, 8) == 1:
@@ -353,7 +369,8 @@ class PJ:
         return random.randint(10, 12)
 
     def aumentar_stat(self, char:str) -> int:
-        growth_text = CRECIMIENTO_GARANTIZADO[self.LV][self.clase]
+        # growth_text = CRECIMIENTO_GARANTIZADO[self.LV][self.clase]
+        growth_text = self.get_guaranteed_growth(self.LV, self.clase)
         if char in growth_text:
             return 1
         elif random.randint(1, 8) == 1:
@@ -478,6 +495,7 @@ class PJ:
         print(f"{self.STR_base}\t\t{self.AGL_base}\t\t{self.INT_base}\t\t{self.STA_base}\t\t{self.LCK_base}")
         print(f"STR\t\tAGL\t\tINT\t\tSTA\t\tLCK")
         print(f"{self.STR}\t\t{self.AGL}\t\t{self.INT}\t\t{self.STA}\t\t{self.LCK}")
+        # print(f"ATK: {self.get_ATK_actualizado_old()}\t\tATK_weapon ({self.arma.name}): {self.get_arma_atk()}")
         print(f"ATK: {self.get_ATK_actualizado()}\t\tATK_weapon ({self.arma.name}): {self.get_arma_atk()}")
         print(f"ACC: {self.get_ACC_actualizado()}")
         print(f"DEF: {self.get_DEF_actualizado()}")

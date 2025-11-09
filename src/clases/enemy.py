@@ -24,6 +24,8 @@ class Enemy:
         self.sp_atk = ENEMIGOS[enemy_type]['sp_atk']
         self.family = ENEMIGOS[enemy_type]['family']
         self.AGL = ENEMIGOS[enemy_type]['AGL']
+        if self.AGL < 10:
+            self.AGL = 10
         self.espera = 0
         self.alive = True
         self.char_type = "enemy"

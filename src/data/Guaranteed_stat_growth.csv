@@ -97,3 +97,199 @@ Lv,Warrior,Thief,Monk,W. Mage,B. Mage,R. Mage
 97, M A   ,   A   ,     V ,-,  S    ,    I  
 98,H S    ,  S   L,-,    I  , M  I  ,      L
 99,-, M     ,   A V ,-,     V ,     V 
+100,H S    ,H S   L,H     L,HM  I  , M  I  ,  S    
+101,   A V ,   A   ,   A V ,     V ,-, M A   
+102,H S   L,H S I L,  S I L,  S   L,HM  I  ,  S  VL
+103,   A V ,     V ,     V ,   A   ,-,    I  
+104,H S I L,H S   L,H      ,HM     , M AI L,H S  V 
+105,   A   ,   A   ,   A V ,  S  V ,     V , M  I  
+106,H S    ,H S I L,  S I L,H   I L,HM  I  ,  S   L
+107,   A V ,-,     V ,-,-, M A   
+108,H S   L,  S   L,      L, M     , MS I L,-
+109,   A V ,   A V ,   A V ,   AIV ,-,    IV 
+110,H S I L,H S I L,H S I  ,H     L, M AIV ,HMSA  L
+111,   A   ,-,     V , MS I  ,-,     V 
+112,H S    ,  S   L,      L,H      ,HM  I  , MS    
+113,   A V ,   A   ,   A V , M   V ,-,    IV 
+114,H S   L,H S   L,  S I L,      L, M  IV ,HMS   L
+115,   A V ,     V ,     V ,HM A   ,-,     V 
+116,H S I L,  S I L,H      ,    I  ,HM AI L, M A   
+117,   A   ,   A   ,   A V , MS  V ,  S    ,    I  
+118,H S    ,H     L,  S I L,H     L, M  I  ,HMS   L
+119,   A V ,-,     V , M     ,-,   A V 
+120,  S   L,  S   L,      L,H   I  , M  I L,  S    
+121,   A V ,   A V ,   A V , M A  L,-, M  IV 
+122,H S I L,H S I L,H S I  ,H   IV , M AIV ,H     L
+123,   A   ,-,     V , MS    ,  S    ,-
+124,H S    ,      L,      L,H     L,HM  I  , M   VL
+125,   A V ,   A   ,   A V , M   V ,-,   AI  
+126,  S   L,H S   L,  S I L,H   I  , M  I  , MS    
+127, M A V , M   V ,     V , M A   ,-,-
+128,H S I L,  S I L,H      ,-, M AI L, M  I L
+129,   A   ,   A   ,   A V , MS    ,  S    ,H      
+130,H S    ,      L,H S I L,H   I L, M  IV , MS  VL
+131, M A V , M A   ,     V , M   V ,-,   AI  
+132,  S   L,H S   L,      L,    I  , M  I L,-
+133,   A V , M   V ,   A V , M A   ,H      , M   VL
+134,H S I L,  S I L,H S I  ,     V , M AIV ,  SA   
+135, M A   ,   A   ,     V ,HMS    ,  S    ,H   I  
+136,H S    ,      L,      L,    I L, M  I  ,  S  VL
+137,   A V , M A   ,   A V , M     ,-,    I  
+138,  S   L,H S   L,  S I L,    I  , M  I  , M     
+139, M   V , M   V ,     V , M A   ,H      ,     VL
+140,H S I L,  S I L,H      ,H   IV , M  I L,H SA   
+141,   A   ,   A   ,   A V , MS I  ,-,    I  
+142,H S    ,      L,  S I L,      L, M  IV , M    L
+143, M A V , M A   ,     V , M  I  ,   A   ,   A   
+144,  S   L,H S   L,      L,-, M  I  ,-
+145,     V , M   V ,   A V ,HM AI  ,  S    ,H   IV 
+146,  S I L,  S I L,H S I  ,     V ,HM  I  ,  SA  L
+147, M A   ,   A   ,     V , MS I  ,-, M     
+148,H S    ,      L,      L,      L, M  I L,     VL
+149,   A V , M A   ,   A V , M     ,     V ,  S    
+150,  S   L,H S   L,  S I L,    I  , M  I  ,HM     
+151, M   V , M   V ,     V , M A V ,-,   AI  
+152,  S I L,  S I L,H      ,-,HMS I  ,  S  V 
+153,   A   ,   A   ,   A V , MS   L,   A   ,-
+154,H S    ,      L,  S I L,    I  , M  I L, M    L
+155, M A V , M A   ,     V , M A   ,-,-
+156,  S   L,H     L,      L,-, M  IV ,  SAIV 
+157,     V , M   V ,   A V , MS  V ,-,H      
+158,  S I L,  S I L,H S I  ,      L, M  I  , M     
+159, M A   ,   A   ,     V , M AI  ,-,      L
+160,H S    ,      L,H     L,-,HMS I  ,    I  
+161,     V , M A   ,   A V ,  S  V ,-,     V 
+162,  S   L,H S   L,  S I L, M     , M AI L,HMSA   
+163, M A   , M A V ,     V ,   AI L,-,-
+164,  S I  ,  S I L,H      , M     , M  I  ,    I  
+165,     V ,   A   ,   A V ,  S I  ,-,  S   L
+166,H S   L,      L,  S I L, M A V , M  I  ,-
+167, M A   , M A   ,     V ,    I  ,   A   ,    I  
+168,  S    ,  S   L,      L, MS    , M  IV ,-
+169,     V , M A V ,   A V ,    I L,  S    , MS    
+170,  S I L,H S I L,H S I  , M A   , M  I L,     V 
+171, M A   ,   A   ,     V ,    IV ,-,H  A  L
+172,H S    ,      L,      L, MS    ,HM  I  ,-
+173,     V , M A   ,   A V ,      L,   A   ,    I  
+174,  S   L,  S   L,  S I L, M  I  , M  IVL,-
+175, M A   , M A V ,     V ,   A V ,-, MS    
+176,  S I  ,  S I L,H      , MS    , MS I  ,      L
+177,     V ,   A   ,   A V ,    I  ,-,    I  
+178,H S    ,H     L,  S I L, M    L, M  I  ,-
+179, M A   , M A   ,     V ,-,      L,   A   
+180,  S    ,  S   L,      L, MSAI  , M  IV ,-
+181,-, M   V ,   A V ,-,-, MS I L
+182,  S I  ,    I L,H S I  , M     , M  I  ,-
+183, M A   ,   A   ,     V ,    I L,-,-
+184,H S    ,  S   L,-, MS    , M  I  ,      L
+185,-, M     ,   A V ,     V ,  SA   , M  I  
+186,  S    ,      L,  S I L, M  I  , M  I  ,  S    
+187, M A   , M A V ,     V ,   A   ,H      ,-
+188,  S    ,H S I L,H      , M     , M    L, M    L
+189,-,-,   A V ,    I L,-,-
+190,H S    ,      L,H S I  , M     , M  IV ,    I  
+191, M A   , M A   ,     V ,-,-,   A   
+192,  S    ,  S   L,      L, M  IV , M  I  ,     V 
+193,-, M   V ,   A V ,-,-,  S   L
+194,  S    ,    I L,H S I  , M    L, M AI L, M     
+195, M A   ,   A   ,     V ,-,  S    ,    I  
+196,H S    ,  S   L,-,    I  , M  I  ,      L
+197,-, M     ,   A V ,-,     V ,     V 
+198,H S    ,H S   L,H     L,HM  I  , M  I  ,  S    
+199,   A V ,   A   ,   A V ,     V ,-, M A   
+200,H S   L,H S I L,  S I L,  S   L,HM  I  ,  S  VL
+201,   A V ,     V ,     V ,   A   ,-,    I  
+202,H S I L,H S   L,H      ,HM     , M AI L,H S  V 
+203,   A   ,   A   ,   A V ,  S  V ,     V , M  I  
+204,H S    ,H S I L,  S I L,H   I L,HM  I  ,  S   L
+205,   A V ,-,     V ,-,-, M A   
+206,H S   L,  S   L,      L, M     , MS I L,-
+207,   A V ,   A V ,   A V ,   AIV ,-,    IV 
+208,H S I L,H S I L,H S I  ,H     L, M AIV ,HMSA  L
+209,   A   ,-,     V , MS I  ,-,     V 
+210,H S    ,  S   L,      L,H      ,HM  I  , MS    
+211,   A V ,   A   ,   A V , M   V ,-,    IV 
+212,H S   L,H S   L,  S I L,      L, M  IV ,HMS   L
+213,   A V ,     V ,     V ,HM A   ,-,     V 
+214,H S I L,  S I L,H      ,    I  ,HM AI L, M A   
+215,   A   ,   A   ,   A V , MS  V ,  S    ,    I  
+216,H S    ,H     L,  S I L,H     L, M  I  ,HMS   L
+217,   A V ,-,     V , M     ,-,   A V 
+218,  S   L,  S   L,      L,H   I  , M  I L,  S    
+219,   A V ,   A V ,   A V , M A  L,-, M  IV 
+220,H S I L,H S I L,H S I  ,H   IV , M AIV ,H     L
+221,   A   ,-,     V , MS    ,  S    ,-
+222,H S    ,      L,      L,H     L,HM  I  , M   VL
+223,   A V ,   A   ,   A V , M   V ,-,   AI  
+224,  S   L,H S   L,  S I L,H   I  , M  I  , MS    
+225, M A V , M   V ,     V , M A   ,-,-
+226,H S I L,  S I L,H      ,-, M AI L, M  I L
+227,   A   ,   A   ,   A V , MS    ,  S    ,H      
+228,H S    ,      L,H S I L,H   I L, M  IV , MS  VL
+229, M A V , M A   ,     V , M   V ,-,   AI  
+230,  S   L,H S   L,      L,    I  , M  I L,-
+231,   A V , M   V ,   A V , M A   ,H      , M   VL
+232,H S I L,  S I L,H S I  ,     V , M AIV ,  SA   
+233, M A   ,   A   ,     V ,HMS    ,  S    ,H   I  
+234,H S    ,      L,      L,    I L, M  I  ,  S  VL
+235,   A V , M A   ,   A V , M     ,-,    I  
+236,  S   L,H S   L,  S I L,    I  , M  I  , M     
+237, M   V , M   V ,     V , M A   ,H      ,     VL
+238,H S I L,  S I L,H      ,H   IV , M  I L,H SA   
+239,   A   ,   A   ,   A V , MS I  ,-,    I  
+240,H S    ,      L,  S I L,      L, M  IV , M    L
+241, M A V , M A   ,     V , M  I  ,   A   ,   A   
+242,  S   L,H S   L,      L,-, M  I  ,-
+243,     V , M   V ,   A V ,HM AI  ,  S    ,H   IV 
+244,  S I L,  S I L,H S I  ,     V ,HM  I  ,  SA  L
+245, M A   ,   A   ,     V , MS I  ,-, M     
+246,H S    ,      L,      L,      L, M  I L,     VL
+247,   A V , M A   ,   A V , M     ,     V ,  S    
+248,  S   L,H S   L,  S I L,    I  , M  I  ,HM     
+249, M   V , M   V ,     V , M A V ,-,   AI  
+250,  S I L,  S I L,H      ,-,HMS I  ,  S  V 
+251,   A   ,   A   ,   A V , MS   L,   A   ,-
+252,H S    ,      L,  S I L,    I  , M  I L, M    L
+253, M A V , M A   ,     V , M A   ,-,-
+254,  S   L,H     L,      L,-, M  IV ,  SAIV 
+255,     V , M   V ,   A V , MS  V ,-,H      
+256,  S I L,  S I L,H S I  ,      L, M  I  , M     
+257, M A   ,   A   ,     V , M AI  ,-,      L
+258,H S    ,      L,H     L,-,HMS I  ,    I  
+259,     V , M A   ,   A V ,  S  V ,-,     V 
+260,  S   L,H S   L,  S I L, M     , M AI L,HMSA   
+261, M A   , M A V ,     V ,   AI L,-,-
+262,  S I  ,  S I L,H      , M     , M  I  ,    I  
+263,     V ,   A   ,   A V ,  S I  ,-,  S   L
+264,H S   L,      L,  S I L, M A V , M  I  ,-
+265, M A   , M A   ,     V ,    I  ,   A   ,    I  
+266,  S    ,  S   L,      L, MS    , M  IV ,-
+267,     V , M A V ,   A V ,    I L,  S    , MS    
+268,  S I L,H S I L,H S I  , M A   , M  I L,     V 
+269, M A   ,   A   ,     V ,    IV ,-,H  A  L
+270,H S    ,      L,      L, MS    ,HM  I  ,-
+271,     V , M A   ,   A V ,      L,   A   ,    I  
+272,  S   L,  S   L,  S I L, M  I  , M  IVL,-
+273, M A   , M A V ,     V ,   A V ,-, MS    
+274,  S I  ,  S I L,H      , MS    , MS I  ,      L
+275,     V ,   A   ,   A V ,    I  ,-,    I  
+276,H S    ,H     L,  S I L, M    L, M  I  ,-
+277, M A   , M A   ,     V ,-,      L,   A   
+278,  S    ,  S   L,      L, MSAI  , M  IV ,-
+279,-, M   V ,   A V ,-,-, MS I L
+280,  S I  ,    I L,H S I  , M     , M  I  ,-
+281, M A   ,   A   ,     V ,    I L,-,-
+282,H S    ,  S   L,-, MS    , M  I  ,      L
+283,-, M     ,   A V ,     V ,  SA   , M  I  
+284,  S    ,      L,  S I L, M  I  , M  I  ,  S    
+285, M A   , M A V ,     V ,   A   ,H      ,-
+286,  S    ,H S I L,H      , M     , M    L, M    L
+287,-,-,   A V ,    I L,-,-
+288,H S    ,      L,H S I  , M     , M  IV ,    I  
+289, M A   , M A   ,     V ,-,-,   A   
+290,  S    ,  S   L,      L, M  IV , M  I  ,     V 
+291,-, M   V ,   A V ,-,-,  S   L
+292,  S    ,    I L,H S I  , M    L, M AI L, M     
+293, M A   ,   A   ,     V ,-,  S    ,    I  
+294,H S    ,  S   L,-,    I  , M  I  ,      L
+295,-, M     ,   A V ,-,     V ,     V 

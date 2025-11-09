@@ -14,8 +14,15 @@ pj_1 = PJ('Warrior', 'Escanor')
 pj_2 = PJ('Warrior', 'Arturo')
 pj_3 = PJ('Thief', 'Robin Hood')
 pj_4 = PJ('Monk', 'Eremita')
+pj_4.reemplazar_armadura('body_armor', '')
 arrChar = ArrCharacter()
 arrChar.addArrChar([pj_1,pj_2,pj_3,pj_4])
+# 1.5. Leveleo y descansados
+nivel_objetivo = 99
+for i in range(nivel_objetivo-1):
+    for pj in [pj_1,pj_2,pj_3,pj_4]:
+        pj.Lv1UP()
+        pj.HP = pj.HP_MAX
 # 2. Seleccionar Location Inicial ("Cornelia")
             # Cornelia-Cornelia Bridge-Earthgift Shrine region
             # Earthgift Shrine region
@@ -171,14 +178,24 @@ def ataque_att_tar(attacker, target):
 #         print(f"i: {i}, txt: {txt}")
 
 ## Mostrar stats del Monje
-pj_4.mostrar_datos_4()
-print(f"\tArma: {pj_4.arma.name}")
-print(f"\tbody_armor: {pj_4.body_armor.name}")
-pj_4.reemplazar_armadura('body_armor', '')
-pj_4.mostrar_datos_4()
-print(f"\tArma: {pj_4.arma.name}")
-print(f"\tbody_armor: {pj_4.body_armor.name}")
-pj_4.reemplazar_arma('Hands')
-pj_4.mostrar_datos_4()
-print(f"\tArma: {pj_4.arma.name}")
-print(f"\tbody_armor: {pj_4.body_armor.name}")
+# pj_4.mostrar_datos_4()
+# print(f"\tArma: {pj_4.arma.name}")
+# print(f"\tbody_armor: {pj_4.body_armor.name}")
+# pj_4.reemplazar_armadura('body_armor', '')
+# pj_4.mostrar_datos_4()
+# print(f"\tArma: {pj_4.arma.name}")
+# print(f"\tbody_armor: {pj_4.body_armor.name}")
+# pj_4.reemplazar_arma('Hands')
+# pj_4.mostrar_datos_4()
+# print(f"\tArma: {pj_4.arma.name}")
+# print(f"\tbody_armor: {pj_4.body_armor.name}")
+
+# Testear la probabilidad de acierto y crítico
+n_acie = 0
+n_crit = 0
+n = 10000000
+for i in range(n):
+    n_acie, n_crit = for_prob_one_hit_ene_pj(pj_4, enemies_array[0], n_acie, n_crit)
+print(f"n_acie: {n_acie}/{n} => {n_acie/n*100}%")
+print(f"n_crit: {n_crit}/{n} => {n_crit/n*100}%")
+print(f"pj_4: {pj_4.name} ; pj_4.CRIT: {pj_4.CRIT}")

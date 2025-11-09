@@ -8,7 +8,7 @@ def cargar_xp_tabla():
 
     xp_tabla = {}
     with open(ruta_archivo, 'r', newline='') as archivo:
-        lector = csv.reader(archivo)
+        lector = csv.reader(archivo, delimiter=';')
         next(lector)  # Salta encabezados
         for nivel, xp in lector:
             xp_tabla[int(nivel)] = int(xp)

@@ -45,28 +45,41 @@ max_wait = 400
 
 #############################
 # 1. Iniciar Nueva Partida (Crear Party)
-pj_1 = PJ('Warrior', 'Escanor')
-pj_2 = PJ('Warrior', 'Arturo')
-pj_3 = PJ('Thief', 'Robin Hood')
-pj_4 = PJ('Monk', 'Eremita')
+pj_1 = PJ('Master', 'Fritz')      # pj_1 = PJ('Warrior', 'Escanor')
+pj_2 = PJ('Master', 'Yatzo')      # pj_2 = PJ('Warrior', 'Arturo')
+pj_3 = PJ('Master', 'Zest')       # pj_3 = PJ('Thief', 'Robin Hood')
+pj_4 = PJ('Master', 'Eremita')
+## Quitar armaduras si son Monks o Masters
+pj_1.reemplazar_armadura('body_armor', '')
+pj_2.reemplazar_armadura('body_armor', '')
+pj_3.reemplazar_armadura('body_armor', '')
 pj_4.reemplazar_armadura('body_armor', '')
+## Equipar arma
+# pj_1.cambiar_arma('Ultima weapon')
+
 arrChar = ArrCharacter()
 arrChar.addArrChar([pj_1,pj_2,pj_3,pj_4])
 # 1.5. Leveleo y descansados
-nivel_objetivo = 1
+nivel_objetivo = 99
 for i in range(nivel_objetivo-1):
     for pj in [pj_1,pj_2,pj_3,pj_4]:
         pj.Lv1UP()
         pj.HP = pj.HP_MAX
+        pj.MP = pj.MP_MAX
 # 2. Seleccionar Location Inicial ("Cornelia")
             # Cornelia-Cornelia Bridge-Earthgift Shrine region      # All / pre-WSC northern rivers
             # Earthgift Shrine region
-location = "Marsh Cave B1"
+            # Marsh Cave B1
+            # Cavern of Earth, Giant's Cave, Melmond, Sage's Cave region
+            # Cavern of Earth B1, Cavern of Earth B2
+            # Cavern of Ice B1, Cavern of Ice B3
+location = "Cavern of Ice B1"
 # 3. Encuentro con enemigos
 ## 3.1. Crear arreglo de enemigos
 form_ids = get_formation(location)
 print(f"form_ids: {form_ids}")
-random_choice = random.choice(form_ids)
+# random_choice = random.choice(form_ids)
+random_choice = 123
 print(f"random_choice: {random_choice}")
 enemies_by_formation = get_enemies_from_formation(random_choice)
 print(f"enemies_by_formation: {enemies_by_formation}")
@@ -167,12 +180,16 @@ def one_hit_att_tar(attacker, target):
         n_tabs = "\t" * 16
 
     if acierta:
+        # Genera un número aleatorio de punto flotante entre 0.8 y 1.2
+        # valor_aleatorio = round(random.uniform(0.8, 1.2), 2)
+        # valor_aleatorio = random.choice([0.80,0.85,0.90,0.95,1.00,1.05,1.10,1.15,1.20])
+        valor_aleatorio = random.choice(range(80,121))/100
         if critico:
-            print(n_tabs, f"Crit Damage: 2 * {daño_att} - {defensa_tar} = {2 * daño_att - defensa_tar}")
-            return max(2 * daño_att - defensa_tar, 0)
+            print(n_tabs, f"Crit Damage: 2 * {daño_att} * {valor_aleatorio} - {defensa_tar} = {int(2 * daño_att * valor_aleatorio - defensa_tar)}")
+            return int(max(2 * daño_att * valor_aleatorio - defensa_tar, 0))
         else:
-            print(n_tabs, f"Norm Damage: {daño_att} - {defensa_tar} = {daño_att - defensa_tar}")
-            return max(daño_att - defensa_tar, 0)
+            print(n_tabs, f"Norm Damage: {daño_att} * {valor_aleatorio} - {defensa_tar} = {int(daño_att * valor_aleatorio - defensa_tar)}")
+            return int(max(daño_att * valor_aleatorio - defensa_tar, 0))
     else:
         print(n_tabs, "Miss Hit")
         return 0
@@ -180,6 +197,8 @@ def one_hit_att_tar(attacker, target):
 def ataque_att_tar(attacker, target):
     if "pj" == attacker.char_type:
         n_golpes = 1 + attacker.ACC//32
+        if attacker.clase in ["Monk", "Master"]:
+            n_golpes *= 2
     else:
         n_golpes = attacker.Hits
     # n_golpes = 1 + attacker.ACC//32 if "pj" == attacker.char_type else attacker.Hits
@@ -251,16 +270,25 @@ while(True):
             continue
     opc = input("[1: Atacar; 2: Magia; 3: Defender; 4: Mostrar; 5: Turnos]: ")
     if opc == "1":
+
+
         enemies_alive = arrChar.arrEne().arrAlive()
         while(True):
             try:
-                index = int(input(f"Ingresa un enemigo entre 1 y {enemies_alive.get_n()}: "))
+                text = input(f"Ingresa un enemigo entre 1 y {enemies_alive.get_n()}: ")
+                if text == "q":
+                    pasa_turno = False # no es necesario, xq ya está en falso supuestamente.
+                    print(f"Atacar cancelado.")
+                    break
+                index = int(text)
                 if 0 <= index-1 < enemies_alive.get_n():
                     ataque_att_tar(char_en_turno, enemies_alive.get_char(index-1))
                     pasa_turno = True
                     break
             except ValueError:
                 print("Valor inválido.")
+
+
     elif opc == "2":
         pasa_turno = False
     elif opc == "3":
@@ -275,8 +303,8 @@ while(True):
 
         while (True):
             try:
-                num = int(input(f"[1: Extremo detalle; 2: Detalle medio; 3: Básico]: "))
-                if 1 <= num <= 3:
+                num = int(input(f"[1: Extremo detalle; 2: Detalle medio; 3: Básico; 4: Extra]: "))
+                if 1 <= num <= 4:
                     print(f"*" * 10)
                     if num == 1:
                         for p in arrChar.arr:
@@ -287,6 +315,9 @@ while(True):
                     elif num == 3:
                         for p in arrChar.arr:
                             p.mostrar_datos_3()
+                    elif num == 4:
+                        for p in arrChar.arr:
+                            p.mostrar_datos_4()
                     print(f"*" * 10)
                     break
                 else:
