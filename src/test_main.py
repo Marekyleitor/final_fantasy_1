@@ -4,7 +4,7 @@ from src.clases.personaje import *
 from src.clases.pj import PJ
 from src.clases.enemy import Enemy
 from src.clases.arrCharacter import ArrCharacter
-from src.utils.formation_utils import *
+from src.utils.utils_formation import *
 
 max_wait = 400
 
