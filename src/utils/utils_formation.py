@@ -49,10 +49,13 @@ def get_enemies_how_many_and_which(enemies: List[str]) -> List[str]:
     """
     result = []
     for enemy in enemies:
+        if " x" not in enemy:
+            enemy = enemy + " x1"
         name, range_str = enemy.split(' x')
         if '-' in range_str:
             min_val, max_val = map(int, range_str.split('-'))
             count = random.randint(min_val, max_val)
+            # count = random.randint(1, max_val) # test
             result.extend([name] * count)
         else:
             result.append(name)

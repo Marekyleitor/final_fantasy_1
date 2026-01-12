@@ -6,7 +6,7 @@ def ejecutar_ataque(char_en_turno, enemies_alive):
     pasa_turno = True
     try:
         text = input(f"Ingresa un enemigo entre 1 y {enemies_alive.get_n()}: ")
-        if text == "q":
+        if text.upper() == "Q":
             pasa_turno = False
             print(f"Atacar cancelado.")
             return pasa_turno
@@ -21,7 +21,7 @@ def ejecutar_ataque(char_en_turno, enemies_alive):
 def ataque_att_tar(attacker, target):
     if "pj" == attacker.char_type:
         n_golpes = 1 + attacker.ACC//32
-        if attacker.clase in ["Monk", "Master"]:
+        if attacker.clase in ["Monk", "Master"] and not attacker.armado():
             n_golpes *= 2
     else:
         n_golpes = attacker.Hits

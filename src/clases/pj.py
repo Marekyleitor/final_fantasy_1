@@ -4,19 +4,21 @@ import math
 from src.clases.arma import Arma
 from src.clases.armadura import Armadura
 from src.utils.constantes import ESTADISTICAS_BASE, XP_TABLE, CRECIMIENTO_GARANTIZADO
+from src.utils.constantes import VERDE, ROJO, AZUL, RESET
 
 
 class PJ:
     def __init__(self, clase:str="Warrior", name:str="no_name", LV:int=1):
         """
-                Inicializa el personaje jugable con su nombre y clase.
+        Inicializa el personaje jugable con su nombre y clase.
 
-                Args:
-                    name (str): Nombre del personaje
-                    clase (str): Clase del personaje ('Warrior', 'Thief', etc.)
-                """
+        Args:
+            name (str): Nombre del personaje
+            clase (str): Clase del personaje ('Warrior', 'Thief', etc.)
+        """
         self.name = name
         self.clase = clase
+        self.controlled_by = "P1"
         self.LV = 1
         self.XP = 0
         self.MAX_LV = len(XP_TABLE)  # 99
@@ -67,8 +69,8 @@ class PJ:
         # print(f"self.HP: {self.HP}")
 
     def asignar_estadisticas_secundarias(self):
-        self.actualizar_ATK_old()
-        self.ACC = self.obtener_estadistica('Ini_ACC') + self.AGL + self.LV*self.obtener_estadistica('Mul_ACC')# + self.arma.acc
+        self.actualizar_ATK()
+        self.ACC = self.obtener_estadistica('Ini_ACC') + self.AGL + self.LV*self.obtener_estadistica('Mul_ACC') + self.get_arma_acc()# + self.arma.acc
         self.asignar_DEF()
         self.EVA = self.obtener_estadistica('Ini_EVA') + 2 * self.AGL
         self.asignar_CRIT()
@@ -226,19 +228,25 @@ class PJ:
 
     def get_arma_atk(self):
         if isinstance(self.arma.atk, str):
-            if self.arma.atk == 'HP/10':
-                return self.HP // 10
+            if 'HP/10' in self.arma.atk:
+                return int((self.HP * self.arma.mult) // 10)
             elif self.arma.atk.isdigit():
                 return int(self.arma.atk)
-        return 0
+        elif isinstance(self.arma.atk, int):
+            return self.arma.atk
+        else:
+            return 0
 
     def get_arma_acc(self):
         if isinstance(self.arma.acc, str):
-            if self.arma.acc == 'HP/10':
-                return self.HP // 10
+            if 'HP/10' in self.arma.acc:
+                return int((self.HP * self.arma.mult) // 10)
             elif self.arma.acc.isdigit():
                 return int(self.arma.acc)
-        return 0
+        elif isinstance(self.arma.acc, int):
+            return self.arma.acc
+        else:
+            return 0
 
     def get_arma_crit(self):
         return int(self.arma.crit)
@@ -272,7 +280,7 @@ class PJ:
         else:
             ### Weapon CRIT ###
             # self.CRIT = self.weapon.CRIT
-            self.CRIT = 0 # + self.arma.acc
+            self.CRIT = 0 # + self.arma.crit
 
     def obtener_estadistica(self, stat):
         """Calcula el valor final de una estadística basada en el nivel."""
@@ -294,6 +302,10 @@ class PJ:
         # self.actualizar_stats_por_arma_armadura_y_secundarias_despues_de_leveleo() # incluyen stats principales que no son base
         self.actualizar_stats_por_arma_armadura_y_secundarias() # incluyen stats principales que no son base
         # self.actualizar_stats_secundarias_despues_de_leveleo()
+        if self.XP < self.XP_limit0:
+            self.XP = self.XP_limit0
+        if show_title:
+            self.mostrar_LV_up_del_pj()
 
     def actualizar_LV_y_XP(self):
         self.LV += 1
@@ -406,12 +418,16 @@ class PJ:
         if self.HP == 0:
             self.alive = False
 
+    def up_or_down_MP(self, quant):
+        self.MP = max(0, min(self.MP+quant, self.MP_MAX))
+
     def arma_inicial(self, tipo):
         if tipo == 'Warrior' or tipo == 'Thief' or tipo == 'B. Mage' or tipo == 'R. Mage'\
                 or tipo == 'Fi' or tipo == 'Th' or tipo == 'BM' or tipo == 'RM'\
                 or tipo == 'Knight' or tipo == 'Ninja' or tipo == 'B. Wizard' or tipo == 'R. Wizard'\
                 or tipo == 'Kn' or tipo == 'Ni' or tipo == 'BW' or tipo == 'RW':
             return Arma('Knife')
+            # return Arma('Ultima weapon')
         # elif tipo == 'W. Mage' or tipo == 'Monk' or tipo == 'W. Wizard' or tipo == 'Master'\
         #         or tipo == 'WM' or tipo == 'BB' or tipo == 'WW' or tipo == 'Ma':
         #     return Arma('Staff')
@@ -420,8 +436,8 @@ class PJ:
         else: # 'Monk', 'Master', 'BB' y 'Ma'
             return Arma('Hands')
 
-    def cambiar_arma(self, nueva_arma_name):
-        self.arma = Arma(nueva_arma_name)
+    def cambiar_arma(self, nueva_arma_name, mult:float = 1.0):
+        self.arma = Arma(nueva_arma_name, mult)
         self.actualizar_stats_por_arma_armadura_y_secundarias()
 
     def reemplazar_armadura(self, slot_armor_str, new_armor_name):
@@ -451,6 +467,21 @@ class PJ:
             # Asignar el arma
             self.arma = Arma(new_weapon_name)
 
+    def actualizar_Lv(self, show_title):
+        while 1:
+            # if (self.XP >= self.XP_limit0 and self.XP < self.XP_limit1):
+            if (self.XP < self.XP_limit1):
+                break
+            self.Lv1UP(show_title)
+
+    def subirXP(self, cant, show_title):
+        self.XP += cant
+        if (self.XP < self.XP_limit0 or self.XP >= self.XP_limit1):
+            self.actualizar_Lv(show_title)    #OK, sube 1 o más Lv
+
+    def mostrar_LV_up_del_pj(self):
+        print(f"{AZUL}{self.name}{RESET} - {self.clase} ha subido de {VERDE}LV{RESET}.")
+
     def mostrar_datos(self):
         print(f"-" * 10, f"{self.name}", f"-" * 10)
         print(f"{self.clase} - LV. {self.LV}")
@@ -465,7 +496,10 @@ class PJ:
         print(f"ATK\tACC\tDEF\tEVA\tCRI\tMD")
         print(f"{self.ATK}\t{self.ACC}\t{self.DEF}\t{self.EVA}\t{self.CRIT}\t{self.MD}")
         print(f"espera: {self.espera}")
-        print(f"alive: {self.alive}")
+        if self.alive:
+            print(f"alive: {AZUL}{self.alive}{RESET}")
+        else:
+            print(f"alive: {ROJO}{self.alive}{RESET}")
 
     def mostrar_datos_2(self):
         print(f"-" * 10, f"{self.name}", f"-" * 10)
@@ -477,14 +511,20 @@ class PJ:
         print(f"ATK\tACC\tDEF\tEVA\tCRI\tMD")
         print(f"{self.ATK}\t{self.ACC}\t{self.DEF}\t{self.EVA}\t{self.CRIT}\t{self.MD}")
         print(f"espera: {self.espera}")
-        print(f"alive: {self.alive}")
+        if self.alive:
+            print(f"alive: {AZUL}{self.alive}{RESET}")
+        else:
+            print(f"alive: {ROJO}{self.alive}{RESET}")
 
     def mostrar_datos_3(self):
         print(f"-" * 10, f"{self.name}", f"-" * 10)
         print(f"{self.clase} - LV. {self.LV}")
         print(f"HP: {self.HP} / {self.HP_MAX}")
         print(f"MP: {self.MP} / {self.MP_MAX}")
-        print(f"alive: {self.alive}")
+        if self.alive:
+            print(f"alive: {AZUL}{self.alive}{RESET}")
+        else:
+            print(f"alive: {ROJO}{self.alive}{RESET}")
 
     def mostrar_datos_4(self):
         print(f"\t\t===== mostrar_datos_4 =====")
@@ -503,3 +543,23 @@ class PJ:
         # print(f"XP_limit0: {self.XP_limit0}")
         # print(f"XP_limit1: {self.XP_limit1}")
         print(f"\t\t===========================")
+
+    def mostrar_datos_5(self):
+        print(f"-" * 10, f"{self.name}", f"-" * 10)
+        print(f"{self.clase} - LV. {self.LV}")
+        print(f"HP: {self.HP} / {self.HP_MAX}")
+        print(f"MP: {self.MP} / {self.MP_MAX}")
+        print(f"STR\tAGL\tINT\tSTA\tLCK")
+        print(f"{self.STR}\t{self.AGL}\t{self.INT}\t{self.STA}\t{self.LCK}")
+        print(f"ATK\tACC\tDEF\tEVA\tCRI\tMD")
+        print(f"{self.ATK}\t{self.ACC}\t{self.DEF}\t{self.EVA}\t{self.CRIT}\t{self.MD}")
+        if self.alive:
+            print(f"alive: {AZUL}{self.alive}{RESET}")
+        else:
+            print(f"alive: {ROJO}{self.alive}{RESET}")
+        print(f"{'Arma:':<16} {self.arma.decored_name}")
+        self.arma.mostrar_datos_5()
+        print(f"{'Shield:':<16} {self.shield.name}") # decored_name
+        print(f"{'Helmet:':<16} {self.helmet.name}") # decored_name
+        print(f"{'Body_armor:':<16} {self.body_armor.name}") # decored_name
+        print(f"{'Gloves:':<16} {self.gloves.name}") # decored_name

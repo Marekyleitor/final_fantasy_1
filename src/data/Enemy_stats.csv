@@ -1,204 +1,204 @@
-Name;Background;HP;ATK;DEF;MD;WEAK;RESI;Gil;EXP;Hits;ACC;ACC_2;Status;CRIT;Crit_2;EVA;Eva_2;Run Lev.;Magic;Sp. Att;Family;AGL
-Goblin;Grass;8;4;4;16;-;-;6;6;1;2;85;-;1;1%;6;3;13;-;-;-;3
-Goblin Guard;Grass;16;8;6;23;-;-;18;18;1;4;86;-;1;1%;10;5;20;-;-;-;5
-Wolf;Grass;20;8;0;28;-;-;6;24;1;4;86;-;1;1%;36;18;13;-;-;Beast;18
-Crazy Horse;Grass;64;10;2;40;-;-;15;63;2;16;92;-;1;1%;22;11;13;-;-;Beast;11
-Skeleton;Temple of Chaos 1;10;10;0;17;Fire, Dia;Ice, Death, Confusion, Paralysis;3;9;1;2;85;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;12;6;22;-;-;Undead;6
-Black Widow;Temple of Chaos 1;28;10;0;28;-;-;8;30;1;6;87;-;1;1%;30;15;15;-;-;-;15
-Gigas Worm;Temple of Chaos 1;56;17;8;40;Fire;-;15;63;1;14;91;-;1;1%;24;12;12;-;-;-;12
-Warg Wolf;Temple of Chaos 1;72;14;0;46;-;-;22;93;1;18;93;-;1;1%;54;27;14;-;-;Beast;27
-Werewolf;Temple of Chaos 1;68;14;6;45;-;-;67;135;1;16;92;-;1;1%;42;21;20;-;-;Regenerative, Beast, Magic;21
-Zombie;Temple of Chaos 1;20;10;0;25;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;12;24;1;4;86;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;6;3;20;-;-;Undead;3
-Ghoul;Temple of Chaos 1;48;8;6;36;Fire, Dia;Ice, Death, Confusion, Paralysis;50;93;3;12;90;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;12;6;22;-;-;Undead;6
-Garland;Temple of Chaos 1;106;15;10;64;-;-;250;130;1;26;97;-;1;1%;12;6;-;-;-;-;6
-Cobra;Forest 1;56;6;6;46;-;-;50;123;1;14;91;-;1;1%;30;15;14;-;-;Dragon;15
-Ogre;Forest 1;100;18;10;65;-;-;195;195;1;24;96;-;1;1%;18;9;18;-;-;Giant;9
-Ogre Chieftain;Forest 1;132;23;14;71;-;-;300;282;1;32;100;-;1;1%;30;15;23;-;-;Giant;15
-Lizard;Forest 2;92;18;12;55;-;-;50;153;1;22;95;-;10;5%;24;12;27;-;-;Dragon;12
-Pirate;Pravoka;6;8;0;15;-;-;40;40;1;2;85;-;1;1%;12;6;-;-;-;-;6
-Sahagin;Boat;28;10;4;28;Bolt;Quake, Fire;30;30;1;6;87;Fire, Earth;1;1%;72;36;15;-;-;Aquatic;36
-Sahagin Chief;Boat;64;15;8;46;Bolt;Quake, Fire;105;105;1;16;92;Fire, Earth;1;1%;78;39;31;-;-;Aquatic;39
-Privateer;Boat;50;14;6;37;-;Quake;120;60;1;12;90;Earth;1;1%;24;12;13;-;-;-;12
-Shark;Boat;120;22;0;70;Bolt;Quake, Fire;66;267;1;30;99;Fire, Earth;1;1%;72;36;21;-;-;Aquatic;36
-Goggler;Boat;10;4;0;14;Bolt;Quake, Fire;10;42;1;2;85;Fire, Earth;1;1%;84;42;15;-;100%;-;42
-Tarantula;Forest 2;64;5;12;46;-;-;50;141;1;16;92;-;1;1%;24;12;16;-;-;-;12
-Ghast;Forest 2;56;8;10;40;Fire, Dia;Ice, Death, Confusion, Paralysis;117;117;3;14;91;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;46;23;40;-;-;Undead;23
-Scorpion;Marsh Cave;84;22;10;55;-;-;70;225;2;20;94;-;1;1%;54;27;16;-;-;-;27
-Shadow;Marsh Cave;50;10;0;37;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;45;90;1;12;90;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;36;18;22;-;-;Undead, Magic;18
-Green Slime;Marsh Cave;24;1;255;36;Ice, Fire;Quake, Bolt, Death, Confusion, Paralysis;20;84;1;0;84;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Lightning, Earth, Spirit, Instant Death;1;1%;0;0;22;-;-;-;0
-Crawler;Marsh Cave;84;1;8;51;-;-;200;186;8;20;94;-;1;1%;42;21;13;-;-;-;21
-Gray Ooze;Marsh Cave;76;30;7;55;Bolt;Quake, Ice, Fire, Death, Confusion, Paralysis;70;255;1;18;93;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Earth, Spirit, Instant Death;1;1%;4;2;36;-;-;-;2
-Gargoyle;Marsh Cave;80;12;8;53;-;Quake;80;132;4;20;94;Earth;1;1%;46;23;26;-;-;Magic;23
-Bloodbones;Marsh Cave;144;26;12;76;Fire, Dia;Ice, Death, Confusion, Paralysis;378;378;1;34;101;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;42;21;38;-;-;Undead;21
-Piscodemon;Marsh Cave;84;30;16;98;-;Ice, Fire, Confusion, Paralysis;300;276;2;20;94;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Spirit;1;1%;66;33;23;-;-;Aquatic, Magic;33
-Astos;Western Keep;420;26;40;170;-;-;2000;2250;1;40;104;-;1;1%;78;39;-;75%;-;-;39
-Mummy;Terra Cavern 1;80;30;20;60;Fire, Dia;Ice, Death, Confusion, Paralysis;300;300;1;20;94;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;24;12;46;-;-;Undead;12
-Wraith;Western Keep;86;22;4;52;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;231;231;1;22;95;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;90;45;40;-;-;Undead, Magic;45
-Anaconda;Marsh Cave;80;22;10;56;-;-;50;165;1;20;94;-;31;16%;36;18;15;-;-;Dragon;18
-Hyenadon;Forest 1;120;22;4;76;-;-;72;288;1;30;99;-;1;1%;48;24;21;-;-;Beast;24
-Lesser Tiger;Titan's Cave;132;22;8;85;-;-;108;438;2;32;100;-;25;13%;48;24;18;-;-;Beast;24
-Minotaur;Terra Cavern 1;164;22;4;95;-;-;489;489;2;40;104;-;1;1%;48;24;22;-;-;-;24
-Hill Gigas;Terra Cavern 1;240;38;12;120;-;-;879;879;1;58;113;-;1;1%;48;24;28;-;-;Giant;24
-Gnoma;Terra Cavern 1;288;66;20;130;Fire;Quake, Bolt, Ice, Death, Confusion, Paralysis;768;1536;1;70;119;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;18;9;-;-;-;Magic;9
-Troll;Terra Cavern 1;184;24;12;100;Fire;-;621;621;3;44;106;-;1;1%;48;24;28;-;-;Regenerative;24
-Wight;Terra Cavern 1;52;20;12;45;Fire, Dia;Ice, Death, Confusion, Paralysis;150;150;1;12;90;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;42;21;40;-;-;Undead;21
-Ochre Jelly;Terra Cavern 1;76;32;6;55;Ice, Fire;Quake, Bolt, Death, Confusion, Paralysis;70;252;1;18;93;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Lightning, Earth, Spirit, Instant Death;1;1%;6;3;32;-;-;-;3
-Cockatrice;Terra Cavern 1;50;1;4;47;-;Quake;200;186;1;10;89;Earth;1;1%;72;36;22;-;-;-;36
-Vampire;Terra Cavern 1;156;76;24;75;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;2000;1200;1;38;103;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;72;36;-;-;25%;Regenerative, Undead, Magic;36
-Ogre Mage;Terra Cavern 1;144;23;10;80;-;Quake;723;723;1;34;101;Earth;1;1%;54;27;27;50%;-;Regenerative, Mage, Giant;27
-Sphinx;Terra Cavern 1;228;23;12;115;-;Quake;1160;1160;3;56;112;Earth;1;1%;120;60;26;-;-;Beast;60
-Lich;Terra Cavern 2;1200;40;40;120;Fire, Dia;Ice, Death, Confusion, Paralysis;3000;2200;1;48;108;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Ice, Spirit, Poison, Instant Death, Earth, Time;1;1%;24;12;-;75%;-;Mage, Undead, Magic;12
-Centipede;Mt. Gulg 1;222;39;20;116;-;-;300;1194;1;54;111;-;1;1%;48;24;16;-;-;-;24
-Piranha;River 1;92;22;0;68;Bolt;Quake, Fire;20;240;1;22;95;Fire, Earth;1;1%;72;36;29;-;-;Aquatic;36
-Red Piranha;River 2;172;37;20;83;-;-;46;546;1;42;105;-;1;1%;72;36;31;-;-;Aquatic;36
-Crocodile;River 1;184;42;16;103;Bolt;Quake, Fire;900;816;2;44;106;Fire, Earth;1;1%;48;24;29;-;-;Aquatic;24
-White Croc;River 2;288;56;20;143;Bolt;Quake, Fire;2000;1890;2;70;119;Fire, Earth;1;1%;48;24;31;-;-;Aquatic;24
-Ochu;River 1;208;20;24;116;Bolt;Quake, Fire;102;1224;3;50;109;Fire, Earth;1;1%;24;12;48;-;-;-;12
-Neochu;River 2;344;35;32;170;-;-;500;3189;3;84;126;-;1;1%;24;12;-;-;-;-;12
-Hydra;River 1;212;30;14;116;-;-;150;915;3;52;110;-;1;1%;36;18;29;-;-;Dragon;18
-Horned Devil;Mt. Gulg 1;94;10;32;127;-;Quake, Ice, Fire;387;387;4;24;96;Fire, Ice, Earth;1;1%;72;36;27;50%;-;Magic;36
-Pyrolisk;Mt. Gulg 1;44;20;4;45;Ice;Quake, Fire;500;423;1;10;89;Fire, Earth;1;1%;72;36;22;-;25%;-;36
-Pyros;Mt. Gulg 1;276;50;20;130;Ice;Quake, fire, Death, Confusion, Paralysis;800;1620;1;68;118;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;42;21;-;-;-;Magic;21
-Fire Hydra;Mt. Gulg 1;182;20;14;103;Ice;Fire;400;1215;3;44;106;Fire;1;1%;36;18;36;-;50%;Dragon;18
-Lava Worm;Mt. Gulg 1;280;50;31;143;Ice;Quake, Fire;400;1671;1;68;118;Fire, Earth;1;1%;4;2;-;-;-;-;2
-Hellhound;Mt. Gulg 1;192;30;8;103;Ice;-;600;1182;1;46;107;Fire;1;1%;48;24;33;-;50%;Beast;24
-Fire Lizard;Mt. Gulg 1;296;31;18;143;Ice;Fire;1200;2472;2;72;120;Fire;1;1%;36;18;-;-;25%;Dragon;18
-Fire Gigas;Mt. Gulg 1;300;73;20;135;Ice;Fire;1506;1506;1;82;125;Fire;1;1%;48;24;-;-;-;Giant;24
-Red Dragon;Mt. Gulg 1;248;75;30;200;-;Quake, Fire;4000;2904;1;60;114;Fire, Earth;1;1%;96;48;-;-;50%;Dragon;48
-Marilith;Mt. Gulg 2;1440;40;50;183;Paralysis;Bolt, Ice, Fire;3000;2475;6;62;115;Stone, Fire, Lightning, Earth, Poison, Time, Instant Death;1;1%;48;24;-;38%;-;Mage, Magic;24
-White Dragon;Ice Cavern;200;53;8;196;Bolt, Fire;Quake, Ice;2000;1701;1;48;108;Poison, Stone, Ice, Earth;1;1%;120;60;-;-;50%;Dragon;60
-Winter Wolf;Ice Cavern;92;25;0;55;Fire;Ice;200;402;1;22;95;Ice;1;1%;54;27;-;-;25%;Beast;27
-Mindflayer;Ice Cavern;112;1;12;187;-;-;999;822;3;28;98;-;1;1%;48;24;25;-;50%;-;24
-Ice Gigas;Ice Cavern;336;60;16;150;Fire;Ice;1752;1752;1;76;122;Ice;1;1%;48;24;-;-;-;Giant;24
-Specter;Ice Cavern;114;40;12;67;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;432;432;1;28;98;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;108;54;40;-;-;Undead, Magic;54
-Remora;Ice Cavern;320;73;24;185;-;Ice, Fire;1000;2244;1;78;123;Fire, Ice, Spirit;1;1%;48;24;48;-;-;-;24
-Dark Wizard;Ice Cavern;105;26;40;170;-;-;1095;1095;1;26;97;-;1;1%;78;39;-;50%;-;Mage;39
-Evil Eye;Ice Cavern;162;30;30;92;-;Quake;3225;3225;1;40;104;Earth;1;1%;12;6;-;63%;23%;Magic;6
-Desert Baretta;Desert;352;98;48;156;-;-;1;2610;1;86;127;-;1;1%;48;24;32;-;-;-;24
-Sabretooth;Grass;200;24;8;106;-;-;500;843;2;48;108;-;0;35%;42;21;50;-;-;Beast;21
-Wyvern;Forest 1;212;30;12;115;-;Quake;50;1173;1;52;110;Earth;1;1%;96;48;35;-;-;Dragon;48
-Wyrm;Forest 1;260;40;22;131;-;Quake;502;1218;1;64;116;Earth;1;1%;60;30;35;-;-;Dragon;30
-Manticore;Forest 1;164;22;8;95;-;Quake;650;1317;2;40;104;Earth;1;1%;72;36;35;-;50%;Beast;36
-Baretta;Forest 1;256;60;38;130;-;-;300;1428;3;62;115;-;1;1%;56;28;33;-;-;-;28
-Basilisk;Marsh;196;30;20;91;-;-;658;1977;1;52;110;-;1;1%;24;12;-;-;50%;Dragon;12
-Allosaurus;Forest 1;480;65;10;200;-;-;502;3387;1;132;150;-;1;1%;60;30;32;-;-;Dragon;30
-Weretiger;Marsh;160;30;16;93;-;-;780;780;2;38;103;-;1;1%;48;24;34;-;-;Regenerative, Beast, Magic;24
-Sand Worm;Desert;200;46;14;103;-;Quake;900;2683;1;48;108;Earth;1;1%;62;31;22;-;50%;-;31
-Necrotaur;Citadel of Trials;224;40;14;116;Fire, Dia;Ice, Death, Confusion, Paralysis;1050;1050;1;54;111;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;36;18;28;-;-;Undead;18
-King Mummy;Citadel of Trials;188;43;24;95;Fire, Dia;Ice, Death, Confusion, Paralysis;1000;984;1;46;107;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;24;12;34;-;-;Undead;12
-Medusa;Citadel of Trials;68;20;10;55;-;-;699;699;1;16;92;-;1;1%;36;18;35;-;50%;-;18
-Rakshasa;Citadel of Trials;110;20;30;62;-;Quake, Bolt, Ice, Fire, Death, Confusion, Paralysis;800;603;3;28;98;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;60;30;35;75%;-;Beast;30
-Clay Golem;Citadel of Trials;176;64;7;94;-;Quake, Ice, Fire, Death, Confusion, Paralysis;800;1257;1;42;105;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Lightning, Spirit, Instant Death;1;1%;28;14;-;25%;-;Magic;14
-Nightmare;Citadel of Trials;200;30;24;100;Ice;Quake, fire, Death, Confusion, Paralysis;700;1272;3;48;108;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;132;66;-;-;25%;Magic;66
-Dragon Zombie;Citadel of Trials;268;56;30;135;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;999;2331;1;66;117;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;24;12;-;-;-;Undead, Dragon;12
-Sahagin Prince;Sunken Shrine 1;204;47;20;101;Bolt;Quake, Fire;882;882;1;50;109;Fire, Earth;1;1%;96;48;-;-;-;Aquatic;48
-White Shark;Sunken Shrine 1;344;50;8;170;Bolt;Quake, Fire;600;2361;1;84;126;Fire, Earth;1;1%;72;36;-;-;-;Aquatic;36
-Deepeyes;Sunken Shrine 1;304;30;16;156;Bolt;Quake, Fire;3591;3591;2;74;121;Fire, Earth;1;1%;24;12;-;-;50%;Aquatic;12
-Sea Snake;Sunken Shrine 1;224;35;12;116;Bolt;Quake, Fire;600;957;1;54;111;Fire, Earth;0;0%;48;24;-;-;-;Aquatic, Dragon;24
-Sea Scorpion;Sunken Shrine 1;148;35;18;85;Bolt;Quake, Fire;300;639;3;36;102;Fire, Earth;1;1%;60;30;-;-;-;Aquatic;30
-Sea Troll;Sunken Shrine 1;216;40;20;110;Bolt;Quake;852;852;1;52;110;Earth;1;1%;48;24;-;-;-;Regenerative, Aquatic;24
-Ghost;Sunken Shrine 1;180;93;30;85;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;990;990;1;44;106;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;36;18;-;-;-;Undead, Magic;18
-Aquos;Sunken Shrine 1;300;69;20;130;Ice;Quake, fire, Death, Confusion, Paralysis;800;1962;1;66;117;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;72;36;-;-;-;Magic;36
-Water Naga;Sunken Shrine 1;356;9;8;116;Bolt;Quake, Fire;2355;2355;1;70;119;Fire, Earth;1;1%;72;36;-;75%;-;Mage, Aquatic;36
-Kraken;Sunken Shrine 2;1800;50;60;160;Bolt;Quake, Fire;5000;4245;8;88;128;Stone, Fire, Earth, Poison, Time, Instant Death;1;1%;84;42;-;-;25%;Aquatic;42
-Tyrannosaur;Forest 2;600;115;10;200;-;-;600;7200;1;142;155;-;0;15%;60;30;35;-;-;Dragon;30
-Black Knight;Tower of Mirage;260;44;38;135;-;-;1800;1263;2;64;116;-;1;1%;36;18;-;-;-;-;18
-Chimera;Tower of Mirage;300;30;20;130;Ice;Quake, Fire;2500;2064;4;58;113;Fire, Earth;1;1%;72;36;-;-;50%;Dragon, Beast;36
-Guardian;Tower of Mirage;200;25;40;110;Bolt;Death, Confusion, Paralysis;400;1224;2;48;108;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Spirit, Instant Death;1;1%;72;36;-;-;-;-;36
-Blue Dragon;Tower of Mirage;454;92;20;200;-;Quake, Bolt;2000;3274;1;84;126;Lightning, Earth;1;1%;96;48;-;-;50%;Dragon;48
-Green Dragon;Waterfall Cavern;352;72;16;200;Ice;Quake;5000;4068;1;66;117;Earth;1;1%;96;48;-;-;50%;Dragon;48
-Stone Golem;Flying Fortress 1;200;70;16;110;-;Quake, Bolt, Ice, Fire, Death, Confusion, Paralysis;1000;2385;1;48;108;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;24;12;-;38%;-;Magic;12
-Aeros;Flying Fortress 1;358;53;4;130;-;Quake, Death, Confusion, Paralysis;807;1614;1;60;114;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Earth, Spirit, Instant Death;1;1%;144;72;-;-;-;Magic;72
-Spirit Naga;Flying Fortress 1;420;7;16;143;-;-;4000;3489;1;86;127;-;1;1%;48;24;37;75%;-;Mage;24
-Doom Knight;Flying Fortress 1;190;55;32;173;-;Death, Confusion, Paralysis;3000;2700;1;46;107;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Spirit, Instant Death;1;1%;42;21;-;25%;-;Mage, Magic;21
-Earth Medusa;Flying Fortress 1;96;11;12;70;Fire;Quake, Ice;1218;1218;10;24;96;Ice, Earth;1;1%;72;36;-;-;50%;Magic;36
-Dark Flan;Flying Fortress 1;156;49;255;85;Fire;Quake, Bolt, Ice, Death, Confusion, Paralysis;900;1101;1;38;103;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;24;12;-;-;-;-;12
-Soldier;Flying Fortress 1;400;102;48;160;Bolt;Quake, Ice, Fire, Death, Confusion, Paralysis;2000;4000;1;88;128;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Earth, Spirit, Instant Death;1;1%;96;48;35;-;-;-;48
-Vampire Lord;Flying Fortress 1;300;90;28;84;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;3000;2385;1;40;104;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;72;36;-;25%;19%;Regenerative, Mage, Undead, Magic;36
-Dark Warrior;Flying Fortress 1;200;40;38;186;-;-;3420;3420;1;44;106;-;1;1%;90;45;39;38%;-;Mage;45
-Warmech;Flying Fortress 1;2000;128;80;200;-;Quake, Bolt, Ice, Fire, Death, Confusion, Paralysis;32000;32000;2;198;183;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;96;48;-;-;25%;Regenerative;48
-Tiamat;Flying Fortress 2;2400;49;80;200;Stone;Quake, Bolt, Ice, Fire;6000;5496;4;78;123;Fire, Ice, Lightning, Earth, Time, Instant Death, Stone, Poison;1;1%;72;36;-;-;50%;Dragon;36
-Rhyos;Temple of Chaos Past 1;350;40;18;143;Ice;Quake, Fire;5000;4584;4;68;118;Fire, Earth;1;1%;60;30;-;-;50%;Dragon, Beast;30
-Death Eye;Temple of Chaos Past 1;360;120;60;160;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;1;1;1;148;158;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;40;20%;24;12;-;50%;25%;Regenerative, Undead, Magic;12
-Purple Worm;Temple of Chaos Past 1;448;65;10;200;-;Quake;1000;4344;1;110;139;Earth;0;5%;36;18;-;-;-;-;18
-Iron Golem;Temple of Chaos Past 1;304;93;100;143;-;Quake, Ice, Fire, Death, Confusion, Paralysis;3000;6717;1;74;121;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Earth, Spirit, Instant Death;1;1%;24;12;-;-;13%;Magic;12
-Lich 2;Temple of Chaos Past 1;2800;50;80;140;Dia;Ice, Death, Confusion, Paralysis;1;2000;1;62;115;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Ice, Spirit, Poison, Instant Death, Earth, Time;1;1%;48;24;-;75%;-;Mage, Undead, Magic;24
-Marilith 2;Temple of Chaos Past 1;3200;60;80;183;-;Bolt, Ice, Fire;1;2000;6;62;115;Stone, Fire, Ice, Lightning, Earth, Poison, Time, Instant Death;1;1%;60;30;-;38%;-;Mage, Magic;30
-Kraken 2;Temple of Chaos Past 1;3600;60;80;200;-;Quake, Fire;1;2000;8;112;140;Stone, Fire, Earth, Poison, Time, Instant Death;1;1%;98;49;-;38%;16%;Aquatic;49
-Tiamat 2;Temple of Chaos Past 1;5500;75;90;200;-;Quake, Bolt, Ice, Fire;1;2000;4;84;126;Stone, Fire, Ice, Lightning, Earth, Poison, Time, Instant Death;1;1%;90;45;-;50%;25%;Mage, Dragon;45
-Chaos;Temple of Chaos Past 2;20000;170;100;200;-;Resistant to all attributes;0;0;2;198;183;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;100;50;-;50%;25%;-;50
-Echidna;-;4800;50;50;70;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;0;0;1;50;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;1;0;-;-;-;-;30
-Cerberus;-;4000;40;50;60;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;0;0;1;60;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;50;0;-;-;-;-;50
-Ahriman;-;5000;60;50;100;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;0;0;1;65;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;25;0;-;-;-;Magic;25
-Two-Headed Dragon;-;4500;60;50;50;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;0;0;1;50;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;30;0;-;-;-;Dragon;30
-Scarmiglione;-;4000;19;10;140;-;Stone, Earth, Poison, Time, Instant Death;0;0;1;50;0;Stone, Earth, Poison, Time, Instant Death;1;1%;10;0;-;-;-;Mage;10
-Scarmiglione;-;7046;46;20;140;Fire, Dia;Stone, Ice, Earth, Poison, Time, Instant Death;0;0;1;40;0;Stone, Ice, Earth, Poison, Time, Instant Death;1;1%;10;0;-;-;-;Undead;10
-Cagnazzo;-;7968;44;20;180;Lightning;Stone, Ice, Earth, Poison, Time, Instant Death;0;0;1;80;0;Stone, Ice, Earth, Poison, Time, Instant Death;1;1%;5;0;-;-;-;Aquatic;20
-Barbariccia;-;12954;88;10;190;-;Stone, Lightning, Earth, Poison, Time, Instant Death;0;0;1;100;0;Stone, Lightning, Earth, Poison, Time, Instant Death;1;1%;60;0;-;-;-;-;60
-Rubicante;-;15000;88;40;220;-;Stone, Fire, Ice, Earth, Poison, Time, Instant Death;0;0;1;150;0;Stone, Fire, Ice, Earth, Poison, Time, Instant Death;1;1%;30;0;-;-;-;Mage;50
-Gilgamesh;-;8888;70;50;220;-;Stone, Earth, Poison, Time, Instant Death;0;0;1;110;0;Stone, Earth, Poison, Time, Instant Death;1;1%;10;0;-;-;-;-;20
-Omega;-;35000;115;190;220;Lightning;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Earth, Spirit, Poison, Time, Instant Death;0;0;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Earth, Spirit, Poison, Time, Instant Death;1;1%;95;0;-;-;-;-;76
-Shinryu;-;35000;220;60;220;-;Stone, Earth, Poison, Time, Instant Death;0;0;1;200;0;Stone, Earth, Poison, Time, Instant Death;1;1%;20;0;-;-;-;Dragon;87
-Atomos;-;13000;50;70;200;-;Stone, Earth, Poison, Time, Instant Death;0;0;1;80;0;Stone, Earth, Poison, Time, Instant Death;1;1%;10;0;-;-;-;Magic;10
-Typhon;-;10000;70;100;190;Ice;Stone, Fire, Earth, Poison, Time, Instant Death;0;0;1;70;0;Stone, Fire, Earth, Poison, Time, Instant Death;1;1%;0;0;-;-;-;-;10
-Orthros;-;17000;60;40;180;Fire, Lightning;Stone, Ice, Earth, Poison, Time, Instant Death;0;0;1;80;0;Stone, Ice, Earth, Poison, Time, Instant Death;1;1%;0;0;-;-;-;Aquatic;30
-Phantom Train;-;9999;200;80;180;Fire, Dia;Stone, Confuse, Earth, Poison, Time, Instant Death;0;0;1;50;0;Stone, Confuse, Earth, Poison, Time, Instant Death;1;1%;0;0;-;-;-;Undead;30
-Death Gaze;-;30000;90;150;220;Fire, Dia;Stone, Ice, Earth, Poison, Time, Instant Death;0;0;1;200;0;Stone, Ice, Earth, Poison, Time, Instant Death;1;1%;30;0;-;-;-;Undead;95
-Devil Wizard;-;700;50;50;170;-;-;3800;3800;1;50;0;-;1;1%;95;0;-;-;-;Mage;20
-Abyss Worm;-;2500;95;30;200;-;Earth;1500;4000;1;120;0;Earth;1;1%;40;0;-;-;-;-;10
-Elm Gigas;-;250;40;15;120;-;-;850;850;1;62;0;-;1;1%;50;0;-;-;-;Giant;35
-Flare Gigas;-;1050;80;30;150;-;-;2000;2000;1;80;0;-;1;1%;50;0;-;-;-;Giant;40
-Unicorn;-;150;20;8;80;Ice;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;300;500;1;35;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;33;0;-;-;-;-;50
-Yellow Ogre;-;150;25;15;60;-;-;250;300;1;30;0;-;1;1%;23;0;-;-;-;Giant;10
-Mad Ogre;-;1000;75;40;50;-;-;1000;1000;1;40;0;-;1;1%;60;0;-;-;-;Giant;20
-Mage Chimera;-;600;55;30;150;Ice;Fire, Earth;4500;5000;1;75;0;Fire, Earth;1;1%;70;0;-;-;-;Dragon;70
-Yellow Dragon;-;500;50;16;200;-;Earth;3000;2400;1;68;0;Earth;1;1%;96;0;-;-;-;Dragon;32
-Holy Dragon;-;1374;100;50;200;-;Earth;5055;5055;1;88;0;Earth;1;1%;96;0;-;-;-;Dragon;62
-Mythril Golem;-;848;84;160;170;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;6000;6000;1;85;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;20;0;-;-;-;Mage, Magic;13
-Killer Shark;-;1200;60;20;120;Lightning;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;700;2500;1;90;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;72;0;-;-;-;Aquatic;60
-Death Manticore;-;243;22;12;90;-;-;1200;800;1;40;0;-;1;1%;82;0;-;-;-;-;90
-Blood Tiger;-;213;22;16;90;-;-;100;300;1;40;0;-;1;1%;45;0;-;-;-;-;60
-Dark Eye;-;450;45;20;156;Lightning;Fire, Earth;2000;555;1;76;0;Fire, Earth;1;1%;72;0;-;-;-;-;30
-Bloody Eye;-;720;100;80;160;-;Earth;2;2000;1;130;0;Earth;1;1%;25;0;-;-;-;Mage;30
-Flood Gigas;-;400;45;10;50;-;-;1500;300;1;45;0;-;1;1%;50;0;-;-;-;-;5
-Poison Eagle;-;200;30;5;52;-;-;555;500;1;60;0;-;1;1%;100;0;-;-;-;-;77
-Black Goblin;-;50;10;4;16;-;-;300;200;1;5;0;-;1;1%;10;0;-;-;-;Giant;10
-Knocker;-;450;40;40;23;-;-;500;500;1;30;0;-;1;1%;40;0;-;-;-;Giant;40
-Desertpede;-;120;35;15;85;-;-;100;250;1;35;0;-;1;1%;60;0;-;-;-;-;40
-Gloom Widow;-;71;8;20;40;-;-;520;140;1;18;0;-;1;1%;24;0;-;-;-;-;44
-Duel Knight;-;520;60;50;140;-;Silence, Sleep, Paralysis, Darkness, Confuse, Spirit, Instant Death;4300;1200;1;58;0;Silence, Sleep, Paralysis, Darkness, Confuse, Spirit, Instant Death;1;1%;55;0;-;-;-;-;49
-Squidraken;-;480;40;32;160;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Spirit;888;888;1;44;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Spirit;1;1%;77;0;-;-;-;Aquatic, Magic;55
-Pharaoh;-;1220;75;44;92;Fire, Dia;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;1542;1542;1;67;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;1;1%;24;0;-;-;-;Undead;45
-Bonesnatch;-;500;45;12;81;Fire, Dia;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;800;500;1;60;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;1;1%;42;0;-;-;-;Undead;50
-Silver Dragon;-;200;53;10;180;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;2000;1800;1;50;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;86;0;-;-;-;Dragon;40
-Black Dragon;-;1600;95;30;200;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;4000;3000;1;62;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;120;0;-;-;-;Dragon;40
-Blue Troll;-;132;20;10;85;Fire;-;300;340;1;46;0;-;1;1%;48;0;-;-;-;Regenerative;36
-Earth Troll;-;566;50;45;100;Fire;-;542;1200;1;56;0;-;1;1%;48;0;-;-;-;Regenerative;25
-Poison Naga;-;232;6;8;120;-;-;960;960;1;68;0;-;1;1%;45;0;-;-;-;Aquatic, Magic;65
-Earth Plant;-;675;35;60;170;-;-;300;4440;1;86;0;-;1;1%;24;0;-;-;-;-;19
-Yamatano Orochi;-;1068;50;42;180;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;800;4050;1;60;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;36;0;-;-;-;Dragon;45
-Dark Elemental;-;200;66;20;120;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;780;1500;1;72;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;25;0;-;-;-;Magic;33
-Devil Hound;-;150;22;8;76;-;-;150;300;1;40;0;-;1;1%;45;0;-;-;-;-;60
-Sekhret;-;1400;110;25;116;-;-;1300;1300;1;70;0;-;1;1%;60;0;-;-;-;-;30
-Catoblepas;-;200;30;20;100;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;800;1500;1;60;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;45;0;-;-;-;Dragon;30
-Hundlegs;-;235;40;20;120;-;Earth;200;1000;1;60;0;Earth;1;1%;45;0;-;-;-;-;40
-Undergrounder;-;690;75;50;190;-;Silence, Sleep, Paralysis, Darkness, Confuse, Lightning, Earth, Spirit, Instant Death;1300;2500;1;85;0;Silence, Sleep, Paralysis, Darkness, Confuse, Lightning, Earth, Spirit, Instant Death;1;1%;45;0;-;-;-;-;40
-Death Elemental;-;160;35;4;120;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;800;753;1;66;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;120;0;-;-;-;Magic;84
-Wild Nakk;-;80;15;20;30;-;-;60;240;1;20;0;-;1;1%;40;0;-;-;-;-;80
-Dark Wolf;-;360;30;25;50;-;-;75;300;1;60;0;-;1;1%;70;0;-;-;-;-;100
-Rock Gargoyle;-;337;30;72;130;-;Earth;50;120;1;60;0;Earth;1;1%;72;0;-;-;-;Magic;67
-Sahagin Queen;-;100;30;15;80;Lightning;Fire, Earth;500;500;1;30;0;Fire, Earth;1;1%;80;0;-;-;-;Aquatic;50
-Reaper;-;350;90;20;200;Fire, Dia;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;1000;1000;1;50;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;60;0;-;-;-;Undead, Magic;40
-Python;-;85;22;15;50;-;-;1500;200;1;24;0;-;1;1%;40;0;-;-;-;Dragon;15
-Skuldier;-;120;25;6;42;Fire, Dia;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;80;133;1;35;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;1;1%;35;0;-;-;-;Undead;10
-Red Flan;-;390;50;255;80;Fire, Ice;Silence, Sleep, Paralysis, Darkness, Confuse, Lightning, Earth, Spirit, Instant Death;500;1110;1;39;0;Silence, Sleep, Paralysis, Darkness, Confuse, Lightning, Earth, Spirit, Instant Death;1;1%;20;0;-;-;-;-;60
-Prototype;-;1500;85;45;150;Lightning;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Earth, Spirit, Instant Death;1000;2000;1;70;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Earth, Spirit, Instant Death;1;1%;80;0;-;-;-;-;60
-Revenant;-;68;20;15;45;Fire, Dia;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;250;250;1;13;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;42;0;-;-;-;Undead;30
-Chronodia 1;-;30000;130;150;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;110;0;-;-;-;-;120
-Chronodia 2;-;33000;120;160;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;110;0;-;-;-;-;120
-Chronodia 3;-;33000;120;160;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;110;0;-;-;-;-;120
-Chronodia 4;-;33000;120;160;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;110;0;-;-;-;-;120
-Chronodia 5;-;33000;120;160;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;110;0;-;-;-;-;120
-Chronodia 6;-;36000;130;170;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;120;0;-;-;-;-;120
-Chronodia 7;-;36000;130;170;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;120;0;-;-;-;-;120
-Chronodia 8;-;42000;120;190;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;140;0;-;-;-;-;120
+Name;Background;HP;ATK;DEF;MD;WEAK;RESI;Gil;EXP;Hits;ACC;ACC_2;Status;CRIT;Crit_2;EVA;Eva_2;Run Lev.;Magic;Sp. Att;Family;AGL;Drop;Old Name
+Goblin;Grass;8;4;4;16;-;-;6;6;1;2;85;-;1;1%;6;3;13;-;-;-;3;-;Goblin
+Goblin Guard;Grass;16;8;6;23;-;-;18;18;1;4;86;-;1;1%;10;5;20;-;-;-;5;Potion (3%);Goblin Guard
+Wolf;Grass;20;8;0;28;-;-;6;24;1;4;86;-;1;1%;36;18;13;-;-;Beast;18;-;Wolf
+Crazy Horse;Grass;64;10;2;40;-;-;15;63;2;16;92;-;1;1%;22;11;13;-;-;Beast;11;Potion (5%);Crazy Horse
+Skeleton;Temple of Chaos 1;10;10;0;17;Fire, Dia;Ice, Death, Confusion, Paralysis;3;9;1;2;85;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;12;6;22;-;-;Undead;6;Echo Grass (4%);Skeleton
+Black Widow;Temple of Chaos 1;28;10;0;28;-;-;8;30;1;6;87;-;1;1%;30;15;15;-;-;-;15;-;Black Widow
+Gigas Worm;Temple of Chaos 1;56;17;8;40;Fire;-;15;63;1;14;91;-;1;1%;24;12;12;-;-;-;12;-;Gigas Worm
+Warg Wolf;Temple of Chaos 1;72;14;0;46;-;-;22;93;1;18;93;-;1;1%;54;27;14;-;-;Beast;27;Antidote (4%);Warg Wolf
+Werewolf;Temple of Chaos 1;68;14;6;45;-;-;67;135;1;16;92;-;1;1%;42;21;20;-;-;Regenerative, Beast, Magic;21;-;Werewolf
+Zombie;Temple of Chaos 1;20;10;0;25;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;12;24;1;4;86;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;6;3;20;-;-;Undead;3;Staff (2%);Zombie
+Ghoul;Temple of Chaos 1;48;8;6;36;Fire, Dia;Ice, Death, Confusion, Paralysis;50;93;3;12;90;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;12;6;22;-;-;Undead;6;-;Ghoul
+Garland;Temple of Chaos 1;106;15;10;64;-;-;250;130;1;26;97;-;1;1%;12;6;-;-;-;-;6;Longsword (100%);Garland
+Cobra;Forest 1;56;6;6;46;-;-;50;123;1;14;91;-;1;1%;30;15;14;-;-;Dragon;15;-;Cobra
+Ogre;Forest 1;100;18;10;65;-;-;195;195;1;24;96;-;1;1%;18;9;18;-;-;Giant;9;-;Ogre
+Ogre Chief;Forest 1;132;23;14;71;-;-;300;282;1;32;100;-;1;1%;30;15;23;-;-;Giant;15;-;Ogre Chieftain
+Lizard;Forest 2;92;18;12;55;-;-;50;153;1;22;95;-;10;5%;24;12;27;-;-;Dragon;12;-;Lizard
+Pirate;Pravoka;6;8;0;15;-;-;40;40;1;2;85;-;1;1%;12;6;-;-;-;-;6;Leather Shield (2%);Pirate
+Sahagin;Boat;28;10;4;28;Bolt;Quake, Fire;30;30;1;6;87;Fire, Earth;1;1%;72;36;15;-;-;Aquatic;36;Potion (5%);Sahagin
+Sahagin Chief;Boat;64;15;8;46;Bolt;Quake, Fire;105;105;1;16;92;Fire, Earth;1;1%;78;39;31;-;-;Aquatic;39;-;Sahagin Chief
+Buccaneer;Boat;50;14;6;37;-;Quake;120;60;1;12;90;Earth;1;1%;24;12;13;-;-;-;12;Saber (3%);Privateer
+Shark;Boat;120;22;0;70;Bolt;Quake, Fire;66;267;1;30;99;Fire, Earth;1;1%;72;36;21;-;-;Aquatic;36;-;Shark
+Bigeyes;Boat;10;4;0;14;Bolt;Quake, Fire;10;42;1;2;85;Fire, Earth;1;1%;84;42;15;-;100%;-;42;-;Goggler
+Tarantula;Forest 2;64;5;12;46;-;-;50;141;1;16;92;-;1;1%;24;12;16;-;-;-;12;-;Tarantula
+Ghast;Forest 2;56;8;10;40;Fire, Dia;Ice, Death, Confusion, Paralysis;117;117;3;14;91;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;46;23;40;-;-;Undead;23;-;Ghast
+Scorpion;Marsh Cave;84;22;10;55;-;-;70;225;2;20;94;-;1;1%;54;27;16;-;-;-;27;Spider's Silk (3%);Scorpion
+Shadow;Marsh Cave;50;10;0;37;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;45;90;1;12;90;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;36;18;22;-;-;Undead, Magic;18;-;Shadow
+Green Slime;Marsh Cave;24;1;255;36;Ice, Fire;Quake, Bolt, Death, Confusion, Paralysis;20;84;1;0;84;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Lightning, Earth, Spirit, Instant Death;1;1%;0;0;22;-;-;-;0;Hi-Potion (2%);Green Slime
+Crawler;Marsh Cave;84;1;8;51;-;-;200;186;8;20;94;-;1;1%;42;21;13;-;-;-;21;-;Crawler
+Gray Ooze;Marsh Cave;76;30;7;55;Bolt;Quake, Ice, Fire, Death, Confusion, Paralysis;70;255;1;18;93;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Earth, Spirit, Instant Death;1;1%;4;2;36;-;-;-;2;-;Gray Ooze
+Gargoyle;Marsh Cave;80;12;8;53;-;Quake;80;132;4;20;94;Earth;1;1%;46;23;26;-;-;Magic;23;-;Gargoyle
+Bloodbones;Marsh Cave;144;26;12;76;Fire, Dia;Ice, Death, Confusion, Paralysis;378;378;1;34;101;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;42;21;38;-;-;Undead;21;-;Bloodbones
+Piscodemon;Marsh Cave;84;30;16;98;-;Ice, Fire, Confusion, Paralysis;300;276;2;20;94;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Spirit;1;1%;66;33;23;-;-;Aquatic, Magic;33;-;Piscodemon
+Astos;Western Keep;420;26;40;170;-;-;2000;2250;1;40;104;-;1;1%;78;39;-;75%;-;-;39;Mythril Sword (4%);Astos
+Mummy;Terra Cavern 1;80;30;20;60;Fire, Dia;Ice, Death, Confusion, Paralysis;300;300;1;20;94;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;24;12;46;-;-;Undead;12;-;Mummy
+Wraith;Western Keep;86;22;4;52;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;231;231;1;22;95;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;90;45;40;-;-;Undead, Magic;45;Crosier (1%);Wraith
+Anaconda;Marsh Cave;80;22;10;56;-;-;50;165;1;20;94;-;31;16%;36;18;15;-;-;Dragon;18;-;Anaconda
+Hyenadon;Forest 1;120;22;4;76;-;-;72;288;1;30;99;-;1;1%;48;24;21;-;-;Beast;24;Power Plus (1%);Hyenadon
+Lesser Tiger;Titan's Cave;132;22;8;85;-;-;108;438;2;32;100;-;25;13%;48;24;18;-;-;Beast;24;X-Potion (4%);Lesser Tiger
+Minotaur;Terra Cavern 1;164;22;4;95;-;-;489;489;2;40;104;-;1;1%;48;24;22;-;-;-;24;Knife (6%);Minotaur
+Hill Gigas;Terra Cavern 1;240;38;12;120;-;-;879;879;1;58;113;-;1;1%;48;24;28;-;-;Giant;24;Tent (3%);Hill Gigas
+Earth Elemental;Terra Cavern 1;288;66;20;130;Fire;Quake, Bolt, Ice, Death, Confusion, Paralysis;768;1536;1;70;119;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;18;9;-;-;-;Magic;9;Remedy (3%);Gnoma
+Troll;Terra Cavern 1;184;24;12;100;Fire;-;621;621;3;44;106;-;1;1%;48;24;28;-;-;Regenerative;24;-;Troll
+Wight;Terra Cavern 1;52;20;12;45;Fire, Dia;Ice, Death, Confusion, Paralysis;150;150;1;12;90;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;42;21;40;-;-;Undead;21;-;Wight
+Ochre Jelly;Terra Cavern 1;76;32;6;55;Ice, Fire;Quake, Bolt, Death, Confusion, Paralysis;70;252;1;18;93;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Lightning, Earth, Spirit, Instant Death;1;1%;6;3;32;-;-;-;3;-;Ochre Jelly
+Cockatrice;Terra Cavern 1;50;1;4;47;-;Quake;200;186;1;10;89;Earth;1;1%;72;36;22;-;-;-;36;Gold Needle (7%);Cockatrice
+Vampire;Terra Cavern 1;156;76;24;75;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;2000;1200;1;38;103;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;72;36;-;-;25%;Regenerative, Undead, Magic;36;-;Vampire
+Ogre Mage;Terra Cavern 1;144;23;10;80;-;Quake;723;723;1;34;101;Earth;1;1%;54;27;27;50%;-;Regenerative, Mage, Giant;27;Eye Drops (2%);Ogre Mage
+Sphinx;Terra Cavern 1;228;23;12;115;-;Quake;1160;1160;3;56;112;Earth;1;1%;120;60;26;-;-;Beast;60;-;Sphinx
+Lich;Terra Cavern 2;1200;40;40;120;Fire, Dia;Ice, Death, Confusion, Paralysis;3000;2200;1;48;108;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Ice, Spirit, Poison, Instant Death, Earth, Time;1;1%;24;12;-;75%;-;Mage, Undead, Magic;12;Dry Ether (2%);Lich
+Ankheg;Mt. Gulg 1;222;39;20;116;-;-;300;1194;1;54;111;-;1;1%;48;24;16;-;-;-;24;-;Centipede
+Piranha;River 1;92;22;0;68;Bolt;Quake, Fire;20;240;1;22;95;Fire, Earth;1;1%;72;36;29;-;-;Aquatic;36;-;Piranha
+Red Piranha;River 2;172;37;20;83;-;-;46;546;1;42;105;-;1;1%;72;36;31;-;-;Aquatic;36;-;Red Piranha
+Crocodile;River 1;184;42;16;103;Bolt;Quake, Fire;900;816;2;44;106;Fire, Earth;1;1%;48;24;29;-;-;Aquatic;24;Cottage (3%);Crocodile
+White Croc;River 2;288;56;20;143;Bolt;Quake, Fire;2000;1890;2;70;119;Fire, Earth;1;1%;48;24;31;-;-;Aquatic;24;Hi-Potion (5%);White Croc
+Ochu;River 1;208;20;24;116;Bolt;Quake, Fire;102;1224;3;50;109;Fire, Earth;1;1%;24;12;48;-;-;-;12;-;Ochu
+Neochu;River 2;344;35;32;170;-;-;500;3189;3;84;126;-;1;1%;24;12;-;-;-;-;12;-;Neochu
+Hydra;River 1;212;30;14;116;-;-;150;915;3;52;110;-;1;1%;36;18;29;-;-;Dragon;18;-;Hydra
+Horned Devil;Mt. Gulg 1;94;10;32;127;-;Quake, Ice, Fire;387;387;4;24;96;Fire, Ice, Earth;1;1%;72;36;27;50%;-;Magic;36;-;Horned Devil
+Pyrolisk;Mt. Gulg 1;44;20;4;45;Ice;Quake, Fire;500;423;1;10;89;Fire, Earth;1;1%;72;36;22;-;25%;-;36;Gold Needle (2%);Pyrolisk
+Fire Elemental;Mt. Gulg 1;276;50;20;130;Ice;Quake, fire, Death, Confusion, Paralysis;800;1620;1;68;118;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;42;21;-;-;-;Magic;21;-;Pyros
+Fire Hydra;Mt. Gulg 1;182;20;14;103;Ice;Fire;400;1215;3;44;106;Fire;1;1%;36;18;36;-;50%;Dragon;18;Red Fang (2%);Fire Hydra
+Lava Worm;Mt. Gulg 1;280;50;31;143;Ice;Quake, Fire;400;1671;1;68;118;Fire, Earth;1;1%;4;2;-;-;-;-;2;-;Lava Worm
+Hellhound;Mt. Gulg 1;192;30;8;103;Ice;-;600;1182;1;46;107;Fire;1;1%;48;24;33;-;50%;Beast;24;-;Hellhound
+Fire Lizard;Mt. Gulg 1;296;31;18;143;Ice;Fire;1200;2472;2;72;120;Fire;1;1%;36;18;-;-;25%;Dragon;18;-;Fire Lizard
+Fire Gigas;Mt. Gulg 1;300;73;20;135;Ice;Fire;1506;1506;1;82;125;Fire;1;1%;48;24;-;-;-;Giant;24;-;Fire Gigas
+Red Dragon;Mt. Gulg 1;248;75;30;200;-;Quake, Fire;4000;2904;1;60;114;Fire, Earth;1;1%;96;48;-;-;50%;Dragon;48;-;Red Dragon
+Marilith;Mt. Gulg 2;1440;40;50;183;Paralysis;Bolt, Ice, Fire;3000;2475;6;62;115;Stone, Fire, Lightning, Earth, Poison, Time, Instant Death;1;1%;48;24;-;38%;-;Mage, Magic;24;Golden Apple (3%);Marilith
+White Dragon;Ice Cavern;200;53;8;196;Bolt, Fire;Quake, Ice;2000;1701;1;48;108;Poison, Stone, Ice, Earth;1;1%;120;60;-;-;50%;Dragon;60;-;White Dragon
+Winter Wolf;Ice Cavern;92;25;0;55;Fire;Ice;200;402;1;22;95;Ice;1;1%;54;27;-;-;25%;Beast;27;Ice Shield (2%);Winter Wolf
+Mindflayer;Ice Cavern;112;1;12;187;-;-;999;822;3;28;98;-;1;1%;48;24;25;-;50%;-;24;Phoenix Down (3%);Mindflayer
+Ice Gigas;Ice Cavern;336;60;16;150;Fire;Ice;1752;1752;1;76;122;Ice;1;1%;48;24;-;-;-;Giant;24;-;Ice Gigas
+Specter;Ice Cavern;114;40;12;67;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;432;432;1;28;98;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;108;54;40;-;-;Undead, Magic;54;-;Specter
+Remorazz;Ice Cavern;320;73;24;185;-;Ice, Fire;1000;2244;1;78;123;Fire, Ice, Spirit;1;1%;48;24;48;-;-;-;24;-;Remora
+Dark Wizard;Ice Cavern;105;26;40;170;-;-;1095;1095;1;26;97;-;1;1%;78;39;-;50%;-;Mage;39;Red Curtain (3%);Dark Wizard
+Evil Eye;Ice Cavern;162;30;30;92;-;Quake;3225;3225;1;40;104;Earth;1;1%;12;6;-;63%;23%;Magic;6;-;Evil Eye
+Desert Baretta;Desert;352;98;48;156;-;-;1;2610;1;86;127;-;1;1%;48;24;32;-;-;-;24;-;Desert Baretta
+Sabertooth;Grass;200;24;8;106;-;-;500;843;2;48;108;-;0;35%;42;21;50;-;-;Beast;21;-;Sabretooth
+Wyvern;Forest 1;212;30;12;115;-;Quake;50;1173;1;52;110;Earth;1;1%;96;48;35;-;-;Dragon;48;-;Wyvern
+Wyrm;Forest 1;260;40;22;131;-;Quake;502;1218;1;64;116;Earth;1;1%;60;30;35;-;-;Dragon;30;-;Wyrm
+Manticore;Forest 1;164;22;8;95;-;Quake;650;1317;2;40;104;Earth;1;1%;72;36;35;-;50%;Beast;36;Tent (3%);Manticore
+Baretta;Forest 1;256;60;38;130;-;-;300;1428;3;62;115;-;1;1%;56;28;33;-;-;-;28;-;Baretta
+Basilisk;Marsh;196;30;20;91;-;-;658;1977;1;52;110;-;1;1%;24;12;-;-;50%;Dragon;12;Gold Needle (7%);Basilisk
+Allosaurus;Forest 1;480;65;10;200;-;-;502;3387;1;132;150;-;1;1%;60;30;32;-;-;Dragon;30;Strength Tonic (1%);Allosaurus
+Weretiger;Marsh;160;30;16;93;-;-;780;780;2;38;103;-;1;1%;48;24;34;-;-;Regenerative, Beast, Magic;24;Sleeping Bag (2%);Weretiger
+Sand Worm;Desert;200;46;14;103;-;Quake;900;2683;1;48;108;Earth;1;1%;62;31;22;-;50%;-;31;-;Sand Worm
+Minotaur Zombie;Citadel of Trials;224;40;14;116;Fire, Dia;Ice, Death, Confusion, Paralysis;1050;1050;1;54;111;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;36;18;28;-;-;Undead;18;Great Axe (1%);Necrotaur
+King Mummy;Citadel of Trials;188;43;24;95;Fire, Dia;Ice, Death, Confusion, Paralysis;1000;984;1;46;107;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;24;12;34;-;-;Undead;12;-;King Mummy
+Medusa;Citadel of Trials;68;20;10;55;-;-;699;699;1;16;92;-;1;1%;36;18;35;-;50%;-;18;-;Medusa
+Rakshasa;Citadel of Trials;110;20;30;62;-;Quake, Bolt, Ice, Fire, Death, Confusion, Paralysis;800;603;3;28;98;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;60;30;35;75%;-;Beast;30;-;Rakshasa
+Clay Golem;Citadel of Trials;176;64;7;94;-;Quake, Ice, Fire, Death, Confusion, Paralysis;800;1257;1;42;105;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Lightning, Spirit, Instant Death;1;1%;28;14;-;25%;-;Magic;14;Potion (1%);Clay Golem
+Nightmare;Citadel of Trials;200;30;24;100;Ice;Quake, fire, Death, Confusion, Paralysis;700;1272;3;48;108;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;132;66;-;-;25%;Magic;66;-;Nightmare
+Dragon Zombie;Citadel of Trials;268;56;30;135;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;999;2331;1;66;117;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;24;12;-;-;-;Undead, Dragon;12;Megalixir (1%);Dragon Zombie
+Sahagin Prince;Sunken Shrine 1;204;47;20;101;Bolt;Quake, Fire;882;882;1;50;109;Fire, Earth;1;1%;96;48;-;-;-;Aquatic;48;-;Sahagin Prince
+White Shark;Sunken Shrine 1;344;50;8;170;Bolt;Quake, Fire;600;2361;1;84;126;Fire, Earth;1;1%;72;36;-;-;-;Aquatic;36;Wyrmkiller (3%);White Shark
+Deepeyes;Sunken Shrine 1;304;30;16;156;Bolt;Quake, Fire;3591;3591;2;74;121;Fire, Earth;1;1%;24;12;-;-;50%;Aquatic;12;-;Deepeyes
+Sea Snake;Sunken Shrine 1;224;35;12;116;Bolt;Quake, Fire;600;957;1;54;111;Fire, Earth;0;0%;48;24;-;-;-;Aquatic, Dragon;24;-;Sea Snake
+Sea Scorpion;Sunken Shrine 1;148;35;18;85;Bolt;Quake, Fire;300;639;3;36;102;Fire, Earth;1;1%;60;30;-;-;-;Aquatic;30;-;Sea Scorpion
+Sea Troll;Sunken Shrine 1;216;40;20;110;Bolt;Quake;852;852;1;52;110;Earth;1;1%;48;24;-;-;-;Regenerative, Aquatic;24;-;Sea Troll
+Ghost;Sunken Shrine 1;180;93;30;85;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;990;990;1;44;106;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;36;18;-;-;-;Undead, Magic;18;-;Ghost
+Water Elemental;Sunken Shrine 1;300;69;20;130;Ice;Quake, fire, Death, Confusion, Paralysis;800;1962;1;66;117;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;72;36;-;-;-;Magic;36;-;Aquos
+Water Naga;Sunken Shrine 1;356;9;8;116;Bolt;Quake, Fire;2355;2355;1;70;119;Fire, Earth;1;1%;72;36;-;75%;-;Mage, Aquatic;36;-;Water Naga
+Kraken;Sunken Shrine 2;1800;50;60;160;Bolt;Quake, Fire;5000;4245;8;88;128;Stone, Fire, Earth, Poison, Time, Instant Death;1;1%;84;42;-;-;25%;Aquatic;42;Kikuichimonji (2%);Kraken
+Tyrannosaur;Forest 2;600;115;10;200;-;-;600;7200;1;142;155;-;0;15%;60;30;35;-;-;Dragon;30;Giant's Tonic (1%);Tyrannosaur
+Black Knight;Tower of Mirage;260;44;38;135;-;-;1800;1263;2;64;116;-;1;1%;36;18;-;-;-;-;18;Deathbringer (1%);Black Knight
+Chimera;Tower of Mirage;300;30;20;130;Ice;Quake, Fire;2500;2064;4;58;113;Fire, Earth;1;1%;72;36;-;-;50%;Dragon, Beast;36;-;Chimera
+Guardian;Tower of Mirage;200;25;40;110;Bolt;Death, Confusion, Paralysis;400;1224;2;48;108;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Spirit, Instant Death;1;1%;72;36;-;-;-;-;36;-;Guardian
+Blue Dragon;Tower of Mirage;454;92;20;200;-;Quake, Bolt;2000;3274;1;84;126;Lightning, Earth;1;1%;96;48;-;-;50%;Dragon;48;-;Blue Dragon
+Green Dragon;Waterfall Cavern;352;72;16;200;Ice;Quake;5000;4068;1;66;117;Earth;1;1%;96;48;-;-;50%;Dragon;48;-;Green Dragon
+Stone Golem;Flying Fortress 1;200;70;16;110;-;Quake, Bolt, Ice, Fire, Death, Confusion, Paralysis;1000;2385;1;48;108;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;24;12;-;38%;-;Magic;12;-;Stone Golem
+Air Elemental;Flying Fortress 1;358;53;4;130;-;Quake, Death, Confusion, Paralysis;807;1614;1;60;114;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Earth, Spirit, Instant Death;1;1%;144;72;-;-;-;Magic;72;Ether (2%);Aeros
+Spirit Naga;Flying Fortress 1;420;7;16;143;-;-;4000;3489;1;86;127;-;1;1%;48;24;37;75%;-;Mage;24;-;Spirit Naga
+Death Knight;Flying Fortress 1;190;55;32;173;-;Death, Confusion, Paralysis;3000;2700;1;46;107;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Spirit, Instant Death;1;1%;42;21;-;25%;-;Mage, Magic;21;-;Doom Knight
+Earth Medusa;Flying Fortress 1;96;11;12;70;Fire;Quake, Ice;1218;1218;10;24;96;Ice, Earth;1;1%;72;36;-;-;50%;Magic;36;-;Earth Medusa
+Black Flan;Flying Fortress 1;156;49;255;85;Fire;Quake, Bolt, Ice, Death, Confusion, Paralysis;900;1101;1;38;103;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;24;12;-;-;-;-;12;-;Dark Flan
+Soldier;Flying Fortress 1;400;102;48;160;Bolt;Quake, Ice, Fire, Death, Confusion, Paralysis;2000;4000;1;88;128;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Earth, Spirit, Instant Death;1;1%;96;48;35;-;-;-;48;Phoenix Down (4%);Soldier
+Vampire Lord;Flying Fortress 1;300;90;28;84;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;3000;2385;1;40;104;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;72;36;-;25%;19%;Regenerative, Mage, Undead, Magic;36;Hermes' Shoes (3%);Vampire Lord
+Dark Fighter;Flying Fortress 1;200;40;38;186;-;-;3420;3420;1;44;106;-;1;1%;90;45;39;38%;-;Mage;45;-;Dark Warrior
+Warmech;Flying Fortress 1;2000;128;80;200;-;Quake, Bolt, Ice, Fire, Death, Confusion, Paralysis;32000;32000;2;198;183;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;96;48;-;-;25%;Regenerative;48;Genji Armor (5%);Warmech
+Tiamat;Flying Fortress 2;2400;49;80;200;Stone;Quake, Bolt, Ice, Fire;6000;5496;4;78;123;Fire, Ice, Lightning, Earth, Time, Instant Death, Stone, Poison;1;1%;72;36;-;-;50%;Dragon;36;-;Tiamat
+Rhyos;Temple of Chaos Past 1;350;40;18;143;Ice;Quake, Fire;5000;4584;4;68;118;Fire, Earth;1;1%;60;30;-;-;50%;Dragon, Beast;30;Power Staff (5%);Rhyos
+Death Eye;Temple of Chaos Past 1;360;120;60;160;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;1;1;1;148;158;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;40;20%;24;12;-;50%;25%;Regenerative, Undead, Magic;12;Elixir (1%);Death Eye
+Purple Worm;Temple of Chaos Past 1;448;65;10;200;-;Quake;1000;4344;1;110;139;Earth;0;5%;36;18;-;-;-;-;18;Emergency Exit (3%);Purple Worm
+Iron Golem;Temple of Chaos Past 1;304;93;100;143;-;Quake, Ice, Fire, Death, Confusion, Paralysis;3000;6717;1;74;121;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Fire, Ice, Earth, Spirit, Instant Death;1;1%;24;12;-;-;13%;Magic;12;-;Iron Golem
+Lich 2;Temple of Chaos Past 1;2800;50;80;140;Dia;Ice, Death, Confusion, Paralysis;1;2000;1;62;115;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Ice, Spirit, Poison, Instant Death, Earth, Time;1;1%;48;24;-;75%;-;Mage, Undead, Magic;24;-;Lich 2
+Marilith 2;Temple of Chaos Past 1;3200;60;80;183;-;Bolt, Ice, Fire;1;2000;6;62;115;Stone, Fire, Ice, Lightning, Earth, Poison, Time, Instant Death;1;1%;60;30;-;38%;-;Mage, Magic;30;-;Marilith 2
+Kraken 2;Temple of Chaos Past 1;3600;60;80;200;-;Quake, Fire;1;2000;8;112;140;Stone, Fire, Earth, Poison, Time, Instant Death;1;1%;98;49;-;38%;16%;Aquatic;49;Eye Drops (8%);Kraken 2
+Tiamat 2;Temple of Chaos Past 1;5500;75;90;200;-;Quake, Bolt, Ice, Fire;1;2000;4;84;126;Stone, Fire, Ice, Lightning, Earth, Poison, Time, Instant Death;1;1%;90;45;-;50%;25%;Mage, Dragon;45;Rune Staff (4%);Tiamat 2
+Chaos;Temple of Chaos Past 2;20000;170;100;200;-;Resistant to all attributes;0;0;2;198;183;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;100;50;-;50%;25%;-;50;-;Chaos
+Echidna;-;4800;50;50;70;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;0;0;1;50;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;1;0;-;-;-;-;30;X-Potion (100%);Echidna
+Cerberus;-;4000;40;50;60;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;0;0;1;60;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;50;0;-;-;-;-;50;Kotetsu (100%);Cerberus
+Ahriman;-;5000;60;50;100;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;0;0;1;65;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;25;0;-;-;-;Magic;25;Dry Ether (100%);Ahriman
+Two-Headed Dragon;-;4500;60;50;50;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;0;0;1;50;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;30;0;-;-;-;Dragon;30;Bard's Tunic (100%);Two-Headed Dragon
+Scarmiglione;-;4000;19;10;140;-;Stone, Earth, Poison, Time, Instant Death;0;0;1;50;0;Stone, Earth, Poison, Time, Instant Death;1;1%;10;0;-;-;-;Mage;10;-;Scarmiglione
+Scarmiglione 2nd form;-;7046;46;20;140;Fire, Dia;Stone, Ice, Earth, Poison, Time, Instant Death;0;0;1;40;0;Stone, Ice, Earth, Poison, Time, Instant Death;1;1%;10;0;-;-;-;Undead;10;Lunar Curtain (100%);Scarmiglione 2nd form
+Cagnazzo;-;7968;44;20;180;Lightning;Stone, Ice, Earth, Poison, Time, Instant Death;0;0;1;80;0;Stone, Ice, Earth, Poison, Time, Instant Death;1;1%;5;0;-;-;-;Aquatic;20;Light Curtain (100%);Cagnazzo
+Barbariccia;-;12954;88;10;190;-;Stone, Lightning, Earth, Poison, Time, Instant Death;0;0;1;100;0;Stone, Lightning, Earth, Poison, Time, Instant Death;1;1%;60;0;-;-;-;-;60;Braveheart (100%);Barbariccia
+Rubicante;-;15000;88;40;220;-;Stone, Fire, Ice, Earth, Poison, Time, Instant Death;0;0;1;150;0;Stone, Fire, Ice, Earth, Poison, Time, Instant Death;1;1%;30;0;-;-;-;Mage;50;Kikuichimonji (100%);Rubicante
+Gilgamesh;-;8888;70;50;220;-;Stone, Earth, Poison, Time, Instant Death;0;0;1;110;0;Stone, Earth, Poison, Time, Instant Death;1;1%;10;0;-;-;-;-;20;Genji Gloves (100%);Gilgamesh
+Omega;-;35000;115;190;220;Lightning;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Earth, Spirit, Poison, Time, Instant Death;0;0;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Earth, Spirit, Poison, Time, Instant Death;1;1%;95;0;-;-;-;-;76;Murasame (100%);Omega
+Shinryu;-;35000;220;60;220;-;Stone, Earth, Poison, Time, Instant Death;0;0;1;200;0;Stone, Earth, Poison, Time, Instant Death;1;1%;20;0;-;-;-;Dragon;87;Ragnarok (100%);Shinryu
+Atomos;-;13000;50;70;200;-;Stone, Earth, Poison, Time, Instant Death;0;0;1;80;0;Stone, Earth, Poison, Time, Instant Death;1;1%;10;0;-;-;-;Magic;10;Judgment Staff (100%);Atomos
+Typhon;-;10000;70;100;190;Ice;Stone, Fire, Earth, Poison, Time, Instant Death;0;0;1;70;0;Stone, Fire, Earth, Poison, Time, Instant Death;1;1%;0;0;-;-;-;-;10;Genji Helm (100%);Typhon
+Orthros;-;17000;60;40;180;Fire, Lightning;Stone, Ice, Earth, Poison, Time, Instant Death;0;0;1;80;0;Stone, Ice, Earth, Poison, Time, Instant Death;1;1%;0;0;-;-;-;Aquatic;30;Rune Staff (100%);Orthros
+Phantom Train;-;9999;200;80;180;Fire, Dia;Stone, Confuse, Earth, Poison, Time, Instant Death;0;0;1;50;0;Stone, Confuse, Earth, Poison, Time, Instant Death;1;1%;0;0;-;-;-;Undead;30;Megalixir (100%);Phantom Train
+Death Gaze;-;30000;90;150;220;Fire, Dia;Stone, Ice, Earth, Poison, Time, Instant Death;0;0;1;200;0;Stone, Ice, Earth, Poison, Time, Instant Death;1;1%;30;0;-;-;-;Undead;95;Lightbringer (100%);Death Gaze
+Devil Wizard;-;700;50;50;170;-;-;3800;3800;1;50;0;-;1;1%;95;0;-;-;-;Mage;20;-;Devil Wizard
+Abyss Worm;-;2500;95;30;200;-;Earth;1500;4000;1;120;0;Earth;1;1%;40;0;-;-;-;-;10;Megalixir (15%);Abyss Worm
+Elm Gigas;-;250;40;15;120;-;-;850;850;1;62;0;-;1;1%;50;0;-;-;-;Giant;35;-;Elm Gigas
+Flare Gigas;-;1050;80;30;150;-;-;2000;2000;1;80;0;-;1;1%;50;0;-;-;-;Giant;40;Red Curtain (8%);Flare Gigas
+Unicorn;-;150;20;8;80;Ice;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;300;500;1;35;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;33;0;-;-;-;-;50;Ether (15%);Unicorn
+Yellow Ogre;-;150;25;15;60;-;-;250;300;1;30;0;-;1;1%;23;0;-;-;-;Giant;10;-;Yellow Ogre
+Mad Ogre;-;1000;75;40;50;-;-;1000;1000;1;40;0;-;1;1%;60;0;-;-;-;Giant;20;Strength Tonic (8%);Mad Ogre
+Mage Chimera;-;600;55;30;150;Ice;Fire, Earth;4500;5000;1;75;0;Fire, Earth;1;1%;70;0;-;-;-;Dragon;70;Hermes' Shoes (8%);Mage Chimera
+Yellow Dragon;-;500;50;16;200;-;Earth;3000;2400;1;68;0;Earth;1;1%;96;0;-;-;-;Dragon;32;Lunar Curtain (12%);Yellow Dragon
+Holy Dragon;-;1374;100;50;200;-;Earth;5055;5055;1;88;0;Earth;1;1%;96;0;-;-;-;Dragon;62;Dry Ether (3%);Holy Dragon
+Mythril Golem;-;848;84;160;170;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;6000;6000;1;85;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;20;0;-;-;-;Mage, Magic;13;Dark Claymore (1%);Mythril Golem
+Killer Shark;-;1200;60;20;120;Lightning;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;700;2500;1;90;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;72;0;-;-;-;Aquatic;60;-;Killer Shark
+Death Manticore;-;243;22;12;90;-;-;1200;800;1;40;0;-;1;1%;82;0;-;-;-;-;90;-;Death Manticore
+Blood Tiger;-;213;22;16;90;-;-;100;300;1;40;0;-;1;1%;45;0;-;-;-;-;60;-;Blood Tiger
+Dark Eye;-;450;45;20;156;Lightning;Fire, Earth;2000;555;1;76;0;Fire, Earth;1;1%;72;0;-;-;-;-;30;-;Dark Eye
+Bloody Eye;-;720;100;80;160;-;Earth;2;2000;1;130;0;Earth;1;1%;25;0;-;-;-;Mage;30;Remedy (20%);Bloody Eye
+Flood Gigas;-;400;45;10;50;-;-;1500;300;1;45;0;-;1;1%;50;0;-;-;-;-;5;-;Flood Gigas
+Poison Eagle;-;200;30;5;52;-;-;555;500;1;60;0;-;1;1%;100;0;-;-;-;-;77;Cockatrice Claw (15%);Poison Eagle
+Black Goblin;-;50;10;4;16;-;-;300;200;1;5;0;-;1;1%;10;0;-;-;-;Giant;10;Potion (30%);Black Goblin
+Knocker;-;450;40;40;23;-;-;500;500;1;30;0;-;1;1%;40;0;-;-;-;Giant;40;Hi-Potion (15%);Knocker
+Desertpede;-;120;35;15;85;-;-;100;250;1;35;0;-;1;1%;60;0;-;-;-;-;40;Antidote (15%);Desertpede
+Gloom Widow;-;71;8;20;40;-;-;520;140;1;18;0;-;1;1%;24;0;-;-;-;-;44;Antidote (15%);Gloom Widow
+Duel Knight;-;520;60;50;140;-;Silence, Sleep, Paralysis, Darkness, Confuse, Spirit, Instant Death;4300;1200;1;58;0;Silence, Sleep, Paralysis, Darkness, Confuse, Spirit, Instant Death;1;1%;55;0;-;-;-;-;49;Enhancer (3%);Duel Knight
+Squidraken;-;480;40;32;160;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Spirit;888;888;1;44;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Spirit;1;1%;77;0;-;-;-;Aquatic, Magic;55;Sage's Staff (1%);Squidraken
+Pharaoh;-;1220;75;44;92;Fire, Dia;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;1542;1542;1;67;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;1;1%;24;0;-;-;-;Undead;45;Asura (2%);Pharaoh
+Bonesnatch;-;500;45;12;81;Fire, Dia;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;800;500;1;60;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;1;1%;42;0;-;-;-;Undead;50;-;Bonesnatch
+Silver Dragon;-;200;53;10;180;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;2000;1800;1;50;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;86;0;-;-;-;Dragon;40;-;Silver Dragon
+Black Dragon;-;1600;95;30;200;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;4000;3000;1;62;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;120;0;-;-;-;Dragon;40;Lunar Curtain (5%);Black Dragon
+Blue Troll;-;132;20;10;85;Fire;-;300;340;1;46;0;-;1;1%;48;0;-;-;-;Regenerative;36;-;Blue Troll
+Earth Troll;-;566;50;45;100;Fire;-;542;1200;1;56;0;-;1;1%;48;0;-;-;-;Regenerative;25;-;Earth Troll
+Poison Naga;-;232;6;8;120;-;-;960;960;1;68;0;-;1;1%;45;0;-;-;-;Aquatic, Magic;65;-;Poison Naga
+Earth Plant;-;675;35;60;170;-;-;300;4440;1;86;0;-;1;1%;24;0;-;-;-;-;19;Turbo Ether (5%);Earth Plant
+Yamatano Orochi;-;1068;50;42;180;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;800;4050;1;60;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;36;0;-;-;-;Dragon;45;Braveheart (1%);Yamatano Orochi
+Dark Elemental;-;200;66;20;120;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;780;1500;1;72;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;25;0;-;-;-;Magic;33;-;Dark Elemental
+Devil Hound;-;150;22;8;76;-;-;150;300;1;40;0;-;1;1%;45;0;-;-;-;-;60;-;Devil Hound
+Sekhret;-;1400;110;25;116;-;-;1300;1300;1;70;0;-;1;1%;60;0;-;-;-;-;30;War Hammer (1%);Sekhret
+Catoblepas;-;200;30;20;100;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;800;1500;1;60;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Lightning, Earth, Spirit, Instant Death;1;1%;45;0;-;-;-;Dragon;30;Remedy (15%);Catoblepas
+Hundlegs;-;235;40;20;120;-;Earth;200;1000;1;60;0;Earth;1;1%;45;0;-;-;-;-;40;-;Hundlegs
+Undergrounder;-;690;75;50;190;-;Silence, Sleep, Paralysis, Darkness, Confuse, Lightning, Earth, Spirit, Instant Death;1300;2500;1;85;0;Silence, Sleep, Paralysis, Darkness, Confuse, Lightning, Earth, Spirit, Instant Death;1;1%;45;0;-;-;-;-;40;Gaia Gear (1%);Undergrounder
+Death Elemental;-;160;35;4;120;-;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;800;753;1;66;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Earth, Spirit, Instant Death;1;1%;120;0;-;-;-;Magic;84;Zephyr Cape (2%);Death Elemental
+Wild Nakk;-;80;15;20;30;-;-;60;240;1;20;0;-;1;1%;40;0;-;-;-;-;80;White Fang (5%);Wild Nakk
+Dark Wolf;-;360;30;25;50;-;-;75;300;1;60;0;-;1;1%;70;0;-;-;-;-;100;White Fang (10%);Dark Wolf
+Rock Gargoyle;-;337;30;72;130;-;Earth;50;120;1;60;0;Earth;1;1%;72;0;-;-;-;Magic;67;-;Rock Gargoyle
+Sahagin Queen;-;100;30;15;80;Lightning;Fire, Earth;500;500;1;30;0;Fire, Earth;1;1%;80;0;-;-;-;Aquatic;50;Blue Curtain (10%);Sahagin Queen
+Reaper;-;350;90;20;200;Fire, Dia;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;1000;1000;1;50;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;60;0;-;-;-;Undead, Magic;40;Deathbringer (1%);Reaper
+Python;-;85;22;15;50;-;-;1500;200;1;24;0;-;1;1%;40;0;-;-;-;Dragon;15;Antidote (15%);Python
+Skuldier;-;120;25;6;42;Fire, Dia;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;80;133;1;35;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Spirit, Instant Death;1;1%;35;0;-;-;-;Undead;10;-;Skuldier
+Red Flan;-;390;50;255;80;Fire, Ice;Silence, Sleep, Paralysis, Darkness, Confuse, Lightning, Earth, Spirit, Instant Death;500;1110;1;39;0;Silence, Sleep, Paralysis, Darkness, Confuse, Lightning, Earth, Spirit, Instant Death;1;1%;20;0;-;-;-;-;60;-;Red Flan
+Prototype;-;1500;85;45;150;Lightning;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Earth, Spirit, Instant Death;1000;2000;1;70;0;Silence, Sleep, Paralysis, Darkness, Confuse, Fire, Ice, Earth, Spirit, Instant Death;1;1%;80;0;-;-;-;-;60;Rune Axe (1%);Prototype
+Revenant;-;68;20;15;45;Fire, Dia;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;250;250;1;13;0;Silence, Sleep, Paralysis, Darkness, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;42;0;-;-;-;Undead;30;-;Revenant
+Chronodia 1;-;30000;130;150;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;110;0;-;-;-;-;120;Maximillian (100%);Chronodia 1
+Chronodia 2;-;33000;120;160;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;110;0;-;-;-;-;120;Lust Dagger (100%);Chronodia 2
+Chronodia 3;-;33000;120;160;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;110;0;-;-;-;-;120;Golden Staff (100%);Chronodia 3
+Chronodia 4;-;33000;120;160;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;110;0;-;-;-;-;120;Master Shield (100%);Chronodia 4
+Chronodia 5;-;33000;120;160;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;110;0;-;-;-;-;120;Shadow Mask (100%);Chronodia 5
+Chronodia 6;-;36000;130;170;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;120;0;-;-;-;-;120;Lordly Robes (100%);Chronodia 6
+Chronodia 7;-;36000;130;170;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;120;0;-;-;-;-;120;Survival Vest (100%);Chronodia 7
+Chronodia 8;-;42000;120;190;200;-;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1;1;200;0;Silence, Sleep, Paralysis, Darkness, Stone, Confuse, Fire, Ice, Lightning, Earth, Spirit, Poison, Time, Instant Death;1;1%;140;0;-;-;-;-;120;Barbarian's Sword (100%);Chronodia 8

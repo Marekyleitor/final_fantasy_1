@@ -31,9 +31,9 @@ class ArrCharacter:
 
     def subirXP_gru(self, cant):
         auxArrAlive = self.arrAlive()
-        cant_XP_One = cant // len(auxArrAlive)
-        for per in auxArrAlive:
-            per.subirXP(cant_XP_One, False)
+        cant_XP_One = cant // auxArrAlive.n
+        for per in auxArrAlive.arr:
+            per.subirXP(cant_XP_One, True)
 
     def arrPer(self):
         aux = []

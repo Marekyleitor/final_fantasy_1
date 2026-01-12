@@ -1,4 +1,5 @@
 from src.utils.constantes import ENEMIGOS
+from src.utils.constantes import VERDE, ROJO, AZUL, RESET
 
 class Enemy:
     def __init__(self, enemy_type):
@@ -26,6 +27,7 @@ class Enemy:
         self.AGL = ENEMIGOS[enemy_type]['AGL']
         if self.AGL < 10:
             self.AGL = 10
+        self.drop = ENEMIGOS[enemy_type]['drop']
         self.espera = 0
         self.alive = True
         self.char_type = "enemy"
@@ -36,42 +38,53 @@ class Enemy:
             self.alive = False
 
     def mostrar_datos(self):
-        print(f"-" * 10, f"Enemy: {self.enemy_type}", f"-" * 10)
-        print("HP:", self.HP, '\t', type(self.HP))
-        print("ATK:", self.ATK, '\t', type(self.ATK))
-        print("DEF:", self.DEF, '\t', type(self.DEF))
-        print("MD:", self.MD, '\t', type(self.MD))
-        print("WEAK:", self.WEAK, '\t', type(self.WEAK))
-        print("RESI:", self.RESI, '\t', type(self.RESI))
-        print("Gil:", self.gil, '\t', type(self.gil))
-        print("XP:", self.XP, '\t', type(self.XP))
-        print("Hits:", self.Hits, '\t', type(self.Hits))
-        print("ACC:", self.ACC, '\t', type(self.ACC))
-        print("Status:", self.status, '\t', type(self.status))
-        print("CRIT:", self.CRIT, '\t', type(self.CRIT))
-        print("EVA:", self.EVA, '\t', type(self.EVA))
-        print("Run_level:", self.run_level, '\t', type(self.run_level))
-        print("Magic:", self.magic, '\t', type(self.magic))
-        print("Sp_atk:", self.sp_atk, '\t', type(self.sp_atk))
-        print("Family:", self.family, '\t', type(self.family))
-        print("AGL:", self.AGL, '\t', type(self.AGL))
+        n_tabs = "\t" * 16
+        print(n_tabs, f"-" * 10, f"Enemy: {self.enemy_type}", f"-" * 10)
+        print(n_tabs, "HP:", self.HP, '\t', type(self.HP))
+        print(n_tabs, "ATK:", self.ATK, '\t', type(self.ATK))
+        print(n_tabs, "DEF:", self.DEF, '\t', type(self.DEF))
+        print(n_tabs, "MD:", self.MD, '\t', type(self.MD))
+        print(n_tabs, "WEAK:", self.WEAK, '\t', type(self.WEAK))
+        print(n_tabs, "RESI:", self.RESI, '\t', type(self.RESI))
+        print(n_tabs, "Gil:", self.gil, '\t', type(self.gil))
+        print(n_tabs, "XP:", self.XP, '\t', type(self.XP))
+        print(n_tabs, "Hits:", self.Hits, '\t', type(self.Hits))
+        print(n_tabs, "ACC:", self.ACC, '\t', type(self.ACC))
+        print(n_tabs, "Status:", self.status, '\t', type(self.status))
+        print(n_tabs, "CRIT:", self.CRIT, '\t', type(self.CRIT))
+        print(n_tabs, "EVA:", self.EVA, '\t', type(self.EVA))
+        print(n_tabs, "Run_level:", self.run_level, '\t', type(self.run_level))
+        print(n_tabs, "Magic:", self.magic, '\t', type(self.magic))
+        print(n_tabs, "Sp_atk:", self.sp_atk, '\t', type(self.sp_atk))
+        print(n_tabs, "Family:", self.family, '\t', type(self.family))
+        print(n_tabs, "AGL:", self.AGL, '\t', type(self.AGL))
+        print(n_tabs, "Drop:", self.drop, '\t', type(self.drop))
 
     def mostrar_datos_2(self):
-        print(f"-" * 10, f"Enemy: {self.enemy_type}", f"-" * 10)
-        print(f"HP: {self.HP} / {ENEMIGOS[self.enemy_type]['HP']}")
-        print(f"ATK\tACC\tDEF\tEVA\tCRI\tMD")
-        print(f"{self.ATK}\t{self.ACC}\t{self.DEF}\t{self.EVA}\t{self.CRIT}\t{self.MD}")
-        print(f"AGL: {self.AGL}")
-        print(f"alive: {self.alive}")
+        n_tabs = "\t" * 16
+        print(n_tabs, f"-" * 10, f"Enemy: {self.enemy_type}", f"-" * 10)
+        print(n_tabs, f"HP: {self.HP} / {ENEMIGOS[self.enemy_type]['HP']}")
+        print(n_tabs, f"ATK\tACC\tDEF\tEVA\tCRI\tMD")
+        print(n_tabs, f"{self.ATK}\t{self.ACC}\t{self.DEF}\t{self.EVA}\t{self.CRIT}\t{self.MD}")
+        print(n_tabs, f"AGL: {self.AGL}")
+        if self.alive:
+            print(n_tabs, f"alive: {AZUL}{self.alive}{RESET}")
+        else:
+            print(n_tabs, f"alive: {ROJO}{self.alive}{RESET}")
 
     def mostrar_datos_3(self):
-        print(f"-" * 10, f"Enemy: {self.enemy_type}", f"-" * 10)
-        print(f"HP: {self.HP} / {ENEMIGOS[self.enemy_type]['HP']}")
-        print(f"alive: {self.alive}")
+        n_tabs = "\t" * 16
+        print(n_tabs, f"-" * 10, f"Enemy: {self.enemy_type}", f"-" * 10)
+        print(n_tabs, f"HP: {self.HP} / {ENEMIGOS[self.enemy_type]['HP']}")
+        if self.alive:
+            print(n_tabs, f"alive: {AZUL}{self.alive}{RESET}")
+        else:
+            print(n_tabs, f"alive: {ROJO}{self.alive}{RESET}")
 
     def mostrar_datos_4(self):
         # print(f"\t\t===== mostrar_datos_4 (Enemy) =====")
-        print(f"\tself.name: {self.name}")
+        n_tabs = "\t" * 16
+        print(n_tabs, f"\tself.name: {self.name}")
         # print(f"-" * 10, f"self.name: {self.name}", f"-" * 10)
         # print(f"-" * 10, f"self.n_id: {self.n_id}", f"-" * 10)
 

@@ -275,7 +275,7 @@ while(True):
         # while(True):
         #     try:
         #         text = input(f"Ingresa un enemigo entre 1 y {enemies_alive.get_n()}: ")
-        #         if text == "q":
+        #         if text.upper() == "Q":
         #             pasa_turno = False # no es necesario, xq ya está en falso supuestamente.
         #             print(f"Atacar cancelado.")
         #             break

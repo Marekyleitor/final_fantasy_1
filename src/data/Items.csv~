@@ -1,0 +1,44 @@
+Name;Type;Subtype;Price;Value;Buy;Find;Drop;Effect;Description;Affects;
+Potion (HEAL);Usable;Healing;40;20;All shops;Chaos Shrine, Matoya's Cave (x2), Mount Duergar, Cavern of Earth, Flying Fortress (x2), Earthgift Shrine, Lifespring Grotto (x2), Whisperwind Cove (x5);Goblin Guard, Crazy Horse, Sahagin, Clay Golem, Black Goblin;Restores 50 HP.;Restores 50 HP.;one ally;
+Hi-Potion;Usable;Healing;150;75;Crescent Lake, Gaia, Onrac, Whisperwind Cove (B1-B9 Town);Mount Gulg, Earthgift Shrine, Hellfire Chasm (x2), Lifespring Grotto (x4), Whisperwind Cove (x10);Green Slime, White Croc, Knocker;Restores 150 HP.;Restores 150 HP.;one ally;
+X-Potion;Usable;Healing;600;300;-;Cardian Islands, Hellfire Chasm, Lifespring Grotto (x6), Whisperwind Cove (x13);Lesser Tiger, Echidna;Fully restores HP.;Fully restores HP.;one ally;
+Ether;Usable;Healing;150;75;Pravoka, Crescent Lake, Gaia, Onrac;Mount Duergar, Cavern of Ice, Earthgift Shrine, Hellfire Chasm, Lifespring Grotto (x5), Whisperwind Cove (x9);Air Elemental, Unicorn;Restores 50 MP.;Restores 50 MP.;one ally;
+Turbo Ether;Usable;Healing;500;250;Whisperwind Cove (B11-B19 Town);Hellfire Chasm, Lifespring Grotto (x2), Whisperwind Cove (x9);Earth Plant;Restores 150 MP.;Restores 150 MP.;one ally;
+Dry Ether;Usable;Healing;1600;800;-;Cardian Islands, Chaos Shrine (Past), Lifespring Grotto (x4), Whisperwind Cove (x5);Lich, Ahriman, Holy Dragon;Fully restores MP.;Fully restores MP.;one ally;
+Elixir;Usable;Healing;2000;1000;-;Cardian Islands, Chaos Shrine (Past), Lifespring Grotto (x8), Whisperwind Cove (x16);Death Eye;Fully restores HP and MP.;Fully restores HP and MP.;one ally;
+Megalixir;Usable;Healing;4000;2000;-;Chaos Shrine (Past), Lifespring Grotto (x3), Whisperwind Cove (x7);Dragon Zombie, Phantom Train, Abyss Worm;Fully restores party's HP and MP.;Fully restores party's HP and MP.;all allies;
+Phoenix Down;Usable;Healing;500;250;Cornelia, Pravoka, Crescent Lake, Gaia, Whisperwind Cove (B11-B19 Town);Marsh Cave, Mount Gulg, Hellfire Chasm, Lifespring Grotto (x6), Whisperwind Cove (x15);Mindflayer, Soldier;Revives one fallen ally.;Revives one KO'd ally.;one ally;
+Antidote (PURE);Usable;Healing;50;25;Cornelia, Elfheim, Pravoka;Matoya's Cave, Cavern of Earth, Mount Gulg (x2);Warg Wolf, Desertpede, Gloom Widow, Python;Cures Poison.;Cures Poison.;one ally;
+Eye Drops;Usable;Healing;50;25;Pravoka;Hellfire Chasm, Lifespring Grotto (x2), Whisperwind Cove (x6);Ogre Mage, Kraken 2;Cures Darkness.;Cures Darkness.;one ally;
+Echo Grass;Usable;Healing;50;25;Elfheim;Hellfire Chasm, Lifespring Grotto (x2), Whisperwind Cove (x5);Skeleton;Cures Silence.;Cures Silence.;one ally;
+Gold Needle (SOFT);Usable;Healing;500;250;Elfheim, Onrac;Chaos Shrine, Cavern of Earth, Mount Gulg, Cardian Islands, Flying Fortress (x2);Cockatrice, Pyrolisk, Basilisk;Cures Stone.;Cures Stone.;one ally;
+Remedy;Usable;Healing;1500;750;Onrac, Whisperwind Cove (B21-B29 Town);Earthgift Shrine, Hellfire Chasm, Lifespring Grotto (x4), Whisperwind Cove (x10);Earth Elemental, Bloody Eye, Catoblepas;Cures ailments except stone and KO.;Cures ailments except stone and KO.;one ally;
+Emergency Exit;Usable;Field;200;100;-;Hellfire Chasm, Lifespring Grotto (x3), Whisperwind Cove (x8);Purple Worm;Warps party out of dungeon. Does not work in Soul of Chaos dungeons or Labyrinth of Time.;Transports party out of dungeons and towns.;-;
+Sleeping Bag (TENT);Usable;Field;50;25;Cornelia;Cavern of Earth, Cavern of Ice;Weretiger;Partially restores party's HP. Can only be used outdoors.;Partially restores party's HP. Can only be used outdoors.;-;
+Tent (CABIN);Usable;Field;160;80;Elfheim, Crescent Lake, Gaia;Castle Cornelia, Chaos Shrine, Mount Duergar, Cavern of Earth, Mount Gulg, Cardian Islands, Mirage Tower;Hill Gigas, Manticore;Partially restores party's HP and MP. Can only be used outdoors.;Partially restores party's HP and MP. Can only be used outdoors.;-;
+Cottage (HOUSE);Usable;Field;2000;1000;Gaia, Onrac;Castle Cornelia, Marsh Cave, Mount Duergar, Mount Gulg, Citadel of Trials, Cardian Islands, Mirage Tower, Flying Fortress;Crocodile;Fully restores party's HP and MP. Can only be used outdoors.;Fully restores party's HP and MP. Can only be used outdoors.;-;
+Golden Apple;Usable;Field;0;0;-;Lifespring Grotto (x4), Whisperwind Cove (x10);Marilith;Raises max HP by 10.;Raises max HP by 10.;one ally;
+Silver Apple;Usable;Field;0;0;-;Earthgift Shrine, Lifespring Grotto (x4), Whisperwind Cove (x7);-;Raises max HP by 5.;Raises max HP by 5.;one ally;
+Soma Drop;Usable;Field;0;0;-;Lifespring Grotto (x4), Whisperwind Cove (x14);-;Raises max MP by 5.;Raises max MP by 5.;one ally;
+Power Plus;Usable;Field;0;0;-;Hellfire Chasm, Lifespring Grotto (x5), Whisperwind Cove (x8);Hyenadon;Raises Strength.;Raises strength.;one ally;
+Stamina Plus;Usable;Field;0;0;-;Hellfire Chasm, Lifespring Grotto (x3), Whisperwind Cove (x7);-;Raises Stamina.;Raises stamina.;one ally;
+Mind Plus;Usable;Field;0;0;-;Hellfire Chasm, Lifespring Grotto (x5), Whisperwind Cove (x9);-;Raises Intelligence.;Raises intelligence.;one ally;
+Speed Plus;Usable;Field;0;0;-;Hellfire Chasm, Lifespring Grotto (x4), Whisperwind Cove (x8);-;Raises Agility.;Raises agility.;one ally;
+Luck Plus;Usable;Field;0;0;-;Hellfire Chasm, Lifespring Grotto (x3), Whisperwind Cove (x6);-;Raises Luck.;Raises luck.;one ally;
+Light Curtain;Usable;Support;1000;500;Whisperwind Cove (Mage Town);Lifespring Grotto (x5), Whisperwind Cove (x7);Cagnazzo;Casts NulAll.;Casts NulAll.;all allies;Spell that protects against damage from all elements.
+Red Curtain;Usable;Support;300;150;Whisperwind Cove (Mage Town);Lifespring Grotto (x2), Whisperwind Cove (x2);Dark Wizard, Flare Gigas;Casts NulBlaze.;Casts NulBlaze.;all allies;Spell that protects against Fire damage.
+White Curtain;Usable;Support;300;150;Whisperwind Cove (Mage Town);Earthgift Shrine, Hellfire Chasm, Lifespring Grotto (x3);-;Casts NulFrost.;Casts NulFrost.;all allies;Spell that protects against Ice damage.
+Blue Curtain;Usable;Support;300;150;Whisperwind Cove (Mage Town);Earthgift Shrine, Hellfire Chasm (x2), Lifespring Grotto, Whisperwind Cove (x2);Sahagin Queen;Casts NulShock.;Casts NulShock.;all allies;Spell that protects against Lightning damage.
+Lunar Curtain;Usable;Support;500;250;Whisperwind Cove (Mage Town);Lifespring Grotto (x3), Whisperwind Cove (x3);Scarmiglione 2nd form, Yellow Dragon, Black Dragon;Casts NulDeath.;Casts NulDeath.;all allies;It protects the afflicted from the instant death spells, Death, Kill, Squint, and Toxic. It is almost always cast through the spell NulDeath. The status is also granted by the spell NulAll.
+Hermes' Shoes;Usable;Support;6500;3250;Whisperwind Cove (B31-B39 Town);Hellfire Chasm (x2), Lifespring Grotto (x9), Whisperwind Cove (x13);Vampire Lord, Mage Chimera;Casts Haste.;Casts Haste.;one ally;Doubles one ally's number of attacks.
+Giant's Tonic;Usable;Support;1500;750;Caravan;Hellfire Chasm (x2), Lifespring Grotto (x3), Whisperwind Cove (x8);Tyrannosaur;Temporarily raises max HP by 200.;Temporarily raises max HP.;one ally;
+Faerie Tonic;Usable;Support;1500;750;Caravan;Lifespring Grotto (x4), Whisperwind Cove (x6);-;Temporarily raises max MP by 200.;Temporarily raises max MP.;one ally;
+Strength Tonic;Usable;Support;1000;500;Caravan;Hellfire Chasm, Lifespring Grotto (x4), Whisperwind Cove (x6);Allosaurus, Mad Ogre;Temporarily raises attack.;Temporarily raises attack.;one ally;
+Protect Drink;Usable;Support;1000;500;Caravan, Whisperwind Cove (B1-B9 Town);Earthgift Shrine, Lifespring Grotto (x3), Whisperwind Cove (x6);-;Temporarily raises defense.;Temporarily raises defense.;one ally;
+Speed Drink;Usable;Support;1000;500;Caravan;Earthgift Shrine, Lifespring Grotto (x3), Whisperwind Cove (x11);-;Temporarily raises agility.;Temporarily raises agility.;one ally;
+Spider's Silk;Usable;Attack;0;0;-;Earthgift Shrine, Lifespring Grotto (x4), Whisperwind Cove (x8);Scorpion;Casts Slow.;Slows down all foes.;all enemies;
+White Fang;Usable;Attack;0;0;-;Earthgift Shrine, Lifespring Grotto (x2), Whisperwind Cove (x7);Wild Nakk, Dark Wolf;Casts Blizzara.;Casts Blizzara.;all enemies;
+Red Fang;Usable;Attack;0;0;-;Earthgift Shrine, Hellfire Chasm (x2), Lifespring Grotto (x4);Fire Hydra;Casts Fira.;Casts Fira.;all enemies;
+Blue Fang;Usable;Attack;0;0;-;Hellfire Chasm, Lifespring Grotto (x2), Whisperwind Cove (x4);-;Casts Thundara.;Casts Thundara.;all enemies;
+Vampire Fang;Usable;Attack;0;0;-;Earthgift Shrine, Lifespring Grotto (x2), Whisperwind Cove (x3);-;Paralyzes one foe.;Paralyzes one foe.;one enemy;
+Cockatrice Claw;Usable;Attack;0;0;-;Hellfire Chasm, Lifespring Grotto (x2), Whisperwind Cove (x5);-;Petrifies one foe.;Petrifies one foe.;one enemy;

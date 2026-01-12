@@ -111,14 +111,14 @@ Number;Enemies;Maximum;Can flee?;Ambush%;Musical theme;Location
 109;Hellhound x1-2;4 large;True;55;Battle;Mount Gulg B3, Mount Gulg B4
 110;Ogre Mage x1, Ogre Chief x1, Hyenadon x0-2;4 large;True;4;Battle;Cavern of Earth B4, Mount Gulg B1, Mount Gulg B2, Mount Gulg B3
 111;Sphinx x1-2;4 large;True;4;Battle;Cavern of Earth B4, Mount Gulg B1
-112;Wyvern x x1-3;4 large;True;4;Battle;Northern Citadel of Trials region, Gaia, Onrac, Waterfall Cavern region
+112;Wyvern x1-3;4 large;True;4;Battle;Northern Citadel of Trials region, Gaia, Onrac, Waterfall Cavern region
 113;Desert Baretta x1;4 large;True;4;Battle;Caravan region
 114;Sea Snake x2-4;9 small;True;4;Battle;Sunken Shrine 3F, Sunken Shrine 4F, Sunken Shrine 5F (dummied)
-115;Lich x1;1 boss;False;4;Boss Battle A;Chaos Shrine B1
-116;Marilith x1;1 boss;False;4;Boss Battle B;Chaos Shrine B2
-117;Kraken x1;1 boss;False;4;Boss Battle A;Chaos Shrine B3
-118;Tiamat x1;1 boss;False;4;Boss Battle B;Chaos Shrine B4
-119;Tiamatx1;1 boss;False;4;Boss Battle B;Flying Fortress 5F
+115;Lich 2 x1;1 boss;False;4;Boss Battle A;Chaos Shrine B1
+116;Marilith 2 x1;1 boss;False;4;Boss Battle B;Chaos Shrine B2
+117;Kraken 2 x1;1 boss;False;4;Boss Battle A;Chaos Shrine B3
+118;Tiamat 2 x1;1 boss;False;4;Boss Battle B;Chaos Shrine B4
+119;Tiamat x1;1 boss;False;4;Boss Battle B;Flying Fortress 5F
 120;Kraken x1;1 boss;False;4;Boss Battle A;Sunken Shrine F1
 121;Marilith x1;1 boss;False;4;Boss Battle B;Mount Gulg B5
 122;Lich x1;1 boss;False;4;Boss Battle A;Cavern of Earth B5
