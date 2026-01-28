@@ -40,8 +40,8 @@ class Arma:
         # self.gear = "Legendary"
         # self.mult = 1.65
         # self.color = '\033[95m'
-        self.compund_name = f"{self.name} | {self.gear} | {self.mult}" # self.name + " | " + self.gear + " | " + self.mult
-        self.decored_name = f"{self.color}{self.compund_name}{RESET}"
+        self.compound_name = f"{self.name} | {self.gear} | {self.mult}" # self.name + " | " + self.gear + " | " + self.mult
+        self.decored_name = f"{self.color}{self.compound_name}{RESET}"
         if name != 'Hands':
             self.price = self.get_price_with_mult() # ARMAS[name]['price']
             self.value = self.get_value_with_mult() # 100
@@ -68,7 +68,7 @@ class Arma:
             self.description = ARMAS[name]['description']
         else:
             self.gear, self.mult = "", 0.00
-            self.compund_name = f"{self.name}"
+            self.compound_name = f"{self.name}"
             self.decored_name = f"{self.name}"
             self.price,self.value,self.atk,self.acc,self.crit,self.equip_by = 0,0,0,0,0,'All clases'
             self.buy,self.find,self.drop,self.gift,self.special,self.type, = '-','-','-','-',False,'-'
@@ -335,6 +335,19 @@ class Arma:
         print(f"    Atk: {self.atk}")
         print(f"    Acc: {self.acc}")
         print(f"    Crit: {self.crit}")
+
+    def get_decored_name(self):
+        if self.name == "Hands":
+            return self.name
+        else:
+            if hasattr(self, "decored_name"):
+                return f"{'Arma:':<16} {self.decored_name}"
+            else:
+                G = "Regular"
+                M = 1.00
+                C = FG_BRIGHT_BLACK
+                text = f"{C}{self.name} | {G} | {M}{RESET}"
+                return text
 
 # Probar la creación de las Armas con sus Gears
 for name, dictionary in ARMAS.items():

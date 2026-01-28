@@ -557,7 +557,7 @@ class PJ:
             print(f"alive: {AZUL}{self.alive}{RESET}")
         else:
             print(f"alive: {ROJO}{self.alive}{RESET}")
-        print(f"{'Arma:':<16} {self.arma.decored_name}")
+        print(self.arma.get_decored_name())
         self.arma.mostrar_datos_5()
         print(f"{'Shield:':<16} {self.shield.name}") # decored_name
         print(f"{'Helmet:':<16} {self.helmet.name}") # decored_name

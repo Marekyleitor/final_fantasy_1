@@ -175,8 +175,8 @@ def mostrar_diccionario_entidad_cantidad(dic:dict):
 def obtener_lista_nombres_limpios(armas_que_puede_usar_en_inventario):
     nombres_limpios = []
     for decored_name in armas_que_puede_usar_en_inventario:
-        compund_name = re.sub(r'\x1b\[[0-9;]*m', '', decored_name)  # eliminar ANSI
-        nombres_limpios.append(compund_name)
+        compound_name = re.sub(r'\x1b\[[0-9;]*m', '', decored_name)  # eliminar ANSI
+        nombres_limpios.append(compound_name)
     return nombres_limpios
 
 def get_only_entity_name(possibly_decored_name):

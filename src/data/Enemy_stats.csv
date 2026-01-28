@@ -10,12 +10,12 @@ Warg Wolf;Temple of Chaos 1;72;14;0;46;-;-;22;93;1;18;93;-;1;1%;54;27;14;-;-;Bea
 Werewolf;Temple of Chaos 1;68;14;6;45;-;-;67;135;1;16;92;-;1;1%;42;21;20;-;-;Regenerative, Beast, Magic;21;-;Werewolf
 Zombie;Temple of Chaos 1;20;10;0;25;Fire, Dia;Quake, Ice, Death, Confusion, Paralysis;12;24;1;4;86;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Earth, Spirit, Instant Death;1;1%;6;3;20;-;-;Undead;3;Staff (2%);Zombie
 Ghoul;Temple of Chaos 1;48;8;6;36;Fire, Dia;Ice, Death, Confusion, Paralysis;50;93;3;12;90;Silence, Sleep, Paralysis, Darkness, Poison, Stone, Confuse, Ice, Spirit, Instant Death;1;1%;12;6;22;-;-;Undead;6;-;Ghoul
-Garland;Temple of Chaos 1;106;15;10;64;-;-;250;130;1;26;97;-;1;1%;12;6;-;-;-;-;6;Longsword (100%);Garland
+Garland;Temple of Chaos 1;106;15;10;64;-;-;250;130;1;26;97;-;1;1%;12;6;-;-;-;-;6;Longsword (2%);Garland
 Cobra;Forest 1;56;6;6;46;-;-;50;123;1;14;91;-;1;1%;30;15;14;-;-;Dragon;15;-;Cobra
 Ogre;Forest 1;100;18;10;65;-;-;195;195;1;24;96;-;1;1%;18;9;18;-;-;Giant;9;-;Ogre
 Ogre Chief;Forest 1;132;23;14;71;-;-;300;282;1;32;100;-;1;1%;30;15;23;-;-;Giant;15;-;Ogre Chieftain
 Lizard;Forest 2;92;18;12;55;-;-;50;153;1;22;95;-;10;5%;24;12;27;-;-;Dragon;12;-;Lizard
-Pirate;Pravoka;6;8;0;15;-;-;40;40;1;2;85;-;1;1%;12;6;-;-;-;-;6;Leather Shield (2%);Pirate
+Pirate;Pravoka;6;8;0;15;-;-;40;40;1;2;85;-;1;1%;12;6;-;-;-;-;6;Leather Shield (20%);Pirate
 Sahagin;Boat;28;10;4;28;Bolt;Quake, Fire;30;30;1;6;87;Fire, Earth;1;1%;72;36;15;-;-;Aquatic;36;Potion (5%);Sahagin
 Sahagin Chief;Boat;64;15;8;46;Bolt;Quake, Fire;105;105;1;16;92;Fire, Earth;1;1%;78;39;31;-;-;Aquatic;39;-;Sahagin Chief
 Buccaneer;Boat;50;14;6;37;-;Quake;120;60;1;12;90;Earth;1;1%;24;12;13;-;-;-;12;Saber (3%);Privateer

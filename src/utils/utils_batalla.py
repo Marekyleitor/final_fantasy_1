@@ -1,4 +1,4 @@
-# utilidades_batalla.py
+# utils_batalla.py
 def validar_input_numero(mensaje, minimo, maximo):
     while True:
         try:

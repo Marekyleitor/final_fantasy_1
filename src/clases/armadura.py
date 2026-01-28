@@ -1,8 +1,14 @@
-from src.utils.constantes import ARMADURAS
+from src.utils import utils_arma_armadura
+from src.utils.constantes import ARMADURAS, RESET
+from src.utils.utils_arma_armadura import get_gear_mult_color, get_price_with_mult
+
 
 class Armadura:
-    def __init__(self, name):
+    def __init__(self, name, mult:float=0):
         self.name = name
+        self.gear, self.mult, self.color = get_gear_mult_color(mult)
+        self.compound_name = f"{self.name} | {self.gear} | {self.mult}"  # self.name + " | " + self.gear + " | " + self.mult
+        self.decored_name = f"{self.color}{self.compound_name}{RESET}"
         if name != '':
             self.equip_by = self.equiped_by_exact_class(ARMADURAS[name]['equip_by'])
             self.price = ARMADURAS[name]['price']
@@ -20,6 +26,9 @@ class Armadura:
             self.used_as_item = ARMADURAS[name]['used_as_item']
             self.end_of_turn = ARMADURAS[name]['end_of_turn']
         else:
+            self.gear, self.mult = "", 0.00
+            self.compound_name = f"{self.name}"
+            self.decored_name = f"{self.name}"
             self.equip_by,self.price,self.value,self.DEF,self.EVA,self.WEI, = 'All clases',0,0,0,0,0
             self.buy,self.find,self.drop,self.type,self.stats,self.resistance, = '-','-','-','-','-','-'
             self.description,self.used_as_item,self.end_of_turn = '-','-','-'
@@ -132,3 +141,13 @@ class Armadura:
         else:
             print(f"Nombre de armadura con tipo de armadura incorrecta.")
             return False
+
+    def value_market_mult(self):
+        return utils_arma_armadura.value_market_mult(self.mult)
+
+    def get_price_with_mult(self):
+        return get_price_with_mult(
+            name=self.name,
+            mult=self.mult,
+            catalog=ARMADURAS
+        )

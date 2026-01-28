@@ -8,6 +8,7 @@ from src.clases.enemy import Enemy
 from src.clases.arrCharacter import ArrCharacter
 from src.utils.utils_formation import *
 from ...clases.arma import Arma
+from ...clases.armadura import Armadura
 from ...utils.constantes import ITEMS, ARMAS, ARMADURAS
 
 max_wait = 400
@@ -29,7 +30,9 @@ def batalla(arrChar, location, estado_de_juego, inventory, gil):
     # random_choice = 256 # Echidna
     # random_choice = 68 # Sea Scorpion x1-6, Sea Snake x2-5, Sea Troll x2
     # random_choice = 147 # Ogre Chief x1-4, Ogre x0-2
-    random_choice = 127 # Garland x1 (Longsword (2%))
+    # random_choice = 127 # Garland x1 (Longsword (2%))
+    random_choice = 126 # Pirate x9 (Leather Shield (2%))
+    # random_choice = 164 # Test libre
     print(f"random_choice: {random_choice}")
     enemies_by_formation = get_enemies_from_formation(random_choice)
     print(f"enemies_by_formation: {enemies_by_formation}")
@@ -308,7 +311,11 @@ def ganancia_por_victoria(arrChar, estado_de_juego, inventory, gil):
     print("\t"*10, f"***** Obtención de Loot y XP *****")
     print("\t"*10, f"XP: {XP}")
     print("\t"*10, f"gil: {gil_gained}")
-    print("\t"*10, f"dropped entities: {dropped_entities}")
+    # print("\t"*10, f"dropped entities: {dropped_entities}")
+    print("\t"*10, f"dropped entities:")
+    for entity in dropped_entities:
+        # Si entity name tiene '\x1b'. Ejm: '\x1b[92mLongsword | Superior | 1.15\x1b[0m'
+        print("\t" * 10, f"- {entity}")
     print("\t"*10, f"**********************************")
     # Repartición de XP
     party.subirXP_gru(XP)
@@ -366,8 +373,12 @@ def add_entities_dropped_to_my_inventory(inventory: dict, dropped_entities: list
         if text_entity in ARMAS:
             # Si es un arma, generamos el objeto y obtenemos su self.decored_name
             text_entity = Arma(text_entity).decored_name
+        # Validar si el item es una armadura
+        elif text_entity in ARMADURAS:
+            # Si es una armadura, generamos el objeto y obtenemos su self.decored_name
+            text_entity = Armadura(text_entity).decored_name
         # La entidad, sea item, arma o armadura se guarda como texto en el inventory
-        if text_entity in inventory:
+        elif text_entity in inventory:
             inventory[text_entity] += 1
         else:
             inventory[text_entity] = 1

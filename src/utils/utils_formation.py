@@ -58,7 +58,8 @@ def get_enemies_how_many_and_which(enemies: List[str]) -> List[str]:
             # count = random.randint(1, max_val) # test
             result.extend([name] * count)
         else:
-            result.append(name)
+            for i in range(int(range_str)):
+                result.append(name)
     return result
 
 def get_total_locations():

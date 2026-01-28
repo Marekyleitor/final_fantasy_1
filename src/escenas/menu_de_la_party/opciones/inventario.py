@@ -3,13 +3,22 @@ from src.utils.constantes import ITEMS_OPEN_WORLD_ONE_ALLY, ITEMS_OPEN_WORLD_ALL
     ITEMS_TOWN_ALL_ALLIES, ITEMS_DUNGEON_ONE_ALLY, ITEMS_DUNGEON_ALL_ALLIES, ITEMS_BATTLE_ONE_ALLY, \
     ITEMS_BATTLE_ALL_ALLIES, ITEMS_BATTLE_ONE_ENEMY, ITEMS_BATTLE_ALL_ENEMIES
 from src.utils.constantes import VERDE, ROJO, AZUL, RESET
+import re
+
+ansi_pattern = re.compile(r'\x1b\[[0-9;]*m')
 
 
 def mostrar_items_y_cantidad(inventory):
     # Mostrar los items del inventario y su cantidad correctamente espaciado
-    print(f"\n\t\t{'Entidad':<20}Cantidad")
+    Entidad_space = 35
+    Cantidad_space = 6
+
+    print(f"\n\t\t{'Entidad':<{Entidad_space}}Cantidad")
     for item_name, item_quant in inventory.items():
-        print(f"\t\t- {item_name:<18}{item_quant:>6}")
+        if item_quant > 0:
+            name_aligned = ljust_ansi(item_name, Entidad_space-2)
+            print(f"\t\t- {name_aligned}{item_quant:>{Cantidad_space}}")
+            # print(f"\t\t- {item_name:<{Entidad_space-2}}{item_quant:>{Cantidad_space}}")
     print()
 
 def se_tiene_este_item(key, dictionary):
@@ -129,24 +138,51 @@ def usar_elemento_en_pj(elem_text, pj):
             print(f"El pj debe estar vivo.")
             return False
 
+def has_ansi(text):
+    return bool(ansi_pattern.search(text))
+
+def strip_ansi(text):
+    return ansi_pattern.sub('', text)
+
+def parse_item(text):
+    clean = strip_ansi(text)
+    name, gear, mult = clean.split(' | ')
+    return name, float(mult)
+
+def inventory_sort_key(item):
+    key_text = item[0]
+
+    if not has_ansi(key_text):
+        # (grupo, nombre, mult dummy)
+        return (0, key_text, 0)
+
+    name, mult = parse_item(key_text)
+    return (1, name, mult)
+
+def ljust_ansi(text, width):
+    visible_len = len(strip_ansi(text))
+    padding = max(0, width - visible_len)
+    return text + ' ' * padding
+
 
 def inventario(arrChar, estado_de_juego, inventory):
     while True:
         print("=== Elementos ===")
-        print("1. Ver lista de elementos")
+        print("1. Ver inventario")
         print("2. Usar algún elemento")
+        print("3. Ordenar inventario")
         print("Q. Volver")
 
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
-            ## Ver lista de elementos
+            ## Ver inventario
             print(f"***** inventory *****")
             # print(inventory)
             mostrar_items_y_cantidad(inventory)
             print(f"*****************")
             print()
-        if opcion == "2":
+        elif opcion == "2":
             print(f"***** inventory *****")
             # print(inventory)
             mostrar_items_y_cantidad(inventory)
@@ -207,62 +243,27 @@ def inventario(arrChar, estado_de_juego, inventory):
                 else:
                     print(f"No se posee el elemento {texto}.")
                     break
-            # while True:
-            #     ## Usar algún elemento
-            #     texto = input("Escriba el nombre del elemento (q: Salir): ")
-            #     if texto.upper() == "Q":
-            #         break
-            #     while True:
-            #         if se_tiene_este_item(texto, inventory):
-            #             if texto in elementos_permitidos(estado_de_juego):
-            #                 if ITEMS[texto]["affects"] == "one ally":
-            #                     print(f"Usarás el elemento {VERDE}{texto}{RESET} en:")
-            #                     for pj in arrChar.arr:
-            #                         pj.mostrar_datos_3()
-            #                     # Input
-            #                     try:
-            #                         opc = input(f"Ingresa un indice de aliado entre 1 y {arrChar.get_n()} (q: Salir): ")
-            #                         if opc.upper() == "Q":
-            #                             break
-            #                         index = int(opc)
-            #                         if 0 <= index - 1 < arrChar.get_n():
-            #                             # Ejecutar el efecto en el pj seleccionado
-            #                             pj = arrChar.get_char(index - 1)
-            #                             exitoso = usar_elemento_en_pj(texto, pj)
-            #                             # Disminuir en 1 el elemento en inventory
-            #                             if exitoso:
-            #                                 inventory[texto] = inventory[texto] - 1
-            #                             break
-            #                     except ValueError:
-            #                         print("Valor inválido.")
-            #                 else:  # all allies
-            #                     while True:
-            #                         print(f"Usarás el elemento {VERDE}{texto}{RESET} en todo el grupo.")
-            #                         print("1. Usar")
-            #                         print("2. Volver")
-            #
-            #                         opc_b = input("Seleccione una opción: ")
-            #
-            #                         if opc_b == "1":
-            #                             ## Usar el elemento en todos los aliados (Megalixir, etc.)
-            #                             if texto == "Megalixir":
-            #                                 for pj in arrChar.arr:
-            #                                     usar_elemento_en_pj("Elixir", pj)
-            #                             else:
-            #                                 print(f"Aún no se tiene registro.")
-            #                         elif opc_b == "2":
-            #                             break
-            #                         else:
-            #                             print(f"Inválido.")
-            #
-            #             else:
-            #                 print(f"El elemento {texto} no se puede usar en el estado de juego {estado_de_juego}.")
-            #                 break
-            #         # elif texto.upper() == "Q":
-            #         #     break
-            #         else:
-            #             print(f"No se posee el elemento {texto}.")
-            #             break
+        elif opcion == "3":
+            print("=== Ordenar Inventario ===")
+            print("1. Alfabéticamente, armas y armaduras al final")
+            print("Q. Volver")
+
+            opcion = input("Seleccione una opción: ")
+
+            if opcion == "1":
+                ## Alfabéticamente, armas y armaduras al final
+                inventory_sorted = dict(
+                    sorted(inventory.items(), key=inventory_sort_key)
+                )
+                inventory = inventory_sorted
+                ## Ver inventario
+                print(f"***** inventory *****")
+                mostrar_items_y_cantidad(inventory)
+                print(f"*****************")
+                print()
+            elif opcion.upper() == "Q":
+                ## Volver
+                return arrChar, estado_de_juego, inventory
 
         # # Ejemplo de uso
         # print(f"{VERDE}¡Victoria!{RESET}")
