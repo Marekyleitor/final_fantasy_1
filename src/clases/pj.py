@@ -560,15 +560,15 @@ class PJ:
             print(f"alive: {ROJO}{self.alive}{RESET}")
         print(self.arma.get_decored_name())
         self.arma.mostrar_datos_5()
-        print(f"{'Shield:':<16} {self.shield.name}") # decored_name
+        print(f"{'Shield:':<16} {self.shield.decored_name}") # decored_name
         if self.shield.name != "":
             self.shield.mostrar_datos_5()
-        print(f"{'Helmet:':<16} {self.helmet.name}") # decored_name
+        print(f"{'Helmet:':<16} {self.helmet.decored_name}") # decored_name
         if self.helmet.name != "":
             self.helmet.mostrar_datos_5()
-        print(f"{'Body_armor:':<16} {self.body_armor.name}") # decored_name
+        print(f"{'Body_armor:':<16} {self.body_armor.decored_name}") # decored_name
         if self.body_armor.name != "":
             self.body_armor.mostrar_datos_5()
-        print(f"{'Gloves:':<16} {self.gloves.name}") # decored_name
+        print(f"{'Gloves:':<16} {self.gloves.decored_name}") # decored_name
         if self.gloves.name != "":
             self.gloves.mostrar_datos_5()
