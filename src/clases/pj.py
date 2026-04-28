@@ -25,10 +25,10 @@ class PJ:
         self.XP_limit0 = self.xp_Lv(self.LV, self.MAX_LV)
         self.XP_limit1 = self.xp_Lv(self.LV + 1, self.MAX_LV)
         self.arma = self.arma_inicial(self.clase)
-        self.shield = Armadura('')
-        self.helmet = Armadura('')
-        self.body_armor = Armadura('Clothes')
-        self.gloves = Armadura('')
+        self.shield = Armadura('', 1.0)
+        self.helmet = Armadura('', 1.0)
+        self.body_armor = Armadura('Clothes', 1.0)
+        self.gloves = Armadura('', 1.0)
         self.asignar_estadisticas_base() # Variables: STR_base,AGL_base,INT_base,STA_base,LCK_base
         self.asignar_estadisticas() # Variables: HP,MP,STR,AGL,INT,STA,LCK
         self.asignar_estadisticas_secundarias() # Variables: ATK,ACC,DEF,EVA,CRIT,MD
@@ -169,10 +169,10 @@ class PJ:
 
     def actualizar_EVA(self):
         arma_EVA = self.arma.allStats.get('EVA', 0)
-        shield_EVA = self.shield.get_EVA()
-        helmet_EVA = self.helmet.get_EVA()
-        body_armor_EVA = self.body_armor.get_EVA()
-        gloves_EVA = self.gloves.get_EVA()
+        shield_EVA = self.shield.get_eva_with_mult()
+        helmet_EVA = self.helmet.get_eva_with_mult()
+        body_armor_EVA = self.body_armor.get_eva_with_mult()
+        gloves_EVA = self.gloves.get_eva_with_mult()
         self.EVA = self.get_EVA_base() + arma_EVA + shield_EVA + helmet_EVA + body_armor_EVA + gloves_EVA
 
     def get_EVA_actualizado(self):
@@ -441,7 +441,7 @@ class PJ:
         self.actualizar_stats_por_arma_armadura_y_secundarias()
 
     def reemplazar_armadura(self, slot_armor_str, new_armor_name):
-        # Validar si es un nombre válido y si es el tipo de armadura correcta
+        # Validar si es un nombre válido (existe en ARMADURAS) y si ese nombre de armadura ('Ribbon') es de ese slot ('shield', 'armor', etc.)
         if self.shield.validar_nombre_armadura(new_armor_name) and self.shield.armadura_es_tipo_correcto(slot_armor_str, new_armor_name):
             # Sumar esta armadura al inventario
             # Restar la nueva armadura del inventario
@@ -545,6 +545,7 @@ class PJ:
         print(f"\t\t===========================")
 
     def mostrar_datos_5(self):
+        """Siendo PJ muestra los stats de armas y armaduras durante el Equipar"""
         print(f"-" * 10, f"{self.name}", f"-" * 10)
         print(f"{self.clase} - LV. {self.LV}")
         print(f"HP: {self.HP} / {self.HP_MAX}")
@@ -560,6 +561,14 @@ class PJ:
         print(self.arma.get_decored_name())
         self.arma.mostrar_datos_5()
         print(f"{'Shield:':<16} {self.shield.name}") # decored_name
+        if self.shield.name != "":
+            self.shield.mostrar_datos_5()
         print(f"{'Helmet:':<16} {self.helmet.name}") # decored_name
+        if self.helmet.name != "":
+            self.helmet.mostrar_datos_5()
         print(f"{'Body_armor:':<16} {self.body_armor.name}") # decored_name
+        if self.body_armor.name != "":
+            self.body_armor.mostrar_datos_5()
         print(f"{'Gloves:':<16} {self.gloves.name}") # decored_name
+        if self.gloves.name != "":
+            self.gloves.mostrar_datos_5()

@@ -31,7 +31,7 @@ def menu_de_la_party(arrChar, location, estado_de_juego, inventory, gil):
         elif opcion == "3":
             ## Equipar
             arrChar, inventory = equipar(arrChar, inventory)
-        if opcion == "4":
+        elif opcion == "4":
             ## Estado
             # estado()
             pass

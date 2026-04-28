@@ -24,14 +24,14 @@ def batalla(arrChar, location, estado_de_juego, inventory, gil):
         print("\tNO HAY ENCUENTROS CON ENEMIGOS AQUÍ.")
         return arrChar.arrPer(), location, estado_de_juego, inventory, gil
 
-    # random_choice = random.choice(form_ids)
+    random_choice = random.choice(form_ids)
     # random_choice = 123 # Chaos
     # random_choice = 115 # Lich
     # random_choice = 256 # Echidna
     # random_choice = 68 # Sea Scorpion x1-6, Sea Snake x2-5, Sea Troll x2
     # random_choice = 147 # Ogre Chief x1-4, Ogre x0-2
     # random_choice = 127 # Garland x1 (Longsword (2%))
-    random_choice = 126 # Pirate x9 (Leather Shield (2%))
+    # random_choice = 126 # Pirate x9 (Leather Shield (2%))
     # random_choice = 164 # Test libre
     print(f"random_choice: {random_choice}")
     enemies_by_formation = get_enemies_from_formation(random_choice)
@@ -347,24 +347,19 @@ def enemy_drop_entities(enemy, dropped_entities):
         porc = int(porc.replace('%)', ''))
         n = random.randint(0,100)
         if n < porc:
-            # Aquí se introduce el objeto caído a la lista dropped_entities (solo dentro de esta función).
-            # dropped_entities.append(entity)
-
             # Determino que tipo de entidad es (Entity, Arma o Armadura)
-            if entity in ITEMS:
-                dropped_entities.append(entity)
-            elif entity in ARMAS:
+            if entity in ARMAS:
                 arma_name = entity
                 arma_01 = Arma(arma_name)
                 dropped_entities.append(arma_01.decored_name)
-                # dropped_entities.append(entity)
             elif entity in ARMADURAS:
-                dropped_entities.append(entity)     # Aquí hasta que se agregue el Gear a las Armaduras
+                armadura_name = entity
+                armadura_01 = Armadura(armadura_name)
+                dropped_entities.append(armadura_01.decored_name)
+            elif entity in ITEMS:
+                dropped_entities.append(entity)
             else:
                 dropped_entities.append(entity)
-
-
-            pass
     return dropped_entities
 
 def add_entities_dropped_to_my_inventory(inventory: dict, dropped_entities: list):
@@ -378,7 +373,7 @@ def add_entities_dropped_to_my_inventory(inventory: dict, dropped_entities: list
             # Si es una armadura, generamos el objeto y obtenemos su self.decored_name
             text_entity = Armadura(text_entity).decored_name
         # La entidad, sea item, arma o armadura se guarda como texto en el inventory
-        elif text_entity in inventory:
+        if text_entity in inventory:
             inventory[text_entity] += 1
         else:
             inventory[text_entity] = 1

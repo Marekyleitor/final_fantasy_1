@@ -14,7 +14,7 @@ def entrar_al_pueblo(arrChar, location, estado_de_juego, inventory, gil):
         print("Q. Salir")
 
         opcion = input("Seleccione una opción: ")
-
+        # No es necesario el return en cada opción, lo que se quiere es que al volver a este punto se te vuelva a preguntar que quieres hasta que quieras salir.
         if opcion == "1":
             ## Entrar a una tienda de Items
             arrChar, location, estado_de_juego, inventory, gil = tienda_de_items(arrChar, location, estado_de_juego, inventory, gil)

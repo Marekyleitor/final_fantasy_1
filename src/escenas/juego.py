@@ -34,7 +34,7 @@ def start_game(arrChar):
 
         if opcion == "1":
             ## Entrar al Pueblo
-            # arrChar, location, estado_de_juego, inventory, gil = entrar_al_pueblo(arrChar, location, estado_de_juego, inventory, gil)
+            arrChar, location, estado_de_juego, inventory, gil = entrar_al_pueblo(arrChar, location, estado_de_juego, inventory, gil)
             pass
         elif opcion == "2":
             ## Buscar batalla

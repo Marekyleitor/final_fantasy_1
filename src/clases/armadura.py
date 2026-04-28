@@ -1,26 +1,31 @@
+import random, math
 from src.utils import utils_arma_armadura
-from src.utils.constantes import ARMADURAS, RESET
-from src.utils.utils_arma_armadura import get_gear_mult_color, get_price_with_mult
+from src.utils.constantes import ARMADURAS, RESET, FG_BRIGHT_BLACK, FG_BRIGHT_GREEN, FG_BRIGHT_CYAN, FG_BRIGHT_MAGENTA, \
+    FG_BRIGHT_RED, FG_BRIGHT_YELLOW
+from src.utils.utils_arma_armadura import equiped_by_exact_class, str_to_dict, porcentage_to_decimal, \
+    get_gear_mult_color, get_price_with_mult, get_value_with_mult, value_market_mult, get_operation_type_A, \
+    get_operation_type_B, get_operation_type_C, get_decored_name
 
 
 class Armadura:
-    def __init__(self, name, mult:float=0):
+    def __init__(self, name, mult: float = 0):
         self.name = name
         self.gear, self.mult, self.color = get_gear_mult_color(mult)
         self.compound_name = f"{self.name} | {self.gear} | {self.mult}"  # self.name + " | " + self.gear + " | " + self.mult
         self.decored_name = f"{self.color}{self.compound_name}{RESET}"
         if name != '':
             self.equip_by = self.equiped_by_exact_class(ARMADURAS[name]['equip_by'])
-            self.price = ARMADURAS[name]['price']
-            self.value = ARMADURAS[name]['value']
-            self.DEF = ARMADURAS[name]['DEF']
-            self.EVA = ARMADURAS[name]['EVA']
-            self.WEI = ARMADURAS[name]['WEI']
+            self.price = self.get_price_with_mult()  # ARMADURAS[name]['price']
+            self.value = self.get_value_with_mult()  # ARMADURAS[name]['value']
+            self.DEF = self.get_def_with_mult()  # ARMADURAS[name]['DEF']
+            self.EVA = self.get_eva_with_mult()  # ARMADURAS[name]['EVA']
+            self.WEI = self.get_wei_with_mult()  # ARMADURAS[name]['WEI']
             self.buy = ARMADURAS[name]['buy']
             self.find = ARMADURAS[name]['find']
             self.drop = ARMADURAS[name]['drop']
             self.type = ARMADURAS[name]['type']
             self.stats = self.str_to_dict(ARMADURAS[name]['stats'])
+            self.allStats = self.getAllStats()
             self.resistance = ARMADURAS[name]['resistance']
             self.description = ARMADURAS[name]['description']
             self.used_as_item = ARMADURAS[name]['used_as_item']
@@ -29,12 +34,16 @@ class Armadura:
             self.gear, self.mult = "", 0.00
             self.compound_name = f"{self.name}"
             self.decored_name = f"{self.name}"
-            self.equip_by,self.price,self.value,self.DEF,self.EVA,self.WEI, = 'All clases',0,0,0,0,0
-            self.buy,self.find,self.drop,self.type,self.stats,self.resistance, = '-','-','-','-','-','-'
-            self.description,self.used_as_item,self.end_of_turn = '-','-','-'
+            self.equip_by, self.price, self.value, self.DEF, self.EVA, self.WEI, = 'All clases', 0, 0, 0, 0, 0
+            self.buy, self.find, self.drop, self.type, self.stats, = '-', '-', '-', '-', '-'
+            self.allStats, self.resistance, self.description, self.used_as_item = self.getAllStats(), '-', '-', '-'
+            self.end_of_turn = '-'
 
     def mostrar_datos(self):
         print("Name:", self.name, '\t', type(self.name))
+        print("Gear:", self.gear, '\t', type(self.gear))
+        print("Mult:", self.mult, '\t', type(self.mult))
+        print("Color:", self.color, '\t', type(self.color))
         print("Equipped by:", self.equip_by, '\t', type(self.equip_by))
         print("Price:", self.price, '\t', type(self.price))
         print("Value:", self.value, '\t', type(self.value))
@@ -51,80 +60,47 @@ class Armadura:
         print("Used as item:", self.used_as_item, '\t', type(self.used_as_item))
         print("End of turn:", self.end_of_turn, '\t', type(self.end_of_turn))
 
-    def equiped_by_exact_class(self, lst:list) -> list:
-        """
-            Traduce una lista de strings usando un diccionario de traducciones.
-            Modifica la lista original.
-            """
-        if lst[0] == 'All classes':
-            return ['Warrior','Knight','Thief','Ninja','W. Mage','W. Wizard','B. Mage','B. Wizard','Monk','Master','R. Mage','R. Wizard']
-        # Diccionario de clase exacta del PJ (ejemplo)
-        traducciones = {
-            'Wa': 'Warrior',
-            'Kn': 'Knight',
-            'Th': 'Thief',
-            'Ni': 'Ninja',
-            'WM': 'W. Mage',
-            'WW': 'W. Wizard',
-            'BM': 'B. Mage',
-            'BW': 'B. Wizard',
-            'Mo': 'Monk',
-            'Ma': 'Master',
-            'RM': 'R. Mage',
-            'RW': 'R. Wizard'
-        }
-        for i in range(len(lst)):
-            lst[i] = traducciones.get(lst[i], lst[i])
-        return lst
+    def equiped_by_exact_class(self, lst: list) -> list:
+        return equiped_by_exact_class(lst)
 
-    def str_to_dict(self, s:str="-"):# return str ("-") or dict
-        if s == '-':
-            return s
-        else:
-            s = s.replace("{", "")
-            s = s.replace("}", "")
-            arr = s.split(", ")
-            miDic = {}
-            for elem in arr:
-                val = elem.split(":")
-                miDic[val[0]] = int(val[1])
-                # print(type(miDic[val[0]]))
-            return miDic
+    def str_to_dict(self, s: str = "-"):  # return str ("-") or dict
+        return str_to_dict(s)
 
-    def porcentage_to_decimal(self, porc:str):
-        porc = porc.replace("%", "")
-        deci = float(int(porc) / 100)
-        return 1 + deci
+    def porcentage_to_decimal(self, porc: str):
+        return porcentage_to_decimal(porc)
 
     def getAllStats(self) -> dict:  # self.stats es dict, excepto si es '-'
-        aux = {'STR': 0, 'AGL': 0, 'INT': 0, 'STA': 0, 'LCK': 0, 'HP_MAX': 1, 'MP_MAX': 1}
+        aux = {'STR': 0, 'AGL': 0, 'INT': 0, 'STA': 0, 'LCK': 0, 'HP_MAX': 1.0, 'MP_MAX': 1.0}
         if self.stats == '-':
             return aux
         else:
             if 'STR' in self.stats:
-                aux['STR'] = self.stats['STR']
+                aux['STR'] = int(self.stats['STR'] * self.mult)
             if 'AGL' in self.stats:
-                aux['AGL'] = self.stats['AGL']
+                aux['AGL'] = int(self.stats['AGL'] * self.mult)
             if 'INT' in self.stats:
-                aux['INT'] = self.stats['INT']
+                aux['INT'] = int(self.stats['INT'] * self.mult)
             if 'STA' in self.stats:
-                aux['STA'] = self.stats['STA']
+                aux['STA'] = int(self.stats['STA'] * self.mult)
             if 'LCK' in self.stats:
-                aux['LCK'] = self.stats['LCK']
+                aux['LCK'] = int(self.stats['LCK'] * self.mult)
             if 'HP_MAX' in self.stats:
-                aux['HP_MAX'] = self.porcentage_to_decimal(self.stats['HP_MAX'])
+                aux['HP_MAX'] = float((self.stats['HP_MAX'] - 1.0) * self.mult) + 1.0
             if 'MP_MAX' in self.stats:
-                aux['MP_MAX'] = self.porcentage_to_decimal(self.stats['MP_MAX'])
+                aux['MP_MAX'] = float((self.stats['MP_MAX'] - 1.0) * self.mult) + 1.0
             # print('getAllStats: aux:', aux)
             return aux
 
-    def get_DEF(self):
-        return self.DEF
+    # def get_DEF(self):
+    #     return self.DEF
+    #
+    # def get_EVA(self):
+    #     return self.EVA
+    #
+    # def get_WEI(self):
+    #     return self.WEI
 
-    def get_EVA(self):
-        return self.EVA - self.WEI
-
-    def validar_nombre_armadura(self, nombre:str) -> bool:
+    def validar_nombre_armadura(self, nombre: str) -> bool:
         if nombre == '' or nombre in ARMADURAS.keys():
             return True
         else:
@@ -142,8 +118,8 @@ class Armadura:
             print(f"Nombre de armadura con tipo de armadura incorrecta.")
             return False
 
-    def value_market_mult(self):
-        return utils_arma_armadura.value_market_mult(self.mult)
+    def get_gear_mult_color(self, mult):
+        return get_gear_mult_color(mult)
 
     def get_price_with_mult(self):
         return get_price_with_mult(
@@ -151,3 +127,77 @@ class Armadura:
             mult=self.mult,
             catalog=ARMADURAS
         )
+
+    def get_value_with_mult(self):
+        return get_value_with_mult(self.price, self.mult)
+
+    def get_def_with_mult(self):
+        def_str = 0 if self.name == '' else ARMADURAS[self.name]['DEF']
+        try:
+            def_num = int(def_str)
+            final_def = math.trunc(def_num * self.mult)  # Initial (def x mult)
+            return final_def  # Devuelve un número entero/flotante
+        except ValueError:
+            return f"{def_str} x {str(self.mult)}"  # Devuelve un string
+
+    def get_eva_with_mult(self):
+        eva_str = 0 if self.name == '' else ARMADURAS[self.name]['EVA']
+        try:
+            eva_num = int(eva_str)
+            final_eva = math.trunc(eva_num * self.mult)  # Initial (eva x mult)
+            return final_eva  # Devuelve un número entero/flotante
+        except ValueError:
+            return f"{eva_str} x {str(self.mult)}"  # Devuelve un string
+
+    def get_wei_with_mult(self):
+        wei_str = 0 if self.name == '' else ARMADURAS[self.name]['WEI']
+        try:
+            wei_num = int(wei_str)
+            final_wei = math.trunc(wei_num * self.mult)  # Initial (wei x mult)
+            return final_wei  # Devuelve un número entero/flotante
+        except ValueError:
+            return f"{wei_str} x {str(self.mult)}"  # Devuelve un string
+
+    def mostrar_gear_stats(self):
+        # print(f"===== mostrar_gear_stats =====")
+        price_base_str = ARMADURAS[self.name]['price']
+        calculated_price = self.price
+        def_base_str = ARMADURAS[self.name]['DEF']
+        eva_base_str = ARMADURAS[self.name]['EVA']
+        wei_base_str = ARMADURAS[self.name]['WEI']
+
+        print(f"\t{self.decored_name} Value_Market_Mult: {self.value_market_mult()}")
+        print(f"\t\tPrice: {self.get_operation_type_A(price_base_str)} = {self.price}")
+        print(f"\t\tValue: {self.get_operation_type_B(calculated_price)} = {self.value}")
+        print(f"\t\tDEF: {self.get_operation_type_C(def_base_str)} = {self.DEF}")
+        print(f"\t\tEVA: {self.get_operation_type_C(eva_base_str)} = {self.EVA}")
+        print(f"\t\tWEI: {self.get_operation_type_C(wei_base_str)} = {self.WEI}")
+        print(f"\t\tStats: {self.getAllStats()}")
+
+    def value_market_mult(self):
+        return value_market_mult(self.mult)
+
+    def get_operation_type_A(self, num):
+        return get_operation_type_A(num, self.mult)
+
+    def get_operation_type_B(self, num):
+        return get_operation_type_B(num)
+
+    def get_operation_type_C(self, num):
+        return get_operation_type_C(num, self.mult)
+
+    def mostrar_datos_5(self):
+        """Muestra los stats de esta armadura"""
+        print(f"    DEF: {self.DEF}")
+        print(f"    EVA: {self.EVA}")
+        print(f"    WEI: {self.WEI}")
+
+    def get_decored_name(self):
+        return get_decored_name(self)
+
+
+# Probar la creación de las Armaduras con sus Gears
+for name, dictionary in ARMADURAS.items():
+    # print(f"{name}")
+    my_armadura_01 = Armadura(name)
+    my_armadura_01.mostrar_gear_stats()

@@ -546,3 +546,4 @@ print(f"Resultado final como lista: {all_locations}")
 #
 # print(f"\033[31m\033[101mTest{RESET}")
 # print(f"\033[91m\033[41mTest{RESET}")
+

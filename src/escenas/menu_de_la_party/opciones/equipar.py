@@ -85,6 +85,7 @@ def equipar_2_un_pj(arrChar, inventory, index):
                 # Se muestra la comparación entre los stats del PJ con el arma actual y la seleccionada
                 pj_temp = copy.deepcopy(pj)
                 pj_temp.cambiar_arma(nombre, mult)
+                print(f"Comparativa de stats del PJ antes y después del cambio.")
                 print(f"Ahora: {pj.arma.decored_name}")
                 print(f"ATK: {pj.get_ATK_actualizado()}")
                 print(f"ACC: {pj.get_ACC_actualizado()}")
@@ -166,11 +167,25 @@ def mostrar_y_obtener_armas_del_inventario_que_puede_usar(arrChar, inventory, in
     return obtener_lista_nombres_limpios(armas_que_puede_usar_en_inventario)
 
 def mostrar_diccionario_entidad_cantidad(dic:dict):
+    # # Espaciado para el nombre
+    # esp = 30
+    # print(f"\n\t{'Entity':<{esp}}Precio")
+    # for indice, (entity_name, quant) in enumerate(dic.items()):
+    #     print(f"\t{indice+1}. {entity_name:<{esp-2+9}}{quant:>6}") # El +9 es por los caracteres ANSI
+
     # Espaciado para el nombre
     esp = 30
-    print(f"\n\t{'Entity':<{esp}}Precio")
+    print(f"\n\t{'Entity':<{esp}}Quant\t\tAtk\tAcc\tCrit")
     for indice, (entity_name, quant) in enumerate(dic.items()):
-        print(f"\t{indice+1}. {entity_name:<{esp-2+9}}{quant:>6}") # El +9 es por los caracteres ANSI
+        # Separar el decored_name en "nombre" y "mult".
+        nombre = get_only_entity_name(entity_name)
+        mult = get_only_entity_mult(entity_name)
+        # Crear un arma temporal con ese nombre y mult
+        weapon_temp = Arma(nombre, mult)
+        atk_temp = weapon_temp.atk  # Ya está multiplicado con su mult
+        acc_temp = weapon_temp.acc  # Ya está multiplicado con su mult
+        crit_temp = weapon_temp.crit  # Ya está multiplicado con su mult
+        print(f"\t{indice + 1}. {entity_name:<{esp - 2 + 9}}{quant:>6}\t{atk_temp}\t{acc_temp}\t{crit_temp}")  # El +9 es por los caracteres ANSI
 
 def obtener_lista_nombres_limpios(armas_que_puede_usar_en_inventario):
     nombres_limpios = []

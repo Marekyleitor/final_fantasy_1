@@ -27,7 +27,7 @@ Wizard's Hat;RM, RW, WM, WW, BM, BW;46600;23300;4;0;1;Whisperwind Cove (B21-B29 
 Sage's Mitre;WM, WW, BM, BW;45200;22600;5;0;1;Whisperwind Cove (B31-B39 Town);Hellfire Chasm, Lifespring Grotto, Whisperwind Cove;-;helmet;{INT:5, MP_MAX:10%};-;A hat made of enchanted cloth.;-;-
 Black Cowl;Th, Ni;?;100;8;10;1;-;Earthgift Shrine, Whisperwind Cove;-;helmet;{STR:3, AGL:1, STA:1};Sleep;Black hood brought from a distant land.;-;-
 Tiger Mask;Kn, Ni, Ma;?;100;8;0;2;-;Lifespring Grotto, Whisperwind Cove;-;helmet;{STR:3, AGL:2, STA:1};-;A light mask made in a tiger's likeness.;-;-
-Red Cap;RM, RW;?;100;8;0;1;-;Whisperwind Cove;-;helmet;{STR:4, AGL:3, STA:2, , HP_MAX:25%};-;A cap that awakens latent abilities.;-;-
+Red Cap;RM, RW;?;100;8;0;1;-;Whisperwind Cove;-;helmet;{STR:4, AGL:3, STA:2, HP_MAX:25%};-;A cap that awakens latent abilities.;-;-
 Genji Helm;Wa, Kn, Th, Ni;?;100;9;15;3;-;Whisperwind Cove;Typhon;helmet;{INT:3};Poison, Stone;A heavy helm crafted in a distant land.;-;-
 Crystal Helm;Kn, Ni;?;100;10;15;3;-;Whisperwind Cove;-;helmet;{INT:3};Stone;A helm of crystal, crafted long ago.;-;-
 Shadow Mask;Th, Ni;?;100;3;6;2;-;-;Chronodia (Tiamat);helmet;{AGL:30};-;Mask that is a testament to darkness.;-;-

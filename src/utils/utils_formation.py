@@ -20,6 +20,7 @@ def get_formation(location: str) -> List[int]:
     Returns:
         Lista de números de formación que aparecen en esa ubicación
     """
+    # Con este código si buscas "Chaos Shrine" toma también "Chaos Shrine Region"
     return [
         int(numero) for numero, datos in FORMACION.items()
         if location in datos['Location']
