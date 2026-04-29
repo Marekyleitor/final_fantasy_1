@@ -5,7 +5,8 @@ from src.clases.arma import Arma
 from src.utils.constantes import ARMAS
 
 
-def equipar(arrChar, inventory):
+# def equipar(arrChar, inventory):
+def equipar(partida):
     while True:
         print("\n=== Equipar ===")
         print("1. Seleccionar un PJ")
@@ -17,22 +18,25 @@ def equipar(arrChar, inventory):
         if opcion == "1":
             ## Seleccionar un PJ
             while True:
-                mostrar_PJs(arrChar)
+                mostrar_PJs(partida.arrChar)
                 try:
-                    text = input(f"Ingresa un PJ entre 1 y {arrChar.get_n()}: ")
+                    text = input(f"Ingresa un PJ entre 1 y {partida.arrChar.get_n()}: ")
                     if text.upper() == "Q":
                         break
                     index = int(text)
-                    if 0 <= index - 1 < arrChar.get_n():
-                        arrChar, inventory = equipar_un_pj(arrChar, inventory, index - 1)
+                    if 0 <= index - 1 < partida.arrChar.get_n():
+                        # arrChar, inventory = equipar_un_pj(arrChar, inventory, index - 1)
+                        partida = equipar_un_pj(partida, index - 1)
                 except ValueError:
                     print("Valor inválido.")
         elif opcion.upper() == "Q":
             ## Salir
-            return arrChar, inventory
+            # return arrChar, inventory
+            return partida
 
-def equipar_un_pj(arrChar, inventory, index):
-    pj = arrChar.get_char(index)
+# def equipar_un_pj(arrChar, inventory, index):
+def equipar_un_pj(partida, index):
+    pj = partida.arrChar.get_char(index)
     pj.mostrar_datos_5()
     while True:
         print(f"\n=== Equipar_un_pj - {pj.name} - {pj.clase} ===")
@@ -45,7 +49,8 @@ def equipar_un_pj(arrChar, inventory, index):
 
         if opcion == "1":
             ## Equipar
-            arrChar, inventory = equipar_2_un_pj(arrChar, inventory, index)
+            # arrChar, inventory = equipar_2_un_pj(arrChar, inventory, index)
+            partida = equipar_2_un_pj(partida, index)
         elif opcion == "2":
             ## Óptimo
             pass
@@ -54,10 +59,12 @@ def equipar_un_pj(arrChar, inventory, index):
             pass
         elif opcion.upper() == "Q":
             ## Salir
-            return arrChar, inventory
+            # return arrChar, inventory
+            return partida
 
-def equipar_2_un_pj(arrChar, inventory, index):
-    pj = arrChar.get_char(index)
+# def equipar_2_un_pj(arrChar, inventory, index):
+def equipar_2_un_pj(partida, index):
+    pj = partida.arrChar.get_char(index)
     while True:
         print(f"\n=== Equipar_2_un_pj - {pj.name} - {pj.clase} ===")
         print("1. Arma")
@@ -71,12 +78,13 @@ def equipar_2_un_pj(arrChar, inventory, index):
 
         if opcion == "1":
             ## Arma
-            lista_de_nombres_de_armas_limpios = mostrar_y_obtener_armas_del_inventario_que_puede_usar(arrChar, inventory, index)
+            # lista_de_nombres_de_armas_limpios = mostrar_y_obtener_armas_del_inventario_que_puede_usar(arrChar, inventory, index)
+            lista_de_nombres_de_armas_limpios = mostrar_y_obtener_armas_del_inventario_que_puede_usar(partida, index)
             ### Obtener el String del arma en cuentión (ej.: Knife | Legendary | 1.6) o Q para Salir.
             nombre_arma_en_inventario = get_nombre_arma_o_armadura_en_inventario(lista_de_nombres_de_armas_limpios)
             ### Validar condición
             if nombre_arma_en_inventario.upper() == "Q":
-                # return arrChar, inventory # esto me retrocede a "Equipar_un_pj"
+                # return partida.arrChar, partida.inventory # esto me retrocede a "Equipar_un_pj"
                 pass # Esto me permite volver a "Equipar_2_un_pj"
             else: # cualquier nombre dentro de la lista de nombres válidos
                 # Obtenemos el "nombre" (only_name) del arma y su "mult"
@@ -108,12 +116,14 @@ def equipar_2_un_pj(arrChar, inventory, index):
                         arma_previa_decored_name = pj.arma.decored_name
                         pj.cambiar_arma(nombre, mult)
                         # Sumar (+1) el arma que desequipo en el inventario
-                        sumar_al_inventario(1,arma_previa_decored_name, inventory)
+                        sumar_al_inventario(1,arma_previa_decored_name, partida.inventory)
                         # Restar (-1) el arma que equipo en el inventario
-                        restar_al_inventario(1, pj.arma.decored_name, inventory)
-                        return arrChar, inventory
+                        restar_al_inventario(1, pj.arma.decored_name, partida.inventory)
+                        # return arrChar, inventory
+                        return partida
                     elif confirmacion.upper() == "Q":
-                        return arrChar, inventory
+                        # return arrChar, inventory
+                        return partida
 
         elif opcion == "2":
             ## Shield
@@ -129,25 +139,28 @@ def equipar_2_un_pj(arrChar, inventory, index):
             pass
         elif opcion.upper() == "Q":
             ## Salir
-            return arrChar, inventory
+            # return arrChar, inventory
+            return partida
 
-def mostrar_y_obtener_armas_del_inventario_que_puede_usar(arrChar, inventory, index):
+# def mostrar_y_obtener_armas_del_inventario_que_puede_usar(arrChar, inventory, index):
+def mostrar_y_obtener_armas_del_inventario_que_puede_usar(partida, index):
     """
     Muestra las armas del inventario compatibles con el PJ en el índice recibido.
 
     Args:
-        arrChar (ArrChar): Arreglo de Characteres, en este caso solo PJs
-        inventory (dict[str: int]): El inventario.
+        partida (Partida): El estado del juego.
+            .arrChar (ArrChar): Arreglo de Characteres, en este caso solo PJs
+            .inventory (dict[str: int]): El inventario.
         index (int): Index del PJ en arrChar que estamos tratando. arrChar.get_char(index).
 
     Returns:
         None: Solo se muestra información
     """
-    pj = arrChar.get_char(index)
+    pj = partida.arrChar.get_char(index)
     armas_en_inventario = {}
     armas_que_puede_usar_en_inventario = {}
     # Recorro mi inventario
-    for entity_name, quant in inventory.items():
+    for entity_name, quant in partida.inventory.items():
         ## Variable para guardar solo el nombre del entity (recordar que hay decored_names)
         only_entity_name = get_only_entity_name(entity_name)
         ## Saco solo las que son armas (if ARMAS[entity_name] )

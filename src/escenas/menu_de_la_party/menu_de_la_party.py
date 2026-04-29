@@ -1,11 +1,14 @@
 import os
 
 from src.clases.arrCharacter import ArrCharacter
+from src.clases.partida import Partida
+# from src.clases.game_state import GameState
 from src.escenas.menu_de_la_party.opciones.equipar import equipar
 from src.escenas.menu_de_la_party.opciones.inventario import inventario
-from src.clases.partida import Partida
 
-def menu_de_la_party(arrChar, location, estado_de_juego, inventory, gil):
+
+# def menu_de_la_party(arrChar, location, estado_de_juego, inventory, gil):
+def menu_de_la_party(partida):
     while True:
         print("\n=== Menu de la Party ===")
         print("1. Inventario")
@@ -16,21 +19,24 @@ def menu_de_la_party(arrChar, location, estado_de_juego, inventory, gil):
         print("6. Configuración")
         print("7. Guardar")
         print("Q. Salir")
-        print(f"Gil: {gil}")
+        print(f"Gil: {partida.gil}")
 
         opcion = input("Seleccione una opción: ")
 
+        # Un return dentro de estas opciones ocasiona que salga del bucle y aquí no se quiere eso.
+
         if opcion == "1":
             ## Inventario
-            arrChar, estado_de_juego, inventory = inventario(arrChar, estado_de_juego, inventory)
-            # return arrChar, location, estado_de_juego, inventory, gil
+            # arrChar, estado_de_juego, inventory = inventario(arrChar, estado_de_juego, inventory)
+            partida = inventario(partida)
         elif opcion == "2":
             ## Magia
             # magia()
             pass
         elif opcion == "3":
             ## Equipar
-            arrChar, inventory = equipar(arrChar, inventory)
+            # arrChar, inventory = equipar(arrChar, inventory)
+            partida = equipar(partida)
         elif opcion == "4":
             ## Estado
             # estado()
@@ -45,13 +51,17 @@ def menu_de_la_party(arrChar, location, estado_de_juego, inventory, gil):
             pass
         elif opcion == "7":
             ## Guardar
-            guardar(arrChar, location, estado_de_juego, inventory, gil)
+            # guardar(arrChar, location, estado_de_juego, inventory, gil)
+            guardar(partida)
         elif opcion.upper() == "Q":
             ## Salir
-            return arrChar, location, estado_de_juego, inventory, gil
+            # return arrChar, location, estado_de_juego, inventory, gil
+            return partida
 
-def guardar(arrChar, location, estado_de_juego, inventory, gil):
-    partida = Partida(arrChar, location, estado_de_juego, inventory, gil)
+# def guardar(arrChar, location, estado_de_juego, inventory, gil):
+def guardar(partida):
+    # partida = Partida(arrChar, location, estado_de_juego, inventory, gil)
+    # partida = Partida(partida)    # Si recibe un objeto Partida, ya no tengo que crearlo
     mostrar_partidas()
     while True:
         ranura = input(f"Guardar Partida en la Ranura (1 - 10) (q: Salir): ")
@@ -65,6 +75,9 @@ def guardar(arrChar, location, estado_de_juego, inventory, gil):
                     if input("¿Quieres sobreescribir esta partida guardada? (S/N): ").upper() == 'S':
                         partida.guardar_partida(str(ranura))
                         break
+                else:
+                    partida.guardar_partida(str(ranura))
+                    break
         except ValueError:
             print("Valor inválido.")
 

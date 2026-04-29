@@ -35,15 +35,15 @@ def se_tiene_este_item(key, dictionary):
     return key in dictionary and dictionary[key] >= 1
 
 
-def elementos_permitidos(estado_de_juego):
+def elementos_permitidos(partida_estado_de_juego):
     # Puede ser: Mundo Abierto, Pueblo, Dungeon, Batalla
-    if estado_de_juego == "Mundo Abierto":
+    if partida_estado_de_juego == "Mundo Abierto":
         return ITEMS_OPEN_WORLD
-    elif estado_de_juego == "Pueblo":
+    elif partida_estado_de_juego == "Pueblo":
         return ITEMS_TOWN
-    elif estado_de_juego == "Dungeon":
+    elif partida_estado_de_juego == "Dungeon":
         return ITEMS_DUNGEON
-    elif estado_de_juego == "Batalla":
+    elif partida_estado_de_juego == "Batalla":
         return ITEMS_BATTLE
     else:
         return []
@@ -164,8 +164,8 @@ def ljust_ansi(text, width):
     padding = max(0, width - visible_len)
     return text + ' ' * padding
 
-
-def inventario(arrChar, estado_de_juego, inventory):
+# def inventario(arrChar, estado_de_juego, inventory):
+def inventario(partida):
     while True:
         print("=== Elementos ===")
         print("1. Ver inventario")
@@ -179,13 +179,13 @@ def inventario(arrChar, estado_de_juego, inventory):
             ## Ver inventario
             print(f"***** inventory *****")
             # print(inventory)
-            mostrar_items_y_cantidad(inventory)
+            mostrar_items_y_cantidad(partida.inventory)
             print(f"*****************")
             print()
         elif opcion == "2":
             print(f"***** inventory *****")
             # print(inventory)
-            mostrar_items_y_cantidad(inventory)
+            mostrar_items_y_cantidad(partida.inventory)
             print(f"*****************")
             print()
             while True:
@@ -193,26 +193,26 @@ def inventario(arrChar, estado_de_juego, inventory):
                 texto = input("Escriba el nombre del elemento (q: Salir): ")
                 if texto.upper() == "Q":
                     break
-                elif se_tiene_este_item(texto, inventory):
-                    if texto in elementos_permitidos(estado_de_juego):
+                elif se_tiene_este_item(texto, partida.inventory):
+                    if texto in elementos_permitidos(partida.estado_de_juego):
                         if ITEMS[texto]["affects"] == "one ally":
                             while True:
                                 print(f"Usarás el elemento {VERDE}{texto}{RESET} en:")
-                                for pj in arrChar.arr:
+                                for pj in partida.arrChar.arr:
                                     pj.mostrar_datos_3()
                                 # Input
                                 try:
-                                    opc_a = input(f"Ingresa un indice de aliado entre 1 y {arrChar.get_n()} (q: Salir): ")
+                                    opc_a = input(f"Ingresa un indice de aliado entre 1 y {partida.arrChar.get_n()} (q: Salir): ")
                                     if opc_a.upper() == "Q":
                                         break
                                     index = int(opc_a)
-                                    if 0 <= index - 1 < arrChar.get_n():
+                                    if 0 <= index - 1 < partida.arrChar.get_n():
                                         # Ejecutar el efecto en el pj seleccionado
-                                        pj = arrChar.get_char(index - 1)
+                                        pj = partida.arrChar.get_char(index - 1)
                                         exitoso = usar_elemento_en_pj(texto, pj)
                                         # Disminuir en 1 el elemento en inventory
                                         if exitoso:
-                                            inventory[texto] = inventory[texto] - 1
+                                            partida.inventory[texto] = partida.inventory[texto] - 1
                                 except ValueError:
                                     print("Valor inválido.")
 
@@ -226,7 +226,7 @@ def inventario(arrChar, estado_de_juego, inventory):
                             if opc_b == "1":
                                 ## Usar el elemento en todos los aliados (Megalixir, etc.)
                                 if texto == "Megalixir":
-                                    for pj in arrChar.arr:
+                                    for pj in partida.arrChar.arr:
                                         usar_elemento_en_pj("Elixir", pj)
                                 else:
                                     print(f"Aún no se tiene registro.")
@@ -236,7 +236,7 @@ def inventario(arrChar, estado_de_juego, inventory):
                                 print(f"Inválido.")
 
                     else:
-                        print(f"El elemento {texto} no se puede usar en el estado de juego {estado_de_juego}.")
+                        print(f"El elemento {texto} no se puede usar en el estado de juego {partida.estado_de_juego}.")
                         break
                 # elif texto.upper() == "Q":
                 #     break
@@ -253,17 +253,18 @@ def inventario(arrChar, estado_de_juego, inventory):
             if opcion == "1":
                 ## Alfabéticamente, armas y armaduras al final
                 inventory_sorted = dict(
-                    sorted(inventory.items(), key=inventory_sort_key)
+                    sorted(partida.inventory.items(), key=inventory_sort_key)
                 )
-                inventory = inventory_sorted
+                partida.inventory = inventory_sorted
                 ## Ver inventario
                 print(f"***** inventory *****")
-                mostrar_items_y_cantidad(inventory)
+                mostrar_items_y_cantidad(partida.inventory)
                 print(f"*****************")
                 print()
             elif opcion.upper() == "Q":
                 ## Volver
-                return arrChar, estado_de_juego, inventory
+                # return arrChar, estado_de_juego, inventory
+                return partida
 
         # # Ejemplo de uso
         # print(f"{VERDE}¡Victoria!{RESET}")
@@ -272,4 +273,5 @@ def inventario(arrChar, estado_de_juego, inventory):
 
         elif opcion.upper() == "Q":
             ## Volver
-            return arrChar, estado_de_juego, inventory
+            # return arrChar, estado_de_juego, inventory
+            return partida

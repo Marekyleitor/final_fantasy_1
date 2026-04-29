@@ -1,8 +1,9 @@
 from src.escenas.pueblo.locales.tienda_de_items import *
 
 
-def entrar_al_pueblo(arrChar, location, estado_de_juego, inventory, gil):
-    estado_de_juego = "Pueblo"
+# def entrar_al_pueblo(arrChar, location, estado_de_juego, inventory, gil):
+def entrar_al_pueblo(partida):
+    partida.estado_de_juego = "Pueblo"
     while True:
         print("\n=== Pueblo ===")
         print("1. Entrar a una tienda de Items")
@@ -17,7 +18,8 @@ def entrar_al_pueblo(arrChar, location, estado_de_juego, inventory, gil):
         # No es necesario el return en cada opción, lo que se quiere es que al volver a este punto se te vuelva a preguntar que quieres hasta que quieras salir.
         if opcion == "1":
             ## Entrar a una tienda de Items
-            arrChar, location, estado_de_juego, inventory, gil = tienda_de_items(arrChar, location, estado_de_juego, inventory, gil)
+            # arrChar, location, estado_de_juego, inventory, gil = tienda_de_items(arrChar, location, estado_de_juego, inventory, gil)
+            partida = tienda_de_items(partida)
         elif opcion == "2":
             ## Entrar a una Armería
 
@@ -40,5 +42,6 @@ def entrar_al_pueblo(arrChar, location, estado_de_juego, inventory, gil):
             pass
         elif opcion.upper() == "Q":
             ## Salir
-            estado_de_juego = "Mundo Abierto"
-            return arrChar, location, estado_de_juego, inventory, gil
+            partida.estado_de_juego = "Mundo Abierto"
+            # return arrChar, location, estado_de_juego, inventory, gil
+            return partida

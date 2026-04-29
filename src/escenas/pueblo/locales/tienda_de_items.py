@@ -2,7 +2,8 @@ from src.utils.constantes import ITEMS
 from src.utils.constantes import VERDE, ROJO, AZUL, RESET
 
 
-def tienda_de_items(arrChar, location, estado_de_juego, inventory, gil):
+# def tienda_de_items(arrChar, location, estado_de_juego, inventory, gil):
+def tienda_de_items(partida):
     while True:
         print("\n=== Tienda de Items ===")
         print("1. Comprar")
@@ -14,19 +15,23 @@ def tienda_de_items(arrChar, location, estado_de_juego, inventory, gil):
 
         if opcion == "1":
             ## Comprar
-            arrChar, location, estado_de_juego, inventory, gil = comprar(arrChar, location, estado_de_juego, inventory, gil)
+            # arrChar, location, estado_de_juego, inventory, gil = comprar(arrChar, location, estado_de_juego, inventory, gil)
+            partida = comprar(partida)
         elif opcion == "2":
             ## Vender
             # arrChar, location, estado_de_juego, inventory, gil = vender(arrChar, location, estado_de_juego, inventory, gil)
+            # partida = vender(partida)
             pass
         elif opcion == "3":
             ## Dónde encontrar cada elemento
             donde_encontrar_cada_elemento()
         elif opcion.upper() == "Q":
             ## Salir
-            return arrChar, location, estado_de_juego, inventory, gil
+            # return arrChar, location, estado_de_juego, inventory, gil
+            return partida
 
-def comprar(arrChar, location, estado_de_juego, inventory, gil):
+# def comprar(arrChar, location, estado_de_juego, inventory, gil):
+def comprar(partida):
     # item será un diccionario: 'Potion': {'type': 'Usable', 'subtype': 'Healing', 'price': 40, ... }
     items_for_sale = {}
     for item_name, item_data in ITEMS.items():
@@ -38,7 +43,7 @@ def comprar(arrChar, location, estado_de_juego, inventory, gil):
             cities = item_data.get("buy", "")
             # Verificamos si está disponible
             # print(f"{item_name}: {item_data.get("buy")}")  # El texto de "buy"
-            if item_data.get("buy") == ["All shops"] or location in cities:
+            if item_data.get("buy") == ["All shops"] or partida.location in cities:
                 items_for_sale[item_name] = item_data
 
     while True:
@@ -72,23 +77,23 @@ def comprar(arrChar, location, estado_de_juego, inventory, gil):
                         try:
                             cantidad = int(cantidad)
                             # Valida si se puede comprar por precio
-                            if ITEMS[item_a_comprar]["price"] * cantidad <= gil:
+                            if ITEMS[item_a_comprar]["price"] * cantidad <= partida.gil:
                                 # Muestra la futura compra y el precio total
                                 print(f"\nTratas de comprar {VERDE}Potion{RESET} ({ITEMS[item_a_comprar]["price"]} gil) x{cantidad} = {ROJO}{ITEMS[item_a_comprar]["price"]*cantidad}{RESET} gil")
-                                print(f"Tu dinero: {gil} gil - {ROJO}{ITEMS[item_a_comprar]["price"]*cantidad}{RESET} gil = {AZUL}{gil-ITEMS[item_a_comprar]["price"]*cantidad}{RESET} gil")
+                                print(f"Tu dinero: {partida.gil} gil - {ROJO}{ITEMS[item_a_comprar]["price"]*cantidad}{RESET} gil = {AZUL}{partida.gil-ITEMS[item_a_comprar]["price"]*cantidad}{RESET} gil")
                                 # Pregunta si en realidad quiere comprar
                                 if input("¿Aceptas la compra? (S/N): ").upper() == 'S':
                                     # Obtengo el o los elementos
-                                    if item_a_comprar in inventory:
-                                        inventory[item_a_comprar] += cantidad
+                                    if item_a_comprar in partida.inventory:
+                                        partida.inventory[item_a_comprar] += cantidad
                                     else:
-                                        inventory[item_a_comprar] = cantidad
+                                        partida.inventory[item_a_comprar] = cantidad
                                     # Se descuenta de mi gil
-                                    gil -= ITEMS[item_a_comprar]["price"] * cantidad
+                                    partida.gil -= ITEMS[item_a_comprar]["price"] * cantidad
                                 # else:
                                 #     break
                             else:
-                                print(f"No tienes suficiente dinero. Gil: {AZUL}{gil}{RESET}. Costo Total: {ROJO}{ITEMS[item_a_comprar]["price"]*cantidad}{RESET}.")
+                                print(f"No tienes suficiente dinero. Gil: {AZUL}{partida.gil}{RESET}. Costo Total: {ROJO}{ITEMS[item_a_comprar]["price"]*cantidad}{RESET}.")
 
                         except ValueError:
                             print("Valor inválido.")
@@ -103,11 +108,14 @@ def comprar(arrChar, location, estado_de_juego, inventory, gil):
             pass
 
 
-    return arrChar, location, estado_de_juego, inventory, gil
+    # return arrChar, location, estado_de_juego, inventory, gil
+    return partida
 
-def vender(arrChar, location, estado_de_juego, inventory, gil):
+# def vender(arrChar, location, estado_de_juego, inventory, gil):
+def vender(partida):
 
-    return arrChar, location, estado_de_juego, inventory, gil
+    # return arrChar, location, estado_de_juego, inventory, gil
+    return partida
 
 def donde_encontrar_cada_elemento():
     for item_name, item_data in ITEMS.items():

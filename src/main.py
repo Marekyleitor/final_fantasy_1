@@ -1,6 +1,7 @@
 from src.escenas.iniciar_nueva_partida import iniciar_nueva_partida
 from src.escenas.continuar_partida import continuar_partida, mostrar_partidas_en_paquete_saves
 from src.clases.partida import Partida
+# from src.clases.game_state import GameState
 import os.path
 
 def main():

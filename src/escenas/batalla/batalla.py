@@ -13,16 +13,18 @@ from ...utils.constantes import ITEMS, ARMAS, ARMADURAS
 
 max_wait = 400
 
-def batalla(arrChar, location, estado_de_juego, inventory, gil):
-    estado_de_juego = "Batalla"
+# def batalla(arrChar, location, estado_de_juego, inventory, gil):
+def batalla(partida):
+    partida.estado_de_juego = "Batalla"
     # 3. Encuentro con enemigos
     ## 3.1. Crear arreglo de enemigos
-    form_ids = get_formation(location)
+    form_ids = get_formation(partida.location)
     print(f"form_ids: {form_ids}")
 
     if form_ids == []:
         print("\tNO HAY ENCUENTROS CON ENEMIGOS AQUÍ.")
-        return arrChar.arrPer(), location, estado_de_juego, inventory, gil
+        # return arrChar.arrPer(), location, estado_de_juego, inventory, gil
+        return partida
 
     random_choice = random.choice(form_ids)
     # random_choice = 123 # Chaos
@@ -43,29 +45,31 @@ def batalla(arrChar, location, estado_de_juego, inventory, gil):
         enemies_array.append(Enemy(enemy))
 
 
-    ## 3.2. Y pasárselo a arrChar
-    arrChar.addArrChar(enemies_array)
-    arrChar.update_enemy_names()
-    print(f"Characters in arrChar.n: {arrChar.n}")
-    # Mostrar tipo de enemigo y su nombre (ej.: "Goblin 2") de todos los enemigos en arrChar
-    for enemy in arrChar.arrEne().arr:
+    ## 3.2. Y pasárselo a partida.arrChar
+    partida.arrChar.addArrChar(enemies_array)
+    partida.arrChar.update_enemy_names()
+    print(f"Characters in partida.arrChar.n: {partida.arrChar.n}")
+    # Mostrar tipo de enemigo y su nombre (ej.: "Goblin 2") de todos los enemigos en partida.arrChar
+    for enemy in partida.arrChar.arrEne().arr:
         enemy.mostrar_datos_4()
 
-    agregar_espera_aleatoria(arrChar)
+    agregar_espera_aleatoria(partida.arrChar)
     pasa_turno = True
 
     while (True):
         # Validar la victoria, todos los enemigos muertos y al menos 1 pj vivo
-        if arrChar.arrEne().arrAlive().arr == [] and arrChar.arrPer().arrAlive().arr != []:
+        if partida.arrChar.arrEne().arrAlive().arr == [] and partida.arrChar.arrPer().arrAlive().arr != []:
             # Reiniciar espera aleatoria
-            reiniciar_espera_aleatoria(arrChar)
+            reiniciar_espera_aleatoria(partida.arrChar)
             # Obtención de XP, Gil y dropeo enemigo
-            arrChar, estado_de_juego, inventory, gil = ganancia_por_victoria(arrChar, estado_de_juego, inventory, gil)
-            # Aquí "arrChar" ya solo posee los PJs
+            # arrChar, estado_de_juego, inventory, gil = ganancia_por_victoria(arrChar, estado_de_juego, inventory, gil)
+            partida = ganancia_por_victoria(partida)
+            # Aquí "partida.arrChar" ya solo posee los PJs
             # Devolver valores
-            return arrChar.arrPer(), location, estado_de_juego, inventory, gil
+            # return arrChar.arrPer(), location, estado_de_juego, inventory, gil
+            return partida
         # Validar la derrota, si todos los pj están muertos
-        if arrChar.arrPer().arrAlive().arr == []:
+        if partida.arrChar.arrPer().arrAlive().arr == []:
             print(f"""⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⡀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⠀⠀⠀⢀⣴⣿⡶⠀⣾⣿⣿⡿⠟⠛⠁
     ⠀⠀⠀⠀⠀⠀⣀⣀⣄⣀⠀⠀⠀⠀⣶⣶⣦⠀⠀⠀⠀⣼⣿⣿⡇⠀⣠⣿⣿⣿⠇⣸⣿⣿⣧⣤⠀⠀⠀
@@ -89,7 +93,7 @@ def batalla(arrChar, location, estado_de_juego, inventory, gil):
             #  \____/_/   \_\_|  |_|_____|  \___/  \_/  |_____|_| \_\ """)
             break
         if pasa_turno:
-            char_en_turno = proseguir_al_siguiente_turno(arrChar)
+            char_en_turno = proseguir_al_siguiente_turno(partida.arrChar)
             print(f"")
 
             n_tabs = ""
@@ -101,15 +105,15 @@ def batalla(arrChar, location, estado_de_juego, inventory, gil):
                 # Ataque aleatorio de un enemigo a un jugador
                 # print(f"Enemigo {char_en_turno.char_type} ha atacado.")
                 # ataque_random_de_enemigo_a_jugador(char_en_turno, pers)
-                ejecutar_turno_de_enemigo(char_en_turno, arrChar)
+                ejecutar_turno_de_enemigo(char_en_turno, partida.arrChar)
                 continue
         opc = input("[1: Atacar; 2: Magia; 3: Defender; 4: Mostrar; 5: Turnos; 6: Huir]: ")
         if opc == "1":
 
-            enemies_alive = arrChar.arrEne().arrAlive()
+            enemies_alive = partida.arrChar.arrEne().arrAlive()
             pasa_turno = ejecutar_ataque(char_en_turno, enemies_alive)
 
-            # enemies_alive = arrChar.arrEne().arrAlive()
+            # enemies_alive = partida.arrChar.arrEne().arrAlive()
             # while(True):
             #     try:
             #         text = input(f"Ingresa un enemigo entre 1 y {enemies_alive.get_n()}: ")
@@ -134,7 +138,7 @@ def batalla(arrChar, location, estado_de_juego, inventory, gil):
             pasa_turno = False
 
             # print(f"*" * 10)
-            # for p in arrChar.arr:
+            # for p in partida.arrChar.arr:
             #     p.mostrar_datos()
             # print(f"*" * 10)
 
@@ -144,16 +148,16 @@ def batalla(arrChar, location, estado_de_juego, inventory, gil):
                     if 1 <= num <= 4:
                         print(f"*" * 10)
                         if num == 1:
-                            for p in arrChar.arr:
+                            for p in partida.arrChar.arr:
                                 p.mostrar_datos()
                         elif num == 2:
-                            for p in arrChar.arr:
+                            for p in partida.arrChar.arr:
                                 p.mostrar_datos_2()
                         elif num == 3:
-                            for p in arrChar.arr:
+                            for p in partida.arrChar.arr:
                                 p.mostrar_datos_3()
                         elif num == 4:
-                            for p in arrChar.arr:
+                            for p in partida.arrChar.arr:
                                 p.mostrar_datos_4()
                         print(f"*" * 10)
                         break
@@ -164,9 +168,10 @@ def batalla(arrChar, location, estado_de_juego, inventory, gil):
 
         elif opc == "5":
             pasa_turno = False
-            siguientes_x_turnos(arrChar, 8)
+            siguientes_x_turnos(partida.arrChar, 8)
         elif opc == "6":
-            return arrChar.arrPer(), location, estado_de_juego, inventory, gil
+            # return arrChar.arrPer(), location, estado_de_juego, inventory, gil
+            return partida
         else:
             pasa_turno = False
             print("Opcion inválida")
@@ -297,9 +302,10 @@ def reiniciar_espera_aleatoria(arr_char):
     for char in arr_char.arr:
         char.espera = 0
 
-def ganancia_por_victoria(arrChar, estado_de_juego, inventory, gil):
-    party = arrChar.arrPer()            # PJs vivos y muertos
-    dead_enemies = arrChar.arrEne()
+# def ganancia_por_victoria(arrChar, estado_de_juego, inventory, gil):
+def ganancia_por_victoria(partida):
+    party = partida.arrChar.arrPer()            # PJs vivos y muertos
+    dead_enemies = partida.arrChar.arrEne()
     XP = 0
     gil_gained = 0
     dropped_entities = []                  # Is a list "[]"
@@ -320,12 +326,14 @@ def ganancia_por_victoria(arrChar, estado_de_juego, inventory, gil):
     # Repartición de XP
     party.subirXP_gru(XP)
     # Entrega de gil
-    gil += gil_gained
+    partida.gil += gil_gained
     # Dropeo enemigo
-    ## Agregar dropped_entities a mi inventory (diccionario)
-    inventory = add_entities_dropped_to_my_inventory(inventory, dropped_entities)
+    ## Agregar dropped_entities a mi partida.inventory (diccionario)
+    partida.inventory = add_entities_dropped_to_my_inventory(partida.inventory, dropped_entities)
     # Tal vez cambiar el estado de juego
-    return arrChar.arrPer(), estado_de_juego, inventory, gil
+    # return arrChar.arrPer(), estado_de_juego, inventory, gil
+    partida.arrChar = party
+    return partida
 
 def enemy_drop_entities(enemy, dropped_entities):
     """
@@ -362,7 +370,7 @@ def enemy_drop_entities(enemy, dropped_entities):
                 dropped_entities.append(entity)
     return dropped_entities
 
-def add_entities_dropped_to_my_inventory(inventory: dict, dropped_entities: list):
+def add_entities_dropped_to_my_inventory(partida_inventory: dict, dropped_entities: list):
     for text_entity in dropped_entities:
         # Validar si el item es un arma
         if text_entity in ARMAS:
@@ -372,12 +380,12 @@ def add_entities_dropped_to_my_inventory(inventory: dict, dropped_entities: list
         elif text_entity in ARMADURAS:
             # Si es una armadura, generamos el objeto y obtenemos su self.decored_name
             text_entity = Armadura(text_entity).decored_name
-        # La entidad, sea item, arma o armadura se guarda como texto en el inventory
-        if text_entity in inventory:
-            inventory[text_entity] += 1
+        # La entidad, sea item, arma o armadura se guarda como texto en el partida_inventory
+        if text_entity in partida_inventory:
+            partida_inventory[text_entity] += 1
         else:
-            inventory[text_entity] = 1
-    return inventory
+            partida_inventory[text_entity] = 1
+    return partida_inventory
 
 # def dropear_enemigo_muerto(arr_char):
 #     personajes_vivos = []

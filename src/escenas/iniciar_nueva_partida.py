@@ -1,4 +1,6 @@
 from src.clases.arrCharacter import ArrCharacter
+from src.clases.partida import Partida
+# from src.clases.game_state import GameState
 from src.clases.pj import PJ
 from src.escenas.juego import continue_game
 
@@ -48,9 +50,11 @@ def crearPersonajes():
             pj.MP = pj.MP_MAX
 
     # Dar valores base a "location", "estado_de_juego", "inventory" y "gil"
-    darValoresBaseALosGameState(arrChar)
+    # darValoresBaseALosGameState(arrChar)
+    darValoresBaseALaPartida(arrChar)
 
-def darValoresBaseALosGameState(arrChar):
+# def darValoresBaseALosGameState(arrChar):
+def darValoresBaseALaPartida(arrChar):
     # Seleccionar Location Inicial ("Cornelia")
     location = "Cornelia"
     estado_de_juego = "Mundo Abierto" # Puede ser: Mundo Abierto, Town, Dungeon, Batalla
@@ -58,5 +62,18 @@ def darValoresBaseALosGameState(arrChar):
                  "Elixir": 7, "Megalixir": 5, "Phoenix Down": 6, "\x1b[95mKnife | Legendary | 1.6\x1b[0m": 1,
                  "\x1b[90mKnife | Regular | 1.0\x1b[0m": 1, "\x1b[92mKnife | Superior | 1.25\x1b[0m": 1}
     gil = 500
-    # Mandar a Continuar el juego con los valores base
-    continue_game(arrChar, location, estado_de_juego, inventory, gil)
+
+    # # Mandar a Continuar el juego con los valores base
+    # continue_game(arrChar, location, estado_de_juego, inventory, gil)
+
+    # Crear objeto Partida con todos los valores
+    partida = Partida(
+        arr_char=arrChar,
+        location=location,
+        estado_de_juego=estado_de_juego,
+        inventory=inventory,
+        gil=gil
+    )
+
+    # Mandar a continuar el juego con la Partida
+    continue_game(partida)

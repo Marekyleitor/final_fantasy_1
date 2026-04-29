@@ -4,12 +4,12 @@ from src.clases.partida import Partida
 from src.escenas.juego import continue_game
 
 def continuar_partida(partida):
-    arrChar = partida.arrChar
-    location =partida.location
-    estado_de_juego = partida.estado_de_juego
-    inventory = partida.inventory
-    gil = partida.gil
-    continue_game(arrChar, location, estado_de_juego, inventory, gil)
+    # arrChar = partida.arrChar
+    # location =partida.location
+    # estado_de_juego = partida.estado_de_juego
+    # inventory = partida.inventory
+    # gil = partida.gil
+    continue_game(partida)
 
 def mostrar_partidas_en_paquete_saves():
     # ruta_al_archivo = "./saves/FF1-save "
