@@ -17,9 +17,9 @@ class Armadura:
             self.equip_by = self.equiped_by_exact_class(ARMADURAS[name]['equip_by'])
             self.price = self.get_price_with_mult()  # ARMADURAS[name]['price']
             self.value = self.get_value_with_mult()  # ARMADURAS[name]['value']
-            self.DEF = self.get_def_with_mult()  # ARMADURAS[name]['DEF']
-            self.EVA = self.get_eva_with_mult()  # ARMADURAS[name]['EVA']
-            self.WEI = self.get_wei_with_mult()  # ARMADURAS[name]['WEI']
+            self.DEF = self.get_DEF_with_mult()  # ARMADURAS[name]['DEF']
+            self.EVA = self.get_EVA_with_mult()  # ARMADURAS[name]['EVA']
+            self.WEI = self.get_WEI_with_mult()  # ARMADURAS[name]['WEI']
             self.buy = ARMADURAS[name]['buy']
             self.find = ARMADURAS[name]['find']
             self.drop = ARMADURAS[name]['drop']
@@ -131,47 +131,47 @@ class Armadura:
     def get_value_with_mult(self):
         return get_value_with_mult(self.price, self.mult)
 
-    def get_def_with_mult(self):
-        def_str = 0 if self.name == '' else ARMADURAS[self.name]['DEF']
+    def get_DEF_with_mult(self):
+        DEF_str = 0 if self.name == '' else ARMADURAS[self.name]['DEF']
         try:
-            def_num = int(def_str)
-            final_def = math.trunc(def_num * self.mult)  # Initial (def x mult)
-            return final_def  # Devuelve un número entero/flotante
+            DEF_num = int(DEF_str)
+            final_DEF = math.trunc(DEF_num * self.mult)  # Initial (DEF x mult)
+            return final_DEF  # Devuelve un número entero/flotante
         except ValueError:
-            return f"{def_str} x {str(self.mult)}"  # Devuelve un string
+            return f"{DEF_str} x {str(self.mult)}"  # Devuelve un string
 
-    def get_eva_with_mult(self):
-        eva_str = 0 if self.name == '' else ARMADURAS[self.name]['EVA']
+    def get_EVA_with_mult(self):
+        EVA_str = 0 if self.name == '' else ARMADURAS[self.name]['EVA']
         try:
-            eva_num = int(eva_str)
-            final_eva = math.trunc(eva_num * self.mult)  # Initial (eva x mult)
-            return final_eva  # Devuelve un número entero/flotante
+            EVA_num = int(EVA_str)
+            final_EVA = math.trunc(EVA_num * self.mult)  # Initial (EVA x mult)
+            return final_EVA  # Devuelve un número entero/flotante
         except ValueError:
-            return f"{eva_str} x {str(self.mult)}"  # Devuelve un string
+            return f"{EVA_str} x {str(self.mult)}"  # Devuelve un string
 
-    def get_wei_with_mult(self):
-        wei_str = 0 if self.name == '' else ARMADURAS[self.name]['WEI']
+    def get_WEI_with_mult(self):
+        WEI_str = 0 if self.name == '' else ARMADURAS[self.name]['WEI']
         try:
-            wei_num = int(wei_str)
-            final_wei = math.trunc(wei_num * self.mult)  # Initial (wei x mult)
-            return final_wei  # Devuelve un número entero/flotante
+            WEI_num = int(WEI_str)
+            final_WEI = math.trunc(WEI_num * self.mult)  # Initial (WEI x mult)
+            return final_WEI  # Devuelve un número entero/flotante
         except ValueError:
-            return f"{wei_str} x {str(self.mult)}"  # Devuelve un string
+            return f"{WEI_str} x {str(self.mult)}"  # Devuelve un string
 
     def mostrar_gear_stats(self):
         # print(f"===== mostrar_gear_stats =====")
         price_base_str = ARMADURAS[self.name]['price']
         calculated_price = self.price
-        def_base_str = ARMADURAS[self.name]['DEF']
-        eva_base_str = ARMADURAS[self.name]['EVA']
-        wei_base_str = ARMADURAS[self.name]['WEI']
+        DEF_base_str = ARMADURAS[self.name]['DEF']
+        EVA_base_str = ARMADURAS[self.name]['EVA']
+        WEI_base_str = ARMADURAS[self.name]['WEI']
 
         print(f"\t{self.decored_name} Value_Market_Mult: {self.value_market_mult()}")
         print(f"\t\tPrice: {self.get_operation_type_A(price_base_str)} = {self.price}")
         print(f"\t\tValue: {self.get_operation_type_B(calculated_price)} = {self.value}")
-        print(f"\t\tDEF: {self.get_operation_type_C(def_base_str)} = {self.DEF}")
-        print(f"\t\tEVA: {self.get_operation_type_C(eva_base_str)} = {self.EVA}")
-        print(f"\t\tWEI: {self.get_operation_type_C(wei_base_str)} = {self.WEI}")
+        print(f"\t\tDEF: {self.get_operation_type_C(DEF_base_str)} = {self.DEF}")
+        print(f"\t\tEVA: {self.get_operation_type_C(EVA_base_str)} = {self.EVA}")
+        print(f"\t\tWEI: {self.get_operation_type_C(WEI_base_str)} = {self.WEI}")
         print(f"\t\tStats: {self.getAllStats()}")
 
     def value_market_mult(self):

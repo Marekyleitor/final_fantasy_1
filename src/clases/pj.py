@@ -169,15 +169,30 @@ class PJ:
 
     def actualizar_EVA(self):
         arma_EVA = self.arma.allStats.get('EVA', 0)
-        shield_EVA = self.shield.get_eva_with_mult()
-        helmet_EVA = self.helmet.get_eva_with_mult()
-        body_armor_EVA = self.body_armor.get_eva_with_mult()
-        gloves_EVA = self.gloves.get_eva_with_mult()
+        shield_EVA = self.shield.get_EVA_with_mult()
+        helmet_EVA = self.helmet.get_EVA_with_mult()
+        body_armor_EVA = self.body_armor.get_EVA_with_mult()
+        gloves_EVA = self.gloves.get_EVA_with_mult()
         self.EVA = self.get_EVA_base() + arma_EVA + shield_EVA + helmet_EVA + body_armor_EVA + gloves_EVA
 
     def get_EVA_actualizado(self):
         self.actualizar_EVA()
         return self.EVA
+
+
+    def get_WEI_base(self):
+        return 0
+
+    def actualizar_WEI(self):
+        shield_WEI = self.shield.get_WEI_with_mult()
+        helmet_WEI = self.helmet.get_WEI_with_mult()
+        body_armor_WEI = self.body_armor.get_WEI_with_mult()
+        gloves_WEI = self.gloves.get_WEI_with_mult()
+        self.WEI = self.get_WEI_base() + shield_WEI + helmet_WEI + body_armor_WEI + gloves_WEI
+
+    def get_WEI_actualizado(self):
+        self.actualizar_WEI()
+        return self.WEI
 
 
     def get_CRIT_base(self):
@@ -438,6 +453,17 @@ class PJ:
 
     def cambiar_arma(self, nueva_arma_name, mult:float = 1.0):
         self.arma = Arma(nueva_arma_name, mult)
+        self.actualizar_stats_por_arma_armadura_y_secundarias()
+
+    def cambiar_armadura(self, slot_armor_str, nueva_armadura_name, mult:float = 1.0):
+        if 'shield' == slot_armor_str:
+            self.shield = Armadura(nueva_armadura_name, mult)
+        elif 'helmet' == slot_armor_str:
+            self.helmet = Armadura(nueva_armadura_name, mult)
+        elif 'body_armor' == slot_armor_str:
+            self.body_armor = Armadura(nueva_armadura_name, mult)
+        elif 'gloves' == slot_armor_str:
+            self.gloves = Armadura(nueva_armadura_name, mult)
         self.actualizar_stats_por_arma_armadura_y_secundarias()
 
     def reemplazar_armadura(self, slot_armor_str, new_armor_name):
