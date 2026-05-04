@@ -1,5 +1,6 @@
 from src.clases.arrCharacter import ArrCharacter
 
+########## DESCARTAR este archivo .py ##########
 
 def menu_de_la_party(arrChar):
     while True:

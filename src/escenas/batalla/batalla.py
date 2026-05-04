@@ -7,9 +7,10 @@ from src.clases.pj import PJ
 from src.clases.enemy import Enemy
 from src.clases.arrCharacter import ArrCharacter
 from src.utils.utils_formation import *
+from src.escenas.menu_de_la_party.opciones.inventario import inventario_en_batalla
 from ...clases.arma import Arma
 from ...clases.armadura import Armadura
-from ...utils.constantes import ITEMS, ARMAS, ARMADURAS
+from ...utils.constantes import ITEMS, ARMAS, ARMADURAS, VERDE, RESET
 
 max_wait = 400
 
@@ -54,7 +55,7 @@ def batalla(partida):
         enemy.mostrar_datos_4()
 
     agregar_espera_aleatoria(partida.arrChar)
-    pasa_turno = True
+    pasar_turno = True
 
     while (True):
         # Validar la victoria, todos los enemigos muertos y al menos 1 pj vivo
@@ -92,7 +93,7 @@ def batalla(partida):
             # | |_| |/ ___ \| |  | | |___  | |_| |\ V / | |___|  _ <
             #  \____/_/   \_\_|  |_|_____|  \___/  \_/  |_____|_| \_\ """)
             break
-        if pasa_turno:
+        if pasar_turno:
             char_en_turno = proseguir_al_siguiente_turno(partida.arrChar)
             print(f"")
 
@@ -107,35 +108,39 @@ def batalla(partida):
                 # ataque_random_de_enemigo_a_jugador(char_en_turno, pers)
                 ejecutar_turno_de_enemigo(char_en_turno, partida.arrChar)
                 continue
-        opc = input("[1: Atacar; 2: Magia; 3: Defender; 4: Mostrar; 5: Turnos; 6: Huir]: ")
-        if opc == "1":
 
+        opc = input(f"Turno de {VERDE}{char_en_turno.name}{RESET}\n[1: Atacar; 2: Magia; 3: Defender; 4: Mostrar; 5: Turnos; 6: Huir; 7: Inventario]: ")
+        if opc == "1":
+            ## Atacar
             enemies_alive = partida.arrChar.arrEne().arrAlive()
-            pasa_turno = ejecutar_ataque(char_en_turno, enemies_alive)
+            pasar_turno = ejecutar_ataque(char_en_turno, enemies_alive)
 
             # enemies_alive = partida.arrChar.arrEne().arrAlive()
             # while(True):
             #     try:
             #         text = input(f"Ingresa un enemigo entre 1 y {enemies_alive.get_n()}: ")
             #         if text.upper() == "Q":
-            #             pasa_turno = False # no es necesario, xq ya está en falso supuestamente.
+            #             pasar_turno = False # no es necesario, xq ya está en falso supuestamente.
             #             print(f"Atacar cancelado.")
             #             break
             #         index = int(text)
             #         if 0 <= index-1 < enemies_alive.get_n():
             #             ataque_att_tar(char_en_turno, enemies_alive.get_char(index-1))
-            #             pasa_turno = True
+            #             pasar_turno = True
             #             break
             #     except ValueError:
             #         print("Valor inválido.")
 
 
         elif opc == "2":
-            pasa_turno = False
+            ## Magia
+            pasar_turno = False
         elif opc == "3":
-            pasa_turno = False
+            ## Defender
+            pasar_turno = False
         elif opc == "4":
-            pasa_turno = False
+            ## Mostrar
+            pasar_turno = False
 
             # print(f"*" * 10)
             # for p in partida.arrChar.arr:
@@ -167,13 +172,24 @@ def batalla(partida):
                     print("Valor inválido. Salida 2.")
 
         elif opc == "5":
-            pasa_turno = False
+            ## Turnos
+            pasar_turno = False
             siguientes_x_turnos(partida.arrChar, 8)
         elif opc == "6":
+            ## Huir
             # return arrChar.arrPer(), location, estado_de_juego, inventory, gil
             return partida
+        elif opc == "7":
+            ## Inventario
+            partida, pasar_turno = inventario_en_batalla(partida, char_en_turno)
+            print(f"pasar_turno en batalla: {pasar_turno}")
+            ## Ejemplo
+            # enemies_alive = partida.arrChar.arrEne().arrAlive()
+            # pasar_turno = ejecutar_ataque(char_en_turno, enemies_alive)
+
+            # pass
         else:
-            pasa_turno = False
+            pasar_turno = False
             print("Opcion inválida")
 
 def siguientes_x_turnos(arr_char, n):

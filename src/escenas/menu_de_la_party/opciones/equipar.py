@@ -139,11 +139,9 @@ def equipar_arma(partida, index):
                 if confirmacion == "1":
                     arma_previa_decored_name = pj.arma.decored_name
                     pj.cambiar_arma(nombre, mult)
-
-
                     # Si el arma no es "Hands", Sumar (+1) el arma que desequipó en el inventario
                     nombre_arma_previa = get_only_entity_name(arma_previa_decored_name)
-                    print(f"nombre_arma_previa: {nombre_arma_previa}")
+                    print(f"Nombre del arma previa: {nombre_arma_previa}")
                     if nombre_arma_previa != "Hands":
                         print(f"{arma_previa_decored_name} se guardará en el inventario.")
                         sumar_al_inventario(1, arma_previa_decored_name, partida.inventory)
@@ -151,8 +149,6 @@ def equipar_arma(partida, index):
                         print(f"No poseías arma anteriormente, nada se guardará en el inventario.")
                     # Restar (-1) el arma que equipó en el inventario
                     restar_al_inventario(1, pj.arma.decored_name, partida.inventory)
-
-
                     # Cambio ya ha sido realizado, para que no muestre cambiar una armadura por la misma.
                     cambio_realizado = True
                     break
@@ -262,18 +258,14 @@ def equipar_armadura(partida, index, slot_armor_str):
                 if confirmacion == "1":
                     armadura_previa_decored_name = getattr(pj, slot_armor_str).decored_name
                     pj.cambiar_armadura(slot_armor_str, nombre, mult)
-
-
                     # Si la armadura no es "", Sumar (+1) la armadura que desequipó en el inventario
                     nombre_armadura_previa = get_only_entity_name(armadura_previa_decored_name)
-                    print(f"nombre_armadura_previa: {nombre_armadura_previa}")
+                    print(f"Nombre de la armadura previa: {nombre_armadura_previa}")
                     if nombre_armadura_previa != "":
                         print(f"{armadura_previa_decored_name} se guardará en el inventario.")
                         sumar_al_inventario(1, armadura_previa_decored_name, partida.inventory)
                     else:
                         print(f"No poseías armadura anteriormente, nada se guardará en el inventario.")
-
-
                     # Restar (-1) la armadura que equipó en el inventario
                     restar_al_inventario(1, getattr(pj, slot_armor_str).decored_name, partida.inventory)
                     # Cambio ya ha sido realizado, para que no muestre cambiar una armadura por la misma.
