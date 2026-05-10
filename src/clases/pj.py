@@ -223,6 +223,17 @@ class PJ:
         return self.MD
 
 
+    def get_HP_MAX_base(self):
+        return self.HP_MAX_base
+
+    def actualizar_HP_MAX(self):
+        self.HP_MAX = int(self.get_HP_MAX_base() * self.stats_de_todas_las_armaduras()["HP_MAX"])
+
+    def get_HP_MAX_actualizado(self):
+        self.actualizar_HP_MAX()
+        return self.HP_MAX
+
+
     # def get_ACC_actualizado(self):
 
     def actualizar_stats_por_arma_armadura_y_secundarias(self):
@@ -233,6 +244,9 @@ class PJ:
         self.INT = self.INT_base + arma_stats.get('INT', 0) + armaduras_stats.get('INT', 0)
         self.STA = self.STA_base + arma_stats.get('STA', 0) + armaduras_stats.get('STA', 0)
         self.LCK = self.LCK_base + arma_stats.get('LCK', 0) + armaduras_stats.get('LCK', 0)
+
+        self.HP_MAX = self.get_HP_MAX_actualizado()
+
         # Actualizar el resto de stats (secundarias)
         self.actualizar_ATK() # Aunque usa STR o STA, estos ya están actualizados, así que está bien usar esta función
         self.actualizar_ACC()
@@ -329,8 +343,8 @@ class PJ:
 
     def actualizar_stats_principales_despues_de_leveleo(self, show_title):
         # self.HP_MAX = self.HP_MAX + (self.STA // 4) + 1 + self.prob_aum(0.5) * random.randint(20, 25)
-        self.aumentar_HP_MAX()
-        self.aumentar_MP_MAX()
+        self.aumentar_HP_MAX_y_su_base()
+        self.aumentar_MP_MAX_y_su_base()
         self.STR_base = self.STR_base + self.aumentar_stat("S")
         self.AGL_base = self.AGL_base + self.aumentar_stat("A")
         self.INT_base = self.INT_base + self.aumentar_stat("I")
@@ -349,8 +363,18 @@ class PJ:
     #     else:
     #         return 0
 
-    def aumentar_HP_MAX(self):
-        self.HP_MAX = self.HP_MAX + self.STA // 4 + 1 + self.consulta_gran_MP() # self.prob_aum(0.5) * random.randint(20, 25)
+    def aumentar_HP_MAX_y_su_base(self):
+        print(f"Antes HP_MAX_base: {self.HP_MAX_base}; HP_MAX: {self.HP_MAX}")
+        mult_HP_MAX = self.stats_de_todas_las_armaduras()["HP_MAX"]
+        gran_HP = self.consulta_gran_HP()
+        print(f"***********************")
+        print(f"HP_MAX_base + STA_base // 4 + 1 + gran_HP")
+        print(f"{self.HP_MAX_base} + {self.STA_base // 4 + 1} + {gran_HP}")
+        print(f"{self.HP_MAX_base + self.STA_base // 4 + 1 + gran_HP}")
+        print(f"***********************")
+        self.HP_MAX_base = self.HP_MAX_base + self.STA_base // 4 + 1 + gran_HP  # random.randint(20, 25)
+        self.HP_MAX = int(self.HP_MAX_base * mult_HP_MAX)
+        print(f"Ahora HP_MAX_base: {self.HP_MAX_base}; HP_MAX: {self.HP_MAX}")
 
     def get_guaranteed_growth(self, LV, clase):
         traducciones = {
@@ -378,9 +402,14 @@ class PJ:
     def obtener_gran_aumento_de_HP(self) -> int:
         return random.randint(20, 25)
 
-    def aumentar_MP_MAX(self):
+    def aumentar_MP_MAX_y_su_base(self):
+        print(f"Antes MP_MAX_base: {self.MP_MAX_base}; MP_MAX: {self.MP_MAX}")
         if self.clase not in ['Warrior', 'Thief', 'Monk', 'Master']:
-            self.MP_MAX = self.MP_MAX + self.INT // 4 + 1 + self.consulta_gran_MP()
+            mult_MP_MAX = self.stats_de_todas_las_armaduras()["MP_MAX"]
+            gran_MP = self.consulta_gran_MP()
+            self.MP_MAX_base = self.MP_MAX_base + self.INT_base // 4 + 1 + gran_MP  # random.randint(10, 12)
+            self.MP_MAX = int(self.MP_MAX_base * mult_MP_MAX)
+        print(f"Antes MP_MAX_base: {self.MP_MAX_base}; MP_MAX: {self.MP_MAX}")
 
     def consulta_gran_MP(self) -> int:
         # growth_text = CRECIMIENTO_GARANTIZADO[self.LV][self.clase]

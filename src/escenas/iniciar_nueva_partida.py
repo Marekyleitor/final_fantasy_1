@@ -68,7 +68,7 @@ def darValoresBaseALaPartida(arrChar):
 
     # Crear objeto Partida con todos los valores
     partida = Partida(
-        arr_char=arrChar,
+        arrChar=arrChar,
         location=location,
         estado_de_juego=estado_de_juego,
         inventory=inventory,

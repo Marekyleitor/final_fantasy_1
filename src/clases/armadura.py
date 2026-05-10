@@ -200,4 +200,6 @@ class Armadura:
 for name, dictionary in ARMADURAS.items():
     # print(f"{name}")
     my_armadura_01 = Armadura(name)
+    arr = [my_armadura_01.decored_name]
+    print(f"{arr}")
     my_armadura_01.mostrar_gear_stats()

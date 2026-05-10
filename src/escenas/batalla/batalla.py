@@ -178,6 +178,7 @@ def batalla(partida):
         elif opc == "6":
             ## Huir
             # return arrChar.arrPer(), location, estado_de_juego, inventory, gil
+            partida.arrChar = partida.arrChar.arrPer()
             return partida
         elif opc == "7":
             ## Inventario
